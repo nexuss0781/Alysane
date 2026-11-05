@@ -301,6 +301,22 @@ struct SoftRegions {
 /// No hard assignment, no fixed cluster count, no labels.
 SoftRegions soft_regions(const DistMatrix& D, const std::vector<int>& landmarks, float radius_quantile);
 
+/// Density-peaks mode seeking: regions determined by the metric alone, with no
+/// anchor-subset selection variance. Mode count is data-determined.
+struct DensityPeaks {
+    std::vector<float> rho;    ///< KDE density per point
+    std::vector<int> parent;   ///< nearest denser neighbour (-1 for global max)
+    std::vector<float> delta;  ///< distance to that neighbour
+    std::vector<int> modes;    ///< emergent mode indices
+    std::vector<int> mode_of;  ///< mode ancestor per point
+    std::vector<int> label;    ///< mode index per point
+    std::vector<std::vector<float>> member; ///< partition of unity over modes
+    std::vector<float> boundary_score;
+    int K = 0;
+    float sigma = 0.f;
+};
+DensityPeaks density_peaks(const DistMatrix& D, int knn = 8, float bandwidth_quantile = 0.5f);
+
 /// Partition-of-unity membership for an out-of-sample point given anchor distances.
 std::vector<float> soft_membership(const std::vector<float>& dist_to_anchor, const std::vector<float>& radius);
 

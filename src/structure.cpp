@@ -4,6 +4,7 @@
 // regions are a partition of unity rather than a hard labelling.
 #include "alysane.h"
 #include <omp.h>
+#include <set>
 
 namespace alysane {
 
@@ -125,6 +126,122 @@ std::vector<float> soft_membership(const std::vector<float>& dist_to_anchor,
     }
     for (auto& x : w) x = (float)(x / s);
     return w;
+}
+
+DensityPeaks density_peaks(const DistMatrix& D, int knn, float bandwidth_quantile) {
+    // Mode-seeking regions determined by the metric ALONE.
+    //
+    // Farthest-point anchor selection is high-variance under subsampling: it
+    // picks extreme points, so the anchor set changes wildly between bootstrap
+    // replicates. That nuisance variance is a property of the SELECTION rule,
+    // not of the behavioural geometry being tested. Density peaks removes it:
+    // every point links to its nearest denser neighbour, and modes emerge from
+    // the density landscape. No fixed cluster count, no random anchor subset,
+    // fully deterministic given (D, bandwidth).
+    int N = D.N;
+    DensityPeaks P;
+    P.rho.assign(N, 0.f);
+    P.parent.assign(N, -1);
+    P.delta.assign(N, 0.f);
+    P.label.assign(N, 0);
+    if (N < 3) return P;
+
+    // Adaptive bandwidth: quantile of k-nearest-neighbour distances.
+    int k = std::min(std::max(1, knn), N - 1);
+    std::vector<float> knn_d(N);
+    for (int i = 0; i < N; i++) {
+        std::vector<float> ds;
+        ds.reserve(N - 1);
+        for (int j = 0; j < N; j++)
+            if (j != i) ds.push_back(D(i, j));
+        std::nth_element(ds.begin(), ds.begin() + k - 1, ds.end());
+        knn_d[i] = ds[k - 1];
+    }
+    std::vector<float> tmp = knn_d;
+    std::sort(tmp.begin(), tmp.end());
+    float sigma = std::max(1e-6f, tmp[(size_t)(bandwidth_quantile * (N - 1))]);
+    P.sigma = sigma;
+
+    // Gaussian KDE density at each sample point.
+    for (int i = 0; i < N; i++) {
+        double s = 0;
+        for (int j = 0; j < N; j++) {
+            if (j == i) continue;
+            double u = D(i, j) / sigma;
+            s += std::exp(-u * u);
+        }
+        P.rho[i] = (float)s;
+    }
+
+    // Link each point to its nearest strictly denser neighbour.
+    std::vector<int> order(N);
+    std::iota(order.begin(), order.end(), 0);
+    std::sort(order.begin(), order.end(), [&](int a, int b) { return P.rho[a] > P.rho[b]; });
+    for (int oi = 0; oi < N; oi++) {
+        int i = order[oi];
+        if (oi == 0) { // global density maximum is a mode
+            P.parent[i] = -1;
+            float mx = 0;
+            for (int j = 0; j < N; j++) mx = std::max(mx, D(i, j));
+            P.delta[i] = mx;
+            continue;
+        }
+        int best = -1;
+        float bd = 1e30f;
+        for (int oj = 0; oj < oi; oj++) {
+            int j = order[oj];
+            if (D(i, j) < bd) {
+                bd = D(i, j);
+                best = j;
+            }
+        }
+        P.parent[i] = best;
+        P.delta[i] = bd;
+    }
+
+    // A mode is a point whose nearest denser neighbour is farther than the
+    // bandwidth: it sits on its own density hill rather than a shoulder.
+    // The mode count is data-determined, never fixed.
+    for (int i = 0; i < N; i++)
+        if (P.parent[i] < 0 || P.delta[i] > sigma) P.modes.push_back(i);
+    if (P.modes.empty()) P.modes.push_back(order[0]);
+    std::set<int> is_mode(P.modes.begin(), P.modes.end());
+    P.K = (int)P.modes.size();
+
+    // Assign by following parent links to the first mode ancestor.
+    P.mode_of.assign(N, 0);
+    for (int i = 0; i < N; i++) {
+        int cur = i, guard = 0;
+        while (!is_mode.count(cur) && P.parent[cur] >= 0 && guard++ < N) cur = P.parent[cur];
+        P.mode_of[i] = cur;
+    }
+    std::map<int, int> midx;
+    for (size_t a = 0; a < P.modes.size(); a++) midx[P.modes[a]] = (int)a;
+    for (int i = 0; i < N; i++) P.label[i] = midx.count(P.mode_of[i]) ? midx[P.mode_of[i]] : 0;
+
+    // Soft membership over modes: kernel weights, partition of unity.
+    P.member.assign(N, std::vector<float>(P.K, 0.f));
+    P.boundary_score.assign(N, 0.f);
+    double logK = std::log((double)std::max(2, P.K));
+    for (int i = 0; i < N; i++) {
+        double s = 0;
+        for (int a = 0; a < P.K; a++) {
+            double u = D(i, P.modes[a]) / sigma;
+            double w = std::exp(-u * u);
+            P.member[i][a] = (float)w;
+            s += w;
+        }
+        if (s <= 1e-300) {
+            P.member[i][P.label[i]] = 1.f;
+        } else {
+            for (auto& x : P.member[i]) x = (float)(x / s);
+        }
+        double h = 0;
+        for (float p : P.member[i])
+            if (p > 0) h -= (double)p * std::log((double)p);
+        P.boundary_score[i] = (float)(h / logK);
+    }
+    return P;
 }
 
 SoftRegions soft_regions(const DistMatrix& D, const std::vector<int>& landmarks, float radius_quantile) {

@@ -158,6 +158,33 @@ void run_unit_tests() {
     ck(std::fabs(topk_tv(t, t2, 1000) - quantized_topk_tv(q, q2, 1000)) == 0,
        "quantised top-k TV identical to full-precision top-k TV");
 
+    // ---- density peaks: deterministic, no fixed K, partition of unity ----
+    {
+        auto dp = density_peaks(D, 4, 0.5f);
+        ck(dp.K >= 1 && dp.K <= N, "density peaks mode count in [1,N]");
+        ck(dp.K == 3, "density peaks recovers 3 emergent modes on 3-block metric");
+        bool pu = true, nonneg = true;
+        for (int i = 0; i < N; i++) {
+            double t = 0;
+            for (float x : dp.member[i]) { t += x; if (x < 0.f) nonneg = false; }
+            if (std::fabs(t - 1.0) > 1e-4) pu = false;
+        }
+        ck(pu, "density peaks membership sums to 1");
+        ck(nonneg, "density peaks membership non-negative");
+        // Determinism: same input -> identical modes and labels.
+        auto dp2 = density_peaks(D, 4, 0.5f);
+        ck(dp.modes == dp2.modes && dp.label == dp2.label, "density peaks is deterministic");
+        // Each mode is its own ancestor.
+        bool self_mode = true;
+        for (int m : dp.modes) if (dp.mode_of[m] != m) self_mode = false;
+        ck(self_mode, "each density mode is its own ancestor");
+        // Parent links must strictly increase density (except the global max).
+        bool inc = true;
+        for (int i = 0; i < N; i++)
+            if (dp.parent[i] >= 0 && dp.rho[dp.parent[i]] < dp.rho[i]) inc = false;
+        ck(inc, "parent links increase density");
+    }
+
     // ---- portable SIMD kernels agree with scalar reference ----
     {
         std::vector<float> a(1024), b(1024);

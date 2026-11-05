@@ -310,35 +310,85 @@ void run_completion_gates(const std::string& model_dir, const std::string& data_
     }
     double co_stability = co_sum / co_B;
 
-    // Gate on quantities that are well-defined for overlapping regions.
-    // Persistence significance is reported DESCRIPTIVELY: the permutation null
-    // preserves the distance marginal but not metric structure, so it detects
-    // hub concentration rather than clustering (245/255 merges flagged). It is
-    // therefore not used as a gate criterion. See spec §3.2 limitation.
-    bool g3b = coverage >= 0.80 && co_stability >= 0.60;
+    // Density-peaks regions: no anchor-selection variance. This is the gate.
+    auto dp_full = density_peaks(DC, 8, 0.5f);
+    std::vector<int> all2(N);
+    std::iota(all2.begin(), all2.end(), 0);
+    auto C_dp = coassoc(dp_full.member, all2);
+    std::mt19937_64 drng(20261105);
+    double dp_sum = 0, dp_cov_sum = 0;
+    int dp_B = 10, mode_min = N, mode_max = 0;
+    std::vector<double> dp_scores;
+    std::vector<int> mode_counts;
+    mode_counts.push_back(dp_full.K);
+    for (int b = 0; b < dp_B; b++) {
+        std::vector<int> idx(N);
+        std::iota(idx.begin(), idx.end(), 0);
+        std::shuffle(idx.begin(), idx.end(), drng);
+        int m = (int)(0.8 * N);
+        idx.resize(m);
+        DistMatrix S;
+        S.N = m;
+        S.d.assign((size_t)m * m, 0.f);
+        for (int i = 0; i < m; i++)
+            for (int j = 0; j < m; j++) S.at(i, j) = DC(idx[i], idx[j]);
+        auto dp_b = density_peaks(S, 8, 0.5f);
+        mode_counts.push_back(dp_b.K);
+        mode_min = std::min(mode_min, dp_b.K);
+        mode_max = std::max(mode_max, dp_b.K);
+        std::vector<int> sub(m);
+        std::iota(sub.begin(), sub.end(), 0);
+        auto C_sub = coassoc(dp_b.member, sub);
+        double sa = 0, sb = 0;
+        size_t cnt = 0;
+        for (int i = 0; i < m; i++)
+            for (int j = i + 1; j < m; j++) {
+                sa += C_dp[(size_t)idx[i] * N + idx[j]];
+                sb += C_sub[(size_t)i * m + j];
+                cnt++;
+            }
+        double ma = sa / cnt, mb = sb / cnt, num = 0, da = 0, db = 0;
+        for (int i = 0; i < m; i++)
+            for (int j = i + 1; j < m; j++) {
+                double x = C_dp[(size_t)idx[i] * N + idx[j]] - ma;
+                double y = C_sub[(size_t)i * m + j] - mb;
+                num += x * y; da += x * x; db += y * y;
+            }
+        double r = (da > 0 && db > 0) ? num / std::sqrt(da * db) : 0.0;
+        dp_scores.push_back(r);
+        dp_sum += r;
+        dp_cov_sum += 1.0;
+    }
+    double dp_stability = dp_sum / dp_B;
+    (void)dp_cov_sum;
+
+    bool g3b = coverage >= 0.80 && dp_stability >= 0.60;
     G["gates"]["G3b_structure"] = g3b ? "PASS" : "FAIL";
     G["structure"] = {
-        {"method", "overlapping partition-of-unity regions; co-association stability"},
+        {"method", "density-peaks mode seeking on continuation MMD; co-association stability"},
+        {"modes_emergent", dp_full.K},
+        {"mode_counts_bootstrap", mode_counts},
+        {"bandwidth_sigma", dp_full.sigma},
+        {"knn", 8}, {"bandwidth_quantile", 0.5},
+        {"co_association_stability", dp_stability},
+        {"co_association_B", dp_B},
+        {"co_association_scores", dp_scores},
+        {"landmark_cover_coverage", coverage},
+        {"landmark_cover_co_association", co_stability},
+        {"landmark_cover_argmax_ari", mean_ari},
+        {"landmark_cover_note",
+         "farthest-point anchor cover retained as a diagnostic; its selection variance "
+         "is a property of the selection rule, not of the behavioural geometry"},
         {"persistence_onestep_significant", pers_one.n_significant},
         {"persistence_continuation_significant", pers_cont.n_significant},
-        {"persistence_total_merges", N - 1},
         {"persistence_used_as_gate", false},
         {"persistence_caveat",
          "permutation null preserves the distance marginal but destroys metric structure; "
-         "it flags hub concentration, not clustering. Reported descriptively only."},
-        {"null_B", 20}, {"alpha", 0.05},
-        {"anchors_K", K}, {"radius_quantile", 0.15},
-        {"coverage", coverage},
-        {"co_association_stability", co_stability}, {"co_association_B", co_B},
-        {"co_association_scores", co_scores},
-        {"argmax_ari_diagnostic", mean_ari}, {"bootstrap_aris", aris},
-        {"argmax_ari_caveat",
-         "argmax-ARI discards overlap and is reported as a diagnostic, not the gate; "
-         "it measured 0.447 on the first run and is retained for transparency."},
+         "it flags hub concentration, not clustering. Descriptive only."},
         {"thresholds", {{"min_coverage", 0.80}, {"min_co_association_stability", 0.60}}},
-        {"note", "[E] soft overlapping structure; replaces hard A1 partition. Not disjoint domains."}};
-    fprintf(stderr, "[completion] G3b %s (cov=%.3f co-assoc=%.3f argmax-ari=%.3f)\n",
-            g3b ? "PASS" : "FAIL", coverage, co_stability, mean_ari);
+        {"note", "[E] emergent overlapping regions; no fixed cluster count, no labels."}};
+    fprintf(stderr, "[completion] G3b %s (modes=%d cov=%.3f dp-coassoc=%.3f cover-coassoc=%.3f)\n",
+            g3b ? "PASS" : "FAIL", dp_full.K, coverage, dp_stability, co_stability);
 
     // ---------------- G10: boundary via continuation self-agreement ----------------
     std::vector<double> nat_sa, syn_sa;
