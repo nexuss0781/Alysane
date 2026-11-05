@@ -4,7 +4,28 @@ This workspace contains the archived v1.0 specification, a corrected mathematica
 
 ## Status
 
-The gate is executable end to end. The scientific A1 hard-partition gate is **NO-GO** on the executed pilot; engineering/certificate gates are reported separately in `reports/gates.json`. Do not interpret a completed run as proof that A1 holds.
+**C2+C3 is COMPLETE_WITH_EXPLICIT_NO_GO.** 12 of 13 gates pass against the pinned
+SmolLM-135M on CI. The original A1 hard-partition assumption is **falsified and remains
+an explicit NO-GO**; the objective is preserved by a validated replacement — emergent
+overlapping density-peaks regions over continuation behaviour (63 modes, co-association
+stability 0.995, coverage 0.941), with no predefined taxonomy and no fixed cluster count.
+
+See [`docs/04_C2_C3_completion_report.md`](docs/04_C2_C3_completion_report.md) for the full
+gate table, measurements, corrections and limitations.
+
+| Gate | Result | Gate | Result |
+|---|---|---|---|
+| G1 parity | PASS | G7 serialization | PASS |
+| G2 trace τ | PASS | G8 KV parity | PASS |
+| **G3 A1** | **NO-GO** | G9 continuation | PASS |
+| G3b structure | PASS | G10 boundary | PASS |
+| G4 ψ distortion | PASS | G11 quantisation | PASS |
+| G5 routing | PASS | G12 reshape | PASS |
+| G6 boundary | PASS | | |
+
+**Key limitation:** the learned encoder does not yet generalise at N=256 (holdout
+Spearman 0.020). The validated structure is computed on the behavioural metric directly,
+not on the learned embedding.
 
 C3v2-1 is complete: observables, competence, and identifiability. See `docs/02_C3v2-1_observables_competence_identifiability.md` and `reports/c3v2_1_report.md`. Minimal C++ demonstration/tests:
 
@@ -43,10 +64,14 @@ cmake --build build -j2
 
 ```bash
 python3 tools/prepare_data.py
+./build/alysane_unit_tests                      # 35 model-free tests
 ./build/alysane selftest
+./build/alysane_stress 256 49152                # full-scale, no weights
 OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 ./build/alysane parity models data/parity.bin reports/parity_cpp.bin
 OPENBLAS_NUM_THREADS=2 python3 tools/parity_reference.py
 OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 ./build/alysane gates models data reports
+./build/alysane complete models data reports    # G8-G12 + G3b
+python3 tools/verify_certificates.py            # independent NumPy oracle
 python3 tools/make_report.py
 ```
 
