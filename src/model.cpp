@@ -2,6 +2,7 @@
 #include <cblas.h>
 extern "C" void openblas_set_num_threads(int);
 #include <immintrin.h>
+#include "simd.h"
 #include <iomanip>
 #include <map>
 #include <omp.h>
@@ -180,12 +181,7 @@ static void rmsnorm(int n, int d, const float* x, const float* g, float eps, flo
 static void gemm(int n, int out, int in, const float* X, const float* W, float* Y) {
     cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasTrans, n, out, in, 1.f, X, in, W, in, 0.f, Y, out);
 }
-static float dot64(const float* a, const float* b) {
-    __m512 s = _mm512_setzero_ps();
-    for (int i = 0; i < 64; i += 16)
-        s = _mm512_fmadd_ps(_mm512_loadu_ps(a + i), _mm512_loadu_ps(b + i), s);
-    return _mm512_reduce_add_ps(s);
-}
+static float dot64(const float* a, const float* b) { return alysane::simd::dot(a, b, 64); }
 ForwardResult forward(const KnowledgeWeights& w, const std::vector<int32_t>& ids, bool want_all_logits,
                       bool want_full_last, bool want_logits) {
     setblas(2);
@@ -351,19 +347,7 @@ ForwardResult forward(const KnowledgeWeights& w, const std::vector<int32_t>& ids
     return R;
 }
 
-float tv_distance(const float* a, const float* b, int V) {
-    __m512 s = _mm512_setzero_ps();
-    __m512 mask = _mm512_castsi512_ps(_mm512_set1_epi32(0x7fffffff));
-    int i = 0;
-    for (; i + 16 <= V; i += 16) {
-        __m512 d = _mm512_sub_ps(_mm512_loadu_ps(a + i), _mm512_loadu_ps(b + i));
-        s = _mm512_add_ps(s, _mm512_and_ps(d, mask));
-    }
-    float r = _mm512_reduce_add_ps(s);
-    for (; i < V; i++)
-        r += std::fabs(a[i] - b[i]);
-    return 0.5f * r;
-}
+float tv_distance(const float* a, const float* b, int V) { return 0.5f * alysane::simd::l1(a, b, V); }
 float topk_tau(const Trace& a, const Trace& b) {
     return a.tail_mass + b.tail_mass;
 }

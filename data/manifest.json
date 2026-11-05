@@ -1,0 +1,18 @@
+{
+  "seed": 20261105,
+  "n_ctx": 64,
+  "n_train": 256,
+  "n_hold": 64,
+  "tokenizer_vocab": 49152,
+  "train_source_counts": {
+    "prose": 80,
+    "code": 96,
+    "science_math": 80
+  },
+  "hold_source_counts": {
+    "prose": 20,
+    "code": 24,
+    "science_math": 20
+  },
+  "note": "Source metadata is audit-only; the C++ gate does not use labels. This is a pilot convenience mixture, not live commercial traffic."
+}

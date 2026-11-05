@@ -16,7 +16,7 @@ models/*.pt
 reports/*.bin
 reports*/*.bin
 data/*.bin
-data*/
+data/raw/*.tmp
 *.npz
 
 # Python

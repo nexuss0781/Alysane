@@ -1,0 +1,1001 @@
+{{Short description|Field of knowledge}}<!-- Do not remove the short description as there is consensus to have it, though weak. Instead, propose any changes on the talk page -->
+{{Redirect2|Math|Maths|other uses|Mathematics (disambiguation)|and|Math (disambiguation)}}
+{{pp|small=yes}}
+{{pp-move}}
+{{Use American English|date=April 2026}}
+{{Use mdy dates|cs1-dates=sy|date=October 2024}}
+{{CS1 config|mode=cs1}}
+[[File:Woman_teaching_geometry.jpg|right|thumb| [[Illuminated manuscript|Illuminated]] letter P at the beginning of [[Adelard of Bath]]'s translation of [[Euclid's Elements|Euclid's ''Elements'']], which starts "{{lang|la|Punctum est illud cui pars non est}}" ({{gloss|A point is that which has no part}}).<ref>{{citation |url=https://euclid.analogmachine.org/early-history |title=The Beginning |work=Euclid's Elements |author=[[Herbert M. Sauro]]}}</ref> Geometry is shown personified as a woman, following [[Martianus Capella]]'s ''{{lang|la|De nuptiis Philologiae et Mercurii}}''.<ref>{{citation |url=https://old.maa.org/press/periodicals/convergence/mathematical-treasure-adelard-s-translation-of-euclid-s-elements#:~:text=Shown%20below%20is%20an%20early%2014th%20century,of%20Bath%20(ca.%201075%20%E2%80%93%20ca.%201160). |title=Mathematical Treasure: Adelard’s Translation of Euclid’s Elements |author=Frank J. Swetz |year=2019}}</ref>]]
+
+<!-- Please, do not add any wikilink to this paragraph: On June-July 2026, there was a consensus on the talk page to not link any term in the first paragraph -->'''Mathematics''' is a field of knowledge concerned with abstract concepts such as numbers, geometric shapes, sets, functions, and probabilities. It uses logical reasoning and proof to study and establish their properties, often expressed as theorems, formulas, and equations. Mathematics is widely used to model and solve problems in science, engineering, technology, economics, and everyday life.
+
+There are many areas of mathematics, including [[number theory]] (the study of integers and their properties), [[algebra]] (the study of operations and the structures they form), [[geometry]] (the study of shapes and spaces that contain them), [[Mathematical analysis|analysis]] (the quantitative study of approximation and convergence), and [[set theory]] (presently used as a foundation for all mathematics).
+
+Mathematics involves the description and manipulation of [[mathematical object|abstract objects]] that are either [[abstraction (mathematics)|abstraction]]s from nature or purely abstract entities that are stipulated to have certain properties, called ''[[axiom]]s''. Mathematics uses pure [[reason]] to prove the properties of objects through ''[[mathematical proof|proofs]]'', which consist of a succession of applications of [[inference rule|deductive rules]] to already established results. These results, called ''[[theorem]]s'', include previously proved theorems, axioms, and{{emdash}}in case of abstraction from nature{{emdash}}some basic properties that are considered true starting points of the theory under consideration.<ref>{{cite book |last=Hipólito |first=Inês Viegas |editor1-last=Kanzian |editor1-first=Christian |editor2-last=Mitterer |editor2-first=Josef |editor2-link=Josef Mitterer |editor3-last=Neges |editor3-first=Katharina |date=August 9–15, 2015 |chapter=Abstract Cognition and the Nature of Mathematical Proof |pages=132–134 |title=Realismus – Relativismus – Konstruktivismus: Beiträge des 38. Internationalen Wittgenstein Symposiums |trans-title=Realism – Relativism – Constructivism: Contributions of the 38th International Wittgenstein Symposium |volume=23 |language=de, en |publisher=Austrian Ludwig Wittgenstein Society |location=Kirchberg am Wechsel, Austria |issn=1022-3398 |oclc=236026294 |url=https://www.alws.at/alws/wp-content/uploads/2018/06/papers-2015.pdf#page=133 |url-status=live |archive-url=https://web.archive.org/web/20221107221937/https://www.alws.at/alws/wp-content/uploads/2018/06/papers-2015.pdf#page=133 |archive-date=November 7, 2022 |access-date=January 17, 2024}} ([https://www.researchgate.net/publication/280654540_Abstract_Cognition_and_the_Nature_of_Mathematical_Proof at ResearchGate] {{open access}} {{Webarchive|url=https://web.archive.org/web/20221105145638/https://www.researchgate.net/publication/280654540_Abstract_Cognition_and_the_Nature_of_Mathematical_Proof |date=November 5, 2022}})</ref><!-- The following is pending discussion on talk: Contrary to [[physical law]]s, the validity of a theorem (its truth) does not rely on any [[experimentation]] but on the correctness of its reasoning (though experimentation is often useful for discovering new theorems of interest). -->
+
+Mathematics is essential in [[science]] and [[engineering]]; it is widely used in every field of knowledge and in everyday life, whenever data is manipulated, shapes, patterns, and structures are studied, and logical reasoning is needed. Although mathematics is widely used to model empirical phenomena, its results are established by deductive proof rather than by experiment. The relationship between mathematical truth, logic, and reality is a [[Philosophy of mathematics|subject of philosophical debate]]. Some areas of mathematics, such as [[game theory]], are developed in close correlation with their applications and are often grouped under [[applied mathematics]]. Other areas are developed independently from any application but often find practical applications later.{{Sfn|Peterson|1988|page=12}}<ref name=wigner1960 />
+
+Mathematical written records first appeared in [[Ancient Egyptian mathematics|Ancient Egypt]] and [[Babylonian mathematics|Mesopotamia]], but the concept of proof and its associated [[mathematical rigor]] began in [[Greek mathematics|ancient Greek mathematics]], exemplified in [[Euclid]]'s ''[[Euclid's Elements|Elements]]''.<ref>{{cite web |last=Wise |first=David |url=http://jwilson.coe.uga.edu/EMT668/EMAT6680.F99/Wise/essay7/essay7.htm |title=Eudoxus' Influence on Euclid's Elements with a close look at The Method of Exhaustion|website=[[The University of Georgia]] |url-status=live |archive-url=https://web.archive.org/web/20190601004355/http://jwilson.coe.uga.edu/emt668/EMAT6680.F99/Wise/essay7/essay7.htm |archive-date=June 1, 2019 |access-date=January 18, 2024}}</ref> Mathematics was primarily divided into geometry and arithmetic until the 16th and 17th centuries, when algebra{{efn|Here, ''algebra'' is taken in its modern sense, which is, roughly speaking, the art of manipulating [[formula]]s.}} and [[infinitesimal calculus]] evolved into new fields. Since then, the interaction between mathematical innovations and [[timeline of scientific discoveries|scientific discoveries]] has led to a correlated increase in the development of both.<ref>{{cite journal |last=Alexander |first=Amir |author-link=Amir Alexander |date=September 2011 |title=The Skeleton in the Closet: Should Historians of Science Care about the History of Mathematics? |journal=Isis |volume=102 |number=3 |pages=475–480 |doi=10.1086/661620 |mr=2884913 |pmid=22073771 }}</ref> At the end of the 19th century, the [[foundational crisis of mathematics]] led to the systematic use of the [[axiomatic method]],<ref name=Kleiner_1991>{{cite journal |last=Kleiner |first=Israel |author-link=Israel Kleiner (mathematician) |date=December 1991 |title=Rigor and Proof in Mathematics: A Historical Perspective |journal=Mathematics Magazine |publisher=Taylor & Francis, Ltd. |volume=64 |issue=5 |pages=291–314 |doi=10.1080/0025570X.1991.11977625 |jstor=2690647 |issn=0025-570X |eissn=1930-0980 |lccn=47003192 |mr=1141557 |oclc=1756877 }}</ref> which heralded a dramatic increase in the number of mathematical areas and their fields of application. The contemporary [[Mathematics Subject Classification]] lists more than 60 first-level areas of mathematics.<ref name=MSC>{{cite web |url=https://zbmath.org/static/msc2020.pdf |title=MSC2020-Mathematics Subject Classification System |website=zbMath |publisher=Associate Editors of Mathematical Reviews and zbMATH |url-status=live |archive-url=https://web.archive.org/web/20240102023805/https://zbmath.org/static/msc2020.pdf |archive-date=January 2, 2024 |access-date=November 13, 2025}}</ref><ref name=MSC2020>{{cite journal |last1=Dunne |first1=Edward |last2=Hulek |first2=Klaus |author2-link=Klaus Hulek |date=March 2020 |title=Mathematics Subject Classification 2020 |journal=Notices of the American Mathematical Society |volume=67 |issue=3 |pages=410–411 |doi=10.1090/noti2052 |doi-access=free |issn=0002-9920 |eissn=1088-9477 |lccn=sf77000404 |oclc=1480366 |url=https://www.ams.org/journals/notices/202003/rnoti-p410.pdf |url-status=live |archive-url=https://web.archive.org/web/20210803203928/https://www.ams.org/journals/notices/202003/rnoti-p410.pdf |archive-date=August 3, 2021 |access-date=February 3, 2024 |quote=The new MSC contains 63 two-digit classifications, 529 three-digit classifications, and 6,006 five-digit classifications.}}</ref>
+
+{{TOC limit|3}}
+
+== Areas of mathematics ==
+{{anchor|Branches of mathematics}}
+Before the [[Renaissance]], mathematics was divided into two main areas: [[arithmetic]], regarding the study and manipulation of numbers, and [[geometry]], regarding the study of shapes.<ref>{{cite book |last=Bell |first=E. T. |author-link=Eric Temple Bell |year=1992 |orig-date=1945 |chapter=General Prospectus |title=The Development of Mathematics |edition=2nd |isbn=978-0-486-27239-9 |lccn=45010599 |oclc=523284 |page=3 |publisher=Dover Publications |quote=... mathematics has come down to the present by the two main streams of number and form. The first carried along arithmetic and algebra, the second, geometry.}}</ref> Some types of [[pseudoscience]], such as [[numerology]] and [[astrology]], were not then clearly distinguished from mathematics.<ref>{{cite book |chapter-url=https://books.google.com/books?id=-yyDJUD0DNwC&pg=PA27 |last=Tiwari |first=Sarju |year=1992 |chapter=A Mirror of Civilization |title=Mathematics in History, Culture, Philosophy, and Science |edition=1st |page=27 |publisher=Mittal Publications |publication-place=New Delhi, India |isbn=978-81-7099-404-6 |lccn=92909575 |oclc=28115124 |access-date=November 13, 2025 |quote=It is unfortunate that two curses of mathematics--Numerology and Astrology were also born with it and have been more acceptable to the masses than mathematics itself.}}</ref>
+
+Beginning with the Renaissance, two more areas became predominant. New [[mathematical notation]] led to [[algebra|modern algebra]] which, roughly speaking, begins with the study and manipulation of [[algebraic expression]]s. [[Calculus]], consisting of the two subfields ''[[differential calculus]]'' and ''[[integral calculus]]'', originated with geometry but evolved into the study of [[continuous functions]], which model the typically [[Nonlinear system|nonlinear relationships]] between varying quantities, as represented by [[variable (mathematics)|variables]]. This division into four main areas{{emdash}}arithmetic, geometry, algebra, and calculus<ref>{{cite book |last=Restivo |first=Sal |author-link=Sal Restivo |editor-last=Bunge |editor-first=Mario |editor-link=Mario Bunge |year=1992 |chapter=Mathematics from the Ground Up |title=Mathematics in Society and History |page=14 |series=Episteme |volume=20 |publisher=[[Kluwer Academic Publishers]] |isbn=0-7923-1765-3 |lccn=25709270 |oclc=92013695}}</ref>{{emdash}}endured until the end of the 19th century. Other areas that were previously studied by mathematicians, such as [[celestial mechanics]] and [[solid mechanics]], are now considered to belong to physics.<ref>{{cite book |last=Musielak |first=Dora |author-link=Dora Musielak |year=2022 |title=Leonhard Euler and the Foundations of Celestial Mechanics |series=History of Physics |publisher=[[Springer International Publishing]] |doi=10.1007/978-3-031-12322-1 |isbn=978-3-031-12321-4 |s2cid=253240718 |issn=2730-7549 |eissn=2730-7557 |oclc=1332780664}}</ref> The subject of [[combinatorics]] has been studied for much of recorded history, yet did not become a separate branch of mathematics until the 17th century.<ref>{{cite journal |date=May 1979 |last=Biggs |first=N. L. |author-link=Norman L. Biggs |title=The roots of combinatorics |journal=Historia Mathematica |volume=6 |issue=2 |pages=109–136 |doi=10.1016/0315-0860(79)90074-0 |doi-access=free |issn=0315-0860 |eissn=1090-249X |lccn=75642280 |oclc=2240703}}</ref>
+
+At the end of the 19th century, the [[foundational crisis in mathematics]] and the systematic use of the [[axiomatic method]] led to an explosion of new areas of mathematics.<ref name=Warner_2013>{{cite web |last=Warner |first=Evan |title=Splash Talk: The Foundational Crisis of Mathematics |publisher=[[Columbia University]] |url=https://www.math.columbia.edu/~warner/notes/SplashTalk.pdf |url-status=dead |archive-url=https://web.archive.org/web/20230322165544/https://www.math.columbia.edu/~warner/notes/SplashTalk.pdf |archive-date=March 22, 2023 |access-date=February 3, 2024}}</ref><ref name="Kleiner_1991" /> The 2020 [[Mathematics Subject Classification]] contains 63 first-level areas.<ref name=MSC2020 /> Some of these areas correspond to the older division, as is true regarding [[number theory]] (the modern name for [[higher arithmetic]]) and geometry. Several other first-level areas have "geometry" in their names or are otherwise commonly considered part of geometry. Algebra and calculus do not appear as first-level areas but are split into several first-level areas. Other first-level areas emerged during the 20th century or had not previously been considered as mathematics, such as [[mathematical logic]] and [[foundations of mathematics|foundations]].<ref name=MSC />
+
+=== Number theory ===
+{{Main|Number theory}}
+
+[[File:Spirale Ulam 150.jpg|thumb|This is the [[Ulam spiral]], which illustrates the distribution of [[prime numbers]]. The dark diagonal lines in the spiral hint at the hypothesized approximate [[Independence (probability theory)|independence]] between being prime and being a value of a quadratic polynomial, a conjecture now known as [[Ulam spiral#Hardy and Littlewood's Conjecture F|Hardy and Littlewood's Conjecture F]].]]
+Number theory evolved from the manipulation of [[number]]s, that is, [[natural number]]s <math>(\mathbb{N}),</math> and later expanded to [[integer]]s <math>(\Z)</math> and [[rational number]]s <math>(\Q).</math> Number theory was once called arithmetic, but nowadays this term is mostly used for [[numerical calculation]]s.<ref>{{cite book |last=LeVeque |first=William J. |author-link=William J. LeVeque |year=1977 |chapter=Introduction |title=Fundamentals of Number Theory |pages=1–30 |publisher=[[Addison-Wesley Publishing Company]] |isbn=0-201-04287-8 |lccn=76055645 |oclc=3519779 |s2cid=118560854}}</ref> The study of numbers arguably dates back to ancient [[Babylonian mathematics|Babylon]] and probably [[ancient China|China]], but developed into a distinct discipline in [[Ancient Greek mathematics|ancient Greece]]. Two prominent early number theorists were [[Euclid]] and [[Diophantus]] of [[Alexandria]].<ref>{{cite book |last=Goldman |first=Jay R. |year=1998 |chapter=The Founding Fathers |title=The Queen of Mathematics: A Historically Motivated Guide to Number Theory |pages=2–3 |publisher=A K Peters |publication-place=Wellesley, MA |doi=10.1201/9781439864623 |isbn=1-56881-006-7 |lccn=94020017 |oclc=30437959 |s2cid=118934517}}</ref> The modern study of number theory in its abstract form is largely attributed to [[Pierre de Fermat]] and [[Leonhard Euler]]. The field came to full fruition with the contributions of [[Adrien-Marie Legendre]] and [[Carl Friedrich Gauss]].<ref>{{cite book |last=Weil |first=André |author-link=André Weil |year=1983 |title=Number Theory: An Approach Through History From Hammurapi to Legendre |publisher=Birkhäuser Boston |pages=2–3 |doi=10.1007/978-0-8176-4571-7 |isbn=0-8176-3141-0 |lccn=83011857 |oclc=9576587 |s2cid=117789303}}</ref>
+
+Many easily stated number problems have solutions that require sophisticated methods, often from across mathematics. A prominent example is [[Fermat's Last Theorem]]. This conjecture was stated in 1637 by Pierre de Fermat, but it [[Wiles's proof of Fermat's Last Theorem|was proved]] only in 1994 by [[Andrew Wiles]], who used tools including [[scheme theory]] from [[algebraic geometry]], [[category theory]], and [[homological algebra]].<ref>{{cite journal |last=Kleiner |first=Israel |author-link=Israel Kleiner (mathematician) |date=March 2000 |title=From Fermat to Wiles: Fermat's Last Theorem Becomes a Theorem |journal=[[Elemente der Mathematik]] |volume=55 |issue=1 |pages=19–37 |doi=10.1007/PL00000079 |doi-access=free |issn=0013-6018 |eissn=1420-8962 |lccn=66083524 |oclc=1567783 |s2cid=53319514}}</ref> Another example is [[Goldbach's conjecture]], which asserts that every even integer greater than 2 is the sum of two [[prime number]]s. Stated in 1742 by [[Christian Goldbach]], it remains unproven despite considerable effort.<ref>{{cite book |last=Wang |first=Yuan |year=2002 |title=The Goldbach Conjecture | pages=1–18 |edition=2nd |series=Series in Pure Mathematics |volume=4 |publisher=[[World Scientific]] |doi=10.1142/5096 |isbn=981-238-159-7 |lccn=2003268597 |oclc=51533750 |s2cid=14555830}}</ref>
+
+Number theory includes several subareas, including [[analytic number theory]], [[algebraic number theory]], [[geometry of numbers]] (method oriented), [[Diophantine analysis]], and [[transcendence theory]] (problem oriented).<ref name=MSC />
+
+=== Geometry ===
+{{Main|Geometry}}
+
+[[File:Triangles (spherical geometry).jpg|thumb|On the surface of a sphere, Euclidean geometry only applies as a local approximation. For larger scales, the sum of the angles of a triangle is not equal to 180°.]]
+
+Geometry is one of the oldest branches of mathematics. It started with empirical recipes concerning shapes, such as [[line (geometry)|lines]], [[angle]]s, and [[circle]]s, which were developed mainly for the needs of [[surveying]] and [[architecture]], but has since blossomed into many other subfields.<ref name="Straume_2014">{{Cite arXiv|last=Straume |first=Eldar |date=September 4, 2014 |title=A Survey of the Development of Geometry up to 1870 |class=math.HO |eprint=1409.1140 }}</ref>
+
+A fundamental innovation was the ancient Greeks' introduction of the concept of [[mathematical proof|proof]]s, which require that every assertion must be ''proved''. For example, it is not sufficient to verify by [[measurement]] that, say, two lengths are equal; their equality must be proven via reasoning from previously accepted results ([[theorem]]s) and a few basic statements. The basic statements are not subject to proof because they are self-evident ([[postulate]]s), or are part of the definition of the subject of study ([[axiom]]s). This principle, foundational for all mathematics, was first elaborated for geometry, and was systematized by [[Euclid]] around 300 BC in his book ''[[Euclid's Elements|Elements]]''.<ref>{{cite book |last=Hilbert |first=David |author-link=David Hilbert |year=1902 |title=The Foundations of Geometry |page=1 |publisher=[[Open Court Publishing Company]] |doi=10.1126/science.16.399.307 |lccn=02019303 |oclc=996838 |s2cid=238499430 |url={{GBurl|id=8ZBsAAAAMAAJ}} |access-date=February 6, 2024}} {{free access}}</ref><ref>{{cite book |last=Hartshorne |first=Robin |author-link=Robin Hartshorne |year=2000 |chapter=Euclid's Geometry |pages=9–13 |title=Geometry: Euclid and Beyond |publisher=[[Springer Publishing| Springer, New York]] |isbn=0-387-98650-2 |lccn=99044789 |oclc=42290188 |url={{GBurl|id=EJCSL9S6la0C|p=9}} |access-date=February 7, 2024}}</ref>
+
+The resulting [[Euclidean geometry]] is the study of shapes and their arrangements [[straightedge and compass construction|constructed]] from lines, [[plane (geometry)|planes]] and circles in the [[Euclidean plane]] ([[plane geometry]]) and the three-dimensional [[Euclidean space]].{{efn|This includes [[conic section]]s, which are intersections of [[circular cylinder]]s and planes.}}<ref name=Straume_2014 />
+
+Euclidean geometry was developed without change of methods or scope until the 17th century, when [[René Descartes]] introduced what is now called [[Cartesian coordinates]]. This constituted a major [[Paradigm shift|change of paradigm]]: Instead of defining [[real number]]s as lengths of [[line segments]] (see [[number line]]), it allowed the representation of points using their ''coordinates'', which are numbers. Algebra (and later, calculus) can thus be used to solve geometrical problems. Geometry was split into two new subfields: [[synthetic geometry]], which uses purely geometrical methods, and [[analytic geometry]], which uses coordinates systematically.<ref>{{cite book |last=Boyer |first=Carl B. |author-link=Carl B. Boyer |year=2004 |orig-date=1956 |chapter=Fermat and Descartes |pages=74–102 |title=History of Analytic Geometry |publisher=[[Dover Publications]] |isbn=0-486-43832-5 |lccn=2004056235 |oclc=56317813}}</ref>
+
+Analytic geometry allows the study of [[curve]]s unrelated to circles and lines. Such curves can be defined as the [[graph of a function|graph of functions]], the study of which led to [[differential geometry]]. They can also be defined as [[implicit equation]]s, often [[polynomial equation]]s (which spawned [[algebraic geometry]]). Analytic geometry also makes it possible to consider Euclidean spaces of higher than three dimensions.<ref name=Straume_2014 />
+
+In the 19th century, mathematicians discovered [[non-Euclidean geometries]], which do not follow the [[parallel postulate]]. By questioning that postulate's truth, this discovery has been viewed as joining [[Russell's paradox]] in revealing the [[foundational crisis of mathematics]]. This aspect of the crisis was solved by systematizing the axiomatic method and adopting the view that the truth of the chosen axioms is not a mathematical problem.<ref>{{cite journal |last=Stump |year=1997 |first=David J. |title=Reconstructing the Unity of Mathematics circa 1900 |journal=[[Perspectives on Science]] |volume=5 |issue=3 |pages=383–417 |doi=10.1162/posc_a_00532 |eissn=1530-9274 |issn=1063-6145 |lccn=94657506 |oclc=26085129 |s2cid=117709681 |url=https://philpapers.org/archive/STURTU.pdf |access-date=February 8, 2024 |archive-date=February 8, 2024 |archive-url=https://web.archive.org/web/20240208111126/https://philpapers.org/archive/STURTU.pdf |url-status=live }}</ref><ref name=Kleiner_1991 /> In turn, the axiomatic method allows for the study of various geometries obtained either by changing the axioms or by considering properties that [[Invariant (mathematics)|do not change]] under specific transformations of the [[space (mathematics)|space]].<ref>{{cite web |last1=O'Connor |first1=J. J. |last2=Robertson |first2=E. F. |date=February 1996 |title=Non-Euclidean geometry |website=MacTutor |publisher=[[University of St. Andrews]] |publication-place=Scotland, UK |url=https://mathshistory.st-andrews.ac.uk/HistTopics/Non-Euclidean_geometry/ |url-status=live |archive-url=https://web.archive.org/web/20221106142807/https://mathshistory.st-andrews.ac.uk/HistTopics/Non-Euclidean_geometry/ |archive-date=November 6, 2022 |access-date=February 8, 2024}}</ref>
+
+Today's subareas of geometry include:<ref name=MSC />
+* [[Projective geometry]], introduced in the 16th century by [[Girard Desargues]], extends Euclidean geometry by adding [[points at infinity]] at which [[parallel lines]] intersect. This simplifies many aspects of classical geometry by unifying the treatments for intersecting and parallel lines.
+* [[Affine geometry]], the study of properties relative to [[parallel (geometry)|parallelism]] and independent of the concept of length.
+* [[Differential geometry]], the study of curves, surfaces, and their generalizations, which are defined using [[differentiable function]]s.
+* [[Manifold theory]], the study of shapes that are not necessarily embedded in a larger space.
+* [[Riemannian geometry]], the study of distance properties in curved spaces.
+* [[Algebraic geometry]], the study of curves, surfaces, and their generalizations, which are defined using [[polynomial]]s.
+* [[Topology]], the study of properties that are kept under [[continuous deformation]]s.
+** [[Algebraic topology]], the use in topology of algebraic methods, mainly [[homological algebra]].
+* [[Discrete geometry]], the study of finite configurations in geometry.
+* [[Convex geometry]], the study of [[convex set]]s, which takes its importance from its applications in [[convex optimization|optimization]].
+* [[Complex geometry]], the geometry obtained by replacing real numbers with [[complex number]]s.
+
+=== Algebra ===
+{{Main|Algebra}}
+
+[[File:Quadratic formula.svg|thumb|alt=x = (-b ± sqrt(b^2 - 4ac))/2a|The [[quadratic formula]], which concisely expresses the solutions of all [[quadratic equation]]s|class=skin-invert-image]]  [[File:Rubik's cube.svg|thumb|alt=A shuffled 3x3 rubik's cube |The [[Rubik's Cube group]] is a concrete application of [[group theory]].<ref>{{cite book |last=Joyner |first=David |year=2008 |chapter=The (legal) Rubik's Cube group |title=Adventures in Group Theory: Rubik's Cube, Merlin's Machine, and Other Mathematical Toys |pages=219–232 |edition=2nd |publisher=[[Johns Hopkins University Press]] |isbn=978-0-8018-9012-3 |lccn=2008011322 |oclc=213765703}}</ref>]]
+
+Algebra is the art of manipulating [[equation]]s and formulas. [[Diophantus]] (3rd century) and [[al-Khwarizmi]] (9th century) were the two main precursors of algebra.<ref>{{cite journal |last1=Christianidis |first1=Jean |last2=Oaks |first2=Jeffrey |date=May 2013 |title=Practicing algebra in late antiquity: The problem-solving of Diophantus of Alexandria |journal=Historia Mathematica |volume=40 |issue=2 |pages=127–163 |doi=10.1016/j.hm.2012.09.001 |doi-access=free |eissn=1090-249X |issn=0315-0860 |lccn=75642280 |oclc=2240703 |s2cid=121346342}}</ref>{{sfn|Kleiner|2007|loc="History of Classical Algebra", pp. 3–5}} Diophantus solved some equations involving unknown natural numbers by deducing new relations until he obtained the solution.<ref>{{Cite web |last=Shane |first=David |year=2022 |title=Figurate Numbers: A Historical Survey of an Ancient Mathematics |url=https://www.methodist.edu/wp-content/uploads/2022/06/mr2018_shane.pdf |website=[[Methodist University]] |page=20 |access-date=June 13, 2024 |quote=In his work, Diophantus focused on deducing the arithmetic properties of figurate numbers, such as deducing the number of sides, the different ways a number can be expressed as a figurate number, and the formulation of the arithmetic progressions. |archive-date=June 5, 2024 |archive-url=https://web.archive.org/web/20240605023747/https://www.methodist.edu/wp-content/uploads/2022/06/mr2018_shane.pdf |url-status=live }}</ref> Al-Khwarizmi introduced systematic methods for transforming equations, such as moving a term from one side of an equation to the other side.<ref>{{Cite web |url=https://www.ms.uky.edu/~carl/ma330/project2/al-khwa21.html |last1=Overbay |first1=Shawn |last2=Schorer |first2=Jimmy |last3=Conger |first3=Heather |title=Al-Khwarizmi |website=[[University of Kentucky]] |access-date=June 13, 2024 |archive-date=June 29, 2024 |archive-url=https://web.archive.org/web/20240629043612/https://www.ms.uky.edu/~carl/ma330/project2/al-khwa21.html |url-status=live }}</ref> The term ''algebra'' is derived from the [[Arabic]] word ''al-jabr,'' meaning 'the reunion of broken parts', which he used for naming one of these methods in the title of [[The Compendious Book on Calculation by Completion and Balancing|his main treatise]].<ref>{{Cite web |last=Lim |first=Lisa |date=December 21, 2018 |title=Where the x we use in algebra came from, and the X in Xmas |url=https://www.scmp.com/magazines/post-magazine/short-reads/article/2178856/where-x-we-use-algebra-came-and-x-xmas |url-access=limited |url-status=live |archive-url=https://web.archive.org/web/20181222003908/https://www.scmp.com/magazines/post-magazine/short-reads/article/2178856/where-x-we-use-algebra-came-and-x-xmas |archive-date=December 22, 2018 |access-date=February 8, 2024 |website=[[South China Morning Post]]}}</ref><ref>{{cite encyclopedia |last=Berntjes |first=Sonja |author-link=Sonja Brentjes |title=Algebra |encyclopedia=[[Encyclopaedia of Islam Online]] |edition=3rd |issn=1573-3912 |lccn=2007238847 |oclc=56713464 |doi=10.1163/1573-3912_ei3_COM_0030 }}</ref>
+
+Algebra became an area in its own right only with [[François Viète]] (1540–1603), who introduced the use of variables for representing unknown or unspecified numbers.<ref>{{cite journal |last=Oaks |first=Jeffery A. |year=2018 |title=François Viète's revolution in algebra |journal=[[Archive for History of Exact Sciences]] |volume=72 |issue=3 |pages=245–302 |doi=10.1007/s00407-018-0208-0 |eissn=1432-0657 |issn=0003-9519 |lccn=63024699 |oclc=1482042 }}</ref> Variables allow mathematicians to describe the operations that have to be done on the numbers represented using [[mathematical formulas]].<ref>{{cite web |url=https://www.geeksforgeeks.org/variable-in-maths/ |title=Variable in Maths |website=GeeksforGeeks |date=April 24, 2024 |access-date=June 13, 2024 |archive-date=June 1, 2024 |archive-url=https://web.archive.org/web/20240601215713/https://www.geeksforgeeks.org/variable-in-maths/ |url-status=live }}</ref>
+
+Until the 19th century, algebra consisted mainly of the study of [[linear equation]]s (presently ''[[linear algebra]]''), and polynomial equations in a single [[unknown (algebra)|unknown]], which were called ''algebraic equations'' (a term still in use, although it may be ambiguous). During the 19th century, mathematicians began to use variables to represent things other than numbers (such as [[matrix (mathematics)|matrices]], [[modular arithmetic|modular integers]], and [[geometric transformation]]s), on which generalizations of arithmetic operations are often valid.{{sfn|Kleiner|2007|loc="History of Linear Algebra" pp. 79–101}} The concept of [[algebraic structure]] addresses this, consisting of a [[set (mathematics)|set]] whose elements are unspecified, of operations acting on the elements of the set, and rules that these operations must follow. The scope of algebra thus grew to include the study of algebraic structures. This object of algebra was called ''modern algebra'' or [[abstract algebra]], as established by the influence and works of [[Emmy Noether]],<ref>{{cite book |last=Corry |first=Leo |author-link=Leo Corry |year=2004 |chapter=Emmy Noether: Ideals and Structures |title=Modern Algebra and the Rise of Mathematical Structures |pages=247–252 |edition=2nd revised |publisher=Birkhäuser Basel |publication-place=Germany |isbn=3-7643-7002-5 |lccn=2004556211 |oclc=51234417 |url={{GBurl|id=WdGbeyehoCoC|p=247}} |access-date=February 8, 2024}}</ref>
+and popularized by [[Van der Waerden]]'s book ''[[Moderne Algebra]]''.
+
+Some types of algebraic structures have useful and often fundamental properties in many areas of mathematics. Their study became autonomous parts of algebra, and it includes the following:<ref name=MSC />
+* [[group theory]]
+* [[field (mathematics)|field theory]]
+* [[vector space]]s, whose study is essentially the same as [[linear algebra]]
+* [[ring theory]]
+* [[commutative algebra]], which is the study of [[commutative ring]]s, includes the study of [[polynomial]]s, and is a foundational part of [[algebraic geometry]]
+* [[homological algebra]]
+* [[Lie algebra]] and [[Lie group]] theory
+* [[Boolean algebra]], which is widely used for the study of the logical structure of [[computer]]s
+
+The study of types of algebraic structures as [[mathematical object]]s is the purpose of [[universal algebra]] and [[category theory]].<ref>{{cite book |last=Riche |first=Jacques |editor1-last=Beziau |editor1-first=J. Y. |editor2-last=Costa-Leite |editor2-first=Alexandre |year=2007 |chapter=From Universal Algebra to Universal Logic |pages=3–39 |title=Perspectives on Universal Logic |publisher=Polimetrica International Scientific Publisher |publication-place=Milano, Italy |isbn=978-88-7699-077-9 |oclc=647049731 |url={{GBurl|id=ZoRN9T1GUVwC|p=3}} |access-date=February 8, 2024}}</ref> The latter applies to every [[mathematical structure]] (not only algebraic ones). At its origin, it was introduced, together with homological algebra, to allow the algebraic study of non-algebraic objects such as [[topological space]]s; this particular area of application is called [[algebraic topology]].<ref>{{cite book |last=Krömer |first=Ralph |year=2007 |title=Tool and Object: A History and Philosophy of Category Theory |pages=xxi–xxv, 1–91 |series=Science Networks – Historical Studies |volume=32 |publisher=[[Springer Science & Business Media]] |publication-place=Germany |isbn=978-3-7643-7523-2 |lccn=2007920230 |oclc=85242858 |url={{GBurl|id=41bHxtHxjUAC|pg=PR20}} |access-date=February 8, 2024}}</ref>
+
+=== Calculus and analysis ===
+{{Main|Calculus|Mathematical analysis}}
+
+[[File:Cauchy sequence illustration.svg|thumb|A [[Cauchy sequence]] consists of elements such that all terms following a given point become arbitrarily close to each other as the sequence progresses (from left to right).]]
+
+Calculus, formerly called infinitesimal calculus, was introduced independently and simultaneously by 17th-century mathematicians [[Isaac Newton|Newton]] and [[Leibniz]].<ref>{{cite book |last=Guicciardini |first=Niccolo |author-link=Niccolò Guicciardini |editor1-last=Schliesser |editor1-first=Eric |editor2-last=Smeenk |editor2-first=Chris |year=2017 |chapter=The Newton–Leibniz Calculus Controversy, 1708–1730 |title=The Oxford Handbook of Newton |series=Oxford Handbooks |publisher=[[Oxford University Press]] |doi=10.1093/oxfordhb/9780199930418.013.9 |isbn=978-0-19-993041-8 |oclc=975829354 |chapter-url=https://core.ac.uk/download/pdf/187993169.pdf |url-status=live |archive-url=https://web.archive.org/web/20221109163253/https://core.ac.uk/download/pdf/187993169.pdf |archive-date=November 9, 2022 |access-date=February 9, 2024}}</ref> It is fundamentally the study of the relationship between variables that depend continuously on each other. Calculus was expanded in the 18th century by [[Euler]] with the introduction of the concept of a [[function (mathematics)|function]] and many other results.<ref>{{cite web |last1=O'Connor |first1=J. J. |last2=Robertson |first2=E. F. |date=September 1998 |title=Leonhard Euler |website=MacTutor |publisher=[[University of St Andrews]] |publication-place=Scotland, UK |url=https://mathshistory.st-andrews.ac.uk/Biographies/Euler/ |url-status=live |archive-url=https://web.archive.org/web/20221109164921/https://mathshistory.st-andrews.ac.uk/Biographies/Euler/ |archive-date=November 9, 2022 |access-date=February 9, 2024}}</ref> Presently, "calculus" refers mainly to the elementary part of this theory, and "analysis" is commonly used for advanced parts.<ref>{{Cite web |url=https://byjus.com/maths/calculus/ |title=Calculus (Differential and Integral Calculus with Examples) |website=[[Byju's]] |access-date=June 13, 2024}}</ref>
+
+Analysis is further subdivided into [[real analysis]], where variables represent [[real number]]s, and [[complex analysis]], where variables represent [[complex number]]s. Analysis includes many subareas shared by other areas of mathematics, which include:<ref name=MSC />
+* [[Multivariable calculus]]
+* [[Functional analysis]], where variables represent varying functions
+* [[Integration (mathematics)|Integration]], [[measure theory]] and [[potential theory]], all strongly related with [[probability theory]] on a [[Continuum (set theory)|continuum]]
+* [[Ordinary differential equation]]s
+* [[Partial differential equation]]s
+* [[Numerical analysis]], mainly devoted to the computation of solutions of ordinary and partial differential equations that arise in many applications
+
+=== Discrete mathematics ===
+{{Main|Discrete mathematics}}
+
+[[File:Markovkate 01.svg|right|thumb|A diagram representing a two-state [[Markov chain]]. The states are represented by 'A' and 'E'. The numbers are the probabilities of flipping the state.|class=skin-invert-image|alt=State A has probability 0.4 per step of transitioning to state E, and probability 0.6 of "transitioning" to itself. State E has probability 0.7 per step of transitioning to state A, and probability 0.3 of "transitioning" to itself.]]
+Discrete mathematics, broadly speaking, is the study of individual, [[countable]] mathematical objects. An example is the set of all integers.<ref>{{cite journal |last=Franklin |first=James |author-link=James Franklin (philosopher) |date=July 2017 |title=Discrete and Continuous: A Fundamental Dichotomy in Mathematics |journal=Journal of Humanistic Mathematics |volume=7 |issue=2 |pages=355–378 |url=https://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1334&context=jhm |doi=10.5642/jhummath.201702.18 |doi-access=free |issn=2159-8118 |lccn=2011202231 |oclc=700943261 |s2cid=6945363 |access-date=February 9, 2024 |archive-date=March 10, 2024 |archive-url=https://web.archive.org/web/20240310122911/https://scholarship.claremont.edu/cgi/viewcontent.cgi?article=1334&context=jhm |url-status=live |hdl=1959.4/unsworks_53212 |hdl-access=free }}</ref> Because the objects of study here are discrete, the methods of calculus and mathematical analysis do not directly apply.{{efn|However, some advanced methods of analysis are sometimes used; for example, methods of [[complex analysis]] applied to [[generating series]].}} [[Algorithm]]s{{emdash}}especially their [[implementation]] and [[computational complexity]]{{emdash}}play a major role in discrete mathematics.<ref>{{cite book |url=https://www.ams.org/books/dimacs/036/ |url-access=subscription |last=Maurer |first=Stephen B. |editor1-last=Rosenstein |editor1-first=Joseph G. |editor2-last=Franzblau |editor2-first=Deborah S. |editor3-last=Roberts |editor3-first=Fred S. |editor3-link=Fred S. Roberts |year=1997 |chapter=What is Discrete Mathematics? The Many Answers |pages=121–124 |title=Discrete Mathematics in the Schools |series=DIMACS: Series in Discrete Mathematics and Theoretical Computer Science |volume=36 |publisher=[[American Mathematical Society]] |doi=10.1090/dimacs/036/13 |isbn=0-8218-0448-0 |issn=1052-1798 |lccn=97023277 |oclc=37141146 |s2cid=67358543 |chapter-url={{GBurl|id=EvuQdO3h-DQC|p=121}} |access-date=February 9, 2024}}</ref>
+
+The [[four color theorem]] and [[Kepler conjecture|optimal sphere packing]] were two major problems of discrete mathematics solved in the second half of the 20th century.<ref>{{cite book |last=Hales |first=Thomas C. |title=Turing's Legacy |author-link=Thomas Callister Hales |editor-last=Downey |editor-first=Rod |editor-link=Rod Downey |year=2014 |pages=260–261 |chapter=Turing's Legacy: Developments from Turing's Ideas in Logic |publisher=[[Cambridge University Press]] |series=Lecture Notes in Logic |volume=42 |doi=10.1017/CBO9781107338579.001 |isbn=978-1-107-04348-0 |lccn=2014000240 |oclc=867717052 |s2cid=19315498 |chapter-url={{GBurl|id=fYgaBQAAQBAJ|p=260}} |access-date=February 9, 2024}}</ref> The [[P versus NP problem]], which remains open to this day, is also important for discrete mathematics, since its solution would potentially impact a large number of [[Computationally expensive|computationally difficult]] problems.<ref>{{cite conference |last=Sipser |first=Michael |author-link=Michael Sipser |date=July 1992 |title=The History and Status of the P versus NP Question |conference=STOC '92: Proceedings of the twenty-fourth annual ACM symposium on Theory of Computing |pages=603–618 |doi=10.1145/129712.129771 |doi-access=free |isbn=978-0-89791-511-3 |oclc=51349974 |s2cid=11678884}}</ref>
+
+Discrete mathematics includes:<ref name=MSC />
+* [[Combinatorics]], the art of enumerating mathematical objects that satisfy some given constraints. Originally, these objects were elements or [[subset]]s of a given [[set (mathematics)|set]]; this has been extended to various objects, which establishes a strong link between combinatorics and other parts of discrete mathematics. For example, discrete geometry includes counting configurations of [[geometric shape]]s.
+* [[Graph theory]] and [[hypergraph]]s
+* [[Coding theory]], including [[error correcting code]]s and a part of [[cryptography]]
+* [[Matroid]] theory
+* [[Discrete geometry]]
+* [[Discrete probability distribution]]s
+* [[Game theory]] (although [[continuous game]]s are also studied, most common games, such as [[chess]] and [[poker]], are discrete)
+* [[Discrete optimization]], including [[combinatorial optimization]], [[integer programming]], [[constraint programming]]
+
+=== Mathematical logic and set theory ===
+{{Main|Mathematical logic|Set theory}}
+
+[[File:Venn A intersect B.svg|thumb|alt=A ∩ B is the overlap between sets A and B.|The [[Venn diagram]] is a commonly used method to illustrate the relations between sets.]]
+
+The two subjects of mathematical logic and set theory have belonged to mathematics since the end of the 19th century.<ref>{{cite encyclopedia |url=https://plato.stanford.edu/entries/logic-firstorder-emergence/ |last=Ewald |first=William |date=November 17, 2018 |title=The Emergence of First-Order Logic |encyclopedia=[[Stanford Encyclopedia of Philosophy]] |issn=1095-5054 |lccn=sn97004494 |oclc=37550526 |access-date=June 14, 2024}}</ref><ref>{{cite encyclopedia |url=https://plato.stanford.edu/entries/settheory-early/ |last=Ferreirós |first=José |date=June 18, 2020 |orig-date=First published April 10, 2007 |title=The Early Development of Set Theory |encyclopedia=[[Stanford Encyclopedia of Philosophy]] |issn=1095-5054 |lccn=sn97004494 |oclc=37550526 |access-date=June 14, 2024 |archive-date=May 12, 2021 |archive-url=https://web.archive.org/web/20210512135148/https://plato.stanford.edu/entries/settheory-early/ |url-status=live }}</ref> Before this period, sets were not considered to be mathematical objects, and [[logic]], although used for mathematical proofs, belonged to [[philosophy]] and was not specifically studied by mathematicians.<ref>{{Cite journal |last=Ferreirós |first=José |date=December 2001 |title=The Road to Modern Logic—An Interpretation |journal=The Bulletin of Symbolic Logic |volume=7 |issue=4 |pages=441–484 |doi=10.2307/2687794 |jstor=2687794 |issn=1079-8986 |eissn=1943-5894 |hdl=11441/38373 |lccn=95652899 |oclc=31616719 |s2cid=43258676 |url=https://idus.us.es/xmlui/bitstream/11441/38373/1/The%20road%20to%20modern%20logic.pdf |access-date=June 14, 2024 |archive-date=February 2, 2023 |archive-url=https://web.archive.org/web/20230202133703/https://idus.us.es/bitstream/handle/11441/38373/The%20road%20to%20modern%20logic.pdf?sequence=1 |url-status=dead }}</ref>
+
+Before [[Georg Cantor|Cantor]]'s study of [[infinite set]]s, mathematicians were reluctant to consider [[actually infinite]] collections, and considered [[infinity]] to be the result of endless [[enumeration]]. Cantor's work offended many mathematicians not only by considering actually infinite sets<ref>{{cite web |url=https://www.quantamagazine.org/to-settle-infinity-question-a-new-law-of-mathematics-20131126/ |editor-last=Wolchover |editor-first=Natalie |editor-link=Natalie Wolchover |date=November 26, 2013 |title=Dispute over Infinity Divides Mathematicians |website=[[Quanta Magazine]] |access-date=June 14, 2024}}</ref> but by showing that this implies different sizes of infinity, per [[Cantor's diagonal argument]]. This led to the [[controversy over Cantor's theory|controversy over Cantor's set theory]].<ref>{{cite web |url=https://philarchive.org/archive/ZHUWAO |last=Zhuang |first=Chaohui |title=Wittgenstein's analysis on Cantor's diagonal argument |format=DOC |website=[[PhilArchive]] |access-date=June 14, 2024}}</ref> In the same period, various areas of mathematics concluded that the former intuitive definitions of the basic mathematical objects were insufficient for ensuring [[mathematical rigor]].<ref>{{cite book |last=Tanswell |first=Fenner Stanley |title=Mathematical Rigour and Informal Proof |series=Cambridge Elements in the Philosophy of Mathematics |date=2024 |publisher=[[Cambridge University Press]] |doi=10.1017/9781009325110 |isbn=978-1-00-949438-0 |issn=2514-3808 |eissn=2399-2883 |oclc=1418750041}}</ref>
+
+This became the foundational crisis of mathematics.<ref>{{cite web |url=https://www.andrew.cmu.edu/user/avigad/Papers/infinite.pdf |last1=Avigad |first1=Jeremy |author1-link=Jeremy Avigad |last2=Reck |first2=Erich H. |date=December 11, 2001 |title="Clarifying the nature of the infinite": the development of metamathematics and proof theory |website=[[Carnegie Mellon University]] |url-status=live |archive-url=https://web.archive.org/web/20221009074025/https://www.andrew.cmu.edu/user/avigad/Papers/infinite.pdf |archive-date=October 9, 2022 |access-date=November 13, 2025}}</ref> It was eventually solved in mainstream mathematics by systematizing the axiomatic method inside a [[Zermelo–Fraenkel set theory|formalized set theory]]. Roughly speaking, each mathematical object is defined by the set of all similar objects and the properties that these objects must have.<ref name=Warner_2013 /> For example, in [[Peano arithmetic]], the natural numbers are defined by "zero is a number", "each number has a unique successor", "each number but zero has a unique predecessor", and some rules of reasoning.<ref>{{cite book |url={{GBurl|id=OXfmTHXvRXMC|p=3}}|last=Hamilton |first=Alan G. |title=Numbers, Sets and Axioms: The Apparatus of Mathematics |chapter=Numbers |pages=3–4 |year=1982 |publisher=Cambridge University Press |isbn=978-0-521-28761-6 |lccn=82004206 |oclc=8283672 |access-date=November 13, 2025}}</ref> This [[mathematical abstraction]] from reality is embodied in the modern philosophy of [[Formalism (philosophy of mathematics)|formalism]], as founded by [[David Hilbert]] around 1910.<ref name="Snapper">{{cite journal |last1=Snapper |first1=Ernst |title=The Three Crises in Mathematics: Logicism, Intuitionism and Formalism |journal=Mathematics Magazine |date=September 1979 |volume=52 |issue=4 |pages=207–216 |doi=10.1080/0025570X.1979.11976784 |jstor=2689412 }}</ref>
+
+The "nature" of the objects defined this way is a philosophical problem that mathematicians leave to philosophers, even if many mathematicians have opinions on this nature, and use their opinion{{emdash}}sometimes called "intuition"{{emdash}}to guide their study and proofs. The approach allows considering "logics" (that is, sets of allowed deducing rules), theorems, proofs, etc. as mathematical objects, and to prove theorems about them. For example, [[Gödel's incompleteness theorems]] assert, roughly speaking, that in every [[consistent]] [[formal system]] that contains the natural numbers, there are theorems that are true (that is, provable in a stronger system), but not provable inside the system.<ref name=Raatikainen_2005>{{cite journal |last=Raatikainen |first=Panu |date=October 2005 |title=On the Philosophical Relevance of Gödel's Incompleteness Theorems |journal=Revue Internationale de Philosophie |volume=59 |issue=4 |pages=513–534 |id={{CORE output|78838204}} |doi=10.3917/rip.234.0513 |doi-access=free |jstor=23955909 |s2cid=52083793}}</ref> This approach to the foundations of mathematics was challenged during the first half of the 20th century by mathematicians led by [[L. E. J. Brouwer|Brouwer]], who promoted [[intuitionistic logic]] (which explicitly lacks the [[law of excluded middle]]).<ref>{{cite encyclopedia |url=https://plato.stanford.edu/entries/logic-intuitionistic/ |last=Moschovakis |first=Joan |author-link=Joan Moschovakis |date=September 4, 2018 |title=Intuitionistic Logic |encyclopedia=Stanford Encyclopedia of Philosophy |url-status=live |archive-url=https://web.archive.org/web/20221216154821/https://plato.stanford.edu/entries/logic-intuitionistic/ |archive-date=December 16, 2022 |access-date=November 13, 2025}}</ref><ref>{{cite book |last=McCarty |first=Charles |editor-last1=Heinzmann |editor-first1=Gerhard |editor-link1=Gerhard Heinzmann |editor-last2=Ronzitti |editor-first2=Giuseppina |year=2006 |title=Constructivism: Mathematics, Logic, Philosophy and Linguistics |chapter=At the Heart of Analysis: Intuitionism and Philosophy |series=Philosophia Scientiae |pages=81–94 |doi=10.4000/philosophiascientiae.411 |doi-access=free |eissn=1775-4283 |isbn=978-2-84174-399-5 |oclc=71798942}}</ref>
+
+These problems and debates led to a wide expansion of mathematical logic, with subareas such as [[model theory]] (modeling some logical theories inside other theories), [[proof theory]], [[type theory]], [[computability theory]] and [[computational complexity theory]].<ref name=MSC /> Although these aspects of mathematical logic were introduced before the rise of [[computer]]s, their use in [[compiler]] design, [[formal verification]], [[program analysis]], [[proof assistant]]s and other aspects of [[computer science]] contributed in turn to the expansion of these logical theories.<ref>{{cite web |url=https://www.cs.cmu.edu/~rwh/papers/unreasonable/basl.pdf |last1=Halpern |first1=Joseph |author1-link=Joseph Halpern |last2=Harper |first2=Robert |author2-link=Robert Harper (computer scientist) |last3=Immerman |first3=Neil |author3-link=Neil Immerman |last4=Kolaitis |first4=Phokion |author4-link=Phokion Kolaitis |last5=Vardi |first5=Moshe |author5-link=Moshe Vardi |last6=Vianu |first6=Victor |author6-link=Victor Vianu |date=January 2001 |title=On the Unusual Effectiveness of Logic in Computer Science |website=[[Carnegie Mellon University]] |url-status=live |archive-url=https://web.archive.org/web/20210303115643/https://www.cs.cmu.edu/~rwh/papers/unreasonable/basl.pdf |archive-date=March 3, 2021 |access-date=November 13, 2025}}</ref>
+
+=== Computational mathematics ===
+{{Main|Computational mathematics}}
+
+Computational mathematics is the study of [[mathematical problem]]s that are typically too large for human computing capacity.<ref>{{cite web |url=https://mathshistory.st-andrews.ac.uk/Extras/Computational_mathematics/ |last=Marchuk |first=Gurii Ivanovich |date=April 2020 |title=G I Marchuk's plenary: ICM 1970 |website=MacTutor |publisher=School of Mathematics and Statistics, University of St Andrews, Scotland |url-status=live |archive-url=https://web.archive.org/web/20221113155409/https://mathshistory.st-andrews.ac.uk/Extras/Computational_mathematics/ |archive-date=November 13, 2022 |access-date=November 13, 2022}}</ref><ref>{{cite conference | title=Grand Challenges, High Performance Computing, and Computational Science | last1=Johnson | first1=Gary M. | last2=Cavallini | first2=John S. | conference=Singapore Supercomputing Conference'90: Supercomputing For Strategic Advantage | date=September 1991 | page=28 |lccn=91018998 |publisher=World Scientific | editor1-first=Kang Hoh | editor1-last=Phua | editor2-first=Kia Fock | editor2-last=Loe | url={{GBurl|id=jYNIDwAAQBAJ|p=28}} | access-date=November 13, 2022 }}</ref> 
+
+Part of computational mathematics involves [[numerical analysis]], which is devoted to computation with approximations of [[real numbers]] ([[floating-point arithmetic]]). Numerical analysis provides methods for problems in [[analysis (mathematics)|analysis]] using [[functional analysis]] and [[approximation theory]]. Numerical analysis broadly includes the study of [[approximation]] and [[discretization]], with special focus on [[rounding error]]s.<ref>{{cite book |last=Trefethen |first=Lloyd N. |author-link=Lloyd N. Trefethen |editor1-last=Gowers |editor1-first=Timothy |editor1-link=Timothy Gowers |editor2-last=Barrow-Green |editor2-first=June |editor2-link=June Barrow-Green |editor3-last=Leader |editor3-first=Imre |editor3-link=Imre Leader |year=2008 |chapter=Numerical Analysis |pages=604–615 |title=The Princeton Companion to Mathematics |publisher=[[Princeton University Press]] |isbn=978-0-691-11880-2 |lccn=2008020450 |mr=2467561 |oclc=227205932 |url=http://people.maths.ox.ac.uk/trefethen/NAessay.pdf |url-status=live |archive-url=https://web.archive.org/web/20230307054158/http://people.maths.ox.ac.uk/trefethen/NAessay.pdf |archive-date=March 7, 2023 |access-date=February 15, 2024}}</ref> Numerical analysis and, more broadly, scientific computing, also study non-analytic topics of mathematical science, especially algorithmic-[[numerical linear algebra|matrix]]-and-[[graph theory]]. 
+
+Another area of computational mathematics is [[computer algebra]], which consists mainly of the manipulation of mathematical formulas on a computer.
+
+[[Automated theorem proving]], which includes [[proof assistant]]s and [[proof checker]]s, is another area of computational mathematics that is used for [[formal verification]] and allows [[formal proof]] of difficult theorems of mathematics such as the [[Feit–Thompson theorem]] on [[finite groups]].
+
+[[Algorithmics]], a large part of [[discrete mathematics]], and [[public key cryptography]] are also often considered as a part of computational mathematics.
+
+== History ==
+{{Main|History of mathematics}}
+
+=== Etymology ===
+The word ''mathematics'' comes from the [[Ancient Greek]] word ''máthēma'' ({{langx|grc|{{wikt-lang|en|μάθημα}}|label=none}}), meaning {{gloss|something learned, knowledge, mathematics}}, and the derived expression ''mathēmatikḗ tékhnē'' ({{lang|grc|μαθηματικὴ τέχνη}}), meaning {{gloss|mathematical science}}. It entered the English language during the [[Late Middle English]] period through French and Latin.<ref>{{multiref | {{harvnb|Cresswell|2021|loc=§ Mathematics}} | {{harvnb|Perisho|1965|p=64}} }}</ref> 
+
+Traditionally, one of the two main schools of thought in [[Pythagoreanism]] was known as the ''mathēmatikoi'' (μαθηματικοί){{emdash}}which at the time meant "learners" rather than "mathematicians" in the modern sense. The Pythagoreans were likely the first to constrain the use of the word to just the study of [[arithmetic]] and geometry. By the time of [[Aristotle]] (384–322&nbsp;BC), this meaning was fully established.<ref>{{cite journal |last=Perisho |first=Margaret W. |date=Spring 1965 |title=The Etymology of Mathematical Terms |journal=[[Pi Mu Epsilon Journal]] |volume=4 |issue=2 |pages=62–66 |issn=0031-952X |jstor=24338341 |lccn=58015848 |oclc=1762376}}</ref>
+
+In Latin and English, until around 1700, the term ''mathematics'' more commonly meant "[[astrology]]" (or sometimes "[[astronomy]]") rather than "mathematics"; the meaning gradually changed to its present one from about 1500 to 1800. This change has resulted in several mistranslations: For example, [[Saint Augustine]]'s warning that Christians should beware of ''mathematici'', meaning "astrologers", is sometimes mistranslated as a condemnation of mathematicians.<ref name="Boas">{{cite book |last=Boas |first=Ralph P. |author-link=Ralph P. Boas Jr. |editor-last1=Alexanderson |editor-first1=Gerald L. |editor-last2=Mugler |editor-first2=Dale H. |year=1995 |chapter=What Augustine Didn't Say About Mathematicians |page=257 |title=Lion Hunting and Other Mathematical Pursuits: A Collection of Mathematics, Verse, and Stories |publisher=[[Mathematical Association of America]] |isbn=978-0-88385-323-8 |lccn=94078313 |oclc=633018890}}</ref>
+
+The apparent [[plural]] form in English goes back to the Latin [[Neuter (grammar)|neuter]] plural {{lang|la|mathematica}} ([[Cicero]]), based on the Greek plural ''ta mathēmatiká'' ({{lang|el|τὰ μαθηματικά}}) and means roughly "all things mathematical", although it is plausible that English borrowed only the adjective ''mathematic(al)'' and formed the noun ''mathematics'' anew, after the pattern of ''[[physics]]'' and ''[[metaphysics]]'', inherited from Greek.<ref>''[[The Oxford Dictionary of English Etymology]]'', ''[[Oxford English Dictionary]]'', ''sub'' "mathematics", "mathematic", "mathematics".</ref> In English, the noun ''mathematics'' takes a singular verb. It is often shortened to ''maths''<ref>{{cite web |url=https://www.oed.com/dictionary/maths_n |title=Maths (Noun) |website=[[Oxford English Dictionary]] |publisher=[[Oxford University Press]] |access-date=January 25, 2024 |url-access=subscription |archive-date=January 25, 2024 |archive-url=https://web.archive.org/web/20240125134838/https://www.oed.com/dictionary/maths_n |url-status=live }}</ref> or, in North America, ''math''.<ref>{{cite web |url=https://www.oed.com/dictionary/math_n3 |title=Math (Noun³) |website=[[Oxford English Dictionary]] |publisher=[[Oxford University Press]] |url-status=live |archive-url=https://web.archive.org/web/20200404201407/http://oed.com/view/Entry/114982 |archive-date=April 4, 2020 |access-date=January 25, 2024 |url-access=subscription}}</ref>
+
+=== Ancient ===
+In addition to recognizing how to [[counting|count]] physical objects, [[prehistoric]] peoples may have also known how to count abstract quantities, like time{{emdash}}days, seasons, or years.<ref>See, for example, {{cite book | first=Raymond L. | last=Wilder|author-link=Raymond L. Wilder|title=Evolution of Mathematical Concepts; an Elementary Study|at=passim}}</ref><ref>{{Cite book|last=Zaslavsky|first=Claudia|author-link=Claudia Zaslavsky|title=Africa Counts: Number and Pattern in African Culture.|date=1999|publisher=Chicago Review Press|isbn=978-1-61374-115-3|oclc=843204342}}</ref>[[File:Moskou-papyrus.jpg|thumb|600px|Image of Problem 14 from the Egyptian [[Moscow Mathematical Papyrus]]. The problem includes a diagram indicating the dimensions of the truncated pyramid.]]Archaeological evidence has suggested that the Ancient Egyptian counting system had origins in Sub-Saharan Africa.<ref>{{cite book |last1=Eglash |first1=Ron |title=African fractals : modern computing and indigenous design |date=1999 |publisher=Rutgers University Press |location=New Brunswick, N.J. |isbn=0813526140 |pages=89,141}}</ref> Also, fractal geometry designs that are widespread among Sub-Saharan African cultures are also found in Egyptian architecture and cosmological signs.<ref>{{cite journal |last1=Eglash, R. |title=Fractal Geometry in African Material Culture |journal=Symmetry: Culture and Science |date=1995 |volume=6-1 |pages=174–177}}</ref>The [[Ishango bone]], according to scholar [[Alexander Marshack]], may have influenced the later development of mathematics in Egypt as, like some entries on the Ishango bone, Egyptian arithmetic also made use of multiplication by 2; this however, is disputed.<ref>Marshack, A. (1972). ''The Roots of Civilization: the Cognitive Beginning of Man's First Art, Symbol and Notation''. New York: McGraw-Hill.</ref> Megalithic structures located in [[Nabta Playa]], Upper Egypt featured [[astronomy]], calendar arrangements in alignment with the heliacal rising of [[Sirius]], and supported calibration of the yearly calendar for the annual Nile flood.<ref>{{cite book |last1=Ehret |first1=Christopher |title=Ancient Africa: A Global History, to 300 CE |date=20 June 2023 |publisher=Princeton University Press |isbn=978-0-691-24410-5 |pages=107–110 |url=https://books.google.com/books?id=S5KjEAAAQBAJ&q=christopher+ehret+nabta+playa |language=en}}</ref> Ancient [[Nubians]] established a system of geometric rules which served as the basis for initial [[sundials|sunclocks]]. Nubians also exercised a [[Trigonometry|trigonometric]] methodology comparable to their Egyptian counterparts.<ref>{{Cite journal |author=Armelagos, George |date=2000 |title=Take Two Beers and Call Me in 1,600 Years: Use of Tetracycline by Nubians and Ancient Egyptians |url=https://digitallibrary.amnh.org/items/482bd90a-de71-49b3-9bbc-d8ff0ab974b3 |journal=Natural History |volume=109 |issue=5 |pages=50–3 |s2cid=89542474}}</ref><ref>{{Cite journal|title=Gnomons at Meroë and Early Trigonometry|first=Leo|last=Depuydt|date=1 January 1998|journal=The Journal of Egyptian Archaeology|volume=84|pages=171–180|doi=10.2307/3822211|jstor=3822211}}</ref><ref>{{Cite web|url=https://archive.archaeology.org/online/news/nubia.html|title=Neolithic Skywatchers|date=27 May 1998|first=Andrew|last=Slayman|website=Archaeology Magazine Archive|access-date=17 April 2011|archive-url=https://web.archive.org/web/20110605234044/http://www.archaeology.org/online/news/nubia.html|archive-date=5 June 2011|url-status=live}}</ref><ref>{{Cite book|url=https://books.google.com/books?id=vO5FCVIxz2YC&q=nubia&pg=PA744|title=A History of Ancient Mathematical Astronomy|last=Neugebauer|first=O.|date=2004-09-17|publisher=Springer Science & Business Media|isbn=978-3-540-06995-9|language=en}}</ref>[[File:Plimpton 322.jpg|thumb|The Babylonian mathematical tablet ''[[Plimpton 322]]'', dated to 1800&nbsp;BC]]Evidence for more complex mathematics does not appear until around 3000&nbsp;{{Abbr|BC|Before Christ}}, when the [[Babylonia]]ns and Egyptians began using arithmetic, algebra, and geometry for taxation and other financial calculations, for building and construction, and for astronomy.{{sfn|Kline|1990|loc=Chapter 1}} The oldest mathematical texts from [[Mesopotamia]] and [[Ancient Egypt|Egypt]] are from 2000 to 1800&nbsp;BC.<ref>{{cite book |last1=Joseph |first1=George Gheverghese |chapter=The Beginnings of Written Mathematics: Mesopotamia |title=The Crest of the Peacock |date=2011 |pages=125–176 |doi=10.1515/9781400836369-006 |isbn=978-1-4008-3636-9 }}</ref> Many early texts mention [[Pythagorean triple]]s; so, by inference, the [[Pythagorean theorem]] seems to be the most ancient and widespread mathematical concept after basic arithmetic and geometry. It is in Babylonian mathematics that [[elementary arithmetic]] ([[addition]], [[subtraction]], [[multiplication]], and [[division (mathematics)|division]]) first appears in the archaeological record. The Babylonians also possessed a place-value system and used a [[sexagesimal]] numeral system which is still in use today for measuring angles and time.{{sfn|Boyer|1991|loc="Mesopotamia" pp. 24–27}}
+
+By the 5th century BC, [[Greek mathematics]] began to emerge as a distinct discipline, and some [[ancient Greeks]] such as the [[Pythagoreans]] appeared to have considered it a subject in its own right.<ref>{{cite book | last=Heath | first=Thomas Little | author-link=Thomas Heath (classicist) |url=https://archive.org/details/historyofgreekma0002heat/page/n14 |url-access=registration |page=1 |title=A History of Greek Mathematics: From Thales to Euclid |location=New York |publisher=Dover Publications |date=1981 |orig-date=1921 |isbn=978-0-486-24073-2}}</ref> Around 300 BC, [[Euclid]] organized mathematical knowledge by way of postulates and first principles, which evolved into the axiomatic method that is used in mathematics today, consisting of definition, axiom, theorem, and proof.<ref>{{Cite journal |last=Mueller |first=I. |year=1969 |title=Euclid's Elements and the Axiomatic Method |journal=The British Journal for the Philosophy of Science |volume=20 |issue=4 |pages=289–309 |doi=10.1093/bjps/20.4.289 |jstor=686258 |issn=0007-0882}}</ref> His book, ''[[Euclid's Elements|Elements]]'', covers geometry and number theory and is widely considered the most successful and influential textbook of all time.{{sfn|Boyer|1991|loc="Euclid of Alexandria" p. 119}} Another notable mathematician of antiquity is [[Archimedes]] of [[Syracuse, Italy|Syracuse]] ({{Circa|287|212 BC}}).{{sfn|Boyer|1991|loc="Archimedes of Syracuse" p. 120}} He developed methods for calculating the surface area and volume of [[solids of revolution]], including using the [[method of exhaustion]] to calculate the [[area]] under the arc of a [[parabola]] with the [[Series (mathematics)|summation of an infinite series]], in a manner reminiscent of modern calculus.{{sfn|Boyer|1991|loc="Archimedes of Syracuse" p. 130}} Other notable achievements of Greek mathematics are [[conic sections]] ([[Apollonius of Perga]], 3rd century BC),{{sfn|Boyer|1991|loc="Apollonius of Perga" p. 145}} [[trigonometry]] ([[Hipparchus of Nicaea]], 2nd century BC),{{sfn|Boyer|1991|loc="Greek Trigonometry and Mensuration" p. 162}} and the beginnings of pre-modern algebra (Diophantus, 3rd century AD).{{sfn|Boyer|1991|loc="Revival and Decline of Greek Mathematics" p. 180}}
+[[File:Bakhshali numerals 2.jpg|thumb|right|upright=1.5|The numerals used in the [[Bakhshali manuscript]], dated between the 2nd century BC and the 2nd century AD]]
+The [[Hindu–Arabic numeral system]] and the rules for the use of its operations, in use throughout the world today, evolved over the course of the first millennium AD in [[Indian mathematics|India]] and were transmitted to the [[Western world]] via [[Islamic mathematics]].<ref>{{cite book
+ | title=Number Theory and Its History
+ | first=Øystein
+ | last=Ore
+ | author-link=Øystein Ore
+ | publisher=Courier Corporation
+ | pages=19–24
+ | year=1988
+ | isbn=978-0-486-65620-5
+ | url={{GBurl|id=Sl_6BPp7S0AC|pg=IA19}}
+ | access-date=November 14, 2022
+}}</ref> Other notable developments of Indian mathematics include the modern definition and approximation of [[sine]] and [[cosine]], and an early form of [[infinite series]].<ref>{{cite journal
+ | title=On the Use of Series in Hindu Mathematics
+ | first=A. N. | last=Singh | journal=Osiris
+ | volume=1 | date=January 1936 | pages=606–628
+ | doi=10.1086/368443 | jstor=301627
+ | s2cid=144760421 }}</ref><ref>{{cite book
+ | chapter=Use of series in India
+ | last1=Kolachana | first1=A. | last2=Mahesh | first2=K.
+ | last3=Ramasubramanian | first3=K.
+ | title=Studies in Indian Mathematics and Astronomy
+ | series=Sources and Studies in the History of Mathematics and Physical Sciences
+ | pages=438–461 | publisher=Springer | publication-place=Singapore
+ | isbn=978-981-13-7325-1  | year=2019
+ | doi=10.1007/978-981-13-7326-8_20 | s2cid=190176726 }}</ref>
+
+=== Medieval and later ===
+[[File:Image-Al-Kitāb al-muḫtaṣar fī ḥisāb al-ğabr wa-l-muqābala.jpg|thumb|upright=.7|A page from [[al-Khwarizmi]]'s ''[[Al-Jabr]]'']]
+During the [[Golden Age of Islam]], especially during the 9th and 10th&nbsp;centuries, mathematics saw many important innovations building on Greek mathematics. The most notable achievement of Islamic mathematics was the development of [[algebra]]. Other achievements of the Islamic period include advances in [[spherical trigonometry]] and the addition of the [[decimal point]] to the Arabic numeral system.<ref>{{Cite book | last=Saliba | first=George | author-link=George Saliba | title=A history of Arabic astronomy: planetary theories during the golden age of Islam | date=1994 | publisher=New York University Press | isbn=978-0-8147-7962-0 | oclc=28723059 }}</ref> Many notable mathematicians from this period were Persian, such as [[al-Khwarizmi]], [[Omar Khayyam]] and [[Sharaf al-Dīn al-Ṭūsī]].<ref>{{cite journal
+ | title=Contributions of Islamic scholars to the scientific enterprise
+ | first=Yasmeen M.
+ | last=Faruqi
+ | journal=International Education Journal
+ | year=2006
+ | volume=7
+ | issue=4
+ | pages=391–399
+ | publisher=Shannon Research Press
+ | url=https://eric.ed.gov/?id=EJ854295
+ | access-date=November 14, 2022
+ | archive-date=November 14, 2022
+ | archive-url=https://web.archive.org/web/20221114165547/https://eric.ed.gov/?id=EJ854295
+ | url-status=live
+ }}</ref> The Greek and Arabic mathematical texts were in turn translated into Latin during the Middle Ages and made available in Europe.<ref>{{cite journal | title=Greek-Arabic-Latin: The Transmission of Mathematical Texts in the Middle Ages | first=Richard | last=Lorch | journal=Science in Context | volume=14 | issue=1–2 | date=June 2001 | pages=313–331 | publisher=Cambridge University Press | doi=10.1017/S0269889701000114 | s2cid=146539132 | url=https://epub.ub.uni-muenchen.de/15929/1/greek-arabic-latin.pdf | access-date=December 5, 2022 | archive-date=December 17, 2022 | archive-url=https://web.archive.org/web/20221217160922/https://epub.ub.uni-muenchen.de/15929/1/greek-arabic-latin.pdf | url-status=live }}</ref>
+
+During the [[early modern period]], mathematics began to develop at an accelerating pace in [[Western Europe]], with innovations that revolutionized mathematics, such as the introduction of variables and [[#Symbolic notation and terminology|symbolic notation]] attributed to [[François Viète]] (1540–1603),<ref>{{Cite web |title=Francois Viète: Father of Modern Algebraic Notation |url=https://sites.math.rutgers.edu/~cherlin/History/Papers2002/vieta.html |access-date=2026-08-07 |website=sites.math.rutgers.edu}}</ref> the introduction of [[History of logarithms|logarithms]] by [[John Napier]] in 1614,<ref>{{Cite web |title=Logarithms: The Early History of a Familiar Function - John Napier Introduces Logarithms {{!}} Mathematical Association of America |url=https://old.maa.org/press/periodicals/convergence/logarithms-the-early-history-of-a-familiar-function-john-napier-introduces-logarithms |archive-url=https://web.archive.org/web/20251012230754/https://old.maa.org/press/periodicals/convergence/logarithms-the-early-history-of-a-familiar-function-john-napier-introduces-logarithms |archive-date=2025-10-12 |access-date=2026-08-07 |website=old.maa.org |language=en}}</ref> which greatly simplified numerical calculations, especially for [[astronomy]] and [[marine navigation]], the introduction of Cartesian coordinates by [[René Descartes]] (1596–1650) for reducing geometry to algebra,<ref>{{Cite web |title=René Descartes and the Fly on the Ceiling {{!}} wild.maths.org |url=https://wild.maths.org/ren%C3%A9-descartes-and-fly-ceiling |access-date=2026-08-07 |website=wild.maths.org}}</ref> and the development of calculus by [[Isaac Newton]] (1643–1727) and [[Gottfried Leibniz]] (1646–1716).<ref>{{Cite web |title=Development of the Calculus {{!}} History {{!}} Research Starters {{!}} EBSCO Research |url=https://www.ebsco.com/ |access-date=2026-08-07 |website=EBSCO |language=en}}</ref> [[Leonhard Euler]] (1707–1783) unified and built upon these innovations with a standardized terminology, and complemented them with the discovery and proofs of numerous theorems.<ref>{{Cite web |title=Leonhard Euler {{!}} History {{!}} Research Starters {{!}} EBSCO Research |url=https://www.ebsco.com/ |access-date=2026-08-07 |website=EBSCO |language=en}}</ref>
+
+[[File:Carl Friedrich Gauss 1840 by Jensen.jpg|thumb|upright=.8|[[Carl Friedrich Gauss]]]]
+Perhaps the foremost mathematician of the 19th century was the German mathematician [[Carl Gauss]], who made numerous contributions to fields such as algebra, analysis, [[differential geometry]], [[matrix theory]], number theory, and [[statistics]].<ref>{{cite journal
+ | title=History of Mathematics After the Sixteenth Century
+ | first=Raymond Clare | last=Archibald | author-link=Raymond Clare Archibald
+ | journal=The American Mathematical Monthly
+ | series=Part 2: Outline of the History of Mathematics
+ | volume=56 | issue=1 | date=January 1949 | pages=35–56
+ | doi=10.2307/2304570 | jstor=2304570
+ | doi-access=free}}</ref> In the early 20th century, [[Kurt Gödel]] transformed mathematics by publishing [[Gödel's incompleteness theorems|his incompleteness theorems]], which show in part that any consistent axiomatic system{{emdash}}if powerful enough to describe arithmetic{{emdash}}will contain true propositions that cannot be proved.<ref name=Raatikainen_2005 />
+
+Mathematics has since been greatly extended, and there has been a fruitful interaction between mathematics and [[science]], to the benefit of both. Mathematical discoveries continue to be made to this very day. According to Mikhail B. Sevryuk, in the January&nbsp;2006 issue of the ''[[Bulletin of the American Mathematical Society]]'',{{sfn|Sevryuk|2006|pp=101–109}}
+
+{{Blockquote|text=The number of papers and books included in the Mathematical Reviews (MR) database since 1940 (the first year of operation of MR) is now more than 1.9 million, and more than 75 thousand items are added to the database each year. The overwhelming majority of works in this ocean contain new mathematical theorems and their proofs.}}
+
+== Symbolic notation and terminology ==
+{{Main|Mathematical notation|Language of mathematics|Glossary of mathematics}}
+
+[[File:Sigma summation notation.svg|thumb|An explanation of the sigma (Σ) [[summation]] notation|class=skin-invert-image]]
+Mathematical notation is widely used in science and [[engineering]] for representing complex [[concept]]s and [[property (philosophy)|properties]] in a concise, unambiguous, and accurate way. This notation consists of [[glossary of mathematical symbols|symbols]] used for representing [[operation (mathematics)|operation]]s, unspecified numbers, [[relation (mathematics)|relation]]s, and any other mathematical objects, and then assembling them into [[expression (mathematics)|expression]]s and formulas.<ref>{{cite conference |last=Wolfram |first=Stephan |date=October 2000 |author-link=Stephen Wolfram |title=Mathematical Notation: Past and Future |conference=MathML and Math on the Web: MathML International Conference 2000, Urbana Champaign, USA |url=https://www.stephenwolfram.com/publications/mathematical-notation-past-future/ |url-status=live |archive-url=https://web.archive.org/web/20221116150905/https://www.stephenwolfram.com/publications/mathematical-notation-past-future/ |archive-date=November 16, 2022 |access-date=February 3, 2024}}</ref> More precisely, numbers and other mathematical objects are represented by symbols called variables, which are generally [[Latin alphabet|Latin]] or [[Greek alphabet|Greek]] letters, and often include [[subscript]]s. Operations and relations are generally represented by specific symbols or [[glyph]]s,<ref>{{cite journal |last1=Douglas |first1=Heather |last2=Headley |first2=Marcia Gail |last3=Hadden |first3=Stephanie |last4=LeFevre |first4=Jo-Anne |author4-link=Jo-Anne LeFevre |date=December 3, 2020 |title=Knowledge of Mathematical Symbols Goes Beyond Numbers |journal=Journal of Numerical Cognition |volume=6 |issue=3 |pages=322–354 |doi=10.5964/jnc.v6i3.293 |doi-access=free |eissn=2363-8761 |s2cid=228085700|hdl=20.500.12034/5485 |hdl-access=free }}</ref> such as {{math|+}} ([[plus sign|plus]]), {{math|×}} ([[multiplication sign|multiplication]]), <math display =inline>\int</math> ([[integral sign|integral]]), {{math|1==}} ([[equals sign|equal]]), and {{math|<}} ([[less-than sign|less than]]).<ref name=AMS>{{cite web |last1=Letourneau |first1=Mary |last2=Wright Sharp |first2=Jennifer |date=October 2017 |title=AMS Style Guide |page=75 |publisher=[[American Mathematical Society]] |url=https://www.ams.org/publications/authors/AMS-StyleGuide-online.pdf |url-status=live |archive-url=https://web.archive.org/web/20221208063650/https://www.ams.org//publications/authors/AMS-StyleGuide-online.pdf |archive-date=December 8, 2022 |access-date=February 3, 2024}}</ref> All these symbols are generally grouped according to specific rules to form expressions and formulas.<ref>{{cite journal |last1=Jansen |first1=Anthony R. |last2=Marriott |first2=Kim |last3=Yelland |first3=Greg W. |year=2000 |title=Constituent Structure in Mathematical Expressions |journal=Proceedings of the Annual Meeting of the Cognitive Science Society |volume=22 |publisher=[[University of California Merced]] |eissn=1069-7977 |oclc=68713073 |url=https://escholarship.org/content/qt35r988q9/qt35r988q9.pdf |url-status=live |archive-url=https://web.archive.org/web/20221116152222/https://escholarship.org/content/qt35r988q9/qt35r988q9.pdf |archive-date=November 16, 2022 |access-date=February 3, 2024}}</ref> Normally, expressions and formulas do not appear alone, but are included in sentences of the current language, where expressions play the role of [[noun phrase]]s and formulas play the role of [[clause]]s.
+
+Mathematics has developed a rich terminology covering a broad range of fields that study the properties of various abstract, idealized objects and how they interact. It is based on rigorous [[Technical definition|definitions]] that provide a standard foundation for communication. An axiom or [[postulate]] is a mathematical statement that is taken to be true without need of proof. If a mathematical statement has yet to be proven (or disproven), it is termed a [[conjecture]]. Through a series of rigorous arguments employing [[deductive reasoning]], a statement that is [[formal proof|proven]] to be true becomes a theorem. A specialized theorem that is mainly used to prove another theorem is called a [[Lemma (mathematics)|lemma]]. A proven instance that forms part of a more general finding is termed a [[corollary]].<ref>{{cite book |last=Rossi |first=Richard J. |year=2006 |title=Theorems, Corollaries, Lemmas, and Methods of Proof |series=Pure and Applied Mathematics: A Wiley Series of Texts, Monographs and Tracts |publisher=[[John Wiley & Sons]] |pages=1–14, 47–48 |isbn=978-0-470-04295-3 |lccn=2006041609 |oclc=64085024}}</ref>
+
+Numerous technical terms used in mathematics are [[neologism]]s, such as ''[[polynomial]]'' and ''[[homeomorphism]]''.<ref>{{cite web |url=https://mathshistory.st-andrews.ac.uk/Miller/mathword/ |title=Earliest Uses of Some Words of Mathematics |website=MacTutor |publisher=[[University of St. Andrews]] |publication-place=Scotland, UK |url-status=live |archive-url=https://web.archive.org/web/20220929032236/https://mathshistory.st-andrews.ac.uk/Miller/mathword/ |archive-date=September 29, 2022 |access-date=February 3, 2024}}</ref> Other technical terms are words of the common language that are used in an accurate meaning that may differ slightly from their common meaning. For example, in mathematics, "[[logical disjunction|or]]" means "one, the other, or both", while, in common language, it is either ambiguous or means "one or the other but not both" (in mathematics, the latter is called "[[exclusive or]]"). Finally, many mathematical terms are common words that are used with a completely different meaning.<ref>{{cite journal |last=Silver |first=Daniel S. |date=November–December 2017 |title=The New Language of Mathematics |journal=The American Scientist |volume=105 |number=6 |pages=364–371 |publisher=[[Sigma Xi]] |doi=10.1511/2017.105.6.364 |doi-access=free |issn=0003-0996 |lccn=43020253 |oclc=1480717 |s2cid=125455764}}</ref> This may lead to sentences that are correct and true mathematical assertions, but appear to be nonsense to people who do not have the required background. For example, "every [[free module]] is [[flat module|flat]]" and "a [[field (mathematics)|field]] is always a [[ring (mathematics)|ring]]".
+
+== Relationship with sciences ==
+Mathematics is used in most [[science]]s for [[Mathematical model|modeling]] phenomena, which then allows predictions to be made from experimental laws.<ref>{{cite book | title=Modelling Mathematical Methods and Scientific Computation | first1=Nicola | last1=Bellomo | first2=Luigi | last2=Preziosi | publisher=CRC Press | date=December 22, 1994 | page=1 | isbn=978-0-8493-8331-1 | series=Mathematical Modeling | volume=1 | url={{GBurl|id=pJAvWaRYo3UC}} | access-date=November 16, 2022 }}</ref> The independence of mathematical truth from any experimentation implies that the accuracy of such predictions depends only on the adequacy of the model.<ref>{{cite journal
+ | title=Mathematical Models and Reality: A Constructivist Perspective
+ | first=Christian | last=Hennig
+ | journal=Foundations of Science
+ | volume=15 | pages=29–48 | year=2010
+ | doi=10.1007/s10699-009-9167-x
+ | s2cid=6229200 | url=https://www.researchgate.net/publication/225691477
+ | access-date=November 17, 2022
+}}</ref> Inaccurate predictions, rather than being caused by invalid mathematical concepts, imply the need to change the mathematical model used.<ref>{{cite journal | title=Models in Science | date=February 4, 2020 | first1=Roman | last1=Frigg | author-link=Roman Frigg | first2=Stephan | last2=Hartmann | author2-link=Stephan Hartmann | website=Stanford Encyclopedia of Philosophy | url=https://seop.illc.uva.nl/entries/models-science/ | access-date=November 17, 2022 | archive-date=November 17, 2022 | archive-url=https://web.archive.org/web/20221117162412/https://seop.illc.uva.nl/entries/models-science/ | url-status=live }}</ref> For example, the [[perihelion precession of Mercury]] could only be explained after the emergence of [[Einstein]]'s [[general relativity]], which replaced [[Newton's law of gravitation]] as a better mathematical model.<ref>{{cite book | last=Stewart | first=Ian | author-link=Ian Stewart (mathematician) | chapter=Mathematics, Maps, and Models | title=The Map and the Territory: Exploring the Foundations of Science, Thought and Reality | pages=345–356 | publisher=Springer | year=2018 | editor1-first=Shyam | editor1-last=Wuppuluri | editor2-first=Francisco Antonio | editor2-last=Doria | isbn=978-3-319-72478-2 | series=The Frontiers Collection | chapter-url={{GBurl|id=mRBMDwAAQBAJ|p=345}} | doi=10.1007/978-3-319-72478-2_18 | access-date=November 17, 2022 }}</ref>
+
+There is still a [[philosophy of mathematics|philosophical]] debate whether mathematics is a science. However, in practice, mathematicians are typically grouped with scientists, and mathematics shares much in common with the physical sciences. Like them, it is [[falsifiable]], which means in mathematics that, if a result or a theory is wrong, this can be proved by providing a [[counterexample]]. Similarly to science, [[mathematical theory|theories]] and results (theorems) are often obtained from [[experimentation]].<ref>{{Cite web|url=https://undsci.berkeley.edu/article/mathematics|title=The science checklist applied: Mathematics|website=Understanding Science |publisher=University of California, Berkeley |access-date=October 27, 2019|archive-url=https://web.archive.org/web/20191027021023/https://undsci.berkeley.edu/article/mathematics|archive-date=October 27, 2019|url-status=live}}</ref> In mathematics, the experimentation may consist of computation on selected examples or of the study of figures or other representations of mathematical objects (often mind representations without physical support). For example, when asked how he came about his theorems, Gauss once replied "durch planmässiges Tattonieren" (through systematic experimentation).<ref>{{cite book | last=Mackay | first=A. L. | year=1991 | title=Dictionary of Scientific Quotations | location=London | page=100 | isbn=978-0-7503-0106-0 | publisher=Taylor & Francis | url={{GBurl|id=KwESE88CGa8C|q=durch planmässiges Tattonieren}} | access-date=March 19, 2023 }}</ref> However, some authors emphasize that mathematics differs from the modern notion of science by not {{em|relying}} on empirical evidence.<ref name="Bishop1991">{{cite book | last1 = Bishop | first1 = Alan | year = 1991 | chapter = Environmental activities and mathematical culture | title = Mathematical Enculturation: A Cultural Perspective on Mathematics Education | chapter-url = {{GBurl|id=9AgrBgAAQBAJ|p=54}} | pages = 20–59 | location = Norwell, Massachusetts | publisher = Kluwer Academic Publishers | isbn = 978-0-7923-1270-3 | access-date = April 5, 2020 }}</ref><ref>{{cite book | title=Out of Their Minds: The Lives and Discoveries of 15 Great Computer Scientists | last1=Shasha | first1=Dennis Elliot | author1-link=Dennis Elliot Shasha | last2=Lazere | first2=Cathy A. | publisher=Springer | year=1998 | page=228 | isbn=978-0-387-98269-4 }}</ref><ref name="Nickles2013">{{cite book | last=Nickles | first=Thomas | year=2013 | chapter=The Problem of Demarcation | title=Philosophy of Pseudoscience: Reconsidering the Demarcation Problem | page=104 | location=Chicago | publisher=The University of Chicago Press | isbn=978-0-226-05182-6 }}</ref><ref name="Pigliucci2014">{{Cite magazine | year=2014| last=Pigliucci| first=Massimo | author-link=Massimo Pigliucci | title=Are There 'Other' Ways of Knowing? | magazine=[[Philosophy Now]]| url=https://philosophynow.org/issues/102/Are_There_Other_Ways_of_Knowing | access-date=April 6, 2020| archive-date=May 13, 2020 | archive-url=https://web.archive.org/web/20200513190522/https://philosophynow.org/issues/102/Are_There_Other_Ways_of_Knowing | url-status=live}}</ref>
+<!-- What precedes is only one aspect of the relationship between mathematics and other sciences. Other aspects are considered in the next subsections. -->
+
+=== Pure and applied mathematics ===
+{{Main|Applied mathematics|Pure mathematics}}
+
+{{multiple image
+| footer      = [[Isaac Newton]] (left) and [[Gottfried Wilhelm Leibniz]] developed infinitesimal calculus.
+| total_width = 330
+| width1      = 407
+| height1     = 559
+| image1      = GodfreyKneller-IsaacNewton-1689.jpg
+| alt1        = Isaac Newton
+| width2      = 320
+| height2     = 390
+| image2      = Gottfried Wilhelm Leibniz, Bernhard Christoph Francke.jpg
+| alt2        = Gottfried Wilhelm von Leibniz
+}}
+
+Until the 19th century, there was no clear distinction between pure and applied mathematics as understood today.<ref name="Ferreirós_2007">{{cite book
+ | title=The Shaping of Arithmetic after C.F. Gauss's Disquisitiones Arithmeticae
+ | last=Ferreirós | first=J.
+ | chapter=Ό Θεὸς Άριθμητίζει: The Rise of Pure Mathematics as Arithmetic with Gauss
+ | pages=235–268 | year=2007 | isbn=978-3-540-34720-0
+ | editor1-first=Catherine | editor1-last=Goldstein | editor1-link=Catherine Goldstein
+ | editor2-first=Norbert | editor2-last=Schappacher |editor2-link=Norbert Schappacher
+ | editor3-first=Joachim | editor3-last=Schwermer |editor3-link=Joachim Schwermer
+ | publisher=Springer Science & Business Media
+ | chapter-url={{GBurl|id=IUFTcOsMTysC|p=235}}
+}}</ref> The distinction between developing mathematics for its own sake or for its applications was rather fluid: natural numbers and arithmetic were introduced for the need of counting, and geometry was motivated by surveying, architecture, and astronomy, but both subjects quickly stood on their own. Later, [[Isaac Newton]] used infinitesimal calculus in part to help explain the movement of the [[planet]]s and his law of gravitation. Moreover, since antiquity, most mathematicians were also scientists, and many scientists were also mathematicians.<ref>{{cite journal
+ | title=Mathematical vs. Experimental Traditions in the Development of Physical Science
+ | first=Thomas S. | last=Kuhn | author-link=Thomas Kuhn
+ | journal=The Journal of Interdisciplinary History
+ | year=1976 | volume=7 | issue=1 | pages=1–31 | publisher=The MIT Press
+ | jstor=202372 | doi=10.2307/202372
+}}</ref> Nonetheless, the Western tradition of pure mathematics traces its roots back to [[Pure mathematics in Ancient Greece|ancient Greece.]]<ref>{{cite book
+ | chapter=The two cultures of mathematics in ancient Greece
+ | first=Markus
+ | last=Asper
+ | year=2009
+ | title=The Oxford Handbook of the History of Mathematics
+ | editor1-first=Eleanor
+ | editor1-last=Robson
+ | editor2-first=Jacqueline
+ | editor2-last=Stedall
+ | pages=107–132
+ | isbn=978-0-19-921312-2
+ | publisher=OUP Oxford
+ | series=Oxford Handbooks in Mathematics
+ | chapter-url={{GBurl|id=xZMSDAAAQBAJ|p=107}}
+ | access-date=November 18, 2022
+}}</ref> The problem of [[integer factorization]], for example, which goes back to [[Euclid]] in 300 BC, had no practical application before its use in the [[RSA cryptosystem]], now widely used for the security of [[computer network]]s.<ref>{{cite book |last1=Gozwami |first1=Pinkimani |last2=Singh |first2=Madan Mohan |editor-last1=Ahmad |editor-first1=Khaleel |editor-last2=Doja |editor-first2=M. N. |editor-last3=Udzir |editor-first3=Nur Izura |editor-last4=Singh |editor-first4=Manu Pratap |year=2019 |pages=59–60 |chapter=Integer Factorization Problem |title=Emerging Security Algorithms and Techniques |publisher=CRC Press |isbn=978-0-8153-6145-9 |lccn=2019010556 |oclc=1082226900}}</ref>
+
+In the 19th century, mathematicians such as [[Karl Weierstrass]] and [[Richard Dedekind]] increasingly focused their research on internal problems, that is, ''pure mathematics''.<ref name="Ferreirós_2007" /><ref>{{cite journal
+ | title=How applied mathematics became pure
+ | last=Maddy | first=P. | author-link=Penelope Maddy
+ | journal=The Review of Symbolic Logic
+ | year=2008
+ | volume=1
+ | issue=1
+ | pages=16–41
+ | doi=10.1017/S1755020308080027
+ | s2cid=18122406
+ | url=http://pgrim.org/philosophersannual/pa28articles/maddyhowapplied.pdf
+ | access-date=November 19, 2022
+ | archive-date=August 12, 2017
+ | archive-url=https://web.archive.org/web/20170812012210/http://pgrim.org/philosophersannual/pa28articles/maddyhowapplied.pdf
+ | url-status=live
+ }}</ref> This led to mathematics splitting into ''pure mathematics'' and ''applied mathematics'', the latter often considered as having a lower value among mathematical purists. However, the lines between the two are frequently blurred.<ref>{{cite book
+ | title=The Best Writing on Mathematics, 2016
+ | chapter=In Defense of Pure Mathematics
+ | first=Daniel S.
+ | last=Silver
+ | pages=17–26
+ | isbn=978-0-691-17529-4
+ | year=2017
+ | editor1-first=Mircea
+ | editor1-last=Pitici
+ | publisher=Princeton University Press
+ | chapter-url={{GBurl|id=RXGYDwAAQBAJ|p=17}}
+ | access-date=November 19, 2022
+}}</ref>
+
+The aftermath of [[World War II]] led to a surge in the development of applied mathematics in the US and elsewhere.<ref>{{cite journal | title=The American Mathematical Society and Applied Mathematics from the 1920s to the 1950s: A Revisionist Account | first=Karen Hunger | last=Parshall | author-link=Karen Hunger Parshall | journal=Bulletin of the American Mathematical Society | volume=59 | year=2022 | issue=3 | pages=405–427 | doi=10.1090/bull/1754 | s2cid=249561106 | url=https://www.ams.org/journals/bull/2022-59-03/S0273-0979-2022-01754-5/home.html | access-date=November 20, 2022 | doi-access=free | archive-date=November 20, 2022 | archive-url=https://web.archive.org/web/20221120151259/https://www.ams.org/journals/bull/2022-59-03/S0273-0979-2022-01754-5/home.html | url-status=live }}</ref><ref>{{cite journal
+ | title=The History Of Applied Mathematics And The History Of Society
+ | first=Michael | last=Stolz
+ | journal=Synthese
+ | volume=133 | pages=43–57 | year=2002
+ | issue=1–2 | doi=10.1023/A:1020823608217
+ | s2cid=34271623 | url=https://www.researchgate.net/publication/226795930
+ | access-date=November 20, 2022
+}}</ref> Many of the theories developed for applications were found interesting from the point of view of pure mathematics, and many results of pure mathematics were shown to have applications outside mathematics; in turn, the study of these applications may give new insights on the "pure theory".<ref>{{cite journal
+ | title=On the role of applied mathematics
+ | journal=[[Advances in Mathematics]] | first=C. C . | last=Lin
+ | volume=19 | issue=3 | date=March 1976 | pages=267–288
+ | doi=10.1016/0001-8708(76)90024-4 | doi-access=free
+}}</ref><ref>{{cite conference
+ | title=Applying Pure Mathematics
+ | first=Anthony
+ | last=Peressini
+ | conference=Philosophy of Science. Proceedings of the 1998 Biennial Meetings of the Philosophy of Science Association. Part I: Contributed Papers
+ | volume=66
+ | date=September 1999
+ | pages=S1–S13
+ | jstor=188757
+ | access-date=November 30, 2022
+ | url=https://www.academia.edu/download/32799272/ApplyingMathPSA.pdf
+ | archive-url=https://web.archive.org/web/20240102210931/https://d1wqtxts1xzle7.cloudfront.net/32799272/ApplyingMathPSA-libre.pdf?1391205742=&response-content-disposition=inline%3B+filename%3DApplying_Pure_Mathematics.pdf&Expires=1704233371&Signature=BvNJyYufdj9BiKFe94w6gdXLpAfr7T5JIv~RU74R2uT0O9Ngj6i4cdBtYYOSB6D4V-MgButb6lKNhIGGQogw0e0sHVFkJUy5TRsoCiQ-MLabpZOf74E5SGLMFIExhGVAw7SKrSFaQsFGhfbaRMxbMP~u-wRdJAz6ve6kbWr6oq-doQeEOlRfO4EByNCUYx-KAk3~cBsH1Q2WNZ5QiVObMI1ufQ7zkQM1bqzOumLu6g07F~pt~Cds~lftuQufHomoTH-V9H9iKQgUyc3-4bEB1y1Jdngs7WWg76LcSGn65bPK8dxvsZzKaLDGfoK5jamZkA8z3-xxiMIPL8c6YETjZA__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+ | archive-date=January 2, 2024
+ | url-status=live
+ }}</ref>
+
+An example of the first case is the [[theory of distributions]], introduced by [[Laurent Schwartz]] for validating computations done in [[quantum mechanics]], which immediately became an important tool of (pure) mathematical analysis.<ref>{{cite conference
+ | title=Mathematics meets physics: A contribution to their interaction in the 19th and the first half of the 20th century
+ | last=Lützen
+ | first=J.
+ | year=2011
+ | editor1-last=Schlote
+ | editor1-first=K. H.
+ | editor2-last=Schneider
+ | editor2-first=M.
+ | publisher=Verlag Harri Deutsch
+ | publication-place=Frankfurt am Main
+ | chapter=Examples and reflections on the interplay between mathematics and physics in the 19th and 20th century
+ | chapter-url=https://slub.qucosa.de/api/qucosa%3A16267/zip/
+ | access-date=November 19, 2022
+ | archive-date=March 23, 2023
+ | archive-url=https://web.archive.org/web/20230323164143/https://slub.qucosa.de/api/qucosa%3A16267/zip/
+ | url-status=live
+ }}</ref> An example of the second case is the [[decidability of the first-order theory of the real numbers]], a problem of pure mathematics that was proved true by [[Alfred Tarski]], with an algorithm that is impossible to [[implementation (computer science)|implement]] because of a computational complexity that is much too high.<ref>{{cite journal
+ | title=Model theory and exponentiation
+ | last=Marker
+ | first=Dave
+ | journal=Notices of the American Mathematical Society
+ | volume=43
+ | issue=7
+ | date=July 1996
+ | pages=753–759
+ | url=https://www.ams.org/notices/199607/
+ | access-date=November 19, 2022
+ | archive-date=March 13, 2014
+ | archive-url=https://web.archive.org/web/20140313004011/http://www.ams.org/notices/199607/
+ | url-status=live
+ }}</ref> For obtaining an algorithm that can be implemented and can solve systems of polynomial equations and inequalities, [[George E. Collins|George Collins]] introduced the [[cylindrical algebraic decomposition]] that became a fundamental tool in [[real algebraic geometry]].<ref>{{cite conference
+ | title=Cylindrical Algebraic Decomposition in the RegularChains Library
+ | first1=Changbo | last1=Chen | first2=Marc Moreno | last2=Maza
+ | date=August 2014 | volume=8592
+ | publisher=Springer | publication-place=Berlin
+ | conference=International Congress on Mathematical Software 2014
+ | series=Lecture Notes in Computer Science
+ | url=https://www.researchgate.net/publication/268067322
+ | access-date=November 19, 2022 | doi=10.1007/978-3-662-44199-2_65 }}</ref>
+
+In the present day, the distinction between pure and applied mathematics is more a question of personal research aim of mathematicians than a division of mathematics into broad areas.<ref>{{cite journal
+ | title=Purifying applied mathematics and applying pure mathematics: how a late Wittgensteinian perspective sheds light onto the dichotomy
+ | first1=José Antonio | last1=Pérez-Escobar | first2=Deniz | last2=Sarikaya
+ | journal=European Journal for Philosophy of Science
+ | volume=12 | issue=1 | pages=1–22 | year=2021
+ | doi=10.1007/s13194-021-00435-9 | s2cid=245465895
+ | doi-access=free | hdl=20.500.11850/522216 | hdl-access=free }}</ref><ref>{{cite book
+ | chapter=Pure Mathematics and Applied Mathematics are Inseparably Intertwined: Observation of the Early Analysis of the Infinity
+ | last=Takase
+ | first=M.
+ | title=A Mathematical Approach to Research Problems of Science and Technology
+ | series=Mathematics for Industry
+ | volume=5
+ | year=2014
+ | pages=393–399
+ | publisher=Springer
+ | publication-place=Tokyo
+ | chapter-url={{GBurl|id=UeElBAAAQBAJ|p=393}}
+ | doi=10.1007/978-4-431-55060-0_29
+ | isbn=978-4-431-55059-4
+ | access-date=November 20, 2022
+}}</ref> The Mathematics Subject Classification has a section for "general applied mathematics" but does not mention "pure mathematics".<ref name=MSC /> However, these terms are still used in names of some [[university]] departments, such as at the [[Faculty of Mathematics, University of Cambridge|Faculty of Mathematics]] at the [[University of Cambridge]].
+
+=== Unreasonable effectiveness ===
+
+The [[unreasonable effectiveness of mathematics]] is a phenomenon that was named and first made explicit by physicist [[Eugene Wigner]].<ref name=wigner1960>{{cite journal
+ | title=The Unreasonable Effectiveness of Mathematics in the Natural Sciences
+ | last=Wigner | first=Eugene | author-link=Eugene Wigner
+ | journal=[[Communications on Pure and Applied Mathematics]]
+ | volume=13 | issue=1 | pages=1–14 | year=1960
+ | doi=10.1002/cpa.3160130102 | bibcode=1960CPAM...13....1W
+ | s2cid=6112252 | url=https://math.dartmouth.edu/~matc/MathDrama/reading/Wigner.html
+ | url-status=live | archive-url=https://web.archive.org/web/20110228152633/http://www.dartmouth.edu/~matc/MathDrama/reading/Wigner.html
+ | archive-date=February 28, 2011 | df=mdy-all
+}}</ref> It is the fact that many mathematical theories (even the "purest") have applications outside their initial object. These applications may be completely outside their initial area of mathematics, and may concern physical phenomena that were completely unknown when the mathematical theory was introduced.<ref>{{cite journal
+ | title=Revisiting the 'unreasonable effectiveness' of mathematics
+ | first=Sundar | last=Sarukkai
+ | journal=Current Science
+ | volume=88 | issue=3 | date=February 10, 2005 | pages=415–423
+ | jstor=24110208
+}}</ref> Examples of unexpected applications of mathematical theories can be found in many areas of mathematics.
+
+A notable example is the [[prime factorization]] of natural numbers that was discovered more than 2,000 years before its common use for secure [[internet]] communications through the [[RSA cryptosystem]].<ref>{{cite book
+ | chapter=History of Integer Factoring
+ | pages=41–77
+ | first=Samuel S. Jr.
+ | last=Wagstaff
+ | title=Computational Cryptography, Algorithmic Aspects of Cryptography, A Tribute to AKL
+ | editor1-first=Joppe W.
+ | editor1-last=Bos
+ | editor2-first=Martijn
+ | editor2-last=Stam
+ | series=London Mathematical Society Lecture Notes Series 469
+ | publisher=Cambridge University Press
+ | year=2021
+ | chapter-url=https://www.cs.purdue.edu/homes/ssw/chapter3.pdf
+ | access-date=November 20, 2022
+ | archive-date=November 20, 2022
+ | archive-url=https://web.archive.org/web/20221120155733/https://www.cs.purdue.edu/homes/ssw/chapter3.pdf
+ | url-status=live
+ }}</ref> A second historical example is the theory of [[ellipse]]s. They were studied by the [[ancient Greek mathematicians]] as [[conic section]]s (that is, intersections of [[cone]]s with planes). It was almost 2,000 years later that [[Johannes Kepler]] discovered that the [[trajectories]] of the planets are ellipses.<ref>{{cite web
+ | title=Curves: Ellipse
+ | website=MacTutor
+ | publisher=School of Mathematics and Statistics, University of St Andrews, Scotland
+ | url=https://mathshistory.st-andrews.ac.uk/Curves/Ellipse/
+ | access-date=November 20, 2022
+ | archive-date=October 14, 2022
+ | archive-url=https://web.archive.org/web/20221014051943/https://mathshistory.st-andrews.ac.uk/Curves/Ellipse/
+ | url-status=live
+ }}</ref>
+
+In the 19th century, the internal development of geometry (pure mathematics) led to the definition and study of non-Euclidean geometries, spaces of dimension higher than three, and [[manifold]]s. At this time, these concepts seemed totally disconnected from physical reality, but at the beginning of the 20th century, [[Albert Einstein]] developed the [[theory of relativity]] that uses these concepts fundamentally. In particular, [[spacetime]] of [[special relativity]] is a non-Euclidean space of dimension four, and spacetime of [[general relativity]] is a (curved) manifold of dimension four.<ref>{{cite web
+ | title=Beyond the Surface of Einstein's Relativity Lay a Chimerical Geometry
+ | first=Vasudevan
+ | last=Mukunth
+ | website=The Wire
+ | date=September 10, 2015
+ | url=https://thewire.in/science/beyond-the-surface-of-einsteins-relativity-lay-a-chimerical-geometry
+ | access-date=November 20, 2022
+ | archive-date=November 20, 2022
+ | archive-url=https://web.archive.org/web/20221120191206/https://thewire.in/science/beyond-the-surface-of-einsteins-relativity-lay-a-chimerical-geometry
+ | url-status=live
+ }}</ref><ref>{{cite journal
+ | title=The Space-Time Manifold of Relativity. The Non-Euclidean Geometry of Mechanics and Electromagnetics
+ | first1=Edwin B. | last1=Wilson | first2=Gilbert N. | last2=Lewis
+ | journal=Proceedings of the American Academy of Arts and Sciences
+ | volume=48 | issue=11 | date=November 1912 | pages=389–507
+ | doi=10.2307/20022840 | jstor=20022840 }}</ref>
+
+A striking aspect of the interaction between mathematics and physics is when mathematics drives research in physics. This is illustrated by the discoveries of the [[positron]] and the [[omega baryon|baryon]] <math>\Omega^{-}.</math> In both cases, the equations of the theories had unexplained solutions, which led to conjecture of the existence of an unknown [[particle]], and the search for these particles. In both cases, these particles were discovered a few years later by specific experiments.<ref name=borel /><ref>{{cite journal
+ | title=Discovering the Positron (I)
+ | first=Norwood Russell | last=Hanson | author-link=Norwood Russell Hanson
+ | journal=The British Journal for the Philosophy of Science
+ | volume=12 | issue=47 | date=November 1961 | pages=194–214
+ | publisher=The University of Chicago Press
+ | jstor=685207 | doi=10.1093/bjps/xiii.49.54
+}}</ref><ref>{{cite journal
+ | title=Avoiding reification: Heuristic effectiveness of mathematics and the prediction of the Ω<sup>–</sup> particle
+ | first=Michele | last=Ginammi
+ | journal=Studies in History and Philosophy of Science Part B: Studies in History and Philosophy of Modern Physics
+ | volume=53 | date=February 2016 | pages=20–27
+ | doi=10.1016/j.shpsb.2015.12.001
+ | bibcode=2016SHPMP..53...20G }}</ref>
+
+=== Specific sciences ===
+==== Physics ====
+{{Main|Relationship between mathematics and physics}}
+
+[[File:Pendule schema.gif|thumb|Diagram of a pendulum]]
+Mathematics and physics have influenced each other over their modern history. Modern physics uses mathematics abundantly,<ref>{{Cite book |last1=Wagh |first1=Sanjay Moreshwar |url={{GBurl|id=-DmfVjBUPksC|p=3}} |title=Essentials of Physics  |last2=Deshpande |first2=Dilip Abasaheb |date=September 27, 2012 |publisher=PHI Learning Pvt. Ltd. |isbn=978-81-203-4642-0 |page=3 |language=en |access-date=January 3, 2023 }}</ref> and is also considered to be the motivation of major mathematical developments.<ref>{{Cite conference |last=Atiyah |first=Michael |author-link=Michael Atiyah |year=1990 |title=On the Work of Edward Witten |url=http://www.mathunion.org/ICM/ICM1990.1/Main/icm1990.1.0031.0036.ocr.pdf |conference=Proceedings of the International Congress of Mathematicians |page=31 |archive-url=https://web.archive.org/web/20130928095313/http://www.mathunion.org/ICM/ICM1990.1/Main/icm1990.1.0031.0036.ocr.pdf |archive-date=September 28, 2013 |access-date=December 29, 2022}}</ref>
+
+==== Computing ====
+{{Further|Theoretical computer science|Computational mathematics}}
+Computing is closely related to mathematics in several ways.<ref>{{Cite web |title=Course 18C Mathematics with Computer Science |url=https://math.mit.edu/academics/undergrad/major/course18c.html |access-date=June 1, 2024 |website=math.mit.edu}}</ref> [[Theoretical computer science]] is considered to be mathematical in nature.<ref>{{Cite web |title=Theoretical Computer Science |url=https://math.mit.edu/research/applied/comp-science-theory.html |access-date=June 1, 2024 |website=math.mit.edu}}</ref> Communication technologies apply branches of mathematics that may be very old (e.g., arithmetic), especially with respect to transmission security, in [[cryptography]] and [[coding theory]]. [[Discrete mathematics]] is useful in many areas of computer science, such as [[Computational complexity theory|complexity theory]], [[information theory]], and [[graph theory]].<ref>{{Cite web |date=April 8, 2024 |title=Real-Life Applications of Discrete Mathematics |url=https://www.geeksforgeeks.org/real-life-applications-of-discrete-mathematics/ |access-date=May 19, 2024 |website=GeeksforGeeks |language=en-US |archive-date=May 19, 2024 |archive-url=https://web.archive.org/web/20240519225711/https://www.geeksforgeeks.org/real-life-applications-of-discrete-mathematics/ |url-status=live }}</ref> In 1998, the [[Kepler conjecture]] on [[sphere packing]] seemed to also be partially proven by computer.<ref>{{cite journal |last1=Hales |first1=Thomas |last2=Adams |first2=Mark |last3=Bauer |first3=Gertrud |last4=Dang |first4=Tat Dat |last5=Harrison |first5=John |last6=Hoang |first6=Le Truong |last7=Kaliszyk |first7=Cezary |last8=Magron |first8=Victor |last9=Mclaughlin |first9=Sean |last10=Nguyen |first10=Tat Thang |last11=Nguyen |first11=Quang Truong |last12=Nipkow |first12=Tobias |last13=Obua |first13=Steven |last14=Pleso |first14=Joseph |last15=Rute |first15=Jason |last16=Solovyev |first16=Alexey |last17=Ta |first17=Thi Hoai An |last18=Tran |first18=Nam Trung |last19=Trieu |first19=Thi Diep |last20=Urban |first20=Josef |last21=Vu |first21=Ky |last22=Zumkeller |first22=Roland |title=A Formal Proof of the Kepler Conjecture |journal=Forum of Mathematics, Pi |year=2017 |volume=5 |article-number=e2 |doi=10.1017/fmp.2017.1 |s2cid=216912822 |url=https://www.cambridge.org/core/journals/forum-of-mathematics-pi/article/formal-proof-of-the-kepler-conjecture/78FBD5E1A3D1BCCB8E0D5B0C463C9FBC |language=en |issn=2050-5086 |access-date=February 25, 2023 |archive-date=December 4, 2020 |archive-url=https://web.archive.org/web/20201204053232/https://www.cambridge.org/core/journals/forum-of-mathematics-pi/article/formal-proof-of-the-kepler-conjecture/78FBD5E1A3D1BCCB8E0D5B0C463C9FBC |url-status=live |hdl=2066/176365 |hdl-access=free }}</ref>
+
+==== Statistics and other decision sciences ====
+{{Main|Statistics|Probability theory}}
+
+[[File:IllustrationCentralTheorem.png|upright=1.5|thumb|right|Whatever the form of a random population [[Probability distribution|distribution]] (μ), the sampling [[mean]] (x̄) tends to a [[Gaussian distribution]] and its [[variance]] (σ) is given by the [[central limit theorem]] of probability theory.<ref>{{cite book |last=Rouaud |first=Mathieu |date=April 2017 |orig-date=First published July 2013 |title=Probability, Statistics and Estimation |page=10 |url=http://www.incertitudes.fr/book.pdf |url-status=live |archive-url=https://ghostarchive.org/archive/20221009/http://www.incertitudes.fr/book.pdf |archive-date=October 9, 2022 |access-date=February 13, 2024}}</ref>|class=skin-invert-image]]
+
+The field of statistics is a mathematical application that is employed for the collection and processing of data samples, using procedures based on mathematical methods such as, and especially, [[probability theory]]. Statisticians generate data with [[random sampling]] or randomized [[design of experiments|experiments]].<ref>{{cite book |last=Rao |first=C. Radhakrishna |author-link=C. R. Rao |year=1997 |orig-date=1989 |title=Statistics and Truth: Putting Chance to Work |edition=2nd |pages=3–17, 63–70 |publisher=World Scientific |isbn=981-02-3111-3 |lccn=97010349 |mr=1474730 |oclc=36597731}}</ref>
+
+[[Statistical theory]] studies [[statistical decision theory|decision problems]] such as minimizing the [[risk]] ([[expected loss]]) of a statistical action, such as using a [[statistical method|procedure]] in, for example, [[parameter estimation]], [[hypothesis testing]], and [[selection algorithm|selecting the best]]. In these traditional areas of [[mathematical statistics]], a statistical-decision problem is formulated by minimizing an [[objective function]], like expected loss or [[cost]], under specific constraints. For example, designing a survey often involves minimizing the cost of estimating a population mean with a given level of confidence.<ref name="RaoOpt">{{cite book |last=Rao |first=C. Radhakrishna |author-link=C.R. Rao |editor1-last=Arthanari |editor1-first=T.S. |editor2-last=Dodge |editor2-first=Yadolah |editor2-link=Yadolah Dodge |chapter=Foreword |title=Mathematical programming in statistics |series=Wiley Series in Probability and Mathematical Statistics |publisher=Wiley |location=New York |year=1981 |pages=vii–viii |isbn=978-0-471-08073-2 |lccn=80021637 |mr=607328 |oclc=6707805}}</ref> Because of its use of [[optimization]], the mathematical theory of statistics overlaps with other [[decision science]]s, such as [[operations research]], [[control theory]], and [[mathematical economics]].{{sfn|Whittle|1994|pp=10–11, 14–18}}
+
+==== Biology and chemistry ====
+{{Main|Mathematical and theoretical biology|Mathematical chemistry}}
+
+[[File:Giant Pufferfish skin pattern detail.jpg|thumb|The skin of this [[giant pufferfish]] exhibits a [[Turing pattern]], which can be modeled by [[reaction–diffusion system]]s.]]
+[[Biology]] uses probability extensively in fields such as ecology or [[neurobiology]].<ref name=":2">{{Cite book |last=Millstein |first=Roberta |author-link=Roberta Millstein |title=The Oxford Handbook of Probability and Philosophy |date=September 8, 2016 |editor-last=Hájek |editor-first=Alan |pages=601–622 |chapter=Probability in Biology: The Case of Fitness |doi=10.1093/oxfordhb/9780199607617.013.27 |editor-last2=Hitchcock |editor-first2=Christopher |chapter-url=http://philsci-archive.pitt.edu/10901/1/Millstein-fitness-v2.pdf |access-date=December 29, 2022 |archive-date=March 7, 2023 |archive-url=https://web.archive.org/web/20230307054456/http://philsci-archive.pitt.edu/10901/1/Millstein-fitness-v2.pdf |url-status=live }}</ref> Most discussion of probability centers on the concept of [[evolutionary fitness]].<ref name=":2" /> Ecology heavily uses modeling to simulate [[population dynamics]],<ref name=":2" /><ref>See for example Anne Laurent, Roland Gamet, Jérôme Pantel, ''Tendances nouvelles en modélisation pour l'environnement, actes du congrès «Programme environnement, vie et sociétés»'' 15–17 janvier 1996, CNRS</ref> study ecosystems such as the predator-prey model, measure pollution diffusion,{{Sfn|Bouleau|1999|pp=282–283}} or to assess climate change.{{Sfn|Bouleau|1999|p=285}} The dynamics of a population can be modeled by coupled differential equations, such as the [[Lotka–Volterra equations]].<ref>{{Cite web |date=January 5, 2022 |title=1.4: The Lotka–Volterra Predator-Prey Model |url=https://math.libretexts.org/Bookshelves/Applied_Mathematics/Mathematical_Biology_(Chasnov)/01%3A_Population_Dynamics/1.04%3A_The_Lotka-Volterra_Predator-Prey_Model |access-date=December 29, 2022 |website=Mathematics LibreTexts |language=en |archive-date=December 29, 2022 |archive-url=https://web.archive.org/web/20221229204111/https://math.libretexts.org/Bookshelves/Applied_Mathematics/Mathematical_Biology_(Chasnov)/01:_Population_Dynamics/1.04:_The_Lotka-Volterra_Predator-Prey_Model |url-status=live }}</ref>
+
+[[Statistical hypothesis testing]] is run on data from [[clinical trial]]s to determine whether a new treatment works.<ref>{{Cite journal |last=Salsburg |first=David |date=August 17, 1992 |title=Commentary |url=https://www.dfcm.utoronto.ca/sites/default/files/inline-files/salsburg_1.pdf |journal=The Use of Statistical Methods in the Analysis of Clinical Studies |volume=46 |pages=17 |archive-date=June 1, 2024 |access-date=June 1, 2024 |archive-url=https://web.archive.org/web/20240601211523/https://www.dfcm.utoronto.ca/sites/default/files/inline-files/salsburg_1.pdf |url-status=live }}</ref> Since the start of the 20th century, chemistry has used computing to model molecules in three dimensions.<ref>{{Cite book |url=https://nap.nationalacademies.org/read/10633/chapter/8 |title=Beyond the Molecular Frontier: Challenges for Chemistry and Chemical Engineering |publisher=NAP.edu |year=2003 |isbn=978-0-309-16839-7 |pages=71–73 |language=en |chapter=8 |doi=10.17226/10633|pmid=25032300 |author=National Research Council |author-link=National Research Council (United States) |bibcode=2003nap..book10633N }}</ref>
+
+==== Earth sciences ====
+{{Main|Geomathematics}}
+
+[[Structural geology]] and climatology use probabilistic models to predict the risk of natural catastrophes.<ref>{{Cite web |title=Catastrophe Models (Property) |url=https://content.naic.org/cipr-topics/catastrophe-models-property |access-date=May 19, 2024 |website=content.naic.org |language=en |archive-date=May 19, 2024 |archive-url=https://web.archive.org/web/20240519225714/https://content.naic.org/cipr-topics/catastrophe-models-property |url-status=live }}</ref> Similarly, [[meteorology]], [[oceanography]], and [[planetology]] also use mathematics due to their heavy use of models.<ref>{{Cite web |title=MAM2001 Essay |url=https://ww2.amstat.org/mam/01/essay.html |access-date=May 19, 2024 |website=ww2.amstat.org |archive-date=May 19, 2024 |archive-url=https://web.archive.org/web/20240519225711/https://ww2.amstat.org/mam/01/essay.html |url-status=live }}</ref><ref>{{Cite web |last=Hill |first=Mullica |date=September 7, 2022 |title=HOW MATH IS USED IN WEATHER FORECASTING |url=https://www.mathnasium.com/math-centers/mullicahill/news/how-math-used-weather-forecasting |access-date=May 19, 2024 |website=mathnasium.com |archive-date=May 19, 2024 |archive-url=https://web.archive.org/web/20240519225711/https://www.mathnasium.com/math-centers/mullicahill/news/how-math-used-weather-forecasting |url-status=live }}</ref><ref>{{Cite web |title=Using Mathematical Models to Investigate Planetary Habitability |url=https://icp.giss.nasa.gov/education/modules/eccm/eccm_student_3.pdf |access-date=May 19, 2024 |website=[[NASA]] |archive-date=May 19, 2024 |archive-url=https://web.archive.org/web/20240519225714/https://icp.giss.nasa.gov/education/modules/eccm/eccm_student_3.pdf |url-status=live }}</ref>
+
+==== Social sciences ====
+{{Further|Mathematical economics|Historical dynamics}}
+Areas of mathematics used in the social sciences include [[probability theory]], [[statistics]], [[differential equation]]s, [[game theory]], [[optimization theory]], and [[decision theory]]. These are used in [[linguistics]], [[economics]], [[sociology]],<ref>{{cite journal |last1=Edling |first1=Christofer R. |title=Mathematics in Sociology |journal=Annual Review of Sociology |date=August 2002 |volume=28 |issue=1 |pages=197–220 |doi=10.1146/annurev.soc.28.110601.140942 }}</ref> and [[psychology]].<ref>{{cite book |last1=Batchelder |first1=William H. |title=International Encyclopedia of the Social & Behavioral Sciences |chapter=Mathematical Psychology: History |date=2015 |pages=808–815 |doi=10.1016/B978-0-08-097086-8.43059-X |isbn=978-0-08-097087-5 }}</ref>
+[[File:Supply-demand-equilibrium.svg|thumb|[[Supply and demand]] curves, like this one, are a staple of mathematical economics.|class=skin-invert-image]]
+
+Without mathematical modeling, it is hard to go beyond statistical observations or untestable speculation. Mathematical modeling allows the creation of structured frameworks for testing hypotheses and analyzing complex interactions. Models provide clarity and precision, enabling the translation of theoretical concepts into quantifiable predictions that can be tested against real-world data.<ref>{{Cite web|url=https://www.mdpi.com/journal/mathematics/special_issues/Mathematical_Modeling_Economics_Ecology_Environment|title=Mathematics|website=mdpi.com}}</ref> 
+
+Often, one starts from a model of an individual actor – ''[[Homo economicus]]'' ({{Literal translation|economic man}}),<ref name=":3">{{Cite book |last=Zak |first=Paul J. |url={{GBurl|id=6QrvmNo2qD4C|p=158}} |title=Moral Markets: The Critical Role of Values in the Economy |date=2010 |page=158 |publisher=Princeton University Press |isbn=978-1-4008-3736-6 |language=en |access-date=January 3, 2023 }}</ref> and one uses mathematics to deduce the global behavior of the society or economy from the interactions between the individual actors. However, this approach is limited by the fact that some important facts cannot be taken into account by the model, such as unpredictable technological breakthroughs and the use of the model by some individuals for maximizing their profit.
+
+At the start of the 20th century, there was a development to express historical movements in formulas. In 1922, [[Nikolai Kondratiev]] discerned the ~50-year-long [[Kondratiev cycle]], which explains phases of economic growth or crisis.<ref>{{Cite web |title=Kondratiev, Nikolai Dmitrievich {{!}} Encyclopedia.com |url=https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/kondratiev-nikolai-dmitrievich |access-date=December 29, 2022 |website=www.encyclopedia.com |archive-date=July 1, 2016 |archive-url=https://web.archive.org/web/20160701224009/http://www.encyclopedia.com/doc/1G2-3404100667.html |url-status=live }}</ref> Towards the end of the 19th century, mathematicians extended their analysis into [[geopolitics]].<ref>{{Cite web|url=https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=ha010090244#:~:text=|title=Mathématique de l'histoire-géometrie et cinématique. Lois de Brück. Chronologie géodésique de la Bible., by Charles LAGRANGE et al. &#124; The Online Books Page|website=onlinebooks.library.upenn.edu|access-date=January 3, 2024|archive-date=January 3, 2024|archive-url=https://web.archive.org/web/20240103142807/https://onlinebooks.library.upenn.edu/webbin/book/lookupid?key=ha010090244#:~:text=|url-status=live}}</ref> [[Peter Turchin]] developed [[cliodynamics]] in the 1990s.<ref>{{Cite web |title=Cliodynamics: a science for predicting the future |url=https://www.zdnet.com/article/cliodynamics-a-science-for-predicting-the-future/ |access-date=December 29, 2022 |publisher=ZDNet |language=en |archive-date=December 29, 2022 |archive-url=https://web.archive.org/web/20221229204104/https://www.zdnet.com/article/cliodynamics-a-science-for-predicting-the-future/ |url-status=live }}</ref>
+
+Mathematization of the social sciences is not without risk. In the controversial book ''[[Fashionable Nonsense]]'' (1997), [[Alan Sokal|Sokal]] and [[Jean Bricmont|Bricmont]] denounced the unfounded or abusive use of scientific terminology, particularly from mathematics or physics, in the social sciences.<ref>{{cite book|last=Sokal|first=Alan|url=https://archive.org/details/fashionablenonse00soka|title=Fashionable Nonsense|author2=Jean Bricmont|publisher=Picador|year=1998|isbn=978-0-312-19545-8|location=New York|oclc=39605994|author-link=Alan Sokal|author2-link=Jean Bricmont}}</ref> The study of [[complex systems]] (evolution of unemployment, [[Capital (economics)|business capital]], demographic evolution of a population, etc.) uses mathematical knowledge. However, the choice of counting criteria, particularly for unemployment, or of models, can be subject to controversy.<ref>{{Cite web|url=https://www.factcheck.org/2023/01/bidens-misleading-unemployment-statistic/|title=Biden's Misleading Unemployment Statistic – FactCheck.org|date=January 27, 2023 |access-date=June 2, 2024|archive-date=June 2, 2024|archive-url=https://web.archive.org/web/20240602215913/https://www.factcheck.org/2023/01/bidens-misleading-unemployment-statistic/|url-status=live}}</ref><ref>{{Cite web|url=https://www.minneapolisfed.org/article/2010/modern-macroeconomic-models-as-tools-for-economic-policy|title=Modern Macroeconomic Models as Tools for Economic Policy &#124; Federal Reserve Bank of Minneapolis|website=minneapolisfed.org|access-date=June 2, 2024|archive-date=August 3, 2024|archive-url=https://web.archive.org/web/20240803124409/https://www.minneapolisfed.org/article/2010/modern-macroeconomic-models-as-tools-for-economic-policy|url-status=live}}</ref>
+
+== Philosophy ==
+{{Main|Philosophy of mathematics}}
+
+=== Reality ===
+The connection between mathematics and material reality has led to philosophical debates since at least the time of [[Pythagoras]]. The ancient philosopher [[Plato]] argued that abstractions that reflect material reality have themselves a reality that exists outside space and time. As a result, the philosophical view that mathematical objects somehow exist on their own in abstraction is often referred to as [[Mathematical Platonism|Platonism]]. Independently of their possible philosophical opinions, modern mathematicians may be generally considered as Platonists, since they think of and talk of their objects of study as real objects.<ref name=SEP-Platonism>{{cite encyclopedia |title=Platonism in Metaphysics |encyclopedia=The Stanford Encyclopedia of Philosophy |last=Balaguer |first=Mark |editor-last=Zalta |editor-first=Edward N. |year=2016 |edition=Spring 2016 |publisher=Metaphysics Research Lab, Stanford University |url=https://plato.stanford.edu/archives/spr2016/entries/platonism |access-date=April 2, 2022 |archive-date=January 30, 2022 |archive-url=https://web.archive.org/web/20220130174043/https://plato.stanford.edu/archives/spr2016/entries/platonism/ |url-status=live }}</ref>
+
+[[Armand Borel]] summarized this view of mathematical reality as follows, and provided quotations of [[G. H. Hardy]], [[Charles Hermite]], [[Henri Poincaré]] and [[Albert Einstein]] that support his views.<ref name=borel />
+{{blockquote| Something becomes objective (as opposed to "subjective") as soon as we are convinced that it exists in the minds of others in the same form as it does in ours and that we can think about it and discuss it together.<ref>See {{cite journal
+ | first=L. | last=White | year=1947
+ | title=The locus of mathematical reality: An anthropological footnote
+ | journal=[[Philosophy of Science (journal)|Philosophy of Science]]
+ | volume=14|issue=4 | pages=289–303
+ | doi=10.1086/286957 | s2cid=119887253
+ | id=189303 | postscript=;
+}} also in {{cite book
+ | first=J. R. | last=Newman | year=1956
+ | title=The World of Mathematics
+ | publisher=Simon and Schuster | location=New York
+ | volume=4 | pages=2348–2364
+}}</ref> Because the language of mathematics is so precise, it is ideally suited to defining concepts for which such a consensus exists. In my opinion, that is sufficient to provide us with a {{em|feeling}} of an objective existence, of a reality of mathematics ...}}
+
+Nevertheless, Platonism and the concurrent views on abstraction do not explain the [[#Unreasonable effectiveness|unreasonable effectiveness]] of mathematics (as Platonism assumes mathematics exists independently, but does not explain why it matches reality).<ref>{{cite book
+ | title=The Software of the Universe, An Introduction to the History and Philosophy of Laws of Nature
+ | first=Mauro
+ | last=Dorato
+ | year=2005
+ | chapter=Why are laws mathematical?
+ | pages=31–66
+ | isbn=978-0-7546-3994-7
+ | publisher=Ashgate
+ | chapter-url=https://www.academia.edu/download/52076815/2ch.pdf
+ | access-date=December 5, 2022
+ | archive-url=https://web.archive.org/web/20230817111932/https://d1wqtxts1xzle7.cloudfront.net/52076815/2ch-libre.pdf?1488997736=&response-content-disposition=inline%3B+filename%3DChapter_2_of_the_book_the_software_of_th.pdf&Expires=1692274771&Signature=PXpNLBsmWMkz9YUs6~LUOfXNkmkCAmDfxQUoWOkGJKP4YqPGQUFMuP1I0xFycLZkL0dyfGwdGQ7mPk44nvmpM3YpKBSeVCZRXtDMiwgqs1JhEWrJovAhrchPLM1mGn3pw5P6LPo0sDZsl7uaPoZHMyCyJpayHvFtpyj1oUMIdmGuYM5P3euy1R87g6xlKyNAp~~BR5I4gVpopzLoeZn7d3oEnOOua0GjsqsZ6H9mEgcZMpH-qF8w9iFa9aSXFpqxagQwcVVkg7DXkOjVV5jyzctBUKQtOQQ~-9EN1y-c9pFV-Xu-NNuoN3Ij6K4SwvjYv0a8DMs8T5SVj1Kz9i4CEQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+ | archive-date=August 17, 2023
+ | url-status=live
+ }}</ref>
+
+=== Proposed definitions ===
+{{Main|Definitions of mathematics}}
+
+There is no general consensus about the definition of mathematics or its [[epistemology|epistemological status]]{{emdash}}that is, its place inside knowledge<!-- please, do not link "knowledge", since it is linked in the first paragraph of the preceding link. -->.<!-- <ref name="Mura" /><ref name="Runge" /> --> A great many professional mathematicians take no interest in a definition of mathematics, or consider it undefinable.<!-- <ref name="Mura" /> --> There is not even consensus on whether mathematics is an art or a science.<!-- <ref name="Runge" /> --> Some just say, "mathematics is what mathematicians do".<ref name="Mura">{{cite journal
+ | title=Images of Mathematics Held by University Teachers of Mathematical Sciences
+ | last=Mura | first=Roberta | date=Dec 1993
+ | journal=Educational Studies in Mathematics
+ | volume=25 | issue=4 | pages=375–85
+ | doi=10.1007/BF01273907 | jstor=3482762 | s2cid=122351146
+}}</ref><ref name="Runge">{{cite book
+ | title=Iris Runge: A Life at the Crossroads of Mathematics, Science, and Industry
+ | last1=Tobies
+ | first1=Renate
+ | author1-link=Renate Tobies
+ | first2=Helmut
+ | last2=Neunzert
+ | publisher=Springer
+ | year=2012
+ | isbn=978-3-0348-0229-1
+ | page=9
+ | url={{GBurl|id=EDm0eQqFUQ4C|p=9}}
+ | quote=[I]t is first necessary to ask what is meant by ''mathematics'' in general. Illustrious scholars have debated this matter until they were blue in the face, and yet no consensus has been reached about whether mathematics is a natural science, a branch of the humanities, or an art form.
+ | access-date=June 20, 2015
+}}</ref> A common approach is to define mathematics by its object of study.<ref>{{cite conference
+ | title="What is Mathematics?" and why we should ask, where one should experience and learn that, and how to teach it
+ | first1=Günter M. | last1=Ziegler | author1-link=Günter M. Ziegler
+ | first2=Andreas | last2=Loos | editor-last=Kaiser | editor-first=G.
+ | conference=Proceedings of the 13th International Congress on Mathematical Education
+ | series=ICME-13 Monographs
+ | date=November 2, 2017 | pages=63–77 | publisher=Springer
+ | doi=10.1007/978-3-319-62597-3_5
+ | isbn=978-3-319-62596-6 | doi-access=free }} (Sections "What is Mathematics?" and "What is Mathematics, Really?")</ref>{{sfn|Mura|1993|pp=379, 381}}{{sfn|Brown|Porter|1995|p=326}}<ref>{{cite journal
+ | last=Strauss | first=Danie | year=2011
+ | title=Defining mathematics
+ | journal=Acta Academica
+ | volume=43 | issue=4 | pages=1–28
+ | url=https://www.researchgate.net/publication/290955899
+ | access-date=November 25, 2022
+}}</ref>
+
+Aristotle defined mathematics as "the science of quantity", and this definition prevailed until the 18th century. However, Aristotle also noted that a focus on quantity alone may not distinguish mathematics from sciences like physics; in his view, abstraction and studying quantity as a property "separable in thought" from real instances set mathematics apart.<ref name="Franklin">{{Cite book | last=Franklin | first=James | author-link=James Franklin (philosopher) | title=Philosophy of Mathematics | date= 2009 | isbn=978-0-08-093058-9 | pages=104–106 | publisher=Elsevier | url={{GBurl|id=mbn35b2ghgkC|p=104}} | access-date=June 20, 2015 }}</ref> In the 19th century, when mathematicians began to address topics{{mdash}}such as infinite sets{{mdash}}which have no clear-cut relation to physical reality, a variety of new definitions were given.<ref name="Cajori">{{cite book
+ | title=A History of Mathematics
+ | last=Cajori
+ | first=Florian
+ | author-link=Florian Cajori
+ | publisher=American Mathematical Society (1991 reprint)
+ | year=1893
+ | isbn=978-0-8218-2102-2
+ | pages=285–286
+ | url={{GBurl|id=mGJRjIC9fZgC|p=285}}
+ | access-date=June 20, 2015
+}}</ref> With the large number of new areas of mathematics that have appeared since the beginning of the 20th century, defining mathematics by its object of study has become increasingly difficult.{{sfn|Devlin|2018|p=[https://books.google.com/books?id=gUb7CAAAQBAJ&pg=PA3 3]}} For example, in lieu of a definition, [[Saunders Mac Lane]] in ''[[Mathematics, form and function|Mathematics, Form and Function]]'' summarizes the basics of several areas of mathematics, emphasizing their interconnectedness, and observes:<ref>{{cite book |last1=Mac Lane |first1=Saunders |title=Mathematics Form and Function |date=1986 |doi=10.1007/978-1-4612-4872-9 |isbn=978-1-4612-9340-8 |page=409 }}</ref>
+{{blockquote|the development of Mathematics provides a tightly connected network of formal rules, concepts, and systems.  Nodes of this network are closely bound to procedures useful in human activities and to questions arising in science. The transition from activities to the formal Mathematical systems is guided by a variety of general insights and ideas.}}
+
+Another approach for defining mathematics is to use its methods. For example, an area of study is often qualified as mathematics as soon as one can prove theorems{{emdash}}assertions whose validity relies on a proof, that is, a purely logical deduction.{{efn|For example, logic belongs to philosophy since [[Aristotle]]. Circa the end of the 19th century, the [[foundational crisis of mathematics]] implied developments of logic that are specific to mathematics. This eventually allowed the proof of theorems such as [[Gödel's theorems]]. Since then, [[mathematical logic]] is commonly considered an area of mathematics.}}<ref>{{cite journal | title=The Methodology of Mathematics | first1=Ronald | last1=Brown | author1-link=Ronald Brown (mathematician) | first2=Timothy | last2=Porter | journal=The Mathematical Gazette | volume=79 | issue=485 | pages=321–334 |year=1995 | doi=10.2307/3618304 | jstor=3618304 | s2cid=178923299 | url=https://cds.cern.ch/record/280311 | access-date=November 25, 2022 | archive-date=March 23, 2023 | archive-url=https://web.archive.org/web/20230323164159/https://cds.cern.ch/record/280311 | url-status=live | doi-access=free }}</ref>{{verification failed|date=October 2024}}
+
+=== Rigor ===
+{{See also|Logic}}
+Mathematical reasoning requires [[Mathematical rigor|rigor]]. This means that the definitions must be absolutely unambiguous and the [[proof (mathematics)|proof]]s must be reducible to a succession of applications of [[inference rule]]s,{{efn|This does not mean to make explicit all inference rules that are used. On the contrary, this is generally impossible without [[computer]]s and [[proof assistant]]s. Even with this modern technology, it may take years of human work to write down a completely detailed proof.}} without any use of empirical evidence and [[intuition]].{{efn|This does not mean that empirical evidence and intuition are not needed for choosing the theorems to be proved and to prove them.}}<ref>{{cite journal | title=Mathematical Rigor and Proof | first=Yacin | last=Hamami | journal=The Review of Symbolic Logic | volume=15 | issue=2 | date=June 2022 | pages=409–449 | url=https://www.yacinhamami.com/wp-content/uploads/2019/12/Hamami-2019-Mathematical-Rigor-and-Proof.pdf | access-date=November 21, 2022 | doi=10.1017/S1755020319000443 | s2cid=209980693 | archive-date=December 5, 2022 | archive-url=https://web.archive.org/web/20221205114343/https://www.yacinhamami.com/wp-content/uploads/2019/12/Hamami-2019-Mathematical-Rigor-and-Proof.pdf | url-status=live }}</ref> Rigorous reasoning is not specific to mathematics, but, in mathematics, the standard of rigor is much higher than elsewhere. Despite mathematics' [[concision]], rigorous proofs can require hundreds of pages to express, such as the 255-page [[Feit–Thompson theorem]].{{efn|This is the length of the original paper that does not contain the proofs of some previously published auxiliary results. The book devoted to the complete proof has more than 1,000 pages.}} The emergence of [[computer-assisted proof]]s has allowed proof lengths to further expand.{{efn|For considering a large computation occurring in a proof as reliable, one generally requires two computations using independent software}}<ref>{{harvnb|Peterson|1988|p=4}}: "A few complain that the computer program can't be verified properly." (in reference to the Haken–Appel proof of the [[Four Color Theorem]])</ref> The result of this trend is a philosophy of the [[Quasi-empiricism in mathematics|quasi-empiricist]] proof that can not be considered infallible, but has a probability attached to it.<ref name=Kleiner_1991 />
+
+The concept of rigor in mathematics dates back to ancient Greece, where their society encouraged logical, deductive reasoning. However, this rigorous approach would tend to discourage exploration of new approaches, such as irrational numbers and concepts of infinity. The method of demonstrating rigorous proof was enhanced in the sixteenth century through the use of symbolic notation. In the 18th century, social transition led to mathematicians earning their keep through teaching, which led to more careful thinking about the underlying concepts of mathematics. This produced more rigorous approaches, while transitioning from geometric methods to algebraic and then arithmetic proofs.<ref name=Kleiner_1991 />
+
+At the end of the 19th century, it appeared that the definitions of the basic concepts of mathematics were not accurate enough for avoiding paradoxes (non-Euclidean geometries and [[Weierstrass function (nowhere-differentiable function)|Weierstrass function]]) and contradictions (Russell's paradox). This was solved by the inclusion of axioms with the [[apodictic]] inference rules of mathematical theories; the reintroduction of the axiomatic method pioneered by the ancient Greeks.<ref name=Kleiner_1991 /> It results that "rigor" is no longer a relevant concept in mathematics, as a proof is either correct or erroneous, and a "rigorous proof" is simply a [[pleonasm]]. Where a special concept of rigor comes into play is in the socialized aspects of a proof, wherein it may be demonstrably refuted by other mathematicians. After a proof has been accepted for many years or even decades, it can then be considered reliable.<ref>{{cite journal
+ | title=On the Reliability of Mathematical Proofs
+ | first=V. Ya. | last=Perminov
+ | journal=Philosophy of Mathematics
+ | volume=42 | issue=167 (4) | year=1988 | pages=500–508
+ | publisher=Revue Internationale de Philosophie
+}}</ref>
+
+Nevertheless, the concept of "rigor" may remain useful for teaching beginners what a mathematical proof is.<ref>{{cite journal
+ | title=Teachers' perceptions of the official curriculum: Problem solving and rigor
+ | first1=Jon D. | last1=Davis | first2=Amy Roth | last2=McDuffie | author2-link = Amy Roth McDuffie
+ | first3=Corey | last3=Drake | first4=Amanda L. | last4=Seiwell
+ | journal=International Journal of Educational Research
+ | volume=93 | year=2019 | pages=91–100
+ | doi=10.1016/j.ijer.2018.10.002 | s2cid=149753721 }}</ref>
+
+== Training and practice ==
+{{See also|Computer-based mathematics education}}
+=== Education ===
+{{Main|Mathematics education}}
+
+Mathematics has a remarkable ability to cross cultural boundaries and time periods. As a human activity, the practice of mathematics has a social side, which includes [[Mathematics education|education]], careers, [[List of mathematics awards|recognition]], [[Popular mathematics|popularization]], and so on. In education, mathematics is a core part of the curriculum and forms an important element of the [[science, technology, engineering, and mathematics]] (STEM) academic disciplines. Prominent careers for professional mathematicians include mathematics teacher or professor, [[statistician]], [[actuary]], [[financial analyst]], [[economist]], [[accountant]], [[commodity trader]], or [[Information technology consulting|computer consultant]].<ref>{{cite book
+ | title=Mathematicians and Statisticians: A Practical Career Guide
+ | first=Kezia
+ | last=Endsley
+ | year=2021
+ | series=Practical Career Guides
+ | isbn=978-1-5381-4517-3
+ | publisher=Rowman & Littlefield
+ | pages=1–3
+ | url={{GBurl|id=1cEYEAAAQBAJ|p=3}}
+ | access-date=November 29, 2022
+}}</ref>
+
+Archaeological evidence shows that instruction in mathematics occurred as early as the second millennium BCE in ancient Babylonia.<ref>{{cite book
+ | title=The Oxford Handbook of the History of Mathematics
+ | first=Eleanor | last=Robson | author-link=Eleanor Robson
+ | year=2009
+ | chapter=Mathematics education in an Old Babylonian scribal school
+ | editor1-first=Eleanor | editor1-last=Robson
+ | editor2-first=Jacqueline | editor2-last=Stedall | editor2-link=Jackie Stedall
+ | publisher=OUP Oxford
+ | isbn=978-0-19-921312-2
+ | chapter-url={{GBurl|id=xZMSDAAAQBAJ|p=199}}
+ | access-date=November 24, 2022
+}}</ref> Comparable evidence has been unearthed for scribal mathematics training in the [[ancient Near East]] and then for the [[Greco-Roman world]] starting around 300 BCE.<ref>{{cite book
+ | chapter=Mathematics Education in Antiquity
+ | first1=Alain | last1=Bernard
+ | first2=Christine | last2=Proust | author2-link=Christine Proust
+ | first3=Micah | last3=Ross
+ | title=Handbook on the History of Mathematics Education
+ | editor1-last=Karp | editor1-first=A.
+ | editor2-last=Schubring | editor2-first=G.
+ | year=2014 | pages=27–53 | isbn=978-1-4614-9154-5
+ | publisher=Springer | publication-place=New York
+ | doi=10.1007/978-1-4614-9155-2_3
+}}</ref> The oldest known mathematics textbook is the [[Rhind papyrus]], dating from {{Circa|1650 BCE}} in Egypt.<ref>{{cite journal
+ | title=The World's First Mathematics Textbook
+ | first=Underwood | last=Dudley
+ | journal=Math Horizons
+ | volume=9 | issue=4 | date=April 2002 | pages=8–11
+ | publisher=Taylor & Francis, Ltd.
+ | doi=10.1080/10724117.2002.11975154 | jstor=25678363
+ | s2cid=126067145 }}</ref> Due to a scarcity of books, mathematical teachings in ancient India were communicated using memorized [[oral tradition]] since the [[Vedic period]] ({{c.|1500|500 BCE}}).<ref>{{cite conference
+ | title=Indian pedagogy and problem solving in ancient Thamizhakam
+ | last=Subramarian
+ | first=F.
+ | conference=History and Pedagogy of Mathematics conference, July 16–20, 2012
+ | url=http://hpm2012.onpcs.com/Proceeding/OT2/T2-10.pdf
+ | access-date=November 29, 2022
+ | archive-date=November 28, 2022
+ | archive-url=https://web.archive.org/web/20221128082654/http://hpm2012.onpcs.com/Proceeding/OT2/T2-10.pdf
+ | url-status=live
+ }}</ref> In [[Imperial China]] during the [[Tang dynasty]] (618–907 CE), a mathematics curriculum was adopted for the [[Imperial examination|civil service exam]] to join the state bureaucracy.<ref>{{cite book
+ | chapter=Official Curriculum in Mathematics in Ancient China: How did Candidates Study for the Examination?
+ | first=Man Keung | last=Siu
+ | series=Series on Mathematics Education
+ | title=How Chinese Learn Mathematics
+ | pages=157–185 | year=2004 | volume=1 | isbn=978-981-256-014-8
+ | doi=10.1142/9789812562241_0006
+ | url=https://scholar.archive.org/work/3fb5lb2qsfg35gf2cv6viaydny/access/wayback/http://hkumath.hku.hk:80/~mks/Chapter%206-Siu.pdf
+ | access-date=November 26, 2022 }}</ref>
+
+Following the [[Dark Ages (historiography)|Dark Age]]s, mathematics education in Europe was provided by religious schools as part of the [[Quadrivium]]. The oldest journal addressing instruction in mathematics was ''[[L'Enseignement Mathématique]]'', which began publication in 1899.<ref>{{cite journal
+ | title=The History of Mathematical Education
+ | journal=The American Mathematical Monthly
+ | volume=74 | issue=1 | pages=38–55
+ | publisher=Taylor & Francis, Ltd.
+ | doi=10.2307/2314867 | jstor=2314867 | last1=Jones
+ | first1=Phillip S.
+ | year=1967
+ }}</ref> The Western advancements in science and technology led to the establishment of centralized education systems in many nation-states, with mathematics as a core component{{emdash}}initially for its military applications.<ref>{{cite journal
+ | title=Introduction: the history of mathematics teaching. Indicators for modernization processes in societies
+ | first1=Gert | last1=Schubring | first2=Fulvia | last2=Furinghetti
+ | first3=Man Keung | last3=Siu
+ | journal=ZDM – Mathematics Education
+ | volume=44 | pages=457–459 | date=August 2012
+ | issue=4 | doi=10.1007/s11858-012-0445-7
+ | s2cid=145507519 | doi-access=free }}</ref> While the content of courses varies, in the present day nearly all countries teach mathematics to students for significant amounts of time.<ref>{{Cite book | chapter=Examining eTIMSS Country Differences Between eTIMSS Data and Bridge Data: A Look at Country-Level Mode of Administration Effects | title=TIMSS 2019 International Results in Mathematics and Science | first1=Matthias | last1=von Davier | first2=Pierre | last2=Foy | first3=Michael O. | last3=Martin | first4=Ina V.S. | last4=Mullis | publisher=[[TIMSS]] & [[PIRLS]] International Study Center, [[Lynch School of Education and Human Development]] and [[International Association for the Evaluation of Educational Achievement]] | isbn=978-1-889938-54-7 | page=13.1 | language=en-US | year=2020 | url=https://files.eric.ed.gov/fulltext/ED610099.pdf | access-date=November 29, 2022 | archive-date=November 29, 2022 | archive-url=https://web.archive.org/web/20221129163908/https://files.eric.ed.gov/fulltext/ED610099.pdf | url-status=live }}</ref>
+
+During school, mathematical capabilities and positive expectations have a strong association with career interest in the field. Extrinsic factors such as feedback and motivation by teachers, parents, and peer groups can influence the level of interest in mathematics.<ref>{{cite journal
+ | title=Social Cognitive Factors, Support, and Engagement: Early Adolescents' Math Interests as Precursors to Choice of Career
+ | first1=Heather T.
+ | last1=Rowan-Kenyon
+ | first2=Amy K.
+ | last2=Swan
+ | first3=Marie F.
+ | last3=Creager
+ | journal=The Career Development Quarterly
+ | volume=60
+ | issue=1
+ | date=March 2012
+ | pages=2–15
+ | doi=10.1002/j.2161-0045.2012.00001.x
+ | url=https://www.academia.edu/download/45974312/j.2161-0045.2012.00001.x20160526-3995-67kydl.pdf
+ | access-date=November 29, 2022
+ | archive-url=https://web.archive.org/web/20231122212933/https://d1wqtxts1xzle7.cloudfront.net/45974312/j.2161-0045.2012.00001.x20160526-3995-67kydl-libre.pdf?1464293840=&response-content-disposition=inline%3B+filename%3DSocial_Cognitive_Factors_Support_and_Eng.pdf&Expires=1700692172&Signature=cs9KfTPxoPh859wY~ExtJyAl9NpYb3X-2P4rDel1Z3z7DwehsHLRggoZtgi1pMsamxYobu9dVK4G7OsqfvNxcuwz3uKh1pnCMZQEz~ahVtPb4kvN-4dmwExJplzoxWu31o3SJOfuBt0GGE-0Hl8eLfPBg5agmtkjSwAWQwlqGrjp3YgYZGjbNxOEAM4t1l4qvoWXidWvSHHcEUNvlKYwCDvG0~QhGTmA6ldxmfS1ovf0adog-qqvjGxxJuSjtP6O8zCTwkPXYwi2e8giI0H6b5fNarHc-2q~-NRnVVtYKhvSBcwC22kNZoA7s8sp8ix9KIdM3uxiUIBRBRC-4aaVoQ__&Key-Pair-Id=APKAJLOHF5GGSLRBV4ZA
+ | archive-date=November 22, 2023
+ | url-status=live
+ }}</ref> Some students studying mathematics may develop an apprehension or fear about their performance in the subject. This is known as [[mathematical anxiety]], and it is considered the most prominent of the disorders impacting academic performance. Mathematical anxiety can develop due to various factors such as parental and teacher attitudes, social stereotypes, and personal traits. Help to counteract the anxiety can come from changes in instructional approaches, interactions with parents and teachers, and tailored treatments for the individual.<ref>{{cite journal
+ | title=Spotlight on math anxiety
+ | first1=Silke | last1=Luttenberger
+ | first2=Sigrid | last2=Wimmer
+ | first3=Manuela | last3=Paechter
+ | journal=Psychology Research and Behavior Management
+ | year=2018 | volume=11 | pages=311–322
+ | doi=10.2147/PRBM.S141421 | pmid=30123014
+ | pmc=6087017 | doi-access=free }}</ref>
+
+=== Psychology (aesthetic, creativity and intuition) ===
+The validity of a mathematical theorem relies only on the rigor of its proof, which could theoretically be done automatically by a [[computer program]]. This does not mean that there is no place for creativity in a mathematical work. On the contrary, many important mathematical results (theorems) are solutions of problems that other mathematicians failed to solve, and the invention of a way of solving them may be a fundamental method of the solving process.<ref>{{cite journal
+ | title=The Outlook of the Mathematicians' Creative Processes
+ | first=Narges | last=Yaftian
+ | journal=Procedia – Social and Behavioral Sciences
+ | volume=191 | date=June 2, 2015 | pages=2519–2525
+ | doi=10.1016/j.sbspro.2015.04.617
+ | doi-access=free}}</ref><ref>{{cite journal
+ | title=The Frontage of Creativity and Mathematical Creativity
+ | first1=Mehdi | last1=Nadjafikhah | first2=Narges | last2=Yaftian
+ | journal=Procedia – Social and Behavioral Sciences
+ | volume=90 | date=October 10, 2013 | pages=344–350
+ | doi=10.1016/j.sbspro.2013.07.101
+ | doi-access=free}}</ref> An extreme example is [[Apery's theorem]]: [[Roger Apery]] provided only the ideas for a proof, and the formal proof was given only several months later by three other mathematicians.<ref>{{cite journal
+ | title=A proof that Euler missed... Apéry's Proof of the irrationality of ζ(3)
+ | first=A.
+ | last=van der Poorten
+ | journal=[[The Mathematical Intelligencer]]
+ | volume=1
+ | issue=4
+ | year=1979
+ | pages=195–203
+ | doi=10.1007/BF03028234
+ | s2cid=121589323
+ | url=http://pracownicy.uksw.edu.pl/mwolf/Poorten_MI_195_0.pdf
+ | access-date=November 22, 2022
+ | archive-date=September 6, 2015
+ | archive-url=https://web.archive.org/web/20150906015716/http://pracownicy.uksw.edu.pl/mwolf/Poorten_MI_195_0.pdf
+ | url-status=live
+ }}</ref>
+
+Creativity and rigor are not the only psychological aspects of the activity of mathematicians. Some mathematicians can see their activity as a game, more specifically as solving [[puzzle]]s.<ref>{{cite book
+ | title=Famous Puzzles of Great Mathematicians
+ | first=Miodrag
+ | last=Petkovi
+ | date=September 2, 2009
+ | publisher=American Mathematical Society
+ | pages=xiii–xiv
+ | isbn=978-0-8218-4814-2
+ | url={{GBurl|id=AZlwAAAAQBAJ|pg=PR13}}
+ | access-date=November 25, 2022
+}}</ref> This aspect of mathematical activity is emphasized in [[recreational mathematics]].
+
+Mathematicians can find an [[aesthetic]] value in mathematics. Like [[beauty]], it is hard to define; it is commonly related to ''elegance'', which involves qualities like [[simplicity]], [[symmetry]], completeness, and generality. G. H. Hardy, in ''[[A Mathematician's Apology]]'', expressed the belief that the aesthetic considerations are, in themselves, sufficient to justify the study of pure mathematics. He also identified other criteria such as significance, unexpectedness, and inevitability, which contribute to mathematical aesthetics.<ref>{{cite book
+ | title=A Mathematician's Apology
+ | last=Hardy | first=G. H. | author-link=G. H. Hardy
+ | publisher=Cambridge University Press | year=1940
+ | url=https://archive.org/details/hardy_annotated/
+ | isbn=978-0-521-42706-7 | access-date=November 22, 2022
+}} See also ''[[A Mathematician's Apology]]''.</ref> [[Paul Erdős]] expressed this sentiment more ironically by speaking of "The Book", a supposed divine collection of the most beautiful proofs. The 1998 book ''[[Proofs from THE BOOK]]'', inspired by Erdős, is a collection of particularly succinct and revelatory mathematical arguments. Some examples of particularly elegant results include Euclid's proof that there are infinitely many prime numbers and the [[fast Fourier transform]] for [[harmonic analysis]].<ref>{{cite journal
+ | title=Reflections on Paul Erdős on His Birth Centenary, Part II
+ | first1=Noga | last1=Alon |author-link=Noga Alon | first2=Dan | last2=Goldston
+ | first3=András | last3=Sárközy | first4=József | last4=Szabados
+ | first5=Gérald | last5=Tenenbaum | first6=Stephan Ramon | last6=Garcia
+ | first7=Amy L. | last7=Shoemaker
+ | journal=Notices of the American Mathematical Society
+ | date=March 2015 | volume=62 | issue=3 | pages=226–247
+ | editor1-first=Krishnaswami | editor1-last=Alladi
+ | editor2-first=Steven G. | editor2-last=Krantz
+ | doi=10.1090/noti1223
+ | doi-access=free }}</ref>
+
+Some feel that to consider mathematics a science is to downplay its artistry and history in the seven traditional [[liberal arts]].<ref>See, for example [[Bertrand Russell]]'s statement "Mathematics, rightly viewed, possesses not only truth, but supreme beauty ..." in his {{cite book | title=History of Western Philosophy | year=1919 | page=60 }}</ref> One way this difference of viewpoint plays out is in the philosophical debate as to whether mathematical results are ''created'' (as in art) or ''discovered'' (as in science).<ref name=borel>{{Cite journal
+ | last=Borel | first=Armand | author-link=Armand Borel
+ | title=Mathematics: Art and Science
+ | journal=The Mathematical Intelligencer
+ | volume=5 | issue=4 | pages=9–17 | year=1983
+ | publisher=Springer | issn=1027-488X
+ | doi=10.4171/news/103/8| doi-access=free
+}}</ref> The popularity of recreational mathematics is another sign of the pleasure many find in solving mathematical questions.
+
+== Cultural impact ==
+
+=== Artistic expression ===
+{{Main|Mathematics and art}}
+
+Notes that sound well together to a Western ear are sounds whose fundamental [[frequencies]] of vibration are in simple ratios. For example, an octave doubles the frequency and a [[perfect fifth]] multiplies it by <math display="inline">\frac{3}{2}</math>.<ref>{{cite journal | last = Cazden | first = Norman | date = October 1959 | doi = 10.1177/002242945900700205 | issue = 2 | journal = Journal of Research in Music Education | jstor = 3344215 | pages = 197–220 | title = Musical intervals and simple number ratios | volume = 7| s2cid = 220636812 }}</ref><ref>{{cite journal | last = Budden | first = F. J. | date = October 1967 | doi = 10.2307/3613237 | issue = 377 | journal = The Mathematical Gazette | jstor = 3613237 | pages = 204–215 | publisher = Cambridge University Press ({CUP}) | title = Modern mathematics and music | volume = 51| s2cid = 126119711 }}</ref>
+
+[[File:Julia set (highres 01).jpg|thumb|[[Fractal]] with a scaling symmetry and a central symmetry]]
+Humans, as well as some other animals, find symmetric patterns to be more beautiful.<ref>{{Cite journal |last1=Enquist |first1=Magnus |last2=Arak |first2=Anthony |date=November 1994 |title=Symmetry, beauty and evolution |url=https://www.nature.com/articles/372169a0 |journal=Nature |language=en |volume=372 |issue=6502 |pages=169–172 |doi=10.1038/372169a0 |pmid=7969448 |bibcode=1994Natur.372..169E |s2cid=4310147 |issn=1476-4687 |access-date=December 29, 2022 |archive-date=December 28, 2022 |archive-url=https://web.archive.org/web/20221228052049/https://www.nature.com/articles/372169a0 |url-status=live |url-access=subscription }}</ref> Mathematically, the symmetries of an object form a group known as the [[symmetry group]].<ref>{{Cite web |last=Hestenes |first=David |year=1999 |title=Symmetry Groups |url=https://davidhestenes.net/geocalc/pdf/SymmetryGroups.pdf }}</ref> For example, the group underlying mirror symmetry is the [[cyclic group]] of two elements, <math>\mathbb{Z}/2\mathbb{Z}</math>. A [[Rorschach test]] is a figure invariant by this symmetry,<ref>{{cite encyclopedia | last = Bender | first = Sara | editor1-last = Carducci | editor1-first = Bernardo J. | editor2-last = Nave | editor2-first = Christopher S. | editor3-last = Mio | editor3-first = Jeffrey S. | editor4-last = Riggio | editor4-first = Ronald E. | title = The Rorschach Test | date = September 2020 | doi = 10.1002/9781119547167.ch131 | pages = 367–376 | publisher = Wiley | encyclopedia = The Wiley Encyclopedia of Personality and Individual Differences: Measurement and Assessment| isbn = 978-1-119-05751-2 }}</ref> as are [[butterfly]] and animal bodies more generally (at least on the surface).<ref>{{cite book|title=Symmetry|volume=47|series=Princeton Science Library|first=Hermann|last=Weyl|author-link=Hermann Weyl|publisher=Princeton University Press|year=2015|isbn=978-1-4008-7434-7|page=[https://books.google.com/books?hl=en&lr=&id=GG1FCQAAQBAJ&pg=PA4 4]}}</ref> Waves on the sea surface possess translation symmetry: moving one's viewpoint by the distance between wave crests does not change one's view of the sea.<ref>{{Cite web|url=https://ocw.mit.edu/courses/8-03sc-physics-iii-vibrations-and-waves-fall-2016/pages/part-i-mechanical-vibrations-and-waves/lecture-8/|title=Lecture 8: Translation Symmetry &#124; Physics III: Vibrations and Waves &#124; Physics|website=MIT OpenCourseWare}}</ref> [[Fractals]] possess [[self-similarity]].<ref>{{Cite web |last=Bradley |first=Larry |year=2010 |title=Fractals – Chaos & Fractals |url=https://www.stsci.edu/~lbradley/seminar/fractals.html |access-date=December 29, 2022 |website=stsci.edu |archive-date=March 7, 2023 |archive-url=https://web.archive.org/web/20230307054609/https://www.stsci.edu/~lbradley/seminar/fractals.html |url-status=live }}</ref><ref>{{Cite web |title=Self-similarity |url=https://math.bu.edu/DYSYS/chaos-game/node5.html |access-date=December 29, 2022 |website=math.bu.edu |archive-date=March 2, 2023 |archive-url=https://web.archive.org/web/20230302132911/http://math.bu.edu/DYSYS/chaos-game/node5.html |url-status=live }}</ref>
+
+=== Popularization ===
+{{Main|Popular mathematics}}
+
+Popular mathematics is the act of presenting mathematics without technical terms.<ref>{{Cite conference |last=Kissane |first=Barry |date=July 2009 |title=Popular mathematics |url=https://researchrepository.murdoch.edu.au/id/eprint/6242/ |conference=22nd Biennial Conference of The Australian Association of Mathematics Teachers |location=Fremantle, Western Australia |publisher=Australian Association of Mathematics Teachers |pages=125–126 |access-date=December 29, 2022 |archive-date=March 7, 2023 |archive-url=https://web.archive.org/web/20230307054610/https://researchrepository.murdoch.edu.au/id/eprint/6242/ |url-status=live }}</ref> Presenting mathematics may be hard since the general public suffers from [[mathematical anxiety]] and mathematical objects are highly abstract.<ref>{{Cite book |last=Steen |first=L. A. |url={{GBurl|id=-d3TBwAAQBAJ|dq="popular mathematics" analogies|p=2}} |title=Mathematics Today Twelve Informal Essays |date=2012|publisher=Springer Science & Business Media |isbn=978-1-4613-9435-8 |page=2 |language=en |access-date=January 3, 2023 }}</ref> However, popular mathematics writing can overcome this by using applications or cultural links.<ref>{{Cite book |last=Pitici |first=Mircea |url={{GBurl|id=9nGQDQAAQBAJ|dq="popular mathematics" analogies|p=331}} |title=The Best Writing on Mathematics 2016 |date=2017|publisher=Princeton University Press |isbn=978-1-4008-8560-2 |language=en |access-date=January 3, 2023 }}</ref> Despite this, mathematics is rarely the topic of popularization in printed or televised media.
+
+=== Awards and prize problems ===
+{{Main category|Mathematics awards}}
+[[File:FieldsMedalFront.jpg|thumb|The front side of the [[Fields Medal]] with an illustration of the Greek [[polymath]] [[Archimedes]]]]
+
+The most prestigious award in mathematics is the [[Fields Medal]],{{sfn|Monastyrsky|2001|p=1|ps=: "The Fields Medal is now indisputably the best known and most influential award in mathematics."}}{{sfn|Riehm|2002|pp=778–782}} established by Canadian [[John Charles Fields]] in 1936 and awarded every four years (except around [[World War II in Yugoslavia|World War II]]) to up to four individuals.<ref>{{Cite web |title=Fields Medal {{!}} International Mathematical Union (IMU) |url=https://www.mathunion.org/imu-awards/fields-medal |access-date=February 21, 2022 |website=www.mathunion.org |archive-date=December 26, 2018 |archive-url=https://web.archive.org/web/20181226015744/https://www.mathunion.org/imu-awards/fields-medal |url-status=live }}</ref><ref name="StAndrews-Fields">{{Cite web |title=Fields Medal |url=https://mathshistory.st-andrews.ac.uk/Honours/FieldsMedal/ |access-date=February 21, 2022 |website=Maths History |language=en |archive-date=March 22, 2019 |archive-url=https://web.archive.org/web/20190322134417/http://www-history.mcs.st-andrews.ac.uk/Honours/FieldsMedal.html |url-status=live }}</ref> It is considered the mathematical equivalent of the [[Nobel Prize]].<ref name="StAndrews-Fields" />
+
+Other prestigious mathematics awards include:<ref>{{cite web
+ | title=Honours/Prizes Index
+ | website=MacTutor History of Mathematics Archive
+ | url=https://mathshistory.st-andrews.ac.uk/Honours/
+ | access-date=February 20, 2023
+ | archive-date=December 17, 2021
+ | archive-url=https://web.archive.org/web/20211217235828/https://mathshistory.st-andrews.ac.uk/Honours/
+ | url-status=live
+ }}</ref>
+* The [[Abel Prize]], instituted in 2002<ref>{{Cite web|title=About the Abel Prize|publisher=The Abel Prize|url=https://abelprize.no/page/about-abel-prize|access-date=January 23, 2022|archive-date=April 14, 2022|archive-url=https://web.archive.org/web/20220414060442/https://abelprize.no/page/about-abel-prize|url-status=live}}</ref> and first awarded in 2003<ref>{{Cite encyclopedia|title=Abel Prize {{!}} mathematics award|encyclopedia=Encyclopedia Britannica|url=https://www.britannica.com/science/Abel-Prize|access-date=January 23, 2022|language=en|archive-date=January 26, 2020|archive-url=https://web.archive.org/web/20200126120202/https://www.britannica.com/science/Abel-Prize|url-status=live}}</ref>
+* The [[Chern Medal]] for lifetime achievement, introduced in 2009<ref>{{Cite web |date=June 1, 2009 |title=Chern Medal Award|url=https://www.mathunion.org/fileadmin/IMU/Prizes/Chern/Chern_MedalPress_Release_090601.pdf |url-status=live |archive-url=https://web.archive.org/web/20090617012953/https://www.mathunion.org/fileadmin/IMU/Prizes/Chern/Chern_MedalPress_Release_090601.pdf |archive-date=June 17, 2009 |access-date=February 21, 2022 |website=mathunion.org}}</ref> and first awarded in 2010<ref>{{Cite web |title=Chern Medal Award|publisher=International Mathematical Union (IMU)|url=https://www.mathunion.org/imu-awards/chern-medal-award |access-date=January 23, 2022|archive-date=August 25, 2010 |archive-url=https://web.archive.org/web/20100825071850/http://www.mathunion.org/general/prizes/chern/details |url-status=live }}</ref>
+* The [[American Mathematical Society]] (AMS) [[Leroy P. Steele Prize]], awarded since 1970<ref>{{cite web
+ | title=The Leroy P Steele Prize of the AMS
+ | publisher=School of Mathematics and Statistics, University of St Andrews, Scotland
+ | url=https://mathshistory.st-andrews.ac.uk/Honours/AMSSteelePrize/
+ | access-date=November 17, 2022
+ | archive-date=November 17, 2022
+ | archive-url=https://web.archive.org/web/20221117201134/https://mathshistory.st-andrews.ac.uk/Honours/AMSSteelePrize/
+ | url-status=live
+ }}</ref>
+* The [[Wolf Prize in Mathematics]], also for lifetime achievement,<ref>{{cite book |last1=Chern |first1=S. S. |author-link=S. S. Chern |last2=Hirzebruch |first2=F. |author-link2=Friedrich Hirzebruch |title=Wolf Prize in Mathematics |date=2000 |doi=10.1142/4149 |isbn=978-981-02-3945-9 }}{{pn|date=January 2026}}</ref> instituted in 1978<ref>{{Cite web|title=The Wolf Prize|url=https://wolffund.org.il/the-wolf-prize/|url-status=live|archive-url=https://web.archive.org/web/20200112205029/https://wolffund.org.il/the-wolf-prize/|archive-date=January 12, 2020|access-date=January 23, 2022|website=Wolf Foundation|language=en-US}}</ref>
+
+A famous list of 23 [[open problem]]s, called "[[Hilbert's problems]]", was compiled in 1900 by German mathematician David Hilbert.<ref name=":0">{{Cite web|date=May 6, 2020|title=Hilbert's Problems: 23 and Math|url=https://www.simonsfoundation.org/2020/05/06/hilberts-problems-23-and-math/|access-date=January 23, 2022|website=Simons Foundation|language=en-US|archive-date=January 23, 2022|archive-url=https://web.archive.org/web/20220123011430/https://www.simonsfoundation.org/2020/05/06/hilberts-problems-23-and-math/|url-status=live}}</ref> This list has achieved great celebrity among mathematicians,<ref>{{cite book
+ | chapter=Deciding the undecidable: Wrestling with Hilbert's problems
+ | first=Solomon
+ | last=Feferman
+ | author-link=Solomon Feferman
+ | title=In the Light of Logic
+ | year=1998
+ | publisher=Oxford University Press
+ | isbn=978-0-19-508030-8
+ | pages=3–27
+ | series=Logic and Computation in Philosophy series
+ | chapter-url=https://math.stanford.edu/~feferman/papers/deciding.pdf
+ | url={{GBurl|id=1rjnCwAAQBAJ}}
+ | access-date=November 29, 2022
+}}</ref> and at least 13 of the problems (depending on how some are interpreted) have been solved.<ref name=":0" /><!-- Namely: problems 1, 3, 4; 5, 7, 10; 13, 14, 17; 18, 19, 20; 21 have been solved. (The semicolons are to make counting easier). ~Duckmather -->
+
+A new list of seven important problems, titled the "[[Millennium Prize Problems]]", was published in 2000. Only one of them, the [[Riemann hypothesis]], duplicates one of Hilbert's problems. A solution to any of these problems carries a 1 million dollar reward.<ref>{{Cite web|title=The Millennium Prize Problems|publisher=Clay Mathematics Institute|url=http://www.claymath.org/millennium-problems/millennium-prize-problems|access-date=January 23, 2022|archive-date=July 3, 2015|archive-url=https://web.archive.org/web/20150703184941/http://www.claymath.org/millennium-problems/millennium-prize-problems|url-status=live}}</ref> To date, only one of these problems, the [[Poincaré conjecture]], has been solved.<ref>{{Cite web|title=Millennium Problems|publisher=Clay Mathematics Institute|url=http://www.claymath.org/millennium-problems|access-date=January 23, 2022|archive-date=December 20, 2018|archive-url=https://web.archive.org/web/20181220122925/http://www.claymath.org/millennium-problems|url-status=live}}</ref><!-- NOTE that this website describes the answer to each problem as "unknown" EXCEPT for the Poincaré conjecture, where it mentions "Perelman's proof". ~Duckmather -->
+
+== See also ==
+{{Portal|Mathematics}}
+{{div col|colwidth=22em}}
+* [[Law (mathematics)]]
+* [[List of mathematical jargon]]
+* [[Lists of mathematicians]]
+* [[List of mathematics books]]
+* [[List of mathematics journals]]
+* [[Lists of mathematics topics]]
+* [[Mathematical constant]]
+* [[Mathematical sciences]]
+* [[Mathematics and art]]
+* [[Mathematics education]]
+* [[Philosophy of mathematics]]
+* [[Relationship between mathematics and physics]]
+* [[Science, technology, engineering, and mathematics]]
+{{div col end}}
+
+== Notes ==
+{{notelist}}
+
+== References ==
+=== Citations ===
+{{Reflist|30em
+<!--
+|refs=
+<ref name=future>[[Lynn Steen|Steen, L.A.]] (April 29, 1988). ''The Science of Patterns'' [[Science (journal)|Science]], 240: 611–16. And summarized at [http://www.ascd.org/publications/curriculum-handbook/409/chapters/The-Future-of-Mathematics-Education.aspx Association for Supervision and Curriculum Development] {{webarchive|url=https://web.archive.org/web/20101028101034/http://www.ascd.org/publications/curriculum-handbook/409/chapters/The-Future-of-Mathematics-Education.aspx |date=October 28, 2010 }}, www.ascd.org.</ref>
+<ref name=devlin>[[Devlin, Keith]], ''Mathematics: The Science of Patterns: The Search for Order in Life, Mind and the Universe'' (Scientific American Paperback Library) 1996, {{isbn|978-0716750475}}</ref>
+-->
+}}
+
+=== Other sources ===
+{{refbegin|30em}}
+* {{cite book |last=Bouleau |first=Nicolas|author-link=Nicolas Bouleau |title=Philosophie des mathématiques et de la modélisation: Du chercheur à l'ingénieur |publisher=L'Harmattan |year=1999 |isbn=978-2-7384-8125-2 |lccn=00298763 |oclc=44681994}}
+* {{cite book |last1=Boyer |first1=Carl Benjamin |author1-link=Carl Benjamin Boyer |title=A History of Mathematics |date=1991 |publisher=[[Wiley (publisher)|Wiley]] |location=New York |isbn=978-0-471-54397-8 |edition=2nd |url=https://archive.org/details/historyofmathema00boye/page/n3/mode/2up |chapter= |url-access=registration }}
+* {{cite book |last1=Cresswell |first1=Julia |title=Oxford Dictionary of Word Origins |publisher=Oxford University Press |isbn=978-0-19-886875-0 |edition=3 |date=2021 }}
+* {{cite book |last1=Devlin |first1=Keith |title=Sets, Functions, and Logic: An Introduction to Abstract Mathematics |publisher=CRC Press |isbn=978-1-4822-8602-1 |edition=3 |url=https://books.google.com/books?id=gUb7CAAAQBAJ&pg=PA3 |language=en |year=2018 |archive-date=October 7, 2024 |access-date=October 4, 2024 |archive-url=https://web.archive.org/web/20241007103646/https://books.google.com/books?id=gUb7CAAAQBAJ&pg=PA3 |url-status=live }}
+* {{cite book |last=Eves |first=Howard |author-link=Howard Eves |title=An Introduction to the History of Mathematics |edition=6th |publisher=Saunders |year=1990 |isbn=978-0-03-029558-4 |ref=none}}
+* {{cite book |last=Kleiner |first=Israel |editor-first1=Israel |editor-last1=Kleiner |author-link=Israel Kleiner (mathematician) |year=2007 |title=A History of Abstract Algebra |publisher=Springer Science & Business Media |doi=10.1007/978-0-8176-4685-1 |isbn=978-0-8176-4684-4 |lccn=2007932362 |oclc=76935733 |s2cid=117392219 |url={{GBurl|id=RTLRBK-wj6wC}} |access-date=February 8, 2024 }}
+* {{cite book |last=Kline |first=Morris |author-link=Morris Kline |title=Mathematical Thought from Ancient to Modern Times |url=https://archive.org/details/mathematicalthou00klin |url-access=registration |location=New York |publisher=Oxford University Press |edition= |year=1990 |isbn=978-0-19-506135-2 }}
+* {{cite journal |last=Monastyrsky |first=Michael |url=http://www.fields.utoronto.ca/aboutus/FieldsMedal_Monastyrsky.pdf |year=2001 |title=Some Trends in Modern Mathematics and the Fields Medal |journal=CMS – Notes – de la SMC |volume=33 |issue=2–3 |publisher=Canadian Mathematical Society |access-date=July 28, 2006 |archive-date=August 13, 2006 |archive-url=https://web.archive.org/web/20060813224844/http://www.fields.utoronto.ca/aboutus/FieldsMedal_Monastyrsky.pdf |url-status=live }}
+* {{cite journal |last=Peirce |first=Benjamin |author-link=Benjamin Peirce |pages=97–229 |title=Linear associative algebra |editor-link=Charles Sanders Peirce |editor-first=Charles&nbsp;Sanders |editor-last=Peirce |edition=Corrected, expanded, and annotated revision with an 1875 paper by B.&nbsp;Peirce and annotations by his son, C.S. Peirce, of the 1872 lithograph |journal=American Journal of Mathematics |volume=4 |year=1881 |url={{GBurl|id=De0GAAAAYAAJ|q=Peirce Benjamin Linear Associative Algebra|p=1}} |id=Corrected, expanded, and annotated revision with an 1875 paper by B.&nbsp;Peirce and annotations by his son, C.&nbsp;S.&nbsp;Peirce, of the 1872 lithograph ed. Google [{{GBurl|id=LQgPAAAAIAAJ|p=221}} Eprint] and as an extract, D.&nbsp;Van Nostrand, 1882, Google [https://archive.org/details/bub_gb_De0GAAAAYAAJ Eprint] |issue=1–4 |doi=10.2307/2369153 |jstor=2369153 |hdl=2027/hvd.32044030622997 |hdl-access=free |access-date=November 17, 2020 |ref=none }}.
+* {{cite book |last=Peterson |first=Ivars |year=1988 |title=The Mathematical Tourist: Snapshots of Modern Mathematics |publisher=W. H. Freeman and Company |isbn=0-7167-1953-3 |lccn=87033078 |oclc=17202382}}
+* {{cite book |last=Popper |first=Karl R. |author-link=Karl Popper |title=In Search of a Better World: Lectures and Essays from Thirty Years |location=New York |publisher=Routledge |chapter=On knowledge |year=1995 |isbn=978-0-415-13548-1 |bibcode=1992sbwl.book.....P |url-access=registration |url=https://archive.org/details/insearchofbetter00karl |ref=none }}
+* {{cite journal |last=Riehm |first=Carl |title=The Early History of the Fields Medal |journal=Notices of the AMS |volume=49 |issue=7 |pages=778–782 |date=August 2002 |url=https://www.ams.org/notices/200207/comm-riehm.pdf |access-date=October 2, 2006 |archive-date=October 26, 2006 |archive-url=https://web.archive.org/web/20061026000014/http://www.ams.org/notices/200207/comm-riehm.pdf |url-status=live }}
+* {{cite journal |last=Sevryuk |first=Mikhail B. |date=January 2006 |title=Book Reviews |journal=[[Bulletin of the American Mathematical Society]] |volume=43 |issue=1 |pages=101–109 |url=https://www.ams.org/bull/2006-43-01/S0273-0979-05-01069-4/S0273-0979-05-01069-4.pdf |access-date=June 24, 2006 |doi=10.1090/S0273-0979-05-01069-4 |archive-date=July 23, 2006 |archive-url=https://web.archive.org/web/20060723082901/http://www.ams.org/bull/2006-43-01/S0273-0979-05-01069-4/S0273-0979-05-01069-4.pdf |url-status=live |doi-access=free }}
+* {{cite book |last=Whittle |first=Peter |author-link=Peter Whittle (mathematician) |chapter=Almost home |editor-link=Frank Kelly (mathematician) |editor-first=F.P. |editor-last=Kelly |year=1994 |title=Probability, statistics and optimisation: A Tribute to Peter Whittle |location=Chichester |publisher=John Wiley |pages=1–28 |isbn=978-0-471-94829-2 |lccn=93050774 |oclc=29595603 |chapter-url=http://www.statslab.cam.ac.uk/History/2history.html#6._1966--72:_The_Churchill_Chair |edition=previously "A realised path: The Cambridge Statistical Laboratory up to 1993 (revised 2002)" |url-status=live |archive-url=https://web.archive.org/web/20131219080017/http://www.statslab.cam.ac.uk/History/2history.html#6._1966--72:_The_Churchill_Chair |archive-date=December 19, 2013 }}
+{{refend}}
+
+== Further reading ==
+{{Library resources box |by=no |onlinebooks=yes |others=yes |about=yes |label=Mathematics}}
+{{refbegin}}
+* {{cite book |last=Benson |first=Donald C. |title=The Moment of Proof: Mathematical Epiphanies |publisher=Oxford University Press |year=1999 |url=https://archive.org/details/momentofproofmat00bens/page/n5/mode/2up |url-access=registration |isbn=978-0-19-513919-8 |ref=none}}
+* {{cite book |last1=Davis |first1=Philip J. |author1-link=Philip J. Davis |last2=Hersh |first2=Reuben |author2-link=Reuben Hersh |title=The Mathematical Experience |publisher=Mariner Books |location=Boston; New York |edition=Reprint |year=1999 |isbn=978-0-395-92968-1 |title-link=The Mathematical Experience |ref=none}} Available [https://archive.org/details/mathematicalexpe0000davi_z6m5/ online] (registration required).
+* {{cite book |last1=Courant |first1=Richard |author-link1=Richard Courant |last2=Robbins |first2=Herbert |author-link2=Herbert Robbins |title=What Is Mathematics?: An Elementary Approach to Ideas and Methods |location=New York |publisher=Oxford University Press |edition=2nd |year=1996 |isbn=978-0-19-510519-3 |url=https://archive.org/details/whatismathematic0000cour/page/n5/mode/2up |url-access=registration |ref=none}}
+* {{cite book |last=Gullberg |first=Jan |author-link=Jan Gullberg |title=Mathematics: From the Birth of Numbers |url=https://archive.org/details/mathematicsfromb1997gull/page/n5/mode/2up |url-access=registration |publisher=W.W. Norton & Company |edition= |year=1997 |isbn=978-0-393-04002-9 |ref=none}}
+* {{cite book |editor-last=Hazewinkel |editor-first=Michiel |editor-link=Michiel Hazewinkel |title=Encyclopaedia of Mathematics |publisher=Kluwer Academic Publishers |year=2000 |title-link=Encyclopaedia of Mathematics |ref=none}}&nbsp;– A translated and expanded version of a Soviet mathematics encyclopedia, in ten volumes. Also in paperback and on CD-ROM, and [https://encyclopediaofmath.org/wiki/Special:AllPages online].
+* {{cite book |last=Hodgkin |first=Luke Howard |title=A History of Mathematics: From Mesopotamia to Modernity |publisher=Oxford University Press |year=2005 |isbn=978-0-19-152383-0}}
+* {{cite book |last=Jourdain |first=Philip E. B. |author-link=Philip Jourdain |chapter=The Nature of Mathematics |title=The World of Mathematics |editor=James R. Newman |publisher=Dover Publications |year=2003 |isbn=978-0-486-43268-7 |ref=none}}
+<!-- * {{cite book |last=Maier |first=Annaliese |author-link=Anneliese Maier |title=At the Threshold of Exact Science: Selected Writings of Annaliese Maier on Late Medieval Natural Philosophy |editor=Steven Sargent |location=Philadelphia |publisher=University of Pennsylvania Press |year=1982 |ref=none}}
+ -->
+* {{cite book |last1=Pappas |first1=Theoni |author1-link=Theoni Pappas |title=The Joy Of Mathematics |date=1986 |publisher=Wide World Publishing |location=San Carlos, California |isbn=978-0-933174-65-8 |url=https://archive.org/details/joyofmathematics0000papp_t0z1/page/n3/mode/2up |url-access=registration |ref=none}}
+* {{cite book |last=Waltershausen |first=Wolfgang Sartorius von |author-link=Wolfgang Sartorius von Waltershausen |title=Gauss zum Gedächtniss |year=1965 |orig-date=1856 |publisher=Sändig Reprint Verlag H. R. Wohlwend |isbn=978-3-253-01702-5 |ref=no}}
+{{refend}}
+
+{{Areas of mathematics}}
+{{Authority control}}
+{{Subject bar
+| portal1 = Mathematics
+| portal2 = Arithmetic
+| portal3 = History of science
+| portal4 = Science
+| b       = y
+| commons = y
+| d       = y
+| n       = y
+| q       = y
+| s       = y
+| v       = y
+| wikt    = y
+}}
+
+[[Category:Mathematics| ]]
+[[Category:Formal sciences]]
+[[Category:Main topic articles]]

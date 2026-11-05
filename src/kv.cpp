@@ -3,6 +3,7 @@
 #include "alysane.h"
 #include <cblas.h>
 #include <immintrin.h>
+#include "simd.h"
 #include <omp.h>
 #include <thread>
 extern "C" void openblas_set_num_threads(int);
@@ -30,18 +31,7 @@ static void rms(int n, int d, const float* x, const float* g, float eps, float* 
 static void mm(int n, int out, int in, const float* X, const float* W, float* Y) {
     cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasTrans, n, out, in, 1.f, X, in, W, in, 0.f, Y, out);
 }
-static float dotf(const float* a, const float* b, int hd) {
-    if (hd == 64) {
-        __m512 s = _mm512_setzero_ps();
-        for (int i = 0; i < 64; i += 16)
-            s = _mm512_fmadd_ps(_mm512_loadu_ps(a + i), _mm512_loadu_ps(b + i), s);
-        return _mm512_reduce_add_ps(s);
-    }
-    float s = 0;
-    for (int i = 0; i < hd; i++) s += a[i] * b[i];
-    return s;
-}
-
+static float dotf(const float* a, const float* b, int hd) { return alysane::simd::dot(a, b, hd); }
 ForwardResult forward_kv(const KnowledgeWeights& w, const std::vector<int32_t>& ids, int pos_offset,
                          bool want_logits, KVCache* cache) {
     openblas_set_num_threads(hw_threads());

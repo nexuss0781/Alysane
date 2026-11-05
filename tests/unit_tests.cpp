@@ -1,5 +1,6 @@
 // Unit tests for the C2+C3 completion modules. No model weights required.
 #include "alysane.h"
+#include "simd.h"
 #include <cstdio>
 
 namespace alysane {
@@ -156,6 +157,23 @@ void run_unit_tests() {
     auto q2 = quantize_trace(t2, L, d);
     ck(std::fabs(topk_tv(t, t2, 1000) - quantized_topk_tv(q, q2, 1000)) == 0,
        "quantised top-k TV identical to full-precision top-k TV");
+
+    // ---- portable SIMD kernels agree with scalar reference ----
+    {
+        std::vector<float> a(1024), b(1024);
+        for (int i = 0; i < 1024; i++) { a[i] = ud(rng); b[i] = ud(rng); }
+        double ref_dot = 0, ref_l1 = 0;
+        for (int i = 0; i < 1024; i++) { ref_dot += (double)a[i] * b[i]; ref_l1 += std::fabs((double)a[i] - b[i]); }
+        float sd = simd::dot(a.data(), b.data(), 1024);
+        float sl = simd::l1(a.data(), b.data(), 1024);
+        ck(std::fabs(sd - ref_dot) < 1e-2 * std::max(1.0, std::fabs(ref_dot)), "SIMD dot matches scalar reference");
+        ck(std::fabs(sl - ref_l1) < 1e-3 * std::max(1.0, ref_l1), "SIMD L1 matches scalar reference");
+        // Non-multiple-of-16 length exercises the tail loop.
+        float sd2 = simd::dot(a.data(), b.data(), 1001);
+        double ref2 = 0; for (int i = 0; i < 1001; i++) ref2 += (double)a[i] * b[i];
+        ck(std::fabs(sd2 - ref2) < 1e-2 * std::max(1.0, std::fabs(ref2)), "SIMD dot handles ragged tail");
+        fprintf(stderr, "[info] SIMD ISA: %s\n", simd::isa_name());
+    }
 
     // ---- KVCache shape / accessors ----
     KVCache c;
