@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  correctness:
+    name: Build + unit tests + sanitizers (no weights)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq cmake g++ libopenblas-dev liblapacke-dev
+
+      - name: Build (Release)
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build -j$(nproc)
+
+      - name: Unit tests
+        run: ./build/alysane_unit_tests
+
+      - name: Analytic selftest
+        run: ./build/alysane selftest
+
+      - name: C3v2-1 identifiability tests
+        run: |
+          make c3v2_1
+          ./build/c3v2_1_test
+
+      - name: Build (ASan + UBSan)
+        run: |
+          cmake -S . -B build-asan -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer -g -O1"
+          cmake --build build-asan -j$(nproc) --target alysane_unit_tests
+
+      - name: Sanitizer unit tests
+        env:
+          ASAN_OPTIONS: detect_leaks=0
+          UBSAN_OPTIONS: print_stacktrace=1:halt_on_error=1
+        run: ./build-asan/alysane_unit_tests
+
+      - name: Upload test logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: correctness-logs
+          path: reports/c3v2_1_tests*.txt
+          if-no-files-found: ignore

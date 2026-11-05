@@ -10,7 +10,9 @@ from tokenizers import Tokenizer
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data' / 'raw'
 OUT = ROOT / 'data'
-N_TRAIN, N_HOLD, N_CTX = 256, 64, 64
+N_TRAIN = int(os.environ.get('ALYSANE_N_TRAIN', '256'))
+N_HOLD = int(os.environ.get('ALYSANE_N_HOLD', '64'))
+N_CTX = int(os.environ.get('ALYSANE_N_CTX', '64'))
 SEED = 20261105
 
 tok = Tokenizer.from_file(str(ROOT / 'models' / 'tokenizer.json'))
@@ -33,7 +35,9 @@ for p in sorted(RAW.glob('gutenberg_*.txt')):
     target.extend(chunks(text, p.stem))
 for p in sorted(RAW.glob('wiki_*.txt')):
     science.extend(chunks(p.read_text(errors='ignore'), p.stem))
-code_files = sorted(glob.glob('/usr/local/lib/python3.13/*.py'))
+import sysconfig
+_stdlib = sysconfig.get_paths()['stdlib']
+code_files = sorted(glob.glob(os.path.join(_stdlib, '*.py')))
 code_files = [p for p in code_files if os.path.getsize(p) > 2000][:80]
 for p in code_files:
     code.extend(chunks(Path(p).read_text(errors='ignore'), 'pystdlib/' + Path(p).name))
@@ -52,9 +56,13 @@ def take(pool, n_train, n_hold):
     return uniq[:n_train], uniq[n_train:need]
 
 # Balanced natural mixture; source labels are never read by C++ gate logic.
-tr_p, ho_p = take(prose, 80, 20)
-tr_c, ho_c = take(code, 96, 24)
-tr_s, ho_s = take(science, 80, 20)
+# Balanced thirds across prose / code / science; labels are audit-only.
+def split3(n):
+    a = n // 3; b = n // 3; return a, b, n - a - b
+tp, tc, ts = split3(N_TRAIN); hp, hc, hs = split3(N_HOLD)
+tr_p, ho_p = take(prose, tp, hp)
+tr_c, ho_c = take(code, tc, hc)
+tr_s, ho_s = take(science, ts, hs)
 train = tr_p + tr_c + tr_s
 hold = ho_p + ho_c + ho_s
 rng.shuffle(train); rng.shuffle(hold)

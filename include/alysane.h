@@ -200,7 +200,143 @@ SelfKnowledgeWeights train_self(const std::vector<Trace>& traces, const DistMatr
 SelfKnowledgeWeights train_energy(SelfKnowledgeWeights S, const std::vector<Trace>& traces, int epochs,
                                   uint64_t seed);
 
+// ============================================================================
+// C2+C3 completion: KV-cached generation, continuation behaviour, persistence.
+// ============================================================================
+
+/// Per-layer key/value cache. Layout: [L][cap][KVH*hd], keys already RoPE-rotated.
+struct KVCache {
+    int L = 0, KVH = 0, hd = 0, len = 0, cap = 0;
+    std::vector<float> k, v;
+    void init(int L_, int KVH_, int hd_, int cap_) {
+        L = L_; KVH = KVH_; hd = hd_; cap = cap_; len = 0;
+        k.assign((size_t)L * cap * KVH * hd, 0.f);
+        v.assign((size_t)L * cap * KVH * hd, 0.f);
+    }
+    float* kp(int l, int t) { return k.data() + ((size_t)l * cap + t) * KVH * hd; }
+    float* vp(int l, int t) { return v.data() + ((size_t)l * cap + t) * KVH * hd; }
+    const float* kp(int l, int t) const { return k.data() + ((size_t)l * cap + t) * KVH * hd; }
+    const float* vp(int l, int t) const { return v.data() + ((size_t)l * cap + t) * KVH * hd; }
+    size_t bytes() const { return (k.size() + v.size()) * sizeof(float); }
+};
+
+/// Threads used by BLAS/OpenMP hot paths (default 2, override ALYSANE_THREADS).
+int hw_threads();
+
+/// Forward with optional KV cache. `pos_offset` is the absolute position of ids[0].
+/// When cache != nullptr the K/V for these positions are appended to it.
+ForwardResult forward_kv(const KnowledgeWeights& w, const std::vector<int32_t>& ids, int pos_offset,
+                         bool want_logits, KVCache* cache);
+
+/// One autoregressive decode step at absolute position `pos` (cache.len must equal pos).
+/// Returns the next-token distribution and appends the consumed token's K/V to the cache.
+std::vector<float> decode_step(const KnowledgeWeights& w, KVCache& cache, int32_t token,
+                               std::vector<float>* last_probs_out = nullptr);
+
+// ---- §1.3 self-generated outcome signals (rollout based, no labels) ----
+
+struct RolloutConfig {
+    int R = 4;          ///< continuations per context
+    int T = 8;          ///< tokens per continuation
+    float temperature = 1.0f;
+    uint64_t seed = 20261105ULL;
+};
+
+struct RolloutSet {
+    std::vector<std::vector<int32_t>> seq; ///< R sequences of length T
+    /// Self-agreement a(x): mean pairwise n-gram kernel among own continuations.
+    float self_agreement = 0.f;
+    /// Exact-agreement rate (strict: identical continuations).
+    float exact_agreement = 0.f;
+    /// Mean next-token entropy along the rollout (predictive uncertainty proxy).
+    float mean_entropy = 0.f;
+};
+
+/// Generate R continuations of length T from context ids, sharing one prefill.
+RolloutSet rollouts(const KnowledgeWeights& w, const std::vector<int32_t>& ids, const RolloutConfig& cfg,
+                    uint64_t stream_seed);
+
+/// Normalised n-gram (spectrum-kernel) feature map of a token sequence, n=1..3.
+/// Sparse: token-id keys hashed into a fixed-width signed projection for tractability.
+constexpr int CONT_FEATURE_DIM = 512;
+std::vector<float> continuation_features(const std::vector<int32_t>& seq);
+
+/// Mean feature vector over a rollout set (the empirical kernel mean embedding).
+std::vector<float> continuation_mean(const RolloutSet& rs);
+
+/// MMD pseudometric between two rollout means (bounded in [0, sqrt(2)] after normalisation).
+float continuation_distance(const std::vector<float>& a, const std::vector<float>& b);
+
+/// Continuation consistency kappa(x,y): cross kernel between the two rollout sets.
+float continuation_consistency(const RolloutSet& a, const RolloutSet& b);
+
+// ---- Persistence-based multiscale structure (A1 replacement) ----
+
+struct PersistenceDiagram {
+    /// 0-dimensional deaths = single-linkage merge heights = sorted MST edge weights.
+    std::vector<float> deaths;
+    /// Sublevel-set ultrametric merge height for each pair is recoverable from the MST.
+    std::vector<float> null_quantile; ///< null 95th percentile per ordered death index
+    std::vector<int> significant;     ///< indices of deaths exceeding the null quantile
+    int n_significant = 0;
+    float null_B = 0;
+};
+
+/// 0-dim persistence of the single-linkage filtration, with a permutation null
+/// calibration that destroys geometry while preserving the distance distribution.
+PersistenceDiagram persistence0(const DistMatrix& D, int null_B, uint64_t seed, float alpha = 0.05f);
+
+/// Single-linkage ultrametric (minimax path distance) from the MST, O(N^2).
+DistMatrix ultrametric(const MST& m, int N);
+
+struct SoftRegions {
+    std::vector<int> landmarks;              ///< region anchors (indices into the sample)
+    std::vector<float> radius;               ///< per-anchor local scale
+    std::vector<std::vector<float>> member;  ///< N x K partition-of-unity weights
+    std::vector<float> boundary_score;       ///< membership entropy, normalised to [0,1]
+    int K = 0;
+};
+
+/// Overlapping soft regions: partition of unity subordinate to a landmark cover.
+/// No hard assignment, no fixed cluster count, no labels.
+SoftRegions soft_regions(const DistMatrix& D, const std::vector<int>& landmarks, float radius_quantile);
+
+/// Partition-of-unity membership for an out-of-sample point given anchor distances.
+std::vector<float> soft_membership(const std::vector<float>& dist_to_anchor, const std::vector<float>& radius);
+
+// ---- Trace quantisation (§4) ----
+
+struct QuantizedTrace {
+    std::vector<int8_t> pooled_q; ///< per-layer-block symmetric int8
+    std::vector<float> scale;     ///< one scale per layer (2*d block)
+    std::vector<float> attn_entropy, topk_probs;
+    std::vector<int32_t> topk_ids;
+    float tail_mass = 0, entropy = 0, nll = 0;
+};
+QuantizedTrace quantize_trace(const Trace& t, int L, int d);
+Trace dequantize_trace(const QuantizedTrace& q, int L, int d);
+/// Exact TV between the *unmodified* top-k distributions of a quantised trace pair.
+/// Hidden-state quantisation does not enter tau (see spec §4); this proves it.
+float quantized_topk_tv(const QuantizedTrace& a, const QuantizedTrace& b, int V);
+
+// ---- Reshape / drift (Theorem 3) ----
+
+struct DriftReport {
+    float delta_theta_norm = 0.f;
+    float max_logit_inf = 0.f;   ///< max_x ||z'(x)-z(x)||_inf
+    float empirical_L_z = 0.f;   ///< max_logit_inf / ||delta||
+    float max_tv_change = 0.f;   ///< max pair |d_B' - d_B|
+    float predicted_bound = 0.f; ///< 2 * max_logit_inf
+    int bound_violations = 0;
+    int pairs = 0;
+};
+
+DriftReport measure_drift(const KnowledgeWeights& w, const std::vector<std::vector<int32_t>>& ctxs,
+                          float rel_norm, uint64_t seed);
+
 void run_gates(const std::string& model_dir, const std::string& data_dir, const std::string& out_dir);
+void run_completion_gates(const std::string& model_dir, const std::string& data_dir, const std::string& out_dir);
 void run_parity(const std::string& model_dir, const std::string& tokens, const std::string& out);
 void run_selftest();
+void run_unit_tests();
 } // namespace alysane

@@ -1,0 +1,137 @@
+name: End-to-end real-model gates
+
+on:
+  workflow_dispatch:
+    inputs:
+      n_train:
+        description: 'Training contexts'
+        required: false
+        default: '256'
+      n_hold:
+        description: 'Holdout contexts'
+        required: false
+        default: '64'
+      n_ctx:
+        description: 'Context length'
+        required: false
+        default: '64'
+  push:
+    tags: ['e2e-*']
+
+jobs:
+  gates:
+    name: Pinned SmolLM-135M end-to-end
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq cmake g++ libopenblas-dev liblapacke-dev
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python (oracle + tokenisation only)
+        run: |
+          python -m pip install --upgrade pip
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements.txt
+
+      - name: Restore pinned SmolLM-135M
+        run: |
+          bash tools/download_model.sh
+          echo "c7a387d6fe81ca6dd304aeb809bda3932ff1bbef3ca41c9484502f2f448dc093  models/model.safetensors" | sha256sum -c -
+
+      - name: Prepare corpus (offline token conversion)
+        run: python tools/prepare_data.py
+        env:
+          ALYSANE_N_TRAIN: ${{ github.event.inputs.n_train || '256' }}
+          ALYSANE_N_HOLD: ${{ github.event.inputs.n_hold || '64' }}
+          ALYSANE_N_CTX: ${{ github.event.inputs.n_ctx || '64' }}
+
+      - name: Build
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+          cmake --build build -j$(nproc)
+
+      - name: Unit tests + analytic selftest
+        run: |
+          ./build/alysane_unit_tests
+          ./build/alysane selftest
+
+      - name: C1 parity — C++ side
+        env:
+          OPENBLAS_NUM_THREADS: '4'
+          OMP_NUM_THREADS: '4'
+          ALYSANE_THREADS: '4'
+        run: ./build/alysane parity models data/parity.bin reports/parity_cpp.bin
+
+      - name: C1 parity — independent HuggingFace oracle
+        env:
+          OPENBLAS_NUM_THREADS: '4'
+          OMP_NUM_THREADS: '4'
+        run: python tools/parity_reference.py
+
+      - name: Core gates G1-G7
+        env:
+          OPENBLAS_NUM_THREADS: '4'
+          OMP_NUM_THREADS: '4'
+          ALYSANE_THREADS: '4'
+        run: ./build/alysane gates models data reports
+
+      - name: Completion gates G8-G12 (real model)
+        env:
+          OPENBLAS_NUM_THREADS: '4'
+          OMP_NUM_THREADS: '4'
+          ALYSANE_THREADS: '4'
+        run: ./build/alysane complete models data reports
+
+      - name: Independent certificate oracle (NumPy)
+        run: python tools/verify_certificates.py
+
+      - name: Build report
+        run: python tools/make_report.py
+
+      - name: Gate summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p = pathlib.Path('reports/gates.json')
+          if not p.exists():
+              print('NO GATES PRODUCED'); raise SystemExit(1)
+          g = json.loads(p.read_text())
+          print('=== GATE RESULTS ===')
+          for k, v in sorted(g.get('gates', {}).items()):
+              print(f'{k:34s} {v}')
+          print('overall:', g.get('overall'), 'fails:', g.get('fail_count'))
+          print('ready_for_next_component:', g.get('ready_for_next_component'))
+          PY
+
+      - name: Upload gate artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: alysane-gates
+          path: |
+            reports/gates.json
+            reports/parity.json
+            reports/certificates.json
+            reports/report.md
+            reports/report.html
+            reports/knowledge_manifest.json
+            reports/self_weights.alys
+            data/manifest.json
+          if-no-files-found: warn
+
+      - name: Fail if any gate failed
+        run: |
+          python - <<'PY'
+          import json, pathlib, sys
+          g = json.loads(pathlib.Path('reports/gates.json').read_text())
+          sys.exit(0 if g.get('overall') == 'PASS' else 1)
+          PY
