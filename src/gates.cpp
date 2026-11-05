@@ -113,13 +113,19 @@ void run_gates(const std::string& model_dir, const std::string& data_dir, const 
         }
     auto t1 = std::chrono::steady_clock::now();
     double trace_sec = std::chrono::duration<double>(t1 - t0).count();
+    fprintf(stderr, "[stage] write_traces\n");
     write_traces(out_dir + "/train_traces.bin", traces, w.L, w.d, w.H);
+    fprintf(stderr, "[stage] write_probs\n");
     write_probs(out_dir + "/train_probs.bin", probs);
+    fprintf(stderr, "[stage] pairwise_tv\n");
     auto D = pairwise_tv(probs, V);
+    fprintf(stderr, "[stage] pairwise_tv_done\n");
     auto t2 = std::chrono::steady_clock::now();
     double dist_sec = std::chrono::duration<double>(t2 - t1).count();
     int min_size_target = std::max(8, N / 20);
+    fprintf(stderr, "[stage] measure_a1\n");
     auto a1 = measure_a1(D, min_size_target, 16, 20, 12345);
+    fprintf(stderr, "[stage] measure_a1_done q=%d\n", a1.best.q);
     G["timing"] = {
         {"train_forward_sec", trace_sec}, {"pairwise_tv_sec", dist_sec}, {"N", N}, {"n", n}, {"threads", 2}};
     G["A1"] = {{"strict_separated", a1.strict_separated},
@@ -154,6 +160,7 @@ void run_gates(const std::string& model_dir, const std::string& data_dir, const 
         return;
     }
     // Lemma-1 audit (corrected safe tau = rho+rho').
+    fprintf(stderr, "[stage] trace_audit\n");
     std::mt19937_64 rng(777);
     std::uniform_int_distribution<int> ud(0, N - 1);
     int audit = 2000, viol = 0, viol_half = 0;
@@ -182,8 +189,11 @@ void run_gates(const std::string& model_dir, const std::string& data_dir, const 
         {"bound", "|TV - hatTV| <= rho_i + rho_j (safe); original half-sum proof not accepted"}};
     G["gates"]["G2_trace_tau"] = viol == 0 ? "PASS" : "FAIL";
     // Landmarks / psi.
+    fprintf(stderr, "[stage] landmarks\n");
     auto landmarks = farthest_landmarks(D, 128, 12345);
+    fprintf(stderr, "[stage] psi\n");
     auto psi = psi_embedding(probs, landmarks, V);
+    fprintf(stderr, "[stage] psi_done\n");
     float cov = 0;
     for (int i = 0; i < N; i++) {
         float m = 1e30f;

@@ -8,10 +8,13 @@ endif()
 # Portable baseline: one binary, runtime SIMD dispatch (see include/simd.h).
 # ALYSANE_NATIVE=ON opts into -march=native for local benchmarking only.
 option(ALYSANE_NATIVE "Tune for the build host (non-portable)" OFF)
+# -ffast-math is deliberately NOT used: it enables unsafe FP reassociation and
+# was implicated in a GCC-13/EPYC Release-only segfault. Correctness of the
+# parity and certificate gates takes precedence over the marginal speedup.
 if(ALYSANE_NATIVE)
-  add_compile_options(-O3 -march=native -ffast-math)
+  add_compile_options(-O3 -march=native)
 else()
-  add_compile_options(-O3 -ffast-math)
+  add_compile_options(-O3)
 endif()
 add_compile_options(-fopenmp -Wall -Wextra -Wno-unused-parameter)
 add_link_options(-fopenmp)
