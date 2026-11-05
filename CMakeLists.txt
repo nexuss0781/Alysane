@@ -40,3 +40,8 @@ target_link_libraries(alysane_unit_tests PRIVATE ${OPENBLAS} ${LAPACKE} OpenMP::
 enable_testing()
 add_test(NAME unit_tests COMMAND alysane_unit_tests)
 add_test(NAME selftest COMMAND alysane selftest)
+
+# Full-scale stress harness (no weights): exercises the post-trace gate path at
+# production dimensions under sanitizers.
+add_executable(alysane_stress tests/stress_gates.cpp ${ALYSANE_SOURCES})
+target_link_libraries(alysane_stress PRIVATE ${OPENBLAS} ${LAPACKE} OpenMP::OpenMP_CXX)

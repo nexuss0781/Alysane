@@ -29,6 +29,12 @@ jobs:
       - name: Analytic selftest
         run: ./build/alysane selftest
 
+      - name: Full-scale stress (N=256, V=49152, 4 threads)
+        env:
+          OPENBLAS_NUM_THREADS: '4'
+          OMP_NUM_THREADS: '4'
+        run: ./build/alysane_stress 256 49152
+
       - name: C3v2-1 identifiability tests
         run: |
           make c3v2_1
@@ -38,13 +44,15 @@ jobs:
         run: |
           cmake -S . -B build-asan -DCMAKE_BUILD_TYPE=Debug \
             -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer -g -O1"
-          cmake --build build-asan -j$(nproc) --target alysane_unit_tests
+          cmake --build build-asan -j$(nproc) --target alysane_unit_tests alysane_stress
 
       - name: Sanitizer unit tests
         env:
           ASAN_OPTIONS: detect_leaks=0
           UBSAN_OPTIONS: print_stacktrace=1:halt_on_error=1
-        run: ./build-asan/alysane_unit_tests
+        run: |
+          ./build-asan/alysane_unit_tests
+          OPENBLAS_NUM_THREADS=2 OMP_NUM_THREADS=2 ./build-asan/alysane_stress 64 49152
 
       - name: Upload test logs
         if: always()

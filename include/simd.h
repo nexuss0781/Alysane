@@ -23,12 +23,18 @@ namespace simd {
 enum class Isa { Scalar, Avx2, Avx512 };
 
 inline Isa detect() {
+    // Resolved exactly once. C++11 guarantees thread-safe static initialisation.
+    // Calling __builtin_cpu_init() concurrently from OpenMP threads is a data
+    // race on the global __cpu_model, so it must not run per-call.
+    static const Isa cached = []() -> Isa {
 #if ALYSANE_X86
-    __builtin_cpu_init();
-if (__builtin_cpu_supports("avx512f")) return Isa::Avx512;
-    if (__builtin_cpu_supports("avx2") && __builtin_cpu_supports("fma")) return Isa::Avx2;
+        __builtin_cpu_init();
+        if (__builtin_cpu_supports("avx512f")) return Isa::Avx512;
+        if (__builtin_cpu_supports("avx2") && __builtin_cpu_supports("fma")) return Isa::Avx2;
 #endif
-    return Isa::Scalar;
+        return Isa::Scalar;
+    }();
+    return cached;
 }
 
 inline const char* isa_name() {
