@@ -1,0 +1,40 @@
+# Build
+build/
+build-*/
+cmake-build-*/
+*.o
+*.so
+*.a
+
+# Model weights (restore with tools/download_model.sh)
+models/*.safetensors
+models/*.bin
+models/*.pt
+*.alyk
+
+# Large regenerable artifacts
+reports/*.bin
+reports*/*.bin
+data/*.bin
+data*/
+*.npz
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Secrets - never commit
+.env
+*.pem
+.ghtok
+
+# Trained self-knowledge weights (regenerable, ~60MB)
+reports/self_weights.alys

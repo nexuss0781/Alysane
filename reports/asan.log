@@ -1,0 +1,79 @@
+[gates] reusing cached traces/probs
+[gates] training self
+[self] ep 10 loss 1000.9618 spectral 999.6351 distill 1.3267
+[self] ep 20 loss 8.6605 spectral 7.3469 distill 1.3136
+[self] ep 30 loss -35.1121 spectral -36.4636 distill 1.3515
+[self] ep 40 loss -38.3946 spectral -39.7274 distill 1.3328
+[gates] training energy
+[energy] ep 50 dsm loss 96.1679
+[energy] ep 100 dsm loss 95.5626
+[energy] ep 150 dsm loss 94.7045
+[energy] ep 200 dsm loss 93.7730
+[gates] saving self
+[gates] loading self
+[gates] roundtrip encode
+[gates] roundtrip done
+[gates] holdout forward
+[hold] 16/64
+[hold] 32/64
+[hold] 48/64
+[hold] 64/64
+[gates] holdout psi
+=================================================================
+==3346==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x7f05c35e9800 at pc 0x55599b2537f9 bp 0x7fff8a52c0b0 sp 0x7fff8a52c0a8
+READ of size 64 at 0x7f05c35e9800 thread T0
+    #0 0x55599b2537f8 in _mm512_loadu_ps(void const*) /usr/lib/gcc/x86_64-linux-gnu/14/include/avx512fintrin.h:9376
+    #1 0x55599b2537f8 in alysane::tv_distance(float const*, float const*, int) /home/user/alysane/src/model.cpp:87
+    #2 0x55599b28fb10 in alysane::psi_embedding(std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, std::vector<int, std::allocator<int> > const&, int) /home/user/alysane/src/model.cpp:122
+    #3 0x55599b3610c9 in alysane::run_gates(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/user/alysane/src/gates.cpp:50
+    #4 0x55599b24d47a in main /home/user/alysane/src/main.cpp:9
+    #5 0x7f05fb035ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+    #6 0x7f05fb035d64 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x29d64) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+    #7 0x55599b24d680 in _start (/home/user/alysane/build-asan/alysane+0x2d680) (BuildId: 69ca0b6a525a30f6761cec39eae07e8c29bc703b)
+
+0x7f05c35e9800 is located 0 bytes after 196608-byte region [0x7f05c35b9800,0x7f05c35e9800)
+allocated by thread T0 here:
+    #0 0x7f05fe0f5778 in operator new(unsigned long) ../../../../src/libsanitizer/asan/asan_new_delete.cpp:95
+    #1 0x55599b2f998e in std::__new_allocator<float>::allocate(unsigned long, void const*) /usr/include/c++/14/bits/new_allocator.h:151
+    #2 0x55599b2f998e in std::allocator_traits<std::allocator<float> >::allocate(std::allocator<float>&, unsigned long) /usr/include/c++/14/bits/alloc_traits.h:515
+    #3 0x55599b2f998e in std::_Vector_base<float, std::allocator<float> >::_M_allocate(unsigned long) /usr/include/c++/14/bits/stl_vector.h:380
+    #4 0x55599b2f998e in float* std::vector<float, std::allocator<float> >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<float const*, std::vector<float, std::allocator<float> > > >(unsigned long, __gnu_cxx::__normal_iterator<float const*, std::vector<float, std::allocator<float> > >, __gnu_cxx::__normal_iterator<float const*, std::vector<float, std::allocator<float> > >) /usr/include/c++/14/bits/stl_vector.h:1621
+    #5 0x55599b2f998e in std::vector<float, std::allocator<float> >::operator=(std::vector<float, std::allocator<float> > const&) /usr/include/c++/14/bits/vector.tcc:238
+    #6 0x55599b305dad in alysane::train_self(std::vector<alysane::Trace, std::allocator<alysane::Trace> > const&, alysane::DistMatrix const&, std::vector<std::vector<float, std::allocator<float> >, std::allocator<std::vector<float, std::allocator<float> > > > const&, alysane::A1Report const&, int, int, unsigned long) /home/user/alysane/src/self.cpp:71
+    #7 0x55599b35d52a in alysane::run_gates(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/user/alysane/src/gates.cpp:45
+    #8 0x55599b24d47a in main /home/user/alysane/src/main.cpp:9
+    #9 0x7f05fb035ca7  (/lib/x86_64-linux-gnu/libc.so.6+0x29ca7) (BuildId: 5e5b51f4c39af9ac589408c1dc432ba390a273cc)
+
+SUMMARY: AddressSanitizer: heap-buffer-overflow /usr/lib/gcc/x86_64-linux-gnu/14/include/avx512fintrin.h:9376 in _mm512_loadu_ps(void const*)
+Shadow bytes around the buggy address:
+  0x7f05c35e9580: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7f05c35e9600: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7f05c35e9680: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7f05c35e9700: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x7f05c35e9780: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+=>0x7f05c35e9800:[fa]fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7f05c35e9880: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7f05c35e9900: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7f05c35e9980: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7f05c35e9a00: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+  0x7f05c35e9a80: fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa fa
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07 
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+==3346==ABORTING

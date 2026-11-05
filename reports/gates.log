@@ -1,0 +1,39 @@
+[trace] 32/256
+[trace] 64/256
+[trace] 96/256
+[trace] 128/256
+[trace] 160/256
+[trace] 192/256
+[trace] 224/256
+[trace] 256/256
+[gates] training self
+[self] ep 10 loss 1170.4299 spectral 1169.8897 distill 0.5402
+[self] ep 20 loss 14.3171 spectral 13.7462 distill 0.5709
+[self] ep 30 loss -31.8899 spectral -32.5301 distill 0.6402
+[self] ep 40 loss -33.3678 spectral -33.9723 distill 0.6046
+[self] ep 50 loss -35.2931 spectral -35.8865 distill 0.5934
+[self] ep 60 loss -38.0693 spectral -38.6319 distill 0.5626
+[self] ep 70 loss -40.7971 spectral -41.3382 distill 0.5410
+[self] ep 80 loss -43.4714 spectral -43.9833 distill 0.5120
+[gates] training energy
+[energy] ep 50 dsm loss 76.2624
+[energy] ep 100 dsm loss 75.7674
+[energy] ep 150 dsm loss 74.9234
+[energy] ep 200 dsm loss 74.0836
+[gates] saving self
+[gates] loading self
+[gates] roundtrip encode
+[gates] roundtrip done
+[gates] holdout forward
+[hold] 16/64
+[hold] 32/64
+[hold] 48/64
+[hold] 64/64
+[gates] holdout psi
+[gates] holdout encode
+[henc] 16/64
+[henc] 32/64
+[henc] 48/64
+[henc] 64/64
+[gates] holdout audits
+[gates] overall FAIL fails 1

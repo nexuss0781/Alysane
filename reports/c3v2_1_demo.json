@@ -1,0 +1,122 @@
+{
+  "central_result": "Actual competence is not identifiable from internal observables alone when success depends on an external evaluator/world state not determined by those observables.",
+  "checks_passed": true,
+  "classification": {
+    "internally_observable": [
+      "input tokens",
+      "hidden states",
+      "attention",
+      "logits",
+      "predictive distribution",
+      "predictive entropy",
+      "sampled answer",
+      "self-consistency",
+      "internal verifier output if executed"
+    ],
+    "not_identifiable_internal_only_under_external_success": [
+      "actual competence in general",
+      "epistemic/aleatoric decomposition without assumptions",
+      "future generalization to uncovered tasks"
+    ],
+    "outcome_dependent": [
+      "correctness",
+      "actual competence",
+      "calibration",
+      "expected loss",
+      "transfer success"
+    ]
+  },
+  "component": "C3v2-1",
+  "counterexample": {
+    "internal_only_worst_case_absolute_error_lower_bound": 0.5,
+    "internal_only_worst_case_squared_error_lower_bound": 0.25,
+    "observation": {
+      "answer": 42,
+      "entropy_bits": 0.0,
+      "task_id": 7,
+      "trace_hash": 2709151263
+    },
+    "task": "What is the sealed code?",
+    "world_fail": {
+      "competence": 0.0,
+      "name": "accepts_43"
+    },
+    "world_pass": {
+      "competence": 1.0,
+      "name": "accepts_42"
+    }
+  },
+  "epistemic_aleatoric_nonidentifiability": {
+    "bernoulli_latent": {
+      "aleatoric_variance": 0.0,
+      "epistemic_variance": 0.25
+    },
+    "deterministic_latent": {
+      "aleatoric_variance": 0.25,
+      "epistemic_variance": 0.0
+    },
+    "predictive_competence": 0.5,
+    "same_total_variance": true
+  },
+  "evidence_contract": {
+    "A_internal_verifier": {
+      "claims": "verifier-success; actual competence only if soundness established",
+      "condition": "Y = g(O) for known trusted sound verifier g",
+      "required": [
+        "executable verifier or soundness proof",
+        "verifier version",
+        "task/answer binding"
+      ]
+    },
+    "B_pointwise_verified": {
+      "claims": "deterministic pointwise competence exactly; stochastic only with repeated outcomes and confidence bound",
+      "condition": "fixed task, answer/policy, evaluator, and verified outcome",
+      "required": [
+        "task_id",
+        "answer_id",
+        "evaluator_id",
+        "success_bit",
+        "policy_version",
+        "timestamp"
+      ]
+    },
+    "C_population_verified": {
+      "claims": "|C_hat - C| <= eps with confidence >= 1-delta",
+      "condition": "outcomes sampled from target distribution or reweighted; trusted evaluator; declared n, eps, delta",
+      "required": [
+        "outcome sample",
+        "sampling protocol",
+        "evaluator identity",
+        "confidence calculation"
+      ]
+    },
+    "D_transfer_generalization": {
+      "claims": "must be labeled verified-on-covered, extrapolated-under-assumptions, or unverified",
+      "condition": "additional assumptions or outcome coverage on target region",
+      "required": [
+        "coverage map or explicit regularity/transfer assumptions"
+      ]
+    }
+  },
+  "minimum_outcome_evidence": {
+    "deterministic_pointwise": "one verified success bit for the exact task/answer/evaluator",
+    "no_domain_labels_required": true,
+    "population_hoeffding_n_eps0.05_delta0.05": 738,
+    "population_hoeffding_width_n738_delta0.05": 0.049992407649266275
+  },
+  "positive_internal_case": {
+    "bad": 0.0,
+    "condition": "success predicate is a known measurable function of internal observables",
+    "example": "arithmetic verifier answer == a*b",
+    "good": 1.0
+  },
+  "scope": "observables, competence, identifiability, minimum outcome evidence",
+  "uncertainty_not_competence": {
+    "certain_competence_if_correct": 1.0,
+    "certain_competence_if_wrong": 0.0,
+    "certain_entropy_bits": 0.0,
+    "uniform_competence_all_accepted": 1.0,
+    "uniform_competence_half_accepted": 0.5,
+    "uniform_entropy_bits": 1.0
+  }
+}

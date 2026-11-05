@@ -1,0 +1,18 @@
+{
+  "config": {
+    "FF": 1536,
+    "H": 9,
+    "KVH": 3,
+    "L": 30,
+    "V": 49152,
+    "d": 576,
+    "head_dim": 64,
+    "rms_eps": 9.999999747378752e-06,
+    "rope_theta": 10000.0
+  },
+  "format": "alysane-knowledge-manifest-v1",
+  "note": "pilot retargeted execution core; architectural swap beyond exact Llama computation not claimed",
+  "params": 134515008,
+  "sha256": "c7a387d6fe81ca6dd304aeb809bda3932ff1bbef3ca41c9484502f2f448dc093",
+  "source": "HuggingFaceTB/SmolLM-135M"
+}

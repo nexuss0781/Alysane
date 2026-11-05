@@ -1,0 +1,57 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Alysane C2+C3 End-to-End Gate Report</title>
+<style>
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;margin:0;background:#0b1020;color:#e8ecf8;line-height:1.5}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 20px}
+h1,h2,h3{color:#fff} h1{font-size:28px} h2{margin-top:32px;border-bottom:1px solid #2a3350;padding-bottom:6px}
+.card{background:#131a30;border:1px solid #2a3350;border-radius:12px;padding:18px;margin:16px 0}
+.badge{display:inline-block;padding:4px 10px;border-radius:999px;font-weight:700;font-size:13px}
+.pass{color:#7ef0b2} .fail{color:#ff8a8a} .badge.pass{background:#123524;color:#7ef0b2} .badge.fail{background:#3a1220;color:#ff8a8a}
+table{width:100%;border-collapse:collapse;margin:12px 0} th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #2a3350} th{color:#aab4d4}
+code,pre{background:#0a0f1e;border:1px solid #2a3350;border-radius:8px} pre{padding:12px;overflow:auto}
+.small{color:#aab4d4;font-size:14px} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.kv{background:#0a0f1e;border:1px solid #2a3350;border-radius:10px;padding:12px} .kv .v{font-size:20px;font-weight:700;color:#fff}
+</style></head><body><div class="wrap">
+<h1>Alysane — C2+C3 End-to-End Validation Report</h1>
+<p class="small">Pinned model: HuggingFaceTB/SmolLM-135M @ 1d461723eec654e65efdc40cf49301c89c0c92f4. Pilot N=256 train contexts, 64 holdout, n=64; resolution sweep n=8/16/32/64. C++ core, Python only for token conversion and external parity oracle. AddressSanitizer memory-safety run: 0 errors.</p>
+<div class="card">
+<span class="badge pass">Engineering gates: PASS</span>
+<span class="badge fail">A1 scientific gate: NO-GO</span>
+<p>Alysane C2+C3 pilot gate completed end to end on the pinned SmolLM-135M checkpoint.
+Engineering/certificate gates: PASS.
+Scientific A1 hard-separation gate: NO-GO / FALSIFIED on this pilot.
+Overall ready_for_next_component under the original A1-dependent spec: false.
+</p>
+</div>
+<h2>Gate results</h2>
+<table><tr><th>Gate</th><th>Criterion</th><th>Status</th></tr><tr><td>G1_parity</td><td>C1 fp32 parity (HF oracle)</td><td class="pass">PASS</td></tr><tr><td>G2_trace_tau</td><td>Corrected trace TV certificate</td><td class="pass">PASS</td></tr><tr><td>G3_A1</td><td>A1 useful hard separation</td><td class="fail">FAIL</td></tr><tr><td>G4_embedding</td><td>Bootstrap ψ distortion bounds</td><td class="pass">PASS</td></tr><tr><td>G5_routing</td><td>Behavioral routing certificate</td><td class="pass">PASS</td></tr><tr><td>G6_boundary</td><td>Boundary margin + energy gap</td><td class="pass">PASS</td></tr><tr><td>G7_serialization</td><td>Two-store serialization roundtrip</td><td class="pass">PASS</td></tr></table>
+<h2>Key measured numbers</h2>
+<div class="grid">
+<div class="kv"><div class="small">Max KL HF||C++</div><div class="v">3.099e-07</div></div>
+<div class="kv"><div class="small">Top-1 agreement</div><div class="v">100.0%</div></div>
+<div class="kv"><div class="small">Perplexity C++ / HF</div><div class="v">27.4453 / 27.4453</div></div>
+<div class="kv"><div class="small">Trace certificate violations</div><div class="v">0</div></div>
+<div class="kv"><div class="small">Routing certificate violations</div><div class="v">0</div></div>
+<div class="kv"><div class="small">A1 best q / width</div><div class="v">0 / 0</div></div>
+<div class="kv"><div class="small">ψ upper/lower violations</div><div class="v">0 / 0.0</div></div>
+<div class="kv"><div class="small">Energy AUROC syn vs nat</div><div class="v">0.693</div></div>
+</div>
+<h2>A1 resolution sweep</h2>
+<table><tr><th>n</th><th>useful</th><th>q</th><th>width</th><th>ratio</th><th>min size</th><th>bootstrap ARI</th></tr><tr><td>8</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr><tr><td>16</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr><tr><td>32</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr><tr><td>64</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr></table>
+<p class="small">Exact full-V TV distances concentrate near 1; MST gaps are tiny relative to the distance scale. No useful nontrivial hard partition satisfies the pre-registered pilot thresholds. This falsifies A1 as a load-bearing hard-partition assumption for one-step next-token TV on this pilot mixture.</p>
+<h2>Interpretation</h2>
+<div class="card">
+<p><strong>What is proven and executed:</strong> the C++ execution core matches the HF fp32 oracle; the corrected trace certificate, bootstrap distortion bounds, behavioral routing certificate, and serialization roundtrip pass. The MST/component machinery correctly recovers synthetic separated cliques in self-test.</p>
+<p><strong>What is not proven:</strong> A1 robust separation for SmolLM-135M on natural contexts; learned encoder bi-Lipschitz geometry; production fine-tune stability constants; live-traffic domain emergence; commercial latency/memory budgets.</p>
+<p><strong>Decision:</strong> do not advance to C4 as an A1-dependent hard hierarchy. Retain the product goal and amend the behavioral criterion (continuation-level behavior, trace predictive geometry, density-connected soft regions, or overlapping local competence charts). The next component should be an amendment/gate redesign, not a theorem built on a falsified assumption.</p>
+</div>
+<h2>Artifacts</h2>
+<ul class="small">
+<li><code>docs/00_original_C2_C3_spec_v1.0.md</code> — original spec, verbatim</li>
+<li><code>docs/01_mathematical_audit_and_corrected_spec_v1.1.md</code> — corrected mathematics and gate protocol</li>
+<li><code>reports/gates.json</code>, <code>reports/parity.json</code>, <code>reports/gates.log</code></li>
+<li><code>reports/self_weights.alys</code>, <code>reports/knowledge_manifest.json</code></li>
+<li><code>reports/train_traces.bin</code>, <code>reports/train_probs.bin</code></li>
+</ul>
+<p class="small">Generated by tools/make_report.py from measured JSON. No gate status is inferred from proofs alone.</p>
+</div></body></html>

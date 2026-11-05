@@ -1,0 +1,18 @@
+[PASS] run_checks
+[PASS] deterministic observation
+[PASS] observational equivalence with different competence
+[PASS] grid minimax internal-only error = 0.5
+[PASS] outcome evidence separates worlds
+[PASS] internal verifier positive
+[PASS] internal verifier negative
+[PASS] entropy bits
+[PASS] same uncertainty competence 1
+[PASS] same uncertainty competence 0.5
+[PASS] same total variance
+[PASS] different epistemic variance
+[PASS] different aleatoric variance
+[PASS] squared lower bound
+[PASS] hoeffding n
+[PASS] hoeffding width
+[PASS] hoeffding invalid args
+ALL TESTS PASSED

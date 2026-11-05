@@ -1,0 +1,1147 @@
+{
+  "A1": {
+    "best": {
+      "eps_in": 0.0,
+      "eps_out": 0.0,
+      "max_size": 0,
+      "min_size": 0,
+      "q": 0,
+      "ratio": 0.0,
+      "width": 0.0
+    },
+    "bootstrap": {
+      "B": 20,
+      "mean_ari": 0.0,
+      "method": "80% vertex subsample; cut at pilot midpoint; ARI vs full-sample pilot labels",
+      "subsample_fraction": 0.8
+    },
+    "curve": [
+      {
+        "eps_in": 0.9996765851974487,
+        "eps_out": 0.9997061491012573,
+        "max_size": 255,
+        "min_size": 1,
+        "q": 2,
+        "ratio": 1.0000295639038086,
+        "width": 2.956390380859375e-05
+      },
+      {
+        "eps_in": 0.999561071395874,
+        "eps_out": 0.9996765851974487,
+        "max_size": 254,
+        "min_size": 1,
+        "q": 3,
+        "ratio": 1.0001155138015747,
+        "width": 0.00011551380157470703
+      },
+      {
+        "eps_in": 0.9991855621337891,
+        "eps_out": 0.999561071395874,
+        "max_size": 253,
+        "min_size": 1,
+        "q": 4,
+        "ratio": 1.0003758668899536,
+        "width": 0.00037550926208496094
+      },
+      {
+        "eps_in": 0.998977541923523,
+        "eps_out": 0.9991855621337891,
+        "max_size": 252,
+        "min_size": 1,
+        "q": 5,
+        "ratio": 1.0002082586288452,
+        "width": 0.00020802021026611328
+      },
+      {
+        "eps_in": 0.9988273978233337,
+        "eps_out": 0.998977541923523,
+        "max_size": 251,
+        "min_size": 1,
+        "q": 6,
+        "ratio": 1.0001503229141235,
+        "width": 0.00015014410018920898
+      },
+      {
+        "eps_in": 0.9983584880828857,
+        "eps_out": 0.9988273978233337,
+        "max_size": 250,
+        "min_size": 1,
+        "q": 7,
+        "ratio": 1.00046968460083,
+        "width": 0.00046890974044799805
+      },
+      {
+        "eps_in": 0.9980948567390442,
+        "eps_out": 0.9983584880828857,
+        "max_size": 249,
+        "min_size": 1,
+        "q": 8,
+        "ratio": 1.0002641677856445,
+        "width": 0.00026363134384155273
+      },
+      {
+        "eps_in": 0.9922570586204529,
+        "eps_out": 0.9980948567390442,
+        "max_size": 248,
+        "min_size": 1,
+        "q": 9,
+        "ratio": 1.0058833360671997,
+        "width": 0.005837798118591309
+      },
+      {
+        "eps_in": 0.9911863207817078,
+        "eps_out": 0.9922570586204529,
+        "max_size": 247,
+        "min_size": 1,
+        "q": 10,
+        "ratio": 1.0010802745819092,
+        "width": 0.0010707378387451172
+      },
+      {
+        "eps_in": 0.9898370504379272,
+        "eps_out": 0.9911863207817078,
+        "max_size": 246,
+        "min_size": 1,
+        "q": 11,
+        "ratio": 1.0013631582260132,
+        "width": 0.0013492703437805176
+      },
+      {
+        "eps_in": 0.9895113110542297,
+        "eps_out": 0.9898370504379272,
+        "max_size": 245,
+        "min_size": 1,
+        "q": 12,
+        "ratio": 1.0003291368484497,
+        "width": 0.00032573938369750977
+      },
+      {
+        "eps_in": 0.9892807006835938,
+        "eps_out": 0.9895113110542297,
+        "max_size": 243,
+        "min_size": 1,
+        "q": 13,
+        "ratio": 1.0002330541610718,
+        "width": 0.00023061037063598633
+      },
+      {
+        "eps_in": 0.9890992641448975,
+        "eps_out": 0.9892807006835938,
+        "max_size": 242,
+        "min_size": 1,
+        "q": 14,
+        "ratio": 1.0001834630966187,
+        "width": 0.00018143653869628906
+      },
+      {
+        "eps_in": 0.9890095591545105,
+        "eps_out": 0.9890992641448975,
+        "max_size": 241,
+        "min_size": 1,
+        "q": 15,
+        "ratio": 1.0000907182693481,
+        "width": 8.970499038696289e-05
+      },
+      {
+        "eps_in": 0.9869740605354309,
+        "eps_out": 0.9890095591545105,
+        "max_size": 240,
+        "min_size": 1,
+        "q": 16,
+        "ratio": 1.0020623207092285,
+        "width": 0.00203549861907959
+      }
+    ],
+    "min_size_target": 12,
+    "strict_separated": true,
+    "useful": false
+  },
+  "component": "C2+C3 pilot gate",
+  "embedding_audit": {
+    "holdout_pairs": 2016,
+    "learned_spearman_status": "weak_pilot_observation",
+    "note": "psi bounds use train coverage radius as pilot proxy; holdout coverage not guaranteed",
+    "psi_lower_violations": 0.0,
+    "psi_upper_violations": 0,
+    "spearman_psi_behavior": 0.20247125622683382,
+    "spearman_z_behavior": 0.2152467467387422
+  },
+  "fail_count": 1,
+  "gates": {
+    "G1_parity": "PASS",
+    "G2_trace_tau": "PASS",
+    "G3_A1": "FAIL",
+    "G4_embedding": "PASS",
+    "G5_routing": "PASS",
+    "G6_boundary": "PASS",
+    "G7_serialization": "PASS"
+  },
+  "knowledge": {
+    "H": 9,
+    "KVH": 3,
+    "L": 30,
+    "V": 49152,
+    "d": 576,
+    "params": 134515008,
+    "sha256": "c7a387d6fe81ca6dd304aeb809bda3932ff1bbef3ca41c9484502f2f448dc093"
+  },
+  "landmarks": {
+    "M": 128,
+    "max_coverage_radius_train": 0.8323361873626709
+  },
+  "overall": "FAIL",
+  "parity": {
+    "N": 8,
+    "n": 64,
+    "V": 49152,
+    "max_kl_hf_cpp": 3.099318064414547e-07,
+    "mean_kl_hf_cpp": 0.0,
+    "top1_agreement": 1.0,
+    "max_logit_abs_diff": 0.0002486705780029297,
+    "ppl_cpp": 27.445302963256836,
+    "ppl_hf": 27.44529701734994,
+    "ppl_relative_diff": 2.166457477932772e-07,
+    "nll_cpp": [
+      2.728574514389038,
+      4.072271347045898,
+      2.643585681915283,
+      3.560861110687256,
+      3.4696855545043945,
+      4.40100622177124,
+      2.581134557723999,
+      3.0404417514801025
+    ],
+    "nll_hf": [
+      2.7285735607147217,
+      4.072272300720215,
+      2.643585443496704,
+      3.5608584880828857,
+      3.469684600830078,
+      4.401006698608398,
+      2.5811357498168945,
+      3.0404417514801025
+    ],
+    "thresholds": {
+      "max_kl": 1e-05,
+      "mean_kl": 1e-06,
+      "top1_agreement": 1.0,
+      "ppl_relative_diff": 0.001
+    },
+    "PASS": true
+  },
+  "project": "Alysane",
+  "ready_for_next_component": false,
+  "reuse_cached_traces": false,
+  "routing": {
+    "auroc_distance_syn_vs_nat": 0.49365234375,
+    "auroc_energy_syn_vs_nat": 0.693359375,
+    "certificate_violations": 0,
+    "eps_in": 0.9922570586204529,
+    "eps_out": 0.9980948567390442,
+    "median_natural_margin": 0.3033357262611389,
+    "median_natural_r": 0.6976379156112671,
+    "median_synthetic_r": 0.6589597463607788,
+    "natural": [
+      {
+        "bound": 1.8705925941467285,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.1291559934616089,
+        "nearest": 207,
+        "r": 0.8705931901931763,
+        "second": 0.9997491836547852
+      },
+      {
+        "bound": 1.7882239818572998,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.21163862943649292,
+        "nearest": 118,
+        "r": 0.788224458694458,
+        "second": 0.9998630881309509
+      },
+      {
+        "bound": 1.861663579940796,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.1381574273109436,
+        "nearest": 175,
+        "r": 0.8616641759872437,
+        "second": 0.9998216032981873
+      },
+      {
+        "bound": 1.6444473266601562,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.35550034046173096,
+        "nearest": 171,
+        "r": 0.644447922706604,
+        "second": 0.999948263168335
+      },
+      {
+        "bound": 1.6965489387512207,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3033357262611389,
+        "nearest": 121,
+        "r": 0.6965494155883789,
+        "second": 0.9998851418495178
+      },
+      {
+        "bound": 1.9911386966705322,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.008756935596466064,
+        "nearest": 229,
+        "r": 0.9911391735076904,
+        "second": 0.9998961091041565
+      },
+      {
+        "bound": 1.802783489227295,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.19710910320281982,
+        "nearest": 134,
+        "r": 0.8027839660644531,
+        "second": 0.999893069267273
+      },
+      {
+        "bound": 1.7193498611450195,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2805064916610718,
+        "nearest": 210,
+        "r": 0.7193503379821777,
+        "second": 0.9998568296432495
+      },
+      {
+        "bound": 1.0658119916915894,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.9341024160385132,
+        "nearest": 36,
+        "r": 0.06581248342990875,
+        "second": 0.9999148845672607
+      },
+      {
+        "bound": 1.7490229606628418,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2509068250656128,
+        "nearest": 130,
+        "r": 0.7490235567092896,
+        "second": 0.9999303817749023
+      },
+      {
+        "bound": 1.6675529479980469,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3323015570640564,
+        "nearest": 118,
+        "r": 0.6675534248352051,
+        "second": 0.9998549818992615
+      },
+      {
+        "bound": 1.9192225933074951,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.08067983388900757,
+        "nearest": 46,
+        "r": 0.9192231893539429,
+        "second": 0.9999030232429504
+      },
+      {
+        "bound": 1.6724298000335693,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3275415897369385,
+        "nearest": 87,
+        "r": 0.6724303960800171,
+        "second": 0.9999719858169556
+      },
+      {
+        "bound": 1.8942325115203857,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.10553550720214844,
+        "nearest": 103,
+        "r": 0.8942331075668335,
+        "second": 0.9997686147689819
+      },
+      {
+        "bound": 1.8705735206604004,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.1293264627456665,
+        "nearest": 121,
+        "r": 0.8705739974975586,
+        "second": 0.9999004602432251
+      },
+      {
+        "bound": 1.7479166984558105,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.25195157527923584,
+        "nearest": 222,
+        "r": 0.7479171752929688,
+        "second": 0.9998687505722046
+      },
+      {
+        "bound": 1.3403229713439941,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.6595833897590637,
+        "nearest": 232,
+        "r": 0.3403235077857971,
+        "second": 0.9999068975448608
+      },
+      {
+        "bound": 1.0845478773117065,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.9154431819915771,
+        "nearest": 61,
+        "r": 0.08454836159944534,
+        "second": 0.9999915361404419
+      },
+      {
+        "bound": 1.6976373195648193,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3019903898239136,
+        "nearest": 75,
+        "r": 0.6976379156112671,
+        "second": 0.9996283054351807
+      },
+      {
+        "bound": 1.772036075592041,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.22785091400146484,
+        "nearest": 144,
+        "r": 0.7720365524291992,
+        "second": 0.9998874664306641
+      },
+      {
+        "bound": 1.285016655921936,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.714896023273468,
+        "nearest": 87,
+        "r": 0.285017192363739,
+        "second": 0.999913215637207
+      },
+      {
+        "bound": 1.4446897506713867,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5551857948303223,
+        "nearest": 232,
+        "r": 0.4446902871131897,
+        "second": 0.999876081943512
+      },
+      {
+        "bound": 1.3950587511062622,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.6048464775085449,
+        "nearest": 88,
+        "r": 0.3950593173503876,
+        "second": 0.9999057650566101
+      },
+      {
+        "bound": 1.4089384078979492,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5909339785575867,
+        "nearest": 225,
+        "r": 0.4089388847351074,
+        "second": 0.9998728632926941
+      },
+      {
+        "bound": 1.6085996627807617,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.39127206802368164,
+        "nearest": 248,
+        "r": 0.6086001396179199,
+        "second": 0.9998722076416016
+      },
+      {
+        "bound": 1.4890899658203125,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5107439756393433,
+        "nearest": 52,
+        "r": 0.48909053206443787,
+        "second": 0.9998344779014587
+      },
+      {
+        "bound": 1.5687334537506104,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.4311676621437073,
+        "nearest": 224,
+        "r": 0.5687339305877686,
+        "second": 0.9999015927314758
+      },
+      {
+        "bound": 1.959155559539795,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.040749192237854004,
+        "nearest": 103,
+        "r": 0.9591560363769531,
+        "second": 0.9999052286148071
+      },
+      {
+        "bound": 1.7125701904296875,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.28734123706817627,
+        "nearest": 248,
+        "r": 0.7125707268714905,
+        "second": 0.9999119639396667
+      },
+      {
+        "bound": 1.529534101486206,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.4703800678253174,
+        "nearest": 241,
+        "r": 0.5295346975326538,
+        "second": 0.9999147653579712
+      },
+      {
+        "bound": 1.771888256072998,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.22798871994018555,
+        "nearest": 119,
+        "r": 0.7718888521194458,
+        "second": 0.9998775720596313
+      },
+      {
+        "bound": 1.0662598609924316,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.9336624145507812,
+        "nearest": 36,
+        "r": 0.0662604421377182,
+        "second": 0.9999228715896606
+      },
+      {
+        "bound": 1.4715290069580078,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5283904671669006,
+        "nearest": 232,
+        "r": 0.471529483795166,
+        "second": 0.9999199509620667
+      },
+      {
+        "bound": 1.5447888374328613,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.45504850149154663,
+        "nearest": 120,
+        "r": 0.5447893738746643,
+        "second": 0.9998378753662109
+      },
+      {
+        "bound": 1.745072364807129,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2545105814933777,
+        "nearest": 2,
+        "r": 0.7450728416442871,
+        "second": 0.9995834231376648
+      },
+      {
+        "bound": 1.9122074842453003,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.08771008253097534,
+        "nearest": 17,
+        "r": 0.9122080206871033,
+        "second": 0.9999181032180786
+      },
+      {
+        "bound": 1.259354829788208,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.740544855594635,
+        "nearest": 213,
+        "r": 0.2593553066253662,
+        "second": 0.9999001622200012
+      },
+      {
+        "bound": 1.2649412155151367,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.734817385673523,
+        "nearest": 100,
+        "r": 0.2649417817592621,
+        "second": 0.9997591972351074
+      },
+      {
+        "bound": 1.6037936210632324,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.39604854583740234,
+        "nearest": 30,
+        "r": 0.6037942171096802,
+        "second": 0.9998427629470825
+      },
+      {
+        "bound": 1.8412413597106934,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.15716803073883057,
+        "nearest": 242,
+        "r": 0.8412419557571411,
+        "second": 0.9984099864959717
+      },
+      {
+        "bound": 1.8401768207550049,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.15943467617034912,
+        "nearest": 134,
+        "r": 0.8401774168014526,
+        "second": 0.9996120929718018
+      },
+      {
+        "bound": 1.9256846904754639,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.07425832748413086,
+        "nearest": 105,
+        "r": 0.9256852865219116,
+        "second": 0.9999436140060425
+      },
+      {
+        "bound": 1.835359811782837,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.1645796298980713,
+        "nearest": 144,
+        "r": 0.8353604078292847,
+        "second": 0.999940037727356
+      },
+      {
+        "bound": 1.852163553237915,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.14733314514160156,
+        "nearest": 51,
+        "r": 0.852164089679718,
+        "second": 0.9994972348213196
+      },
+      {
+        "bound": 1.6784987449645996,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.32135969400405884,
+        "nearest": 215,
+        "r": 0.6784992814064026,
+        "second": 0.9998589754104614
+      },
+      {
+        "bound": 1.4340643882751465,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5657401084899902,
+        "nearest": 225,
+        "r": 0.4340648651123047,
+        "second": 0.9998049736022949
+      },
+      {
+        "bound": 1.9843685626983643,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.013354361057281494,
+        "nearest": 242,
+        "r": 0.9843690991401672,
+        "second": 0.9977234601974487
+      },
+      {
+        "bound": 1.7055617570877075,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.29434287548065186,
+        "nearest": 227,
+        "r": 0.7055622935295105,
+        "second": 0.9999051690101624
+      },
+      {
+        "bound": 1.531784176826477,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.46815675497055054,
+        "nearest": 42,
+        "r": 0.53178471326828,
+        "second": 0.9999414682388306
+      },
+      {
+        "bound": 1.4148144721984863,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5849121809005737,
+        "nearest": 172,
+        "r": 0.4148149788379669,
+        "second": 0.9997271299362183
+      },
+      {
+        "bound": 1.817551612854004,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.18234586715698242,
+        "nearest": 93,
+        "r": 0.8175520896911621,
+        "second": 0.9998979568481445
+      },
+      {
+        "bound": 1.9566905498504639,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.0431978702545166,
+        "nearest": 75,
+        "r": 0.9566911458969116,
+        "second": 0.9998890161514282
+      },
+      {
+        "bound": 1.9842231273651123,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.015730857849121094,
+        "nearest": 97,
+        "r": 0.9842237234115601,
+        "second": 0.9999545812606812
+      },
+      {
+        "bound": 1.7829866409301758,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2168644666671753,
+        "nearest": 87,
+        "r": 0.782987117767334,
+        "second": 0.9998515844345093
+      },
+      {
+        "bound": 1.309417963027954,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.6905120611190796,
+        "nearest": 161,
+        "r": 0.3094184696674347,
+        "second": 0.9999305009841919
+      },
+      {
+        "bound": 1.636462926864624,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3634793162345886,
+        "nearest": 167,
+        "r": 0.6364635229110718,
+        "second": 0.9999428391456604
+      },
+      {
+        "bound": 1.6399006843566895,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.35994428396224976,
+        "nearest": 130,
+        "r": 0.6399012804031372,
+        "second": 0.999845564365387
+      },
+      {
+        "bound": 1.4834210872650146,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5164657831192017,
+        "nearest": 222,
+        "r": 0.48342159390449524,
+        "second": 0.9998874068260193
+      },
+      {
+        "bound": 1.9341614246368408,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.06494492292404175,
+        "nearest": 11,
+        "r": 0.934161901473999,
+        "second": 0.9991068243980408
+      },
+      {
+        "bound": 1.501103162765503,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.49880141019821167,
+        "nearest": 71,
+        "r": 0.5011036396026611,
+        "second": 0.9999050498008728
+      },
+      {
+        "bound": 1.563697099685669,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.4362490177154541,
+        "nearest": 130,
+        "r": 0.5636975765228271,
+        "second": 0.9999465942382812
+      },
+      {
+        "bound": 1.017751932144165,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.9822280406951904,
+        "nearest": 120,
+        "r": 0.01775241456925869,
+        "second": 0.9999804496765137
+      },
+      {
+        "bound": 1.8341763019561768,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.16567552089691162,
+        "nearest": 121,
+        "r": 0.834176778793335,
+        "second": 0.9998522996902466
+      },
+      {
+        "bound": 1.7425940036773682,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2568317651748657,
+        "nearest": 57,
+        "r": 0.7425944805145264,
+        "second": 0.9994262456893921
+      }
+    ],
+    "partition_q": 9,
+    "synthetic": [
+      {
+        "bound": 1.6749422550201416,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3233270049095154,
+        "nearest": 185,
+        "r": 0.6749428510665894,
+        "second": 0.9982698559761047
+      },
+      {
+        "bound": 1.6512680053710938,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3480117917060852,
+        "nearest": 23,
+        "r": 0.651268482208252,
+        "second": 0.9992802739143372
+      },
+      {
+        "bound": 1.597188949584961,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.40228909254074097,
+        "nearest": 25,
+        "r": 0.5971894860267639,
+        "second": 0.9994785785675049
+      },
+      {
+        "bound": 1.7994343042373657,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.20038849115371704,
+        "nearest": 30,
+        "r": 0.7994348406791687,
+        "second": 0.9998233318328857
+      },
+      {
+        "bound": 1.6731832027435303,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.32517337799072266,
+        "nearest": 121,
+        "r": 0.673183798789978,
+        "second": 0.9983571767807007
+      },
+      {
+        "bound": 1.9262897968292236,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.07283562421798706,
+        "nearest": 110,
+        "r": 0.9262903928756714,
+        "second": 0.9991260170936584
+      },
+      {
+        "bound": 1.6012661457061768,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3969680666923523,
+        "nearest": 121,
+        "r": 0.6012667417526245,
+        "second": 0.9982348084449768
+      },
+      {
+        "bound": 1.6555652618408203,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.34376609325408936,
+        "nearest": 221,
+        "r": 0.6555658578872681,
+        "second": 0.9993319511413574
+      },
+      {
+        "bound": 1.3551220893859863,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.6446495056152344,
+        "nearest": 66,
+        "r": 0.3551226258277893,
+        "second": 0.9997721314430237
+      },
+      {
+        "bound": 1.621890902519226,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.37765640020370483,
+        "nearest": 57,
+        "r": 0.621891438961029,
+        "second": 0.9995478391647339
+      },
+      {
+        "bound": 1.6252832412719727,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.37429267168045044,
+        "nearest": 121,
+        "r": 0.6252837777137756,
+        "second": 0.9995764493942261
+      },
+      {
+        "bound": 1.9214882850646973,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.07672178745269775,
+        "nearest": 63,
+        "r": 0.921488881111145,
+        "second": 0.9982106685638428
+      },
+      {
+        "bound": 1.820371150970459,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.17912942171096802,
+        "nearest": 121,
+        "r": 0.8203717470169067,
+        "second": 0.9995011687278748
+      },
+      {
+        "bound": 1.6871631145477295,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3110761046409607,
+        "nearest": 13,
+        "r": 0.6871635913848877,
+        "second": 0.9982396960258484
+      },
+      {
+        "bound": 1.7429296970367432,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2565303444862366,
+        "nearest": 23,
+        "r": 0.7429301738739014,
+        "second": 0.9994605183601379
+      },
+      {
+        "bound": 1.6517574787139893,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3466428518295288,
+        "nearest": 121,
+        "r": 0.6517579555511475,
+        "second": 0.9984008073806763
+      },
+      {
+        "bound": 1.5590693950653076,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.44008517265319824,
+        "nearest": 121,
+        "r": 0.5590699911117554,
+        "second": 0.9991551637649536
+      },
+      {
+        "bound": 1.423693299293518,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.5758489370346069,
+        "nearest": 87,
+        "r": 0.42369386553764343,
+        "second": 0.9995428323745728
+      },
+      {
+        "bound": 1.7147715091705322,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.28422319889068604,
+        "nearest": 99,
+        "r": 0.71477210521698,
+        "second": 0.998995304107666
+      },
+      {
+        "bound": 1.6825785636901855,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.31569504737854004,
+        "nearest": 144,
+        "r": 0.6825790405273438,
+        "second": 0.9982740879058838
+      },
+      {
+        "bound": 1.7876369953155518,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.21107792854309082,
+        "nearest": 25,
+        "r": 0.78763747215271,
+        "second": 0.9987154006958008
+      },
+      {
+        "bound": 1.6551034450531006,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.34441888332366943,
+        "nearest": 25,
+        "r": 0.6551039218902588,
+        "second": 0.9995228052139282
+      },
+      {
+        "bound": 1.658959150314331,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.34063929319381714,
+        "nearest": 83,
+        "r": 0.6589597463607788,
+        "second": 0.999599039554596
+      },
+      {
+        "bound": 1.8089599609375,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.18886077404022217,
+        "nearest": 57,
+        "r": 0.8089605569839478,
+        "second": 0.9978213310241699
+      },
+      {
+        "bound": 1.5977215766906738,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.40181922912597656,
+        "nearest": 63,
+        "r": 0.5977221727371216,
+        "second": 0.9995414018630981
+      },
+      {
+        "bound": 1.6044905185699463,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.3948410749435425,
+        "nearest": 121,
+        "r": 0.604491114616394,
+        "second": 0.9993321895599365
+      },
+      {
+        "bound": 1.614989995956421,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.38461703062057495,
+        "nearest": 23,
+        "r": 0.6149905920028687,
+        "second": 0.9996076226234436
+      },
+      {
+        "bound": 1.7711808681488037,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2278839349746704,
+        "nearest": 2,
+        "r": 0.7711814641952515,
+        "second": 0.9990653991699219
+      },
+      {
+        "bound": 1.603058934211731,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.39547890424728394,
+        "nearest": 63,
+        "r": 0.6030594706535339,
+        "second": 0.9985383749008179
+      },
+      {
+        "bound": 1.902942180633545,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.09617310762405396,
+        "nearest": 47,
+        "r": 0.9029427766799927,
+        "second": 0.9991158843040466
+      },
+      {
+        "bound": 1.5877928733825684,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.41136038303375244,
+        "nearest": 209,
+        "r": 0.5877933502197266,
+        "second": 0.999153733253479
+      },
+      {
+        "bound": 1.7022278308868408,
+        "certificate_violations": 0,
+        "domain": 0,
+        "margin": 0.2961009740829468,
+        "nearest": 23,
+        "r": 0.7022284269332886,
+        "second": 0.9983294010162354
+      }
+    ],
+    "theorem": "corrected behavioral certificate: d(x,y)<=d(x,x*)+diam(D); latent-only routing is not certified without distortion"
+  },
+  "serialization": {
+    "max_encode_l2_diff": 0.0,
+    "max_energy_diff": 0.0
+  },
+  "status_legend": {
+    "E": "measured",
+    "F": "failed gate",
+    "H": "hypothesis",
+    "P": "proven/classical under stated assumptions"
+  },
+  "timing": {
+    "N": 256,
+    "n": 64,
+    "pairwise_tv_sec": 0.366274341,
+    "threads": 2,
+    "train_forward_sec": 35.08780177
+  },
+  "trace_audit": {
+    "bound": "|TV - hatTV| <= rho_i + rho_j (safe); original half-sum proof not accepted",
+    "max_abs_error": 0.46288079023361206,
+    "max_tau_corrected": 1.2328094244003296,
+    "pairs": 2000,
+    "violations_corrected": 0,
+    "violations_original_half_tau": 0
+  },
+  "sanitizer": {
+    "run": "AddressSanitizer (debug, O1, single-thread)",
+    "memory_errors": 0,
+    "exit_code": 0,
+    "log": "reports-asan/asan.log",
+    "note": "Memory-safety run completed without AddressSanitizer errors. Its gate directory omits the external parity oracle, so G1 is not evaluated there."
+  }
+}
