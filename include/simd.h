@@ -11,6 +11,8 @@
 #include <cmath>
 #include <cstddef>
 #include <cstdint>
+#include <cstdlib>
+#include <cstring>
 
 #if defined(__x86_64__) || defined(_M_X64)
 #include <immintrin.h>
@@ -27,6 +29,12 @@ inline Isa detect() {
     // Calling __builtin_cpu_init() concurrently from OpenMP threads is a data
     // race on the global __cpu_model, so it must not run per-call.
     static const Isa cached = []() -> Isa {
+        // Diagnostic override: ALYSANE_SIMD=scalar|avx2|avx512
+        if (const char* e = std::getenv("ALYSANE_SIMD")) {
+            if (!std::strcmp(e, "scalar")) return Isa::Scalar;
+            if (!std::strcmp(e, "avx2")) return Isa::Avx2;
+            if (!std::strcmp(e, "avx512")) return Isa::Avx512;
+        }
 #if ALYSANE_X86
         __builtin_cpu_init();
         if (__builtin_cpu_supports("avx512f")) return Isa::Avx512;

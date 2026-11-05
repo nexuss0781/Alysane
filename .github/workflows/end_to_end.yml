@@ -76,12 +76,36 @@ jobs:
           OMP_NUM_THREADS: '4'
         run: python tools/parity_reference.py
 
+      - name: Report CPU capabilities
+        run: |
+          lscpu | grep -E 'Model name|Flags' | head -2
+          grep -o -m1 -E 'avx512f|avx2|fma' /proc/cpuinfo | sort -u | tr '\n' ' '; echo
+          g++ --version | head -1
+
       - name: Core gates G1-G7
+        continue-on-error: true
+        id: core_gates
         env:
           OPENBLAS_NUM_THREADS: '4'
           OMP_NUM_THREADS: '4'
           ALYSANE_THREADS: '4'
         run: ./build/alysane gates models data reports
+
+      - name: Diagnose crash under ASan (only if core gates crashed)
+        if: steps.core_gates.outcome == 'failure'
+        env:
+          ASAN_OPTIONS: detect_leaks=0:abort_on_error=0
+          UBSAN_OPTIONS: print_stacktrace=1
+          OPENBLAS_NUM_THREADS: '2'
+          OMP_NUM_THREADS: '2'
+          ALYSANE_THREADS: '2'
+        run: |
+          cmake -S . -B build-asan -DCMAKE_BUILD_TYPE=Debug \
+            -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer -g -O1"
+          cmake --build build-asan -j$(nproc) --target alysane
+          ./build-asan/alysane gates models data reports-asan 2>&1 | tail -60 || true
+          echo "=== scalar ISA retry ==="
+          ALYSANE_SIMD=scalar ./build/alysane gates models data reports-scalar 2>&1 | tail -20 || true
 
       - name: Completion gates G8-G12 (real model)
         env:
