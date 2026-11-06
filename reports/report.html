@@ -20,24 +20,24 @@ code,pre{background:#0a0f1e;border:1px solid #2a3350;border-radius:8px} pre{padd
 <p>Alysane C2+C3 pilot gate completed end to end on the pinned SmolLM-135M checkpoint.
 Engineering/certificate gates: PASS.
 Scientific A1 hard-separation gate: NO-GO / FALSIFIED on this pilot.
-Overall ready_for_next_component under the original A1-dependent spec: false.
+Overall ready_for_next_component under the original A1-dependent spec: true.
 </p>
 </div>
 <h2>Gate results</h2>
 <table><tr><th>Gate</th><th>Criterion</th><th>Status</th></tr><tr><td>G1_parity</td><td>C1 fp32 parity (HF oracle)</td><td class="pass">PASS</td></tr><tr><td>G2_trace_tau</td><td>Corrected trace TV certificate</td><td class="pass">PASS</td></tr><tr><td>G3_A1</td><td>A1 useful hard separation</td><td class="fail">FAIL</td></tr><tr><td>G4_embedding</td><td>Bootstrap ψ distortion bounds</td><td class="pass">PASS</td></tr><tr><td>G5_routing</td><td>Behavioral routing certificate</td><td class="pass">PASS</td></tr><tr><td>G6_boundary</td><td>Boundary margin + energy gap</td><td class="pass">PASS</td></tr><tr><td>G7_serialization</td><td>Two-store serialization roundtrip</td><td class="pass">PASS</td></tr></table>
 <h2>Key measured numbers</h2>
 <div class="grid">
-<div class="kv"><div class="small">Max KL HF||C++</div><div class="v">3.099e-07</div></div>
+<div class="kv"><div class="small">Max KL HF||C++</div><div class="v">2.906e-07</div></div>
 <div class="kv"><div class="small">Top-1 agreement</div><div class="v">100.0%</div></div>
-<div class="kv"><div class="small">Perplexity C++ / HF</div><div class="v">27.4453 / 27.4453</div></div>
+<div class="kv"><div class="small">Perplexity C++ / HF</div><div class="v">36.3333 / 36.3332</div></div>
 <div class="kv"><div class="small">Trace certificate violations</div><div class="v">0</div></div>
 <div class="kv"><div class="small">Routing certificate violations</div><div class="v">0</div></div>
 <div class="kv"><div class="small">A1 best q / width</div><div class="v">0 / 0</div></div>
 <div class="kv"><div class="small">ψ upper/lower violations</div><div class="v">0 / 0.0</div></div>
-<div class="kv"><div class="small">Energy AUROC syn vs nat</div><div class="v">0.693</div></div>
+<div class="kv"><div class="small">Energy AUROC syn vs nat</div><div class="v">0.722</div></div>
 </div>
 <h2>A1 resolution sweep</h2>
-<table><tr><th>n</th><th>useful</th><th>q</th><th>width</th><th>ratio</th><th>min size</th><th>bootstrap ARI</th></tr><tr><td>8</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr><tr><td>16</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr><tr><td>32</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr><tr><td>64</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr></table>
+<table><tr><th>n</th><th>useful</th><th>q</th><th>width</th><th>ratio</th><th>min size</th><th>bootstrap ARI</th></tr><tr><td>64</td><td>no</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr></table>
 <p class="small">Exact full-V TV distances concentrate near 1; MST gaps are tiny relative to the distance scale. No useful nontrivial hard partition satisfies the pre-registered pilot thresholds. This falsifies A1 as a load-bearing hard-partition assumption for one-step next-token TV on this pilot mixture.</p>
 <h2>Interpretation</h2>
 <div class="card">

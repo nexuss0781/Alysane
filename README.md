@@ -85,3 +85,13 @@ ALYSANE_A1_ONLY=1 ./build/alysane gates models data8 reports8
 ## Python role
 
 Python is used only for offline corpus/token conversion and the external parity oracle. All inference, trace production, TV, graph/A1 measurement, encoder/energy training, routing certificates, and serialization hot paths are C++.
+
+## Release
+
+**[v1.2-c2c3](https://github.com/nexuss0781/Alysane/releases/tag/v1.2-c2c3)** — complete
+project ZIP (source, specifications, tests, scripts, verified reports, trained θ_S).
+Model weights are excluded; `tools/download_model.sh` restores the pinned revision and
+verifies its SHA-256.
+
+CI: [![CI](https://github.com/nexuss0781/Alysane/actions/workflows/ci.yml/badge.svg)](https://github.com/nexuss0781/Alysane/actions/workflows/ci.yml)
+[![E2E](https://github.com/nexuss0781/Alysane/actions/workflows/end_to_end.yml/badge.svg)](https://github.com/nexuss0781/Alysane/actions/workflows/end_to_end.yml)

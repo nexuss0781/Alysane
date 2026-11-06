@@ -6,8 +6,8 @@
       "pairs": 2000,
       "violations_safe_tau": 0,
       "violations_original_half_tau": 0,
-      "max_abs_error": 0.46256581918170503,
-      "max_tau": 1.218336582183838,
+      "max_abs_error": 0.46256587592396614,
+      "max_tau": 1.218336045742035,
       "max_half_tau_excess": 0.0,
       "PASS": true,
       "note": "safe tau = rho_i + rho_j; original half-sum reported, not assumed"
@@ -15,7 +15,7 @@
     "psi_distortion": {
       "M": 32,
       "pairs": 2984,
-      "coverage_radius": 0.9946399686071689,
+      "coverage_radius": 0.9946400121583397,
       "upper_violations": 0,
       "lower_violations": 0,
       "PASS": true
@@ -28,7 +28,7 @@
     },
     "routing_certificate": {
       "partition_q": 9,
-      "cut": 0.9967829514259794,
+      "cut": 0.9967829435654799,
       "certificate_violations": 0,
       "PASS": true,
       "theorem": "d(x,y) <= d(x,x*) + diam(D) for all y in the region of x*"
@@ -36,8 +36,8 @@
   },
   "tv_matrix": {
     "min": 0.0,
-    "median": 0.9929776313305179,
-    "max": 1.000000003782921,
+    "median": 0.9929776198736313,
+    "max": 1.0000000018646988,
     "symmetry_max_err": 0.0
   },
   "overall_PASS": true
