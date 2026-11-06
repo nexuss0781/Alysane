@@ -29,6 +29,9 @@ jobs:
       - name: Analytic selftest
         run: ./build/alysane selftest
 
+      - name: A1 protocol unit tests (corrections C1-C3)
+        run: ./build/alysane_unit_tests 2>&1 | grep -E 'PROBE|root-JS|CORRECTION|kernel|lambda'
+
       - name: Full-scale stress (N=256, V=49152, 4 threads)
         env:
           OPENBLAS_NUM_THREADS: '4'

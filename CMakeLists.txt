@@ -33,6 +33,8 @@ set(ALYSANE_SOURCES
   src/drift.cpp
   src/gates2.cpp
   tests/unit_tests.cpp
+  src/probe.cpp
+  tests/probe_tests.cpp
 )
 add_executable(alysane src/main.cpp ${ALYSANE_SOURCES})
 target_link_libraries(alysane PRIVATE ${OPENBLAS} ${LAPACKE} OpenMP::OpenMP_CXX)

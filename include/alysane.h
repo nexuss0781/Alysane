@@ -250,6 +250,12 @@ struct RolloutSet {
     float exact_agreement = 0.f;
     /// Mean next-token entropy along the rollout (predictive uncertainty proxy).
     float mean_entropy = 0.f;
+    /// Rollout-averaged next-token distribution over V:
+    ///   q_x = (1/(R*T)) sum_r sum_t p_K(. | x + s_r[<t]).
+    /// This is the tractable r-step behavioural distribution used by branch B1.
+    /// The full continuation law over V^T is intractable; q_x is its expected
+    /// per-step marginal, a genuine probability distribution on V.
+    std::vector<float> mean_probs;
 };
 
 /// Generate R continuations of length T from context ids, sharing one prefill.
@@ -355,4 +361,5 @@ void run_completion_gates(const std::string& model_dir, const std::string& data_
 void run_parity(const std::string& model_dir, const std::string& tokens, const std::string& out);
 void run_selftest();
 void run_unit_tests();
+namespace probe { void run_probe_tests(); }
 } // namespace alysane

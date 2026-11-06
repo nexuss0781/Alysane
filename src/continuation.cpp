@@ -107,6 +107,8 @@ RolloutSet rollouts(const KnowledgeWeights& w, const std::vector<int32_t>& ids, 
 
     RolloutSet rs;
     rs.seq.assign(cfg.R, {});
+    rs.mean_probs.assign(w.V, 0.f);
+    double acc_norm = 0;
     std::mt19937_64 rng(stream_seed);
     double ent_sum = 0;
     int ent_cnt = 0;
@@ -115,6 +117,8 @@ RolloutSet rollouts(const KnowledgeWeights& w, const std::vector<int32_t>& ids, 
         std::vector<float> p = pre.last_probs;
         ent_sum += pre.trace.entropy;
         ent_cnt++;
+        for (int v = 0; v < w.V; v++) rs.mean_probs[v] += p[v];
+        acc_norm += 1;
         rs.seq[r].reserve(cfg.T);
         for (int t = 0; t < cfg.T; t++) {
             int tok = sample_categorical(p, cfg.temperature, rng);
@@ -123,10 +127,14 @@ RolloutSet rollouts(const KnowledgeWeights& w, const std::vector<int32_t>& ids, 
                 p = decode_step(w, cache, tok);
                 ent_sum += dist_entropy(p);
                 ent_cnt++;
+                for (int v = 0; v < w.V; v++) rs.mean_probs[v] += p[v];
+                acc_norm += 1;
             }
         }
     }
     rs.mean_entropy = (float)(ent_sum / std::max(1, ent_cnt));
+    if (acc_norm > 0)
+        for (auto& x : rs.mean_probs) x = (float)(x / acc_norm);
 
     // Self-agreement: mean pairwise kernel among own continuations.
     std::vector<std::vector<float>> feats(cfg.R);

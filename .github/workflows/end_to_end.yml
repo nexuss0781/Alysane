@@ -114,6 +114,39 @@ jobs:
           ALYSANE_THREADS: '4'
         run: ./build/alysane complete models data reports
 
+      - name: A1 measurement protocol (alysane-probe)
+        continue-on-error: true
+        id: probe
+        env:
+          OPENBLAS_NUM_THREADS: '4'
+          OMP_NUM_THREADS: '4'
+          ALYSANE_THREADS: '4'
+          ALYSANE_PROBE_GRID: '48'
+          ALYSANE_PROBE_B: '20'
+          ALYSANE_PROBE_M: '20000'
+          ALYSANE_PROBE_LANDMARKS: '64'
+        run: ./build/alysane probe models data reports
+
+      - name: A1 verdict summary
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p = pathlib.Path('reports/probe_report.json')
+          if not p.exists():
+              print('NO PROBE REPORT'); raise SystemExit(0)
+          r = json.loads(p.read_text())
+          print('=== A1 MEASUREMENT PROTOCOL ===')
+          print('final_verdict:', r['final_verdict'], '| branch:', r['final_branch'])
+          for m in r['metrics']:
+              pl = m['plateau']
+              print(f"  {m['metric']:20s} plateau={pl['valid']} k={pl['k']} "
+                    f"M={m['margin_usable']:.6f} M_req={m['margin_required']:.6f} "
+                    f"verdict={m['verdict']} branch={m['branch']}")
+              print(f"    H1={m['H1']['pass']} H2={m['H2']['pass']} H3={m['H3']['pass']} "
+                    f"tau95={m['tau95']:.6f} capture_vacuous={m['capture_audit']['filter_vacuous']}")
+          PY
+
       - name: Independent certificate oracle (NumPy)
         run: python tools/verify_certificates.py
 
@@ -152,6 +185,7 @@ jobs:
             reports/gates.json
             reports/parity.json
             reports/certificates.json
+            reports/probe_report.json
             reports/report.md
             reports/report.html
             reports/knowledge_manifest.json
