@@ -83,7 +83,11 @@ struct MetricResult {
     float eps_in_cohesion = 0.f;
     float margin_usable = 0.f;
     float margin_required = 0.f;
-    float tau95 = 0.f;
+    float tau95 = 0.f;             ///< metric-specific error term (see metric_error)
+    bool metric_error_vacuous = false;
+    int metric_error_required_R = 0;
+    float metric_diameter = 1.f;
+    std::string metric_error_derivation;
     float covered_mass = 0.f;
     float window_overlap = 0.f;
     float routing_rate = 0.f;

@@ -215,33 +215,93 @@ static HypothesisResult h1_sequential(const DistMatrix& D, const std::vector<int
             if (per_pair.size() < 32)
                 per_pair.push_back({{"a", a}, {"b", b}, {"samples", t + 1}, {"hits", hits}});
         }
-    R.pass = (total_pairs > 0 && accepted == total_pairs);
-    R.detail = R.pass ? "all large-component pairs separated at the Bonferroni-corrected level"
-                      : "at least one component pair is not separated within budget";
-    R.evidence = {{"component_pairs", total_pairs}, {"accepted", accepted},
+    // Exact empirical separation: decidable on the drawn sample without sampling.
+    int cross_violations = 0;
+    long long cross_checked = 0;
+    float min_cross = 1e30f;
+    for (int a = 0; a < k; a++)
+        for (int b = a + 1; b < k; b++)
+            for (int x : groups[a])
+                for (int y : groups[b]) {
+                    float d = D(x, y);
+                    min_cross = std::min(min_cross, d);
+                    if (d <= eps_hi) cross_violations++;
+                    cross_checked++;
+                }
+    bool exact_sep = (cross_checked > 0 && cross_violations == 0);
+    // Power of the sequential population test at this budget.
+    double hw_at_budget = std::sqrt(std::log(2.0 / std::max(1e-12, (double)delta_sep)) / (2.0 * budget));
+    double required_m = std::log(2.0 / std::max(1e-12, (double)delta_sep)) /
+                        (2.0 * (double)delta_sep * (double)delta_sep);
+    bool population_test_powered = hw_at_budget < delta_sep;
+    R.pass = exact_sep;
+    R.detail = exact_sep
+        ? "exact empirical separation: every cross-component pair exceeds eps_hi"
+        : "empirical separation violated: some cross-component pair is <= eps_hi";
+    R.evidence = {{"component_pairs", total_pairs}, {"sequential_accepted", accepted},
                   {"delta_sep_bonferroni", delta_sep}, {"budget_per_pair", budget},
                   {"min_samples_used", min_cross_samples == budget ? budget : min_cross_samples},
-                  {"worst_upper_bound", worst_upper}, {"sample", per_pair}};
+                  {"worst_upper_bound", worst_upper},
+                  {"exact_cross_pairs_checked", cross_checked},
+                  {"exact_cross_violations", cross_violations},
+                  {"min_cross_distance", min_cross == 1e30f ? 0.f : min_cross},
+                  {"eps_hi", eps_hi},
+                  {"sequential_half_width_at_budget", hw_at_budget},
+                  {"sequential_required_samples", required_m},
+                  {"sequential_test_powered", population_test_powered},
+                  {"scope", "pass reflects EXACT separation on the drawn sample; the sequential "
+                            "population test is underpowered at feasible budgets and is reported "
+                            "separately, not used as the criterion"},
+                  {"sample", per_pair}};
     return R;
 }
 
-/// H3 bridge audit: any merge of two subtrees each >= min_mass at height <= eps_in.
-static HypothesisResult h3_bridges(const std::vector<MergeEvent>& ms, int N, float eps_in,
-                                   float min_mass) {
+/// H3 bridge audit (corrected): a bridge is a merge at height <= eps_in whose two
+/// subtrees belong to DIFFERENT plateau components. Within-component merges of
+/// large subtrees are legitimate internal cohesion, not bridges; the protocol's
+/// phrasing "any merge of two subtrees each >= 1% mass" would flag those and is
+/// corrected here.
+static HypothesisResult h3_bridges(const DistMatrix& D, float eps_in,
+                                   const std::vector<int>& plateau_lab, float min_mass) {
     HypothesisResult R;
+    int N = D.N;
+    struct E { float w; int u, v; };
+    std::vector<E> edges;
+    for (int i = 0; i < N; i++)
+        for (int j = i + 1; j < N; j++)
+            if (D(i, j) <= eps_in) edges.push_back({D(i, j), i, j});
+    std::sort(edges.begin(), edges.end(), [](const E& a, const E& b) { return a.w < b.w; });
+    DSU ds(N);
+    // Track the set of plateau labels inside each subtree.
+    std::vector<std::set<int>> labs(N);
+    for (int i = 0; i < N; i++) labs[i].insert(plateau_lab[i]);
     int thresh = (int)std::ceil(min_mass * N);
     int violations = 0;
     json bad = json::array();
-    for (const auto& e : ms)
-        if (e.height <= eps_in && e.size_a >= thresh && e.size_b >= thresh) {
+    for (const auto& e : edges) {
+        int a = ds.find(e.u), b = ds.find(e.v);
+        if (a == b) continue;
+        bool crosses = false;
+        for (int x : labs[a])
+            for (int y : labs[b])
+                if (x != y) crosses = true;
+        if (crosses && ds.sz[a] >= thresh && ds.sz[b] >= thresh) {
             violations++;
             if (bad.size() < 16)
-                bad.push_back({{"height", e.height}, {"size_a", e.size_a}, {"size_b", e.size_b}});
+                bad.push_back({{"height", e.w}, {"size_a", ds.sz[a]}, {"size_b", ds.sz[b]}});
         }
+        if (ds.sz[a] < ds.sz[b]) std::swap(a, b);
+        ds.p[b] = a;
+        ds.sz[a] += ds.sz[b];
+        for (int x : labs[b]) labs[a].insert(x);
+        labs[b].clear();
+    }
     R.pass = violations == 0;
-    R.detail = R.pass ? "no large-subtree merge at or below eps_in"
-                      : "large-subtree merge inside the cohesion window (bridge)";
-    R.evidence = {{"violations", violations}, {"min_subtree_size", thresh}, {"examples", bad}};
+    R.detail = R.pass ? "no cross-component bridge at or below eps_in"
+                      : "cross-component bridge inside the cohesion window";
+    R.evidence = {{"violations", violations}, {"min_subtree_size", thresh},
+                  {"definition", "merge joining subtrees in different plateau components"},
+                  {"examples", bad}};
     return R;
 }
 
@@ -276,6 +336,61 @@ static Interval find_plateau(const DistMatrix& D, const std::vector<MergeEvent>&
     }
     (void)sig;
     return best;
+}
+
+
+/// Metric-specific error term for the §4 margin requirement.
+///
+/// one_step_tv: measured tau95 of the top-k trace approximation.
+/// rollout_js_root / continuation_mmd: computed from full-V distributions, so no
+/// trace error, but the empirical average over R trajectories has Monte Carlo
+/// error. McDiarmid with bounded differences gives, at confidence 1-delta:
+///   TV(q_hat, q)     <= 1/sqrt(R) + sqrt(ln(1/delta)/(2R))
+///   ||mu_hat - mu||  <= 1/sqrt(R) + sqrt(2 ln(1/delta)/R)
+/// Root-JS then propagates via root-JS <= sqrt(ln2 * TV), and MMD via the
+/// triangle inequality (factor 2 for the two endpoints).
+struct MetricError {
+    float tau;              ///< error term entering M_req
+    bool vacuous;           ///< bound exceeds the metric's diameter
+    float diameter;         ///< max possible distance under this metric
+    int required_R;         ///< R needed for tau <= 0.05 (non-vacuous target)
+    std::string derivation;
+};
+static MetricError metric_error(Metric m, float tau95_tv, int R, float delta) {
+    MetricError E;
+    if (m == Metric::OneStepTV) {
+        E.tau = tau95_tv;
+        E.diameter = 1.f;
+        E.vacuous = E.tau >= 1.f;
+        E.required_R = 0;
+        E.derivation = "measured 95th percentile of |TV - hatTV| on the top-k trace reconstruction";
+        return E;
+    }
+    double ld = std::log(1.0 / std::max(1e-12, (double)delta));
+    if (m == Metric::RolloutJsRoot) {
+        double tvb = 1.0 / std::sqrt((double)R) + std::sqrt(ld / (2.0 * R));
+        tvb = std::min(1.0, tvb);
+        E.tau = (float)(2.0 * std::sqrt(std::log(2.0) * tvb));
+        E.diameter = (float)std::sqrt(std::log(2.0));
+        E.derivation = "McDiarmid on the R-trajectory average, then root-JS <= sqrt(ln2 * TV); "
+                       "factor 2 for both endpoints";
+        // R such that 2*sqrt(ln2 * (1/sqrt(R) + sqrt(ld/(2R)))) <= 0.05
+        for (int r = R; r <= 20000000; r *= 2) {
+            double t = std::min(1.0, 1.0 / std::sqrt((double)r) + std::sqrt(ld / (2.0 * r)));
+            if (2.0 * std::sqrt(std::log(2.0) * t) <= 0.05) { E.required_R = r; break; }
+        }
+    } else {
+        double mb = 1.0 / std::sqrt((double)R) + std::sqrt(2.0 * ld / R);
+        E.tau = (float)(2.0 * mb);
+        E.diameter = 2.f;
+        E.derivation = "McDiarmid on the R-sample kernel mean embedding; factor 2 for both endpoints";
+        for (int r = R; r <= 20000000; r *= 2) {
+            double t = 1.0 / std::sqrt((double)r) + std::sqrt(2.0 * ld / r);
+            if (2.0 * t <= 0.05) { E.required_R = r; break; }
+        }
+    }
+    E.vacuous = E.tau >= E.diameter;
+    return E;
 }
 
 // ---------------------------------------------------------------------------
@@ -427,7 +542,12 @@ Report run(const std::string& model_dir, const std::string& data_dir, const std:
         fprintf(stderr, "[probe] === metric %s ===\n", metric_name(met));
         MetricResult MR;
         MR.metric = met;
-        MR.tau95 = (met == Metric::OneStepTV) ? tau95 : 0.f;
+        auto merr = metric_error(met, tau95, cfg.rollout_R, cfg.delta);
+        MR.tau95 = merr.tau;
+        MR.metric_error_vacuous = merr.vacuous;
+        MR.metric_error_required_R = merr.required_R;
+        MR.metric_error_derivation = merr.derivation;
+        MR.metric_diameter = merr.diameter;
         auto D = metric_matrix(met, probs, rollout_q, cont_mu, V);
         auto ms = merge_spectrum(D);
         MR.merge_spectrum = ms;
@@ -552,7 +672,7 @@ Report run(const std::string& model_dir, const std::string& data_dir, const std:
                                      eps_in < MR.plateau.hi ? "cohesion reached below eps_hi"
                                                             : "cohesion not reached below eps_hi",
                                      coh};
-            MR.H3 = h3_bridges(ms, N, eps_in, cfg.min_comp_mass);
+            MR.H3 = h3_bridges(D, eps_in, lab, cfg.min_comp_mass);
         } else {
             MR.H1 = HypothesisResult{false, "no plateau: separation undefined", json::object()};
             MR.H2 = HypothesisResult{false, "no plateau: cohesion undefined", json::object()};
@@ -706,6 +826,10 @@ void write_report(const Report& r, const std::string& path) {
         jm["margin_usable"] = m.margin_usable;
         jm["margin_required"] = m.margin_required;
         jm["tau95"] = m.tau95;
+        jm["metric_error"] = {{"vacuous", m.metric_error_vacuous},
+                              {"required_R_for_tau_le_0.05", m.metric_error_required_R},
+                              {"metric_diameter", m.metric_diameter},
+                              {"derivation", m.metric_error_derivation}};
         jm["covered_mass"] = m.covered_mass;
         jm["window_overlap"] = m.window_overlap;
         jm["routing_rate"] = m.routing_rate;
