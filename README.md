@@ -13,6 +13,28 @@ stability 0.995, coverage 0.941), with no predefined taxonomy and no fixed clust
 See [`docs/04_C2_C3_completion_report.md`](docs/04_C2_C3_completion_report.md) for the full
 gate table, measurements, corrections and limitations.
 
+### A1 Measurement Protocol — verdict `PARTIAL_GO`
+
+The supplied [A1 Measurement Protocol](docs/05_A1_measurement_protocol_v1.0.md) is the
+architecture-wide go/no-go gate. It is implemented in C++ (`alysane probe`) and was executed
+against the pinned model on CI. **All three candidate distances exhibit a measurement-stable
+plateau with H1, H2 and H3 satisfied** — structure exists — but the usable margin is far below
+the certified margin on every metric:
+
+| metric | plateau k | M usable | M required | verdict |
+|---|---|---|---|---|
+| `one_step_tv` | 9 | 0.0185 | 0.3683 | PARTIAL_GO |
+| `rollout_js_root` | 2 | 0.0740 | 3.3302 | PARTIAL_GO |
+| `continuation_mmd` | 2 | 0.2368 | 6.8955 | PARTIAL_GO |
+
+This refines the binary A1 NO-GO: the failure is the **margin**, not the existence of
+structure. The binding constraint is top-K reconstruction error (τ95 = 0.184), not geometry.
+Rollout-metric error bounds are vacuous at R=4 and would need R ≈ 3.3×10⁴–8.4×10⁶ rollouts
+per context to certify. Under §4, C5 competence field becomes the primary interface and
+fine-tuning stays gated. Six protocol defects (C1–C6) were corrected rather than implemented
+as written. Full analysis: [`docs/06_A1_probe_execution_report.md`](docs/06_A1_probe_execution_report.md),
+raw evidence: `reports/probe_report.json`.
+
 | Gate | Result | Gate | Result |
 |---|---|---|---|
 | G1 parity | PASS | G7 serialization | PASS |
@@ -44,6 +66,8 @@ make c3v2_1
 - `tools/parity_reference.py` — external HuggingFace fp32 parity oracle.
 - `tools/make_report.py` — generates the final HTML/Markdown report from measured JSON.
 - `models/` — pinned SmolLM-135M weights/tokenizer (not persisted in lightweight snapshots if excluded by size; re-download with the pinned revision below).
+- `docs/05_A1_measurement_protocol_v1.0.md` — supplied A1 gate protocol, verbatim.
+- `docs/06_A1_probe_execution_report.md` — probe execution report, corrections C1–C6, certification-cost analysis.
 - `reports/` — measured gate outputs.
 
 ## Pinned model

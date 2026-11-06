@@ -1,0 +1,6299 @@
+{
+  "N": 256,
+  "V": 49152,
+  "config": {
+    "M_pairs": 20000,
+    "beta_max_go": 0.15000000596046448,
+    "beta_max_partial": 0.4000000059604645,
+    "bootstrap_B": 20,
+    "bootstrap_frac": 0.800000011920929,
+    "covered_mass_req": 0.800000011920929,
+    "delta": 0.05000000074505806,
+    "delta_budget": 0.0,
+    "eps_grid": 48,
+    "eta_cohesion_pct": 95,
+    "h1_budget": 4096,
+    "k_max": 16,
+    "lambda_min": 0.009999999776482582,
+    "landmark_m": 64,
+    "min_comp_mass": 0.009999999776482582,
+    "rollout_R": 4,
+    "rollout_T": 8,
+    "routing_rate_target": 0.800000011920929,
+    "seed": 20261106,
+    "window_overlap_req": 0.8999999761581421
+  },
+  "corrections": {
+    "C1_lambda2": "lambda_2 of a graph with k>=2 components is identically 0; the criterion 'k>=2 AND lambda_2>=lambda_min' is unsatisfiable. Implemented lambda_{k+1} (gap above the k-dimensional kernel) instead.",
+    "C2_power_iteration": "power iteration converges to lambda_max, not lambda_2. Implemented an exact dense symmetric eigensolver, which also certifies kernel multiplicity.",
+    "C3_lemma_M2": "Lemma M2 does not transfer TV-specific certificates. Metric-generic results (Lemmas 2-3, Theorem 1, Corollary 1, routing form) transfer; the trace bound (Lemma 1) and the drift bound (Theorem 3) are TV-specific and re-derived.",
+    "C4_capture_radius": "r = sqrt(m)*eps is vacuous when eps approaches 1, since psi lies in [0,1]^m and ||psi_x-psi_y|| <= sqrt(m). The candidate filter then admits all pairs. Measured and reported.",
+    "C5_hoeffding_scope": "the correlation-integral CI is conditional on the drawn context sample; it bounds |C_hat - C_N|, not |C_hat - C_population|.",
+    "C6_H1_boundary": "k constant on [eps_lo, eps_hi) gives cross distances >= eps_hi, not > eps_hi. Reported with >= and eps_out taken as eps_hi."
+  },
+  "final_branch": "",
+  "final_verdict": "PARTIAL_GO",
+  "metrics": [
+    {
+      "H1": {
+        "detail": "exact empirical separation: every cross-component distance is >= eps_hi",
+        "evidence": {
+          "budget_per_pair": 4096,
+          "component_pairs": 36,
+          "delta_sep_bonferroni": 2.8935186492162757e-05,
+          "eps_hi": 0.9979004859924316,
+          "exact_cross_pairs_checked": 2012,
+          "exact_cross_violations": 0,
+          "min_cross_distance": 0.9979004859924316,
+          "min_samples_used": 4096,
+          "sample": [
+            {
+              "a": 0,
+              "b": 1,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 2,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 3,
+              "hits": 17,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 4,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 5,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 6,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 7,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 0,
+              "b": 8,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 2,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 3,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 4,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 5,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 6,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 7,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 1,
+              "b": 8,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 2,
+              "b": 3,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 2,
+              "b": 4,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 2,
+              "b": 5,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 2,
+              "b": 6,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 2,
+              "b": 7,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 2,
+              "b": 8,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 3,
+              "b": 4,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 3,
+              "b": 5,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 3,
+              "b": 6,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 3,
+              "b": 7,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 3,
+              "b": 8,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 4,
+              "b": 5,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 4,
+              "b": 6,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 4,
+              "b": 7,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 4,
+              "b": 8,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 5,
+              "b": 6,
+              "hits": 0,
+              "samples": 4097
+            },
+            {
+              "a": 5,
+              "b": 7,
+              "hits": 0,
+              "samples": 4097
+            }
+          ],
+          "scope": "pass reflects EXACT separation on the drawn sample; the sequential population test is underpowered at feasible budgets and is reported separately, not used as the criterion",
+          "sequential_accepted": 0,
+          "sequential_half_width_at_budget": 0.03688228105803048,
+          "sequential_required_samples": 6654921276.069845,
+          "sequential_test_powered": false,
+          "worst_upper_bound": 0.0
+        },
+        "pass": true
+      },
+      "H2": {
+        "detail": "cohesion reached below eps_hi",
+        "evidence": [
+          {
+            "component": 0,
+            "eps_cohesion": 0.9793620109558105,
+            "size": 248
+          }
+        ],
+        "pass": true
+      },
+      "H3": {
+        "detail": "no cross-component bridge at or below eps_in",
+        "evidence": {
+          "definition": "merge joining subtrees in different plateau components",
+          "examples": [],
+          "min_subtree_size": 3,
+          "violations": 0
+        },
+        "pass": true
+      },
+      "bootstrap_windows": [
+        {
+          "b": 0,
+          "hi": 0.9851563572883606,
+          "k": 14,
+          "lo": 0.977468729019165,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 1,
+          "hi": 0.9841344356536865,
+          "k": 15,
+          "lo": 0.9798736572265625,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 2,
+          "hi": 0.9983328580856323,
+          "k": 7,
+          "lo": 0.9959046840667725,
+          "overlap_fraction": 0.8721381425857544,
+          "valid": true
+        },
+        {
+          "b": 3,
+          "hi": 0.9841344356536865,
+          "k": 16,
+          "lo": 0.9753320217132568,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 4,
+          "hi": 0.9892246723175049,
+          "k": 16,
+          "lo": 0.9851563572883606,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 5,
+          "hi": 0.9851563572883606,
+          "k": 16,
+          "lo": 0.9818645715713501,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 6,
+          "hi": 0.9891549348831177,
+          "k": 16,
+          "lo": 0.9851563572883606,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 7,
+          "hi": 0.9979004859924316,
+          "k": 8,
+          "lo": 0.9959046840667725,
+          "overlap_fraction": 0.8721381425857544,
+          "valid": true
+        },
+        {
+          "b": 8,
+          "hi": 0.9973528981208801,
+          "k": 9,
+          "lo": 0.9928127527236938,
+          "overlap_fraction": 0.7607116103172302,
+          "valid": true
+        },
+        {
+          "b": 9,
+          "hi": 0.9891549348831177,
+          "k": 16,
+          "lo": 0.9851563572883606,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 10,
+          "hi": 0.9928127527236938,
+          "k": 12,
+          "lo": 0.9900721311569214,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 11,
+          "hi": 0.9892246723175049,
+          "k": 16,
+          "lo": 0.9861898422241211,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 12,
+          "hi": 0.9912662506103516,
+          "k": 15,
+          "lo": 0.9861898422241211,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 13,
+          "hi": 0.9851563572883606,
+          "k": 16,
+          "lo": 0.9753320217132568,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 14,
+          "hi": 0.9891549348831177,
+          "k": 16,
+          "lo": 0.9851563572883606,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 15,
+          "hi": 0.9891549348831177,
+          "k": 16,
+          "lo": 0.9861898422241211,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 16,
+          "hi": 0.9891549348831177,
+          "k": 15,
+          "lo": 0.9861898422241211,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 17,
+          "hi": 0.9841344356536865,
+          "k": 16,
+          "lo": 0.976981520652771,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 18,
+          "hi": 0.9867905378341675,
+          "k": 15,
+          "lo": 0.9809547662734985,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 19,
+          "hi": 0.9979004859924316,
+          "k": 8,
+          "lo": 0.9956120848655701,
+          "overlap_fraction": 1.0,
+          "valid": true
+        }
+      ],
+      "branch": "",
+      "capture_audit": {
+        "candidate_fraction": 1.0,
+        "filter_vacuous": true,
+        "realized_psi_diameter": 1.4165451526641846,
+        "worst_case_radius": 8.0
+      },
+      "covered_mass": 1.0,
+      "covering_number_est": 64.0,
+      "eps_in_cohesion": 0.9793620109558105,
+      "gap_mass_at_plateau": 0.03125,
+      "kcenter_radius_curve": [
+        0.9999761581420898,
+        0.9999731779098511,
+        0.9999673366546631,
+        0.9999618530273438,
+        0.9999613761901855,
+        0.9999244213104248,
+        0.9999187588691711,
+        0.9999088644981384,
+        0.9998843669891357,
+        0.9998824596405029,
+        0.999857485294342,
+        0.9998138546943665,
+        0.999788761138916,
+        0.999764084815979,
+        0.9996880888938904,
+        0.9995524883270264,
+        0.9995414018630981,
+        0.9995356798171997,
+        0.9994238615036011,
+        0.9990473985671997,
+        0.9990417957305908,
+        0.9989887475967407,
+        0.9989518523216248,
+        0.9987989664077759,
+        0.9984825849533081,
+        0.9981713891029358,
+        0.9975326061248779,
+        0.9974849820137024,
+        0.9965289831161499,
+        0.9964747428894043,
+        0.9963436126708984,
+        0.9960500597953796,
+        0.9958640933036804,
+        0.9950078725814819,
+        0.9946302771568298,
+        0.9941990375518799,
+        0.9935228824615479,
+        0.9934885501861572,
+        0.9932780265808105,
+        0.9931346774101257,
+        0.99164879322052,
+        0.9916029572486877,
+        0.9912344813346863,
+        0.9906936883926392,
+        0.9897587299346924,
+        0.9891549348831177,
+        0.988341212272644,
+        0.9883041381835938,
+        0.9874960780143738,
+        0.9868258237838745,
+        0.984115719795227,
+        0.983104944229126,
+        0.9825260043144226,
+        0.981144905090332,
+        0.980433464050293,
+        0.979739785194397,
+        0.9788244962692261,
+        0.9762969613075256,
+        0.9710548520088196,
+        0.969831109046936,
+        0.9685569405555725,
+        0.9685171842575073,
+        0.9667983651161194,
+        0.9659210443496704
+      ],
+      "margin_required": 0.3682810068130493,
+      "margin_usable": 0.018538475036621094,
+      "merge_spectrum": [
+        {
+          "height": 0.030020713806152344,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.06882724910974503,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.07967446744441986,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.10781465470790863,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.12720799446105957,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.13441762328147888,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.15510764718055725,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.1692005693912506,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.17575709521770477,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.19992557168006897,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.21145355701446533,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.21680563688278198,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.2333066463470459,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.24056227505207062,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.24363413453102112,
+          "size_a": 2,
+          "size_b": 2
+        },
+        {
+          "height": 0.25386154651641846,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.2573673725128174,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.2711685299873352,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.2889568507671356,
+          "size_a": 4,
+          "size_b": 3
+        },
+        {
+          "height": 0.30042096972465515,
+          "size_a": 1,
+          "size_b": 7
+        },
+        {
+          "height": 0.30125653743743896,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.3021048903465271,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.3064970076084137,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.31185346841812134,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.31620392203330994,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.3230772018432617,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.339052677154541,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.3394843339920044,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.34943851828575134,
+          "size_a": 8,
+          "size_b": 1
+        },
+        {
+          "height": 0.3521628677845001,
+          "size_a": 1,
+          "size_b": 9
+        },
+        {
+          "height": 0.3578893542289734,
+          "size_a": 1,
+          "size_b": 10
+        },
+        {
+          "height": 0.36128702759742737,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.36493629217147827,
+          "size_a": 1,
+          "size_b": 5
+        },
+        {
+          "height": 0.37393128871917725,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.37424927949905396,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.3858985900878906,
+          "size_a": 11,
+          "size_b": 1
+        },
+        {
+          "height": 0.3959478735923767,
+          "size_a": 1,
+          "size_b": 4
+        },
+        {
+          "height": 0.4052462577819824,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.4075557589530945,
+          "size_a": 5,
+          "size_b": 1
+        },
+        {
+          "height": 0.4143390655517578,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.424728661775589,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.43345168232917786,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.44000715017318726,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.44457221031188965,
+          "size_a": 12,
+          "size_b": 4
+        },
+        {
+          "height": 0.4457867741584778,
+          "size_a": 1,
+          "size_b": 5
+        },
+        {
+          "height": 0.44711339473724365,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.44718843698501587,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.45161187648773193,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4541245698928833,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.4562450647354126,
+          "size_a": 1,
+          "size_b": 6
+        },
+        {
+          "height": 0.45947086811065674,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.4633808732032776,
+          "size_a": 1,
+          "size_b": 6
+        },
+        {
+          "height": 0.46356502175331116,
+          "size_a": 7,
+          "size_b": 1
+        },
+        {
+          "height": 0.4647027254104614,
+          "size_a": 8,
+          "size_b": 1
+        },
+        {
+          "height": 0.4653206765651703,
+          "size_a": 16,
+          "size_b": 1
+        },
+        {
+          "height": 0.46541646122932434,
+          "size_a": 7,
+          "size_b": 17
+        },
+        {
+          "height": 0.46801891922950745,
+          "size_a": 9,
+          "size_b": 1
+        },
+        {
+          "height": 0.48216530680656433,
+          "size_a": 1,
+          "size_b": 6
+        },
+        {
+          "height": 0.48306089639663696,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.48460525274276733,
+          "size_a": 24,
+          "size_b": 1
+        },
+        {
+          "height": 0.48875290155410767,
+          "size_a": 10,
+          "size_b": 1
+        },
+        {
+          "height": 0.49199023842811584,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4927499294281006,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.49295204877853394,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.49391090869903564,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.49582624435424805,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4965188205242157,
+          "size_a": 7,
+          "size_b": 1
+        },
+        {
+          "height": 0.4977369010448456,
+          "size_a": 2,
+          "size_b": 11
+        },
+        {
+          "height": 0.49882811307907104,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.49901214241981506,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4996556341648102,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.5028451085090637,
+          "size_a": 13,
+          "size_b": 1
+        },
+        {
+          "height": 0.5100784301757813,
+          "size_a": 2,
+          "size_b": 3
+        },
+        {
+          "height": 0.5121825933456421,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.5194317102432251,
+          "size_a": 1,
+          "size_b": 5
+        },
+        {
+          "height": 0.5199419856071472,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5201279520988464,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.5247382521629333,
+          "size_a": 6,
+          "size_b": 3
+        },
+        {
+          "height": 0.5339191555976868,
+          "size_a": 25,
+          "size_b": 1
+        },
+        {
+          "height": 0.5379041433334351,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.5407139658927917,
+          "size_a": 2,
+          "size_b": 14
+        },
+        {
+          "height": 0.5442603826522827,
+          "size_a": 26,
+          "size_b": 1
+        },
+        {
+          "height": 0.5518826842308044,
+          "size_a": 27,
+          "size_b": 1
+        },
+        {
+          "height": 0.5533803105354309,
+          "size_a": 16,
+          "size_b": 9
+        },
+        {
+          "height": 0.5581961870193481,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5597903728485107,
+          "size_a": 1,
+          "size_b": 25
+        },
+        {
+          "height": 0.5604569911956787,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.5611492395401001,
+          "size_a": 26,
+          "size_b": 1
+        },
+        {
+          "height": 0.5662394165992737,
+          "size_a": 2,
+          "size_b": 27
+        },
+        {
+          "height": 0.5740352272987366,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.5746517777442932,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5774948596954346,
+          "size_a": 29,
+          "size_b": 1
+        },
+        {
+          "height": 0.5885730385780334,
+          "size_a": 1,
+          "size_b": 8
+        },
+        {
+          "height": 0.5938436388969421,
+          "size_a": 1,
+          "size_b": 30
+        },
+        {
+          "height": 0.5941991806030273,
+          "size_a": 31,
+          "size_b": 1
+        },
+        {
+          "height": 0.5953853130340576,
+          "size_a": 32,
+          "size_b": 2
+        },
+        {
+          "height": 0.5998423099517822,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6002137660980225,
+          "size_a": 2,
+          "size_b": 34
+        },
+        {
+          "height": 0.6010486483573914,
+          "size_a": 36,
+          "size_b": 1
+        },
+        {
+          "height": 0.6023480892181396,
+          "size_a": 1,
+          "size_b": 28
+        },
+        {
+          "height": 0.6066839098930359,
+          "size_a": 9,
+          "size_b": 29
+        },
+        {
+          "height": 0.612144947052002,
+          "size_a": 4,
+          "size_b": 38
+        },
+        {
+          "height": 0.6130660176277161,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6164164543151855,
+          "size_a": 42,
+          "size_b": 1
+        },
+        {
+          "height": 0.6181473731994629,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6182984113693237,
+          "size_a": 1,
+          "size_b": 43
+        },
+        {
+          "height": 0.6299116015434265,
+          "size_a": 3,
+          "size_b": 44
+        },
+        {
+          "height": 0.6373661756515503,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6374191641807556,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.6390698552131653,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6414928436279297,
+          "size_a": 1,
+          "size_b": 47
+        },
+        {
+          "height": 0.6421799063682556,
+          "size_a": 37,
+          "size_b": 1
+        },
+        {
+          "height": 0.6435187458992004,
+          "size_a": 38,
+          "size_b": 5
+        },
+        {
+          "height": 0.6467328071594238,
+          "size_a": 43,
+          "size_b": 1
+        },
+        {
+          "height": 0.6472568511962891,
+          "size_a": 1,
+          "size_b": 44
+        },
+        {
+          "height": 0.652534544467926,
+          "size_a": 3,
+          "size_b": 48
+        },
+        {
+          "height": 0.653759241104126,
+          "size_a": 1,
+          "size_b": 45
+        },
+        {
+          "height": 0.659168541431427,
+          "size_a": 46,
+          "size_b": 1
+        },
+        {
+          "height": 0.6598663926124573,
+          "size_a": 47,
+          "size_b": 2
+        },
+        {
+          "height": 0.6617990732192993,
+          "size_a": 49,
+          "size_b": 51
+        },
+        {
+          "height": 0.6631019115447998,
+          "size_a": 100,
+          "size_b": 3
+        },
+        {
+          "height": 0.6675506830215454,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6691641807556152,
+          "size_a": 103,
+          "size_b": 1
+        },
+        {
+          "height": 0.6697947978973389,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6722637414932251,
+          "size_a": 104,
+          "size_b": 2
+        },
+        {
+          "height": 0.6752357482910156,
+          "size_a": 106,
+          "size_b": 1
+        },
+        {
+          "height": 0.6772743463516235,
+          "size_a": 107,
+          "size_b": 1
+        },
+        {
+          "height": 0.683014988899231,
+          "size_a": 108,
+          "size_b": 1
+        },
+        {
+          "height": 0.6844634413719177,
+          "size_a": 109,
+          "size_b": 1
+        },
+        {
+          "height": 0.6854137778282166,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6884775757789612,
+          "size_a": 110,
+          "size_b": 1
+        },
+        {
+          "height": 0.6910098195075989,
+          "size_a": 2,
+          "size_b": 111
+        },
+        {
+          "height": 0.6927157640457153,
+          "size_a": 2,
+          "size_b": 113
+        },
+        {
+          "height": 0.6966612339019775,
+          "size_a": 1,
+          "size_b": 115
+        },
+        {
+          "height": 0.6973621845245361,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.6975250244140625,
+          "size_a": 116,
+          "size_b": 2
+        },
+        {
+          "height": 0.7012289762496948,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.702343761920929,
+          "size_a": 118,
+          "size_b": 1
+        },
+        {
+          "height": 0.7024916410446167,
+          "size_a": 1,
+          "size_b": 119
+        },
+        {
+          "height": 0.708965539932251,
+          "size_a": 1,
+          "size_b": 120
+        },
+        {
+          "height": 0.7155691385269165,
+          "size_a": 2,
+          "size_b": 121
+        },
+        {
+          "height": 0.7178873419761658,
+          "size_a": 1,
+          "size_b": 123
+        },
+        {
+          "height": 0.7178961038589478,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7181729078292847,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7193451523780823,
+          "size_a": 124,
+          "size_b": 1
+        },
+        {
+          "height": 0.7303763628005981,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.7306097745895386,
+          "size_a": 1,
+          "size_b": 125
+        },
+        {
+          "height": 0.731351375579834,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7358142137527466,
+          "size_a": 1,
+          "size_b": 126
+        },
+        {
+          "height": 0.7406131029129028,
+          "size_a": 1,
+          "size_b": 127
+        },
+        {
+          "height": 0.7419333457946777,
+          "size_a": 2,
+          "size_b": 128
+        },
+        {
+          "height": 0.7447237968444824,
+          "size_a": 1,
+          "size_b": 130
+        },
+        {
+          "height": 0.7453628778457642,
+          "size_a": 131,
+          "size_b": 1
+        },
+        {
+          "height": 0.7454211711883545,
+          "size_a": 132,
+          "size_b": 1
+        },
+        {
+          "height": 0.745561957359314,
+          "size_a": 1,
+          "size_b": 133
+        },
+        {
+          "height": 0.7476556897163391,
+          "size_a": 1,
+          "size_b": 134
+        },
+        {
+          "height": 0.7522681355476379,
+          "size_a": 135,
+          "size_b": 1
+        },
+        {
+          "height": 0.7529358267784119,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.7529678344726563,
+          "size_a": 136,
+          "size_b": 1
+        },
+        {
+          "height": 0.7544254660606384,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7591226100921631,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.7627689242362976,
+          "size_a": 1,
+          "size_b": 137
+        },
+        {
+          "height": 0.7707525491714478,
+          "size_a": 138,
+          "size_b": 1
+        },
+        {
+          "height": 0.773486316204071,
+          "size_a": 4,
+          "size_b": 2
+        },
+        {
+          "height": 0.775058925151825,
+          "size_a": 139,
+          "size_b": 3
+        },
+        {
+          "height": 0.7759050130844116,
+          "size_a": 3,
+          "size_b": 5
+        },
+        {
+          "height": 0.7800285220146179,
+          "size_a": 142,
+          "size_b": 1
+        },
+        {
+          "height": 0.781650960445404,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7829630374908447,
+          "size_a": 143,
+          "size_b": 1
+        },
+        {
+          "height": 0.7834489345550537,
+          "size_a": 3,
+          "size_b": 2
+        },
+        {
+          "height": 0.7836867570877075,
+          "size_a": 144,
+          "size_b": 1
+        },
+        {
+          "height": 0.7863848209381104,
+          "size_a": 6,
+          "size_b": 145
+        },
+        {
+          "height": 0.7888358235359192,
+          "size_a": 2,
+          "size_b": 151
+        },
+        {
+          "height": 0.7919724583625793,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7931472063064575,
+          "size_a": 8,
+          "size_b": 153
+        },
+        {
+          "height": 0.7945644855499268,
+          "size_a": 161,
+          "size_b": 1
+        },
+        {
+          "height": 0.7962421178817749,
+          "size_a": 1,
+          "size_b": 162
+        },
+        {
+          "height": 0.7971861362457275,
+          "size_a": 163,
+          "size_b": 1
+        },
+        {
+          "height": 0.797877311706543,
+          "size_a": 1,
+          "size_b": 164
+        },
+        {
+          "height": 0.8035285472869873,
+          "size_a": 165,
+          "size_b": 1
+        },
+        {
+          "height": 0.8059384822845459,
+          "size_a": 1,
+          "size_b": 166
+        },
+        {
+          "height": 0.8112362027168274,
+          "size_a": 1,
+          "size_b": 167
+        },
+        {
+          "height": 0.8144880533218384,
+          "size_a": 2,
+          "size_b": 168
+        },
+        {
+          "height": 0.817664384841919,
+          "size_a": 170,
+          "size_b": 1
+        },
+        {
+          "height": 0.8245699405670166,
+          "size_a": 1,
+          "size_b": 5
+        },
+        {
+          "height": 0.8264285922050476,
+          "size_a": 1,
+          "size_b": 171
+        },
+        {
+          "height": 0.8271780014038086,
+          "size_a": 172,
+          "size_b": 1
+        },
+        {
+          "height": 0.8277321457862854,
+          "size_a": 1,
+          "size_b": 173
+        },
+        {
+          "height": 0.8298342227935791,
+          "size_a": 174,
+          "size_b": 6
+        },
+        {
+          "height": 0.8330097794532776,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.8367182016372681,
+          "size_a": 180,
+          "size_b": 1
+        },
+        {
+          "height": 0.8401713371276855,
+          "size_a": 181,
+          "size_b": 1
+        },
+        {
+          "height": 0.8456710577011108,
+          "size_a": 2,
+          "size_b": 182
+        },
+        {
+          "height": 0.8518716096878052,
+          "size_a": 1,
+          "size_b": 184
+        },
+        {
+          "height": 0.8561230301856995,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.8570051789283752,
+          "size_a": 1,
+          "size_b": 185
+        },
+        {
+          "height": 0.8579809665679932,
+          "size_a": 3,
+          "size_b": 2
+        },
+        {
+          "height": 0.8587157726287842,
+          "size_a": 186,
+          "size_b": 1
+        },
+        {
+          "height": 0.8688262104988098,
+          "size_a": 4,
+          "size_b": 187
+        },
+        {
+          "height": 0.870653510093689,
+          "size_a": 191,
+          "size_b": 2
+        },
+        {
+          "height": 0.8713992834091187,
+          "size_a": 1,
+          "size_b": 193
+        },
+        {
+          "height": 0.8735440969467163,
+          "size_a": 1,
+          "size_b": 194
+        },
+        {
+          "height": 0.8754810690879822,
+          "size_a": 1,
+          "size_b": 195
+        },
+        {
+          "height": 0.8775397539138794,
+          "size_a": 1,
+          "size_b": 196
+        },
+        {
+          "height": 0.8809119462966919,
+          "size_a": 197,
+          "size_b": 1
+        },
+        {
+          "height": 0.8844502568244934,
+          "size_a": 1,
+          "size_b": 198
+        },
+        {
+          "height": 0.8901166915893555,
+          "size_a": 1,
+          "size_b": 199
+        },
+        {
+          "height": 0.8901697397232056,
+          "size_a": 2,
+          "size_b": 200
+        },
+        {
+          "height": 0.8930423259735107,
+          "size_a": 1,
+          "size_b": 202
+        },
+        {
+          "height": 0.8975427150726318,
+          "size_a": 5,
+          "size_b": 203
+        },
+        {
+          "height": 0.8979917764663696,
+          "size_a": 2,
+          "size_b": 208
+        },
+        {
+          "height": 0.8990795016288757,
+          "size_a": 210,
+          "size_b": 1
+        },
+        {
+          "height": 0.9084928035736084,
+          "size_a": 3,
+          "size_b": 211
+        },
+        {
+          "height": 0.9111887812614441,
+          "size_a": 1,
+          "size_b": 214
+        },
+        {
+          "height": 0.9137369394302368,
+          "size_a": 215,
+          "size_b": 1
+        },
+        {
+          "height": 0.9161410331726074,
+          "size_a": 216,
+          "size_b": 1
+        },
+        {
+          "height": 0.922461986541748,
+          "size_a": 1,
+          "size_b": 217
+        },
+        {
+          "height": 0.9241296648979187,
+          "size_a": 1,
+          "size_b": 218
+        },
+        {
+          "height": 0.9296178817749023,
+          "size_a": 1,
+          "size_b": 219
+        },
+        {
+          "height": 0.9526361227035522,
+          "size_a": 1,
+          "size_b": 220
+        },
+        {
+          "height": 0.9542205929756165,
+          "size_a": 221,
+          "size_b": 1
+        },
+        {
+          "height": 0.9560520648956299,
+          "size_a": 1,
+          "size_b": 222
+        },
+        {
+          "height": 0.9589778184890747,
+          "size_a": 1,
+          "size_b": 223
+        },
+        {
+          "height": 0.9596381187438965,
+          "size_a": 1,
+          "size_b": 224
+        },
+        {
+          "height": 0.9621175527572632,
+          "size_a": 225,
+          "size_b": 1
+        },
+        {
+          "height": 0.9623429775238037,
+          "size_a": 1,
+          "size_b": 226
+        },
+        {
+          "height": 0.9643887281417847,
+          "size_a": 1,
+          "size_b": 227
+        },
+        {
+          "height": 0.9654908776283264,
+          "size_a": 228,
+          "size_b": 1
+        },
+        {
+          "height": 0.969831109046936,
+          "size_a": 229,
+          "size_b": 1
+        },
+        {
+          "height": 0.9702618718147278,
+          "size_a": 1,
+          "size_b": 230
+        },
+        {
+          "height": 0.9703114032745361,
+          "size_a": 231,
+          "size_b": 1
+        },
+        {
+          "height": 0.9708880186080933,
+          "size_a": 232,
+          "size_b": 1
+        },
+        {
+          "height": 0.9749003648757935,
+          "size_a": 1,
+          "size_b": 233
+        },
+        {
+          "height": 0.9753320217132568,
+          "size_a": 1,
+          "size_b": 234
+        },
+        {
+          "height": 0.9755388498306274,
+          "size_a": 235,
+          "size_b": 1
+        },
+        {
+          "height": 0.9841344356536865,
+          "size_a": 1,
+          "size_b": 236
+        },
+        {
+          "height": 0.9851563572883606,
+          "size_a": 237,
+          "size_b": 1
+        },
+        {
+          "height": 0.9861898422241211,
+          "size_a": 238,
+          "size_b": 1
+        },
+        {
+          "height": 0.9891549348831177,
+          "size_a": 1,
+          "size_b": 239
+        },
+        {
+          "height": 0.9892246723175049,
+          "size_a": 1,
+          "size_b": 240
+        },
+        {
+          "height": 0.9900721311569214,
+          "size_a": 1,
+          "size_b": 241
+        },
+        {
+          "height": 0.990196168422699,
+          "size_a": 1,
+          "size_b": 242
+        },
+        {
+          "height": 0.9912662506103516,
+          "size_a": 1,
+          "size_b": 243
+        },
+        {
+          "height": 0.9918098449707031,
+          "size_a": 244,
+          "size_b": 1
+        },
+        {
+          "height": 0.9928127527236938,
+          "size_a": 245,
+          "size_b": 1
+        },
+        {
+          "height": 0.9940226078033447,
+          "size_a": 1,
+          "size_b": 246
+        },
+        {
+          "height": 0.9956120848655701,
+          "size_a": 1,
+          "size_b": 247
+        },
+        {
+          "height": 0.9979004859924316,
+          "size_a": 248,
+          "size_b": 1
+        },
+        {
+          "height": 0.9981398582458496,
+          "size_a": 1,
+          "size_b": 249
+        },
+        {
+          "height": 0.9983328580856323,
+          "size_a": 250,
+          "size_b": 1
+        },
+        {
+          "height": 0.9995606541633606,
+          "size_a": 251,
+          "size_b": 1
+        },
+        {
+          "height": 0.9996448159217834,
+          "size_a": 1,
+          "size_b": 252
+        },
+        {
+          "height": 0.9996448755264282,
+          "size_a": 253,
+          "size_b": 1
+        },
+        {
+          "height": 0.9996957778930664,
+          "size_a": 254,
+          "size_b": 1
+        },
+        {
+          "height": 0.9999327659606934,
+          "size_a": 255,
+          "size_b": 1
+        }
+      ],
+      "metric": "one_step_tv",
+      "metric_error": {
+        "derivation": "measured 95th percentile of |TV - hatTV| on the top-k trace reconstruction",
+        "metric_diameter": 1.0,
+        "required_R_for_tau_le_0.05": 0,
+        "vacuous": false
+      },
+      "plateau": {
+        "eps_hi": 0.9979004859924316,
+        "eps_lo": 0.9956120848655701,
+        "k": 9,
+        "valid": true,
+        "width": 0.0022884011268615723
+      },
+      "routing_bound_rate": 1.0,
+      "routing_rate": 0.7916666865348816,
+      "scale_signature": [
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.030020713806152344,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.05065856873989105,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.07129642367362976,
+          "gap_mass": 1.0,
+          "k": 254,
+          "kernel_multiplicity": 254,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 4.999999873689376e-05,
+          "eps": 0.09193427860736847,
+          "gap_mass": 1.0,
+          "k": 253,
+          "kernel_multiplicity": 253,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0001500000071246177,
+          "eps": 0.11257213354110718,
+          "gap_mass": 1.0,
+          "k": 252,
+          "kernel_multiplicity": 252,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0001500000071246177,
+          "eps": 0.1332099884748459,
+          "gap_mass": 1.0,
+          "k": 251,
+          "kernel_multiplicity": 251,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0001500000071246177,
+          "eps": 0.1538478434085846,
+          "gap_mass": 1.0,
+          "k": 250,
+          "kernel_multiplicity": 250,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0001500000071246177,
+          "eps": 0.1744856983423233,
+          "gap_mass": 0.98828125,
+          "k": 248,
+          "kernel_multiplicity": 248,
+          "lambda_gap": 0.9999999403953552
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.00019999999494757503,
+          "eps": 0.195123553276062,
+          "gap_mass": 0.984375,
+          "k": 247,
+          "kernel_multiplicity": 247,
+          "lambda_gap": 0.5
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0003000000142492354,
+          "eps": 0.21576140820980072,
+          "gap_mass": 0.97265625,
+          "k": 245,
+          "kernel_multiplicity": 245,
+          "lambda_gap": 0.7712863087654114
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0003499999875202775,
+          "eps": 0.23639926314353943,
+          "gap_mass": 0.97265625,
+          "k": 243,
+          "kernel_multiplicity": 243,
+          "lambda_gap": 0.7712863087654114
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.00044999999227002263,
+          "eps": 0.25703710317611694,
+          "gap_mass": 0.94140625,
+          "k": 240,
+          "kernel_multiplicity": 240,
+          "lambda_gap": 0.5000000596046448
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0005000000237487257,
+          "eps": 0.27767497301101685,
+          "gap_mass": 0.94140625,
+          "k": 238,
+          "kernel_multiplicity": 238,
+          "lambda_gap": 0.5000000596046448
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0006000000284984708,
+          "eps": 0.29831281304359436,
+          "gap_mass": 0.94140625,
+          "k": 237,
+          "kernel_multiplicity": 237,
+          "lambda_gap": 0.19098301231861115
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0007999999797903001,
+          "eps": 0.31895068287849426,
+          "gap_mass": 0.921875,
+          "k": 231,
+          "kernel_multiplicity": 231,
+          "lambda_gap": 0.1652209609746933
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0008999999845400453,
+          "eps": 0.3395885229110718,
+          "gap_mass": 0.89453125,
+          "k": 228,
+          "kernel_multiplicity": 228,
+          "lambda_gap": 0.16522081196308136
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0010499999625608325,
+          "eps": 0.3602263927459717,
+          "gap_mass": 0.8828125,
+          "k": 225,
+          "kernel_multiplicity": 225,
+          "lambda_gap": 0.1536576747894287
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0012499999720603228,
+          "eps": 0.3808642327785492,
+          "gap_mass": 0.87890625,
+          "k": 221,
+          "kernel_multiplicity": 221,
+          "lambda_gap": 0.2852306365966797
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0015999999595806003,
+          "eps": 0.4015021026134491,
+          "gap_mass": 0.87109375,
+          "k": 219,
+          "kernel_multiplicity": 219,
+          "lambda_gap": 0.27073830366134644
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0019499999471008778,
+          "eps": 0.4221399426460266,
+          "gap_mass": 0.85546875,
+          "k": 216,
+          "kernel_multiplicity": 216,
+          "lambda_gap": 0.31090664863586426
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0026000000070780516,
+          "eps": 0.4427778124809265,
+          "gap_mass": 0.8359375,
+          "k": 213,
+          "kernel_multiplicity": 213,
+          "lambda_gap": 0.3728557825088501
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.003449999960139394,
+          "eps": 0.46341565251350403,
+          "gap_mass": 0.796875,
+          "k": 204,
+          "kernel_multiplicity": 204,
+          "lambda_gap": 0.20596903562545776
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.004399999976158142,
+          "eps": 0.48405352234840393,
+          "gap_mass": 0.77734375,
+          "k": 197,
+          "kernel_multiplicity": 197,
+          "lambda_gap": 0.06486114859580994
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0052999998442828655,
+          "eps": 0.5046913623809814,
+          "gap_mass": 0.734375,
+          "k": 184,
+          "kernel_multiplicity": 184,
+          "lambda_gap": 0.08881363272666931
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.005900000222027302,
+          "eps": 0.5253292322158813,
+          "gap_mass": 0.69921875,
+          "k": 178,
+          "kernel_multiplicity": 178,
+          "lambda_gap": 0.12116134166717529
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.007350000087171793,
+          "eps": 0.5459671020507813,
+          "gap_mass": 0.671875,
+          "k": 174,
+          "kernel_multiplicity": 174,
+          "lambda_gap": 0.12234055250883102
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.008249999955296516,
+          "eps": 0.5666049122810364,
+          "gap_mass": 0.640625,
+          "k": 167,
+          "kernel_multiplicity": 167,
+          "lambda_gap": 0.009481573477387428
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.009549999609589577,
+          "eps": 0.5872427821159363,
+          "gap_mass": 0.6328125,
+          "k": 164,
+          "kernel_multiplicity": 164,
+          "lambda_gap": 0.010381759144365788
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.011250000447034836,
+          "eps": 0.6078806519508362,
+          "gap_mass": 0.59765625,
+          "k": 155,
+          "kernel_multiplicity": 155,
+          "lambda_gap": 0.0187031552195549
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.012900000438094139,
+          "eps": 0.6285185217857361,
+          "gap_mass": 0.578125,
+          "k": 150,
+          "kernel_multiplicity": 150,
+          "lambda_gap": 0.01718473806977272
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0142000000923872,
+          "eps": 0.6491563320159912,
+          "gap_mass": 0.55859375,
+          "k": 141,
+          "kernel_multiplicity": 141,
+          "lambda_gap": 0.024730095639824867
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.015949999913573265,
+          "eps": 0.6697942018508911,
+          "gap_mass": 0.52734375,
+          "k": 133,
+          "kernel_multiplicity": 133,
+          "lambda_gap": 0.001863226294517517
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.018149999901652336,
+          "eps": 0.690432071685791,
+          "gap_mass": 0.5,
+          "k": 125,
+          "kernel_multiplicity": 125,
+          "lambda_gap": 0.003952018916606903
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0210999995470047,
+          "eps": 0.7110698819160461,
+          "gap_mass": 0.45703125,
+          "k": 116,
+          "kernel_multiplicity": 116,
+          "lambda_gap": 0.004068983253091574
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.02474999986588955,
+          "eps": 0.731707751750946,
+          "gap_mass": 0.42578125,
+          "k": 108,
+          "kernel_multiplicity": 108,
+          "lambda_gap": 0.015269475057721138
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.028149999678134918,
+          "eps": 0.7523456811904907,
+          "gap_mass": 0.38671875,
+          "k": 99,
+          "kernel_multiplicity": 99,
+          "lambda_gap": 0.022234316915273666
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.033900000154972076,
+          "eps": 0.7729834914207458,
+          "gap_mass": 0.3515625,
+          "k": 93,
+          "kernel_multiplicity": 93,
+          "lambda_gap": 0.026818469166755676
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.03994999825954437,
+          "eps": 0.793621301651001,
+          "gap_mass": 0.31640625,
+          "k": 81,
+          "kernel_multiplicity": 81,
+          "lambda_gap": 0.026323974132537842
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.04439999908208847,
+          "eps": 0.8142591714859009,
+          "gap_mass": 0.2890625,
+          "k": 74,
+          "kernel_multiplicity": 74,
+          "lambda_gap": 0.027209779247641563
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.05204999819397926,
+          "eps": 0.8348971009254456,
+          "gap_mass": 0.26171875,
+          "k": 66,
+          "kernel_multiplicity": 66,
+          "lambda_gap": 0.054062046110630035
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.06185000017285347,
+          "eps": 0.8555349111557007,
+          "gap_mass": 0.2421875,
+          "k": 62,
+          "kernel_multiplicity": 62,
+          "lambda_gap": 0.08393360674381256
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.07599999755620956,
+          "eps": 0.8761727809906006,
+          "gap_mass": 0.203125,
+          "k": 53,
+          "kernel_multiplicity": 53,
+          "lambda_gap": 0.08760719746351242
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.09345000237226486,
+          "eps": 0.8968105912208557,
+          "gap_mass": 0.17578125,
+          "k": 47,
+          "kernel_multiplicity": 47,
+          "lambda_gap": 0.15075479447841644
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.11694999784231186,
+          "eps": 0.9174484014511108,
+          "gap_mass": 0.15234375,
+          "k": 40,
+          "kernel_multiplicity": 40,
+          "lambda_gap": 0.12535607814788818
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.14980000257492065,
+          "eps": 0.9380863308906555,
+          "gap_mass": 0.140625,
+          "k": 37,
+          "kernel_multiplicity": 37,
+          "lambda_gap": 0.14018391072750092
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.2110999971628189,
+          "eps": 0.9587242007255554,
+          "gap_mass": 0.12890625,
+          "k": 34,
+          "kernel_multiplicity": 34,
+          "lambda_gap": 0.19630217552185059
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.3305000066757202,
+          "eps": 0.9793620109558105,
+          "gap_mass": 0.078125,
+          "k": 21,
+          "kernel_multiplicity": 21,
+          "lambda_gap": 0.30222803354263306
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 1.0,
+          "eps": 0.9999998807907104,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 1.0039201974868774
+        }
+      ],
+      "tau95": 0.18414050340652466,
+      "verdict": "PARTIAL_GO",
+      "window_overlap": 0.1752493977546692
+    },
+    {
+      "H1": {
+        "detail": "exact empirical separation: every cross-component distance is >= eps_hi",
+        "evidence": {
+          "budget_per_pair": 4096,
+          "component_pairs": 1,
+          "delta_sep_bonferroni": 0.0010416667209938169,
+          "eps_hi": 0.728742778301239,
+          "exact_cross_pairs_checked": 255,
+          "exact_cross_violations": 0,
+          "min_cross_distance": 0.728742778301239,
+          "min_samples_used": 4096,
+          "sample": [
+            {
+              "a": 0,
+              "b": 1,
+              "hits": 15,
+              "samples": 4097
+            }
+          ],
+          "scope": "pass reflects EXACT separation on the drawn sample; the sequential population test is underpowered at feasible budgets and is reported separately, not used as the criterion",
+          "sequential_accepted": 0,
+          "sequential_half_width_at_budget": 0.030378633585530092,
+          "sequential_required_samples": 3483684.690872826,
+          "sequential_test_powered": false,
+          "worst_upper_bound": 0.0
+        },
+        "pass": true
+      },
+      "H2": {
+        "detail": "cohesion reached below eps_hi",
+        "evidence": [
+          {
+            "component": 0,
+            "eps_cohesion": 0.6547659039497375,
+            "size": 255
+          }
+        ],
+        "pass": true
+      },
+      "H3": {
+        "detail": "no cross-component bridge at or below eps_in",
+        "evidence": {
+          "definition": "merge joining subtrees in different plateau components",
+          "examples": [],
+          "min_subtree_size": 3,
+          "violations": 0
+        },
+        "pass": true
+      },
+      "bootstrap_windows": [
+        {
+          "b": 0,
+          "hi": 0.728742778301239,
+          "k": 3,
+          "lo": 0.6983612179756165,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 1,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.709253191947937,
+          "overlap_fraction": 0.798500120639801,
+          "valid": true
+        },
+        {
+          "b": 2,
+          "hi": 0.6664348840713501,
+          "k": 12,
+          "lo": 0.655483067035675,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 3,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.709253191947937,
+          "overlap_fraction": 0.798500120639801,
+          "valid": true
+        },
+        {
+          "b": 4,
+          "hi": 0.6987372636795044,
+          "k": 3,
+          "lo": 0.6873196959495544,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 5,
+          "hi": 0.7372640371322632,
+          "k": 2,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 6,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.7041539549827576,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 7,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 8,
+          "hi": 0.6775245070457458,
+          "k": 11,
+          "lo": 0.6500858068466187,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 9,
+          "hi": 0.728742778301239,
+          "k": 3,
+          "lo": 0.6983612179756165,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 10,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 11,
+          "hi": 0.7273158431053162,
+          "k": 3,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 0.941537618637085,
+          "valid": true
+        },
+        {
+          "b": 12,
+          "hi": 0.6781158447265625,
+          "k": 6,
+          "lo": 0.6597396731376648,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 13,
+          "hi": 0.7372640371322632,
+          "k": 2,
+          "lo": 0.7132469415664673,
+          "overlap_fraction": 0.6348737478256226,
+          "valid": true
+        },
+        {
+          "b": 14,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 15,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 16,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.709253191947937,
+          "overlap_fraction": 0.798500120639801,
+          "valid": true
+        },
+        {
+          "b": 17,
+          "hi": 0.728742778301239,
+          "k": 3,
+          "lo": 0.709253191947937,
+          "overlap_fraction": 0.798500120639801,
+          "valid": true
+        },
+        {
+          "b": 18,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.713515043258667,
+          "overlap_fraction": 0.6238895058631897,
+          "valid": true
+        },
+        {
+          "b": 19,
+          "hi": 0.728742778301239,
+          "k": 2,
+          "lo": 0.7043350338935852,
+          "overlap_fraction": 1.0,
+          "valid": true
+        }
+      ],
+      "branch": "",
+      "capture_audit": {
+        "candidate_fraction": 1.0,
+        "filter_vacuous": true,
+        "realized_psi_diameter": 1.4500398635864258,
+        "worst_case_radius": 8.0
+      },
+      "covered_mass": 1.0,
+      "covering_number_est": 64.0,
+      "eps_in_cohesion": 0.6547659039497375,
+      "gap_mass_at_plateau": 0.00390625,
+      "kcenter_radius_curve": [
+        0.8313373923301697,
+        0.8282266855239868,
+        0.8200985789299011,
+        0.8168699145317078,
+        0.8167346119880676,
+        0.7834576964378357,
+        0.7682483792304993,
+        0.7566106915473938,
+        0.7503089904785156,
+        0.7469786405563354,
+        0.7436012029647827,
+        0.7315412759780884,
+        0.7267407178878784,
+        0.7202855944633484,
+        0.718247652053833,
+        0.7129170298576355,
+        0.7081838846206665,
+        0.7076660394668579,
+        0.7068303823471069,
+        0.7067407369613647,
+        0.7038962841033936,
+        0.700792133808136,
+        0.6991483569145203,
+        0.6987372636795044,
+        0.695493221282959,
+        0.6922370791435242,
+        0.6905779242515564,
+        0.6888628005981445,
+        0.686389148235321,
+        0.6857737302780151,
+        0.6855848431587219,
+        0.67800372838974,
+        0.6740003228187561,
+        0.6739663481712341,
+        0.672957181930542,
+        0.6687641739845276,
+        0.6674872040748596,
+        0.666891872882843,
+        0.6647920608520508,
+        0.663808286190033,
+        0.6630949974060059,
+        0.66279137134552,
+        0.6609947085380554,
+        0.6609649062156677,
+        0.6574721336364746,
+        0.6545196771621704,
+        0.6531456112861633,
+        0.6529625058174133,
+        0.652444064617157,
+        0.6505095958709717,
+        0.6472083926200867,
+        0.6457341313362122,
+        0.6434298157691956,
+        0.6410019397735596,
+        0.6385899782180786,
+        0.6372883319854736,
+        0.6338587403297424,
+        0.6319467425346375,
+        0.6309981942176819,
+        0.6307637095451355,
+        0.6306907534599304,
+        0.6306160092353821,
+        0.6302947998046875,
+        0.6298356652259827
+      ],
+      "margin_required": 3.330218553543091,
+      "margin_usable": 0.07397687435150146,
+      "merge_spectrum": [
+        {
+          "height": 0.23596671223640442,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.34577447175979614,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.3659365475177765,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.3670061528682709,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.3746029734611511,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.4067125916481018,
+          "size_a": 1,
+          "size_b": 5
+        },
+        {
+          "height": 0.4414583444595337,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.44328573346138,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.44803550839424133,
+          "size_a": 1,
+          "size_b": 6
+        },
+        {
+          "height": 0.4511761963367462,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.4517407715320587,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.45358192920684814,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4539318084716797,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.45479822158813477,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.454941064119339,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.4552192986011505,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.46116000413894653,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.46130549907684326,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.46284908056259155,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4630950391292572,
+          "size_a": 2,
+          "size_b": 4
+        },
+        {
+          "height": 0.4631122052669525,
+          "size_a": 6,
+          "size_b": 4
+        },
+        {
+          "height": 0.4639590084552765,
+          "size_a": 10,
+          "size_b": 1
+        },
+        {
+          "height": 0.4640128016471863,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4641399681568146,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4642386734485626,
+          "size_a": 1,
+          "size_b": 11
+        },
+        {
+          "height": 0.4642973840236664,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.46545618772506714,
+          "size_a": 2,
+          "size_b": 12
+        },
+        {
+          "height": 0.4660739004611969,
+          "size_a": 4,
+          "size_b": 7
+        },
+        {
+          "height": 0.4662487804889679,
+          "size_a": 14,
+          "size_b": 1
+        },
+        {
+          "height": 0.46763378381729126,
+          "size_a": 15,
+          "size_b": 1
+        },
+        {
+          "height": 0.46827754378318787,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.46951574087142944,
+          "size_a": 16,
+          "size_b": 1
+        },
+        {
+          "height": 0.4707648456096649,
+          "size_a": 17,
+          "size_b": 1
+        },
+        {
+          "height": 0.4721299111843109,
+          "size_a": 1,
+          "size_b": 18
+        },
+        {
+          "height": 0.4721354842185974,
+          "size_a": 19,
+          "size_b": 1
+        },
+        {
+          "height": 0.4731854200363159,
+          "size_a": 1,
+          "size_b": 20
+        },
+        {
+          "height": 0.47445300221443176,
+          "size_a": 1,
+          "size_b": 21
+        },
+        {
+          "height": 0.4756218492984772,
+          "size_a": 22,
+          "size_b": 1
+        },
+        {
+          "height": 0.47579488158226013,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4764990508556366,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.47673237323760986,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.4768103361129761,
+          "size_a": 4,
+          "size_b": 2
+        },
+        {
+          "height": 0.4780011475086212,
+          "size_a": 1,
+          "size_b": 23
+        },
+        {
+          "height": 0.47819191217422485,
+          "size_a": 24,
+          "size_b": 1
+        },
+        {
+          "height": 0.47819212079048157,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.47874248027801514,
+          "size_a": 25,
+          "size_b": 1
+        },
+        {
+          "height": 0.47874847054481506,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.48007410764694214,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.4802350103855133,
+          "size_a": 26,
+          "size_b": 1
+        },
+        {
+          "height": 0.4803074598312378,
+          "size_a": 27,
+          "size_b": 6
+        },
+        {
+          "height": 0.48075157403945923,
+          "size_a": 33,
+          "size_b": 1
+        },
+        {
+          "height": 0.4815232753753662,
+          "size_a": 34,
+          "size_b": 2
+        },
+        {
+          "height": 0.48180466890335083,
+          "size_a": 1,
+          "size_b": 36
+        },
+        {
+          "height": 0.4823223948478699,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.48323848843574524,
+          "size_a": 37,
+          "size_b": 2
+        },
+        {
+          "height": 0.4834934175014496,
+          "size_a": 39,
+          "size_b": 1
+        },
+        {
+          "height": 0.4876585304737091,
+          "size_a": 40,
+          "size_b": 1
+        },
+        {
+          "height": 0.4893296957015991,
+          "size_a": 41,
+          "size_b": 1
+        },
+        {
+          "height": 0.4899176359176636,
+          "size_a": 1,
+          "size_b": 42
+        },
+        {
+          "height": 0.49028918147087097,
+          "size_a": 43,
+          "size_b": 1
+        },
+        {
+          "height": 0.49044644832611084,
+          "size_a": 44,
+          "size_b": 2
+        },
+        {
+          "height": 0.49055734276771545,
+          "size_a": 46,
+          "size_b": 1
+        },
+        {
+          "height": 0.49136802554130554,
+          "size_a": 47,
+          "size_b": 1
+        },
+        {
+          "height": 0.4915180504322052,
+          "size_a": 1,
+          "size_b": 48
+        },
+        {
+          "height": 0.4916166067123413,
+          "size_a": 1,
+          "size_b": 11
+        },
+        {
+          "height": 0.49377861618995667,
+          "size_a": 49,
+          "size_b": 1
+        },
+        {
+          "height": 0.4951467216014862,
+          "size_a": 1,
+          "size_b": 50
+        },
+        {
+          "height": 0.4964892268180847,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.49651533365249634,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.49674564599990845,
+          "size_a": 3,
+          "size_b": 51
+        },
+        {
+          "height": 0.49702534079551697,
+          "size_a": 12,
+          "size_b": 2
+        },
+        {
+          "height": 0.4970666170120239,
+          "size_a": 54,
+          "size_b": 1
+        },
+        {
+          "height": 0.49776849150657654,
+          "size_a": 55,
+          "size_b": 1
+        },
+        {
+          "height": 0.4981682598590851,
+          "size_a": 56,
+          "size_b": 1
+        },
+        {
+          "height": 0.4981842637062073,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.4984498918056488,
+          "size_a": 1,
+          "size_b": 14
+        },
+        {
+          "height": 0.4988887906074524,
+          "size_a": 1,
+          "size_b": 57
+        },
+        {
+          "height": 0.4990677535533905,
+          "size_a": 58,
+          "size_b": 1
+        },
+        {
+          "height": 0.5000019669532776,
+          "size_a": 59,
+          "size_b": 1
+        },
+        {
+          "height": 0.5002017021179199,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5003876090049744,
+          "size_a": 60,
+          "size_b": 1
+        },
+        {
+          "height": 0.5010870695114136,
+          "size_a": 61,
+          "size_b": 3
+        },
+        {
+          "height": 0.5013394951820374,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.5013484954833984,
+          "size_a": 64,
+          "size_b": 1
+        },
+        {
+          "height": 0.5039822459220886,
+          "size_a": 65,
+          "size_b": 1
+        },
+        {
+          "height": 0.5040256381034851,
+          "size_a": 1,
+          "size_b": 66
+        },
+        {
+          "height": 0.5059798955917358,
+          "size_a": 67,
+          "size_b": 1
+        },
+        {
+          "height": 0.5059917569160461,
+          "size_a": 1,
+          "size_b": 68
+        },
+        {
+          "height": 0.506583034992218,
+          "size_a": 69,
+          "size_b": 1
+        },
+        {
+          "height": 0.5072502493858337,
+          "size_a": 1,
+          "size_b": 70
+        },
+        {
+          "height": 0.5073732733726501,
+          "size_a": 1,
+          "size_b": 71
+        },
+        {
+          "height": 0.507376492023468,
+          "size_a": 72,
+          "size_b": 1
+        },
+        {
+          "height": 0.5080307126045227,
+          "size_a": 73,
+          "size_b": 1
+        },
+        {
+          "height": 0.5082226395606995,
+          "size_a": 74,
+          "size_b": 1
+        },
+        {
+          "height": 0.5082933902740479,
+          "size_a": 75,
+          "size_b": 1
+        },
+        {
+          "height": 0.5095769762992859,
+          "size_a": 5,
+          "size_b": 76
+        },
+        {
+          "height": 0.5099527835845947,
+          "size_a": 1,
+          "size_b": 81
+        },
+        {
+          "height": 0.5104719400405884,
+          "size_a": 82,
+          "size_b": 1
+        },
+        {
+          "height": 0.510749101638794,
+          "size_a": 1,
+          "size_b": 83
+        },
+        {
+          "height": 0.5115531086921692,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5118597745895386,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.5119351744651794,
+          "size_a": 1,
+          "size_b": 84
+        },
+        {
+          "height": 0.51238614320755,
+          "size_a": 85,
+          "size_b": 1
+        },
+        {
+          "height": 0.5128651857376099,
+          "size_a": 1,
+          "size_b": 86
+        },
+        {
+          "height": 0.5136250257492065,
+          "size_a": 87,
+          "size_b": 1
+        },
+        {
+          "height": 0.5139846205711365,
+          "size_a": 1,
+          "size_b": 88
+        },
+        {
+          "height": 0.5150763392448425,
+          "size_a": 1,
+          "size_b": 89
+        },
+        {
+          "height": 0.5161271095275879,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5175142884254456,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.5180395245552063,
+          "size_a": 2,
+          "size_b": 15
+        },
+        {
+          "height": 0.5187424421310425,
+          "size_a": 1,
+          "size_b": 90
+        },
+        {
+          "height": 0.5189743041992188,
+          "size_a": 91,
+          "size_b": 1
+        },
+        {
+          "height": 0.5193600654602051,
+          "size_a": 1,
+          "size_b": 92
+        },
+        {
+          "height": 0.5206906795501709,
+          "size_a": 1,
+          "size_b": 17
+        },
+        {
+          "height": 0.5214744806289673,
+          "size_a": 1,
+          "size_b": 93
+        },
+        {
+          "height": 0.5214873552322388,
+          "size_a": 18,
+          "size_b": 94
+        },
+        {
+          "height": 0.5219072699546814,
+          "size_a": 1,
+          "size_b": 112
+        },
+        {
+          "height": 0.5219318866729736,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.522309422492981,
+          "size_a": 113,
+          "size_b": 1
+        },
+        {
+          "height": 0.5223842263221741,
+          "size_a": 1,
+          "size_b": 114
+        },
+        {
+          "height": 0.5230721831321716,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.523078978061676,
+          "size_a": 115,
+          "size_b": 1
+        },
+        {
+          "height": 0.5231270790100098,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5235525965690613,
+          "size_a": 1,
+          "size_b": 116
+        },
+        {
+          "height": 0.5239289999008179,
+          "size_a": 1,
+          "size_b": 117
+        },
+        {
+          "height": 0.5241567492485046,
+          "size_a": 2,
+          "size_b": 118
+        },
+        {
+          "height": 0.5254361033439636,
+          "size_a": 120,
+          "size_b": 1
+        },
+        {
+          "height": 0.5263262987136841,
+          "size_a": 121,
+          "size_b": 1
+        },
+        {
+          "height": 0.5264583230018616,
+          "size_a": 122,
+          "size_b": 1
+        },
+        {
+          "height": 0.526638388633728,
+          "size_a": 1,
+          "size_b": 123
+        },
+        {
+          "height": 0.5286577343940735,
+          "size_a": 124,
+          "size_b": 1
+        },
+        {
+          "height": 0.5299383401870728,
+          "size_a": 1,
+          "size_b": 125
+        },
+        {
+          "height": 0.5302987694740295,
+          "size_a": 126,
+          "size_b": 1
+        },
+        {
+          "height": 0.5317514538764954,
+          "size_a": 1,
+          "size_b": 127
+        },
+        {
+          "height": 0.531867504119873,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.5320369601249695,
+          "size_a": 128,
+          "size_b": 2
+        },
+        {
+          "height": 0.5323268175125122,
+          "size_a": 130,
+          "size_b": 1
+        },
+        {
+          "height": 0.5327692031860352,
+          "size_a": 1,
+          "size_b": 131
+        },
+        {
+          "height": 0.5334299206733704,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.533447265625,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.5337764620780945,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.5346139073371887,
+          "size_a": 1,
+          "size_b": 132
+        },
+        {
+          "height": 0.5346412658691406,
+          "size_a": 1,
+          "size_b": 133
+        },
+        {
+          "height": 0.5348303318023682,
+          "size_a": 134,
+          "size_b": 1
+        },
+        {
+          "height": 0.5360121130943298,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.5373639464378357,
+          "size_a": 135,
+          "size_b": 1
+        },
+        {
+          "height": 0.5382978916168213,
+          "size_a": 1,
+          "size_b": 136
+        },
+        {
+          "height": 0.5402305126190186,
+          "size_a": 1,
+          "size_b": 137
+        },
+        {
+          "height": 0.5411562919616699,
+          "size_a": 1,
+          "size_b": 138
+        },
+        {
+          "height": 0.5419265031814575,
+          "size_a": 139,
+          "size_b": 1
+        },
+        {
+          "height": 0.5437169671058655,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5442267656326294,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.5444864630699158,
+          "size_a": 4,
+          "size_b": 140
+        },
+        {
+          "height": 0.5445141792297363,
+          "size_a": 1,
+          "size_b": 144
+        },
+        {
+          "height": 0.5460190176963806,
+          "size_a": 1,
+          "size_b": 5
+        },
+        {
+          "height": 0.5474122166633606,
+          "size_a": 1,
+          "size_b": 145
+        },
+        {
+          "height": 0.5483006238937378,
+          "size_a": 146,
+          "size_b": 1
+        },
+        {
+          "height": 0.5510031580924988,
+          "size_a": 2,
+          "size_b": 147
+        },
+        {
+          "height": 0.5519485473632813,
+          "size_a": 2,
+          "size_b": 149
+        },
+        {
+          "height": 0.5522916913032532,
+          "size_a": 1,
+          "size_b": 6
+        },
+        {
+          "height": 0.552664577960968,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.5533820986747742,
+          "size_a": 151,
+          "size_b": 1
+        },
+        {
+          "height": 0.5539932250976563,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.554304838180542,
+          "size_a": 152,
+          "size_b": 1
+        },
+        {
+          "height": 0.5543510913848877,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5548306703567505,
+          "size_a": 1,
+          "size_b": 153
+        },
+        {
+          "height": 0.555180549621582,
+          "size_a": 1,
+          "size_b": 154
+        },
+        {
+          "height": 0.5553367733955383,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5554752945899963,
+          "size_a": 155,
+          "size_b": 1
+        },
+        {
+          "height": 0.5559060573577881,
+          "size_a": 1,
+          "size_b": 156
+        },
+        {
+          "height": 0.5561397075653076,
+          "size_a": 1,
+          "size_b": 157
+        },
+        {
+          "height": 0.5570772290229797,
+          "size_a": 158,
+          "size_b": 1
+        },
+        {
+          "height": 0.557083010673523,
+          "size_a": 1,
+          "size_b": 159
+        },
+        {
+          "height": 0.5577194094657898,
+          "size_a": 160,
+          "size_b": 1
+        },
+        {
+          "height": 0.5581977963447571,
+          "size_a": 1,
+          "size_b": 4
+        },
+        {
+          "height": 0.560451865196228,
+          "size_a": 7,
+          "size_b": 1
+        },
+        {
+          "height": 0.5607621073722839,
+          "size_a": 161,
+          "size_b": 1
+        },
+        {
+          "height": 0.5609508752822876,
+          "size_a": 1,
+          "size_b": 8
+        },
+        {
+          "height": 0.5628598928451538,
+          "size_a": 9,
+          "size_b": 4
+        },
+        {
+          "height": 0.5633068680763245,
+          "size_a": 1,
+          "size_b": 162
+        },
+        {
+          "height": 0.5639531016349792,
+          "size_a": 163,
+          "size_b": 1
+        },
+        {
+          "height": 0.5646464228630066,
+          "size_a": 164,
+          "size_b": 13
+        },
+        {
+          "height": 0.5655683279037476,
+          "size_a": 177,
+          "size_b": 1
+        },
+        {
+          "height": 0.5657838582992554,
+          "size_a": 178,
+          "size_b": 1
+        },
+        {
+          "height": 0.5698267817497253,
+          "size_a": 179,
+          "size_b": 1
+        },
+        {
+          "height": 0.5703148245811462,
+          "size_a": 1,
+          "size_b": 180
+        },
+        {
+          "height": 0.5720713138580322,
+          "size_a": 1,
+          "size_b": 181
+        },
+        {
+          "height": 0.5722626447677612,
+          "size_a": 1,
+          "size_b": 182
+        },
+        {
+          "height": 0.5739074945449829,
+          "size_a": 183,
+          "size_b": 1
+        },
+        {
+          "height": 0.5739266276359558,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.5759738683700562,
+          "size_a": 184,
+          "size_b": 1
+        },
+        {
+          "height": 0.5761418342590332,
+          "size_a": 1,
+          "size_b": 185
+        },
+        {
+          "height": 0.5765240788459778,
+          "size_a": 186,
+          "size_b": 1
+        },
+        {
+          "height": 0.5818144083023071,
+          "size_a": 187,
+          "size_b": 1
+        },
+        {
+          "height": 0.5829498171806335,
+          "size_a": 188,
+          "size_b": 1
+        },
+        {
+          "height": 0.583131730556488,
+          "size_a": 5,
+          "size_b": 189
+        },
+        {
+          "height": 0.5833356380462646,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5834252834320068,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.5837850570678711,
+          "size_a": 1,
+          "size_b": 194
+        },
+        {
+          "height": 0.5842122435569763,
+          "size_a": 195,
+          "size_b": 1
+        },
+        {
+          "height": 0.5848942399024963,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.586703896522522,
+          "size_a": 1,
+          "size_b": 196
+        },
+        {
+          "height": 0.5873669981956482,
+          "size_a": 197,
+          "size_b": 1
+        },
+        {
+          "height": 0.5873969793319702,
+          "size_a": 1,
+          "size_b": 198
+        },
+        {
+          "height": 0.5901283621788025,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.590624213218689,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5920529365539551,
+          "size_a": 1,
+          "size_b": 199
+        },
+        {
+          "height": 0.5927044153213501,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.5927131175994873,
+          "size_a": 3,
+          "size_b": 2
+        },
+        {
+          "height": 0.5930037498474121,
+          "size_a": 5,
+          "size_b": 200
+        },
+        {
+          "height": 0.5934571027755737,
+          "size_a": 1,
+          "size_b": 205
+        },
+        {
+          "height": 0.5969099998474121,
+          "size_a": 2,
+          "size_b": 206
+        },
+        {
+          "height": 0.5969564318656921,
+          "size_a": 1,
+          "size_b": 208
+        },
+        {
+          "height": 0.5970645546913147,
+          "size_a": 209,
+          "size_b": 3
+        },
+        {
+          "height": 0.5972018241882324,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5992990136146545,
+          "size_a": 1,
+          "size_b": 212
+        },
+        {
+          "height": 0.5995693802833557,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.5996823906898499,
+          "size_a": 213,
+          "size_b": 1
+        },
+        {
+          "height": 0.6010473966598511,
+          "size_a": 214,
+          "size_b": 1
+        },
+        {
+          "height": 0.603287935256958,
+          "size_a": 215,
+          "size_b": 1
+        },
+        {
+          "height": 0.604224443435669,
+          "size_a": 1,
+          "size_b": 216
+        },
+        {
+          "height": 0.6042501330375671,
+          "size_a": 2,
+          "size_b": 217
+        },
+        {
+          "height": 0.6058257818222046,
+          "size_a": 219,
+          "size_b": 1
+        },
+        {
+          "height": 0.6060209274291992,
+          "size_a": 220,
+          "size_b": 1
+        },
+        {
+          "height": 0.6088351011276245,
+          "size_a": 221,
+          "size_b": 1
+        },
+        {
+          "height": 0.6122573614120483,
+          "size_a": 222,
+          "size_b": 1
+        },
+        {
+          "height": 0.6198298335075378,
+          "size_a": 1,
+          "size_b": 223
+        },
+        {
+          "height": 0.6225833892822266,
+          "size_a": 2,
+          "size_b": 224
+        },
+        {
+          "height": 0.6233806610107422,
+          "size_a": 1,
+          "size_b": 226
+        },
+        {
+          "height": 0.6250759363174438,
+          "size_a": 2,
+          "size_b": 227
+        },
+        {
+          "height": 0.6251775026321411,
+          "size_a": 1,
+          "size_b": 229
+        },
+        {
+          "height": 0.6260092258453369,
+          "size_a": 230,
+          "size_b": 1
+        },
+        {
+          "height": 0.6293948888778687,
+          "size_a": 231,
+          "size_b": 1
+        },
+        {
+          "height": 0.629780650138855,
+          "size_a": 232,
+          "size_b": 1
+        },
+        {
+          "height": 0.6298356652259827,
+          "size_a": 233,
+          "size_b": 1
+        },
+        {
+          "height": 0.6302947998046875,
+          "size_a": 234,
+          "size_b": 1
+        },
+        {
+          "height": 0.63080233335495,
+          "size_a": 235,
+          "size_b": 1
+        },
+        {
+          "height": 0.6328223943710327,
+          "size_a": 1,
+          "size_b": 236
+        },
+        {
+          "height": 0.6331108212471008,
+          "size_a": 237,
+          "size_b": 3
+        },
+        {
+          "height": 0.639998197555542,
+          "size_a": 1,
+          "size_b": 240
+        },
+        {
+          "height": 0.6405229568481445,
+          "size_a": 1,
+          "size_b": 241
+        },
+        {
+          "height": 0.6477097272872925,
+          "size_a": 1,
+          "size_b": 242
+        },
+        {
+          "height": 0.6500858068466187,
+          "size_a": 243,
+          "size_b": 1
+        },
+        {
+          "height": 0.6572563052177429,
+          "size_a": 244,
+          "size_b": 1
+        },
+        {
+          "height": 0.6736768484115601,
+          "size_a": 1,
+          "size_b": 245
+        },
+        {
+          "height": 0.6740003228187561,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6781158447265625,
+          "size_a": 246,
+          "size_b": 1
+        },
+        {
+          "height": 0.6788086891174316,
+          "size_a": 247,
+          "size_b": 2
+        },
+        {
+          "height": 0.6838440299034119,
+          "size_a": 249,
+          "size_b": 1
+        },
+        {
+          "height": 0.6873196959495544,
+          "size_a": 250,
+          "size_b": 1
+        },
+        {
+          "height": 0.695514440536499,
+          "size_a": 251,
+          "size_b": 1
+        },
+        {
+          "height": 0.6983612179756165,
+          "size_a": 252,
+          "size_b": 1
+        },
+        {
+          "height": 0.7038962841033936,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7043350338935852,
+          "size_a": 253,
+          "size_b": 2
+        },
+        {
+          "height": 0.728742778301239,
+          "size_a": 255,
+          "size_b": 1
+        }
+      ],
+      "metric": "rollout_js_root",
+      "metric_error": {
+        "derivation": "McDiarmid on the R-trajectory average, then root-JS <= sqrt(ln2 * TV); factor 2 for both endpoints",
+        "metric_diameter": 0.8325546383857727,
+        "required_R_for_tau_le_0.05": 8388608,
+        "vacuous": true
+      },
+      "plateau": {
+        "eps_hi": 0.728742778301239,
+        "eps_lo": 0.7043350338935852,
+        "k": 2,
+        "valid": true,
+        "width": 0.02440774440765381
+      },
+      "routing_bound_rate": 0.9895833134651184,
+      "routing_rate": 0.2395833283662796,
+      "scale_signature": [
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.23596671223640442,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.24865759909152985,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.2613484859466553,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.2740393579006195,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.28673025965690613,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.29942113161087036,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.312112033367157,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.3248029053211212,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.33749377727508545,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 4.999999873689376e-05,
+          "eps": 0.35018467903137207,
+          "gap_mass": 0.98828125,
+          "k": 254,
+          "kernel_multiplicity": 254,
+          "lambda_gap": 0.9999999403953552
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 9.999999747378752e-05,
+          "eps": 0.3628755509853363,
+          "gap_mass": 0.98828125,
+          "k": 254,
+          "kernel_multiplicity": 254,
+          "lambda_gap": 1.5
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.00019999999494757503,
+          "eps": 0.37556642293930054,
+          "gap_mass": 0.98046875,
+          "k": 251,
+          "kernel_multiplicity": 251,
+          "lambda_gap": 0.3459426462650299
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.00019999999494757503,
+          "eps": 0.38825732469558716,
+          "gap_mass": 0.98046875,
+          "k": 251,
+          "kernel_multiplicity": 251,
+          "lambda_gap": 0.3459426462650299
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.00019999999494757503,
+          "eps": 0.4009482264518738,
+          "gap_mass": 0.98046875,
+          "k": 251,
+          "kernel_multiplicity": 251,
+          "lambda_gap": 0.3459426462650299
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0002500000118743628,
+          "eps": 0.4136390686035156,
+          "gap_mass": 0.9765625,
+          "k": 250,
+          "kernel_multiplicity": 250,
+          "lambda_gap": 0.2928932309150696
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0002500000118743628,
+          "eps": 0.42632997035980225,
+          "gap_mass": 0.9765625,
+          "k": 250,
+          "kernel_multiplicity": 250,
+          "lambda_gap": 0.2928932309150696
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0002500000118743628,
+          "eps": 0.43902087211608887,
+          "gap_mass": 0.9765625,
+          "k": 250,
+          "kernel_multiplicity": 250,
+          "lambda_gap": 0.374089777469635
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0002500000118743628,
+          "eps": 0.4517117440700531,
+          "gap_mass": 0.9609375,
+          "k": 246,
+          "kernel_multiplicity": 246,
+          "lambda_gap": 0.2928932309150696
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0007999999797903001,
+          "eps": 0.46440261602401733,
+          "gap_mass": 0.91015625,
+          "k": 230,
+          "kernel_multiplicity": 230,
+          "lambda_gap": 0.09896150231361389
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.001500000013038516,
+          "eps": 0.47709351778030396,
+          "gap_mass": 0.84375,
+          "k": 214,
+          "kernel_multiplicity": 214,
+          "lambda_gap": 0.06320804357528687
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.002850000048056245,
+          "eps": 0.4897843897342682,
+          "gap_mass": 0.78125,
+          "k": 198,
+          "kernel_multiplicity": 198,
+          "lambda_gap": 0.07969923317432404
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0062500000931322575,
+          "eps": 0.5024752616882324,
+          "gap_mass": 0.66796875,
+          "k": 172,
+          "kernel_multiplicity": 172,
+          "lambda_gap": 0.12697578966617584
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.01080000028014183,
+          "eps": 0.515166163444519,
+          "gap_mass": 0.578125,
+          "k": 149,
+          "kernel_multiplicity": 149,
+          "lambda_gap": 0.04876720532774925
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.01720000058412552,
+          "eps": 0.5278570652008057,
+          "gap_mass": 0.5,
+          "k": 126,
+          "kernel_multiplicity": 126,
+          "lambda_gap": 0.009772893972694874
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.02745000086724758,
+          "eps": 0.5405479669570923,
+          "gap_mass": 0.4140625,
+          "k": 108,
+          "kernel_multiplicity": 108,
+          "lambda_gap": 0.01036415807902813
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.04194999858736992,
+          "eps": 0.5532388091087341,
+          "gap_mass": 0.35546875,
+          "k": 95,
+          "kernel_multiplicity": 95,
+          "lambda_gap": 0.009483866393566132
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.06224999949336052,
+          "eps": 0.5659297108650208,
+          "gap_mass": 0.28125,
+          "k": 72,
+          "kernel_multiplicity": 72,
+          "lambda_gap": 0.012548387981951237
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.08900000154972076,
+          "eps": 0.5786205530166626,
+          "gap_mass": 0.23828125,
+          "k": 63,
+          "kernel_multiplicity": 63,
+          "lambda_gap": 0.015554483979940414
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.11509999632835388,
+          "eps": 0.5913114547729492,
+          "gap_mass": 0.19921875,
+          "k": 50,
+          "kernel_multiplicity": 50,
+          "lambda_gap": 0.023348232731223106
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.14730000495910645,
+          "eps": 0.6040023565292358,
+          "gap_mass": 0.14453125,
+          "k": 36,
+          "kernel_multiplicity": 36,
+          "lambda_gap": 0.03324788436293602
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.17964999377727509,
+          "eps": 0.6166932582855225,
+          "gap_mass": 0.1171875,
+          "k": 30,
+          "kernel_multiplicity": 29,
+          "lambda_gap": 0.05071146413683891
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.2167000025510788,
+          "eps": 0.6293841004371643,
+          "gap_mass": 0.0859375,
+          "k": 24,
+          "kernel_multiplicity": 24,
+          "lambda_gap": 0.06375858932733536
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.2508000135421753,
+          "eps": 0.6420750021934509,
+          "gap_mass": 0.0546875,
+          "k": 15,
+          "kernel_multiplicity": 15,
+          "lambda_gap": 0.07742992788553238
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.28870001435279846,
+          "eps": 0.6547659039497375,
+          "gap_mass": 0.046875,
+          "k": 13,
+          "kernel_multiplicity": 13,
+          "lambda_gap": 0.11135587096214294
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.33079999685287476,
+          "eps": 0.6674567461013794,
+          "gap_mass": 0.04296875,
+          "k": 12,
+          "kernel_multiplicity": 12,
+          "lambda_gap": 0.13630487024784088
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.37070000171661377,
+          "eps": 0.680147647857666,
+          "gap_mass": 0.02734375,
+          "k": 8,
+          "kernel_multiplicity": 8,
+          "lambda_gap": 0.16311101615428925
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.4145500063896179,
+          "eps": 0.6928385496139526,
+          "gap_mass": 0.01953125,
+          "k": 6,
+          "kernel_multiplicity": 6,
+          "lambda_gap": 0.2025739848613739
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.4564000070095062,
+          "eps": 0.7055293917655945,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.2376309633255005
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.5018500089645386,
+          "eps": 0.7182202935218811,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.28828808665275574
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.5491999983787537,
+          "eps": 0.7309111952781677,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.35053572058677673
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.6000999808311462,
+          "eps": 0.7436020374298096,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.4197068214416504
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.6502000093460083,
+          "eps": 0.7562929391860962,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.4869679808616638
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.7110000252723694,
+          "eps": 0.7689838409423828,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.5738611817359924
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.7807999849319458,
+          "eps": 0.7816747426986694,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.6709499359130859
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.8482499718666077,
+          "eps": 0.794365644454956,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.7531988024711609
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9083999991416931,
+          "eps": 0.8070564270019531,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.8384602665901184
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9609500169754028,
+          "eps": 0.8197473287582397,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9093068242073059
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9999499917030334,
+          "eps": 0.8324382305145264,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9999997615814209
+        }
+      ],
+      "tau95": 1.6651092767715454,
+      "verdict": "PARTIAL_GO",
+      "window_overlap": 0.7197150588035583
+    },
+    {
+      "H1": {
+        "detail": "exact empirical separation: every cross-component distance is >= eps_hi",
+        "evidence": {
+          "budget_per_pair": 4096,
+          "component_pairs": 1,
+          "delta_sep_bonferroni": 0.0010416667209938169,
+          "eps_hi": 1.05680513381958,
+          "exact_cross_pairs_checked": 255,
+          "exact_cross_violations": 0,
+          "min_cross_distance": 1.05680513381958,
+          "min_samples_used": 4096,
+          "sample": [
+            {
+              "a": 0,
+              "b": 1,
+              "hits": 13,
+              "samples": 4097
+            }
+          ],
+          "scope": "pass reflects EXACT separation on the drawn sample; the sequential population test is underpowered at feasible budgets and is reported separately, not used as the criterion",
+          "sequential_accepted": 0,
+          "sequential_half_width_at_budget": 0.030378633585530092,
+          "sequential_required_samples": 3483684.690872826,
+          "sequential_test_powered": false,
+          "worst_upper_bound": 0.0
+        },
+        "pass": true
+      },
+      "H2": {
+        "detail": "cohesion reached below eps_hi",
+        "evidence": [
+          {
+            "component": 0,
+            "eps_cohesion": 0.8200438618659973,
+            "size": 255
+          }
+        ],
+        "pass": true
+      },
+      "H3": {
+        "detail": "no cross-component bridge at or below eps_in",
+        "evidence": {
+          "definition": "merge joining subtrees in different plateau components",
+          "examples": [],
+          "min_subtree_size": 3,
+          "violations": 0
+        },
+        "pass": true
+      },
+      "bootstrap_windows": [
+        {
+          "b": 0,
+          "hi": 0.884419322013855,
+          "k": 5,
+          "lo": 0.8452298045158386,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 1,
+          "hi": 0.9354143738746643,
+          "k": 5,
+          "lo": 0.8393440246582031,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 2,
+          "hi": 0.9579774141311646,
+          "k": 4,
+          "lo": 0.9115071892738342,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 3,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9789450168609619,
+          "overlap_fraction": 0.9688584208488464,
+          "valid": true
+        },
+        {
+          "b": 4,
+          "hi": 0.884419322013855,
+          "k": 9,
+          "lo": 0.8348856568336487,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 5,
+          "hi": 0.889959454536438,
+          "k": 7,
+          "lo": 0.8393440246582031,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 6,
+          "hi": 0.8926895260810852,
+          "k": 7,
+          "lo": 0.8393440246582031,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 7,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9764423966407776,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 8,
+          "hi": 0.884419322013855,
+          "k": 6,
+          "lo": 0.8393440246582031,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 9,
+          "hi": 1.0586472749710083,
+          "k": 2,
+          "lo": 0.9855498671531677,
+          "overlap_fraction": 0.8866704702377319,
+          "valid": true
+        },
+        {
+          "b": 10,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9764423966407776,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 11,
+          "hi": 1.0235326290130615,
+          "k": 3,
+          "lo": 0.9738371968269348,
+          "overlap_fraction": 0.5859709978103638,
+          "valid": true
+        },
+        {
+          "b": 12,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9764423966407776,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 13,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9764423966407776,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 14,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9764423966407776,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 15,
+          "hi": 1.0586472749710083,
+          "k": 2,
+          "lo": 0.9855498671531677,
+          "overlap_fraction": 0.8866704702377319,
+          "valid": true
+        },
+        {
+          "b": 16,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9764423966407776,
+          "overlap_fraction": 1.0,
+          "valid": true
+        },
+        {
+          "b": 17,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9789450168609619,
+          "overlap_fraction": 0.9688584208488464,
+          "valid": true
+        },
+        {
+          "b": 18,
+          "hi": 0.9485425353050232,
+          "k": 5,
+          "lo": 0.8944067358970642,
+          "overlap_fraction": 0.0,
+          "valid": true
+        },
+        {
+          "b": 19,
+          "hi": 1.05680513381958,
+          "k": 2,
+          "lo": 0.9789450168609619,
+          "overlap_fraction": 0.9688584208488464,
+          "valid": true
+        }
+      ],
+      "branch": "",
+      "capture_audit": {
+        "candidate_fraction": 1.0,
+        "filter_vacuous": true,
+        "realized_psi_diameter": 3.1669931411743164,
+        "worst_case_radius": 8.0
+      },
+      "covered_mass": 1.0,
+      "covering_number_est": 64.0,
+      "eps_in_cohesion": 0.8200438618659973,
+      "gap_mass_at_plateau": 0.00390625,
+      "kcenter_radius_curve": [
+        1.1322282552719116,
+        1.0800323486328125,
+        1.0476418733596802,
+        1.0414021015167236,
+        1.0384860038757324,
+        1.007249116897583,
+        1.0037498474121094,
+        0.9883257746696472,
+        0.9791725873947144,
+        0.9492641091346741,
+        0.9208930730819702,
+        0.920232355594635,
+        0.9175927639007568,
+        0.915178120136261,
+        0.9075666069984436,
+        0.8969182968139648,
+        0.8916846513748169,
+        0.8890942931175232,
+        0.8867688179016113,
+        0.8858127593994141,
+        0.8792499303817749,
+        0.877750039100647,
+        0.8756130337715149,
+        0.8697146773338318,
+        0.8646112084388733,
+        0.8528209328651428,
+        0.852293074131012,
+        0.8460094332695007,
+        0.8433214426040649,
+        0.8402817845344543,
+        0.8348856568336487,
+        0.8347834348678589,
+        0.8297051787376404,
+        0.8286385536193848,
+        0.8252739310264587,
+        0.8214627504348755,
+        0.8202816247940063,
+        0.814555287361145,
+        0.8127837181091309,
+        0.8058865070343018,
+        0.8052543997764587,
+        0.7999927997589111,
+        0.7984554171562195,
+        0.7933054566383362,
+        0.7898823618888855,
+        0.789687991142273,
+        0.7878293991088867,
+        0.78378826379776,
+        0.782995343208313,
+        0.7822197079658508,
+        0.7790849208831787,
+        0.7778810262680054,
+        0.773836076259613,
+        0.7722049355506897,
+        0.77192622423172,
+        0.7707571983337402,
+        0.7692475318908691,
+        0.7690762281417847,
+        0.7689281105995178,
+        0.7657781839370728,
+        0.7646635174751282,
+        0.7643533945083618,
+        0.763069212436676,
+        0.7628623843193054
+      ],
+      "margin_required": 6.895493507385254,
+      "margin_usable": 0.23676127195358276,
+      "merge_spectrum": [
+        {
+          "height": 0.5919683575630188,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6164501905441284,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6178489327430725,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6204901337623596,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6227195858955383,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.6237164735794067,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6243055462837219,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6274293065071106,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6303063631057739,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.63056480884552,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6312717795372009,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6323513984680176,
+          "size_a": 1,
+          "size_b": 4
+        },
+        {
+          "height": 0.6327749490737915,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6332525014877319,
+          "size_a": 5,
+          "size_b": 2
+        },
+        {
+          "height": 0.6335021257400513,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.6347670555114746,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6349614262580872,
+          "size_a": 5,
+          "size_b": 7
+        },
+        {
+          "height": 0.6364201903343201,
+          "size_a": 12,
+          "size_b": 1
+        },
+        {
+          "height": 0.6378375887870789,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6378894448280334,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.6379868388175964,
+          "size_a": 1,
+          "size_b": 13
+        },
+        {
+          "height": 0.6390067338943481,
+          "size_a": 14,
+          "size_b": 1
+        },
+        {
+          "height": 0.6390167474746704,
+          "size_a": 15,
+          "size_b": 1
+        },
+        {
+          "height": 0.6391330361366272,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6392940282821655,
+          "size_a": 1,
+          "size_b": 16
+        },
+        {
+          "height": 0.639417290687561,
+          "size_a": 1,
+          "size_b": 17
+        },
+        {
+          "height": 0.6407639384269714,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.6410446166992188,
+          "size_a": 2,
+          "size_b": 3
+        },
+        {
+          "height": 0.6412192583084106,
+          "size_a": 18,
+          "size_b": 1
+        },
+        {
+          "height": 0.6412464380264282,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6413514614105225,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6414953470230103,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6418790221214294,
+          "size_a": 1,
+          "size_b": 19
+        },
+        {
+          "height": 0.6419095396995544,
+          "size_a": 3,
+          "size_b": 5
+        },
+        {
+          "height": 0.6419850587844849,
+          "size_a": 8,
+          "size_b": 1
+        },
+        {
+          "height": 0.6421382427215576,
+          "size_a": 1,
+          "size_b": 9
+        },
+        {
+          "height": 0.6422080397605896,
+          "size_a": 10,
+          "size_b": 2
+        },
+        {
+          "height": 0.6427273750305176,
+          "size_a": 12,
+          "size_b": 1
+        },
+        {
+          "height": 0.6427486538887024,
+          "size_a": 20,
+          "size_b": 1
+        },
+        {
+          "height": 0.6433103084564209,
+          "size_a": 13,
+          "size_b": 1
+        },
+        {
+          "height": 0.6435194611549377,
+          "size_a": 21,
+          "size_b": 1
+        },
+        {
+          "height": 0.6435445547103882,
+          "size_a": 1,
+          "size_b": 22
+        },
+        {
+          "height": 0.6445307731628418,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6454235315322876,
+          "size_a": 14,
+          "size_b": 1
+        },
+        {
+          "height": 0.6454972624778748,
+          "size_a": 23,
+          "size_b": 15
+        },
+        {
+          "height": 0.6456390619277954,
+          "size_a": 38,
+          "size_b": 1
+        },
+        {
+          "height": 0.6456809043884277,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6459647417068481,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6464360356330872,
+          "size_a": 1,
+          "size_b": 39
+        },
+        {
+          "height": 0.646635115146637,
+          "size_a": 1,
+          "size_b": 40
+        },
+        {
+          "height": 0.6467035412788391,
+          "size_a": 41,
+          "size_b": 1
+        },
+        {
+          "height": 0.64695805311203,
+          "size_a": 42,
+          "size_b": 1
+        },
+        {
+          "height": 0.6471171379089355,
+          "size_a": 43,
+          "size_b": 1
+        },
+        {
+          "height": 0.64775550365448,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6478784680366516,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6488993167877197,
+          "size_a": 2,
+          "size_b": 44
+        },
+        {
+          "height": 0.6490909457206726,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.6492471694946289,
+          "size_a": 1,
+          "size_b": 46
+        },
+        {
+          "height": 0.6501557230949402,
+          "size_a": 1,
+          "size_b": 47
+        },
+        {
+          "height": 0.6502444744110107,
+          "size_a": 48,
+          "size_b": 2
+        },
+        {
+          "height": 0.6502951383590698,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.650582492351532,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6506766676902771,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6507609486579895,
+          "size_a": 2,
+          "size_b": 1
+        },
+        {
+          "height": 0.6513286232948303,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6513326168060303,
+          "size_a": 3,
+          "size_b": 1
+        },
+        {
+          "height": 0.6515150666236877,
+          "size_a": 50,
+          "size_b": 1
+        },
+        {
+          "height": 0.65207439661026,
+          "size_a": 4,
+          "size_b": 51
+        },
+        {
+          "height": 0.652195930480957,
+          "size_a": 1,
+          "size_b": 55
+        },
+        {
+          "height": 0.6526341438293457,
+          "size_a": 56,
+          "size_b": 1
+        },
+        {
+          "height": 0.6526650786399841,
+          "size_a": 1,
+          "size_b": 57
+        },
+        {
+          "height": 0.6528813242912292,
+          "size_a": 58,
+          "size_b": 1
+        },
+        {
+          "height": 0.6529353857040405,
+          "size_a": 59,
+          "size_b": 1
+        },
+        {
+          "height": 0.653525173664093,
+          "size_a": 1,
+          "size_b": 60
+        },
+        {
+          "height": 0.6548374891281128,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6548513174057007,
+          "size_a": 61,
+          "size_b": 3
+        },
+        {
+          "height": 0.6549139022827148,
+          "size_a": 1,
+          "size_b": 64
+        },
+        {
+          "height": 0.6551263928413391,
+          "size_a": 4,
+          "size_b": 1
+        },
+        {
+          "height": 0.655133843421936,
+          "size_a": 65,
+          "size_b": 1
+        },
+        {
+          "height": 0.655144214630127,
+          "size_a": 66,
+          "size_b": 1
+        },
+        {
+          "height": 0.6552148461341858,
+          "size_a": 2,
+          "size_b": 67
+        },
+        {
+          "height": 0.6552568674087524,
+          "size_a": 5,
+          "size_b": 69
+        },
+        {
+          "height": 0.6554528474807739,
+          "size_a": 1,
+          "size_b": 74
+        },
+        {
+          "height": 0.6555929780006409,
+          "size_a": 75,
+          "size_b": 1
+        },
+        {
+          "height": 0.6556636691093445,
+          "size_a": 3,
+          "size_b": 76
+        },
+        {
+          "height": 0.6559975147247314,
+          "size_a": 79,
+          "size_b": 1
+        },
+        {
+          "height": 0.6561031341552734,
+          "size_a": 1,
+          "size_b": 80
+        },
+        {
+          "height": 0.6562689542770386,
+          "size_a": 81,
+          "size_b": 1
+        },
+        {
+          "height": 0.6565445065498352,
+          "size_a": 82,
+          "size_b": 1
+        },
+        {
+          "height": 0.6565969586372375,
+          "size_a": 83,
+          "size_b": 1
+        },
+        {
+          "height": 0.6566980481147766,
+          "size_a": 84,
+          "size_b": 1
+        },
+        {
+          "height": 0.6568557024002075,
+          "size_a": 1,
+          "size_b": 85
+        },
+        {
+          "height": 0.657039225101471,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6571579575538635,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.6574523448944092,
+          "size_a": 86,
+          "size_b": 1
+        },
+        {
+          "height": 0.6584888100624084,
+          "size_a": 1,
+          "size_b": 87
+        },
+        {
+          "height": 0.6585630774497986,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6585950255393982,
+          "size_a": 1,
+          "size_b": 88
+        },
+        {
+          "height": 0.6586129069328308,
+          "size_a": 89,
+          "size_b": 4
+        },
+        {
+          "height": 0.6588004231452942,
+          "size_a": 1,
+          "size_b": 93
+        },
+        {
+          "height": 0.6590502262115479,
+          "size_a": 1,
+          "size_b": 94
+        },
+        {
+          "height": 0.6591842174530029,
+          "size_a": 95,
+          "size_b": 1
+        },
+        {
+          "height": 0.6591842174530029,
+          "size_a": 96,
+          "size_b": 1
+        },
+        {
+          "height": 0.6591842174530029,
+          "size_a": 1,
+          "size_b": 97
+        },
+        {
+          "height": 0.6592551469802856,
+          "size_a": 98,
+          "size_b": 1
+        },
+        {
+          "height": 0.6593849658966064,
+          "size_a": 1,
+          "size_b": 99
+        },
+        {
+          "height": 0.6596343517303467,
+          "size_a": 100,
+          "size_b": 1
+        },
+        {
+          "height": 0.6596688032150269,
+          "size_a": 101,
+          "size_b": 2
+        },
+        {
+          "height": 0.6599074006080627,
+          "size_a": 1,
+          "size_b": 103
+        },
+        {
+          "height": 0.6607578992843628,
+          "size_a": 104,
+          "size_b": 1
+        },
+        {
+          "height": 0.6608627438545227,
+          "size_a": 1,
+          "size_b": 105
+        },
+        {
+          "height": 0.6611888408660889,
+          "size_a": 1,
+          "size_b": 2
+        },
+        {
+          "height": 0.6615445613861084,
+          "size_a": 106,
+          "size_b": 1
+        },
+        {
+          "height": 0.661808431148529,
+          "size_a": 107,
+          "size_b": 1
+        },
+        {
+          "height": 0.6629095673561096,
+          "size_a": 1,
+          "size_b": 108
+        },
+        {
+          "height": 0.6634843945503235,
+          "size_a": 109,
+          "size_b": 1
+        },
+        {
+          "height": 0.6638920307159424,
+          "size_a": 110,
+          "size_b": 1
+        },
+        {
+          "height": 0.6639208793640137,
+          "size_a": 2,
+          "size_b": 111
+        },
+        {
+          "height": 0.6640825271606445,
+          "size_a": 1,
+          "size_b": 3
+        },
+        {
+          "height": 0.6643670201301575,
+          "size_a": 113,
+          "size_b": 1
+        },
+        {
+          "height": 0.664436936378479,
+          "size_a": 1,
+          "size_b": 114
+        },
+        {
+          "height": 0.6646691560745239,
+          "size_a": 115,
+          "size_b": 1
+        },
+        {
+          "height": 0.6650856137275696,
+          "size_a": 1,
+          "size_b": 116
+        },
+        {
+          "height": 0.665202260017395,
+          "size_a": 117,
+          "size_b": 1
+        },
+        {
+          "height": 0.6655896902084351,
+          "size_a": 118,
+          "size_b": 1
+        },
+        {
+          "height": 0.6658096313476563,
+          "size_a": 1,
+          "size_b": 119
+        },
+        {
+          "height": 0.6663179397583008,
+          "size_a": 1,
+          "size_b": 120
+        },
+        {
+          "height": 0.6671085357666016,
+          "size_a": 121,
+          "size_b": 4
+        },
+        {
+          "height": 0.667238175868988,
+          "size_a": 125,
+          "size_b": 1
+        },
+        {
+          "height": 0.6673539280891418,
+          "size_a": 126,
+          "size_b": 3
+        },
+        {
+          "height": 0.667576253414154,
+          "size_a": 129,
+          "size_b": 1
+        },
+        {
+          "height": 0.6676449179649353,
+          "size_a": 130,
+          "size_b": 1
+        },
+        {
+          "height": 0.6677568554878235,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6681329011917114,
+          "size_a": 131,
+          "size_b": 1
+        },
+        {
+          "height": 0.668170690536499,
+          "size_a": 132,
+          "size_b": 1
+        },
+        {
+          "height": 0.6681971549987793,
+          "size_a": 1,
+          "size_b": 133
+        },
+        {
+          "height": 0.6686149835586548,
+          "size_a": 2,
+          "size_b": 134
+        },
+        {
+          "height": 0.6687143445014954,
+          "size_a": 136,
+          "size_b": 2
+        },
+        {
+          "height": 0.6689086556434631,
+          "size_a": 138,
+          "size_b": 1
+        },
+        {
+          "height": 0.6696830987930298,
+          "size_a": 1,
+          "size_b": 139
+        },
+        {
+          "height": 0.6701309084892273,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6706666350364685,
+          "size_a": 140,
+          "size_b": 1
+        },
+        {
+          "height": 0.671273946762085,
+          "size_a": 1,
+          "size_b": 141
+        },
+        {
+          "height": 0.6713728904724121,
+          "size_a": 142,
+          "size_b": 1
+        },
+        {
+          "height": 0.6717783212661743,
+          "size_a": 1,
+          "size_b": 143
+        },
+        {
+          "height": 0.6721552014350891,
+          "size_a": 144,
+          "size_b": 1
+        },
+        {
+          "height": 0.6723878383636475,
+          "size_a": 145,
+          "size_b": 1
+        },
+        {
+          "height": 0.6725926995277405,
+          "size_a": 146,
+          "size_b": 1
+        },
+        {
+          "height": 0.6729861497879028,
+          "size_a": 147,
+          "size_b": 1
+        },
+        {
+          "height": 0.67299485206604,
+          "size_a": 1,
+          "size_b": 148
+        },
+        {
+          "height": 0.6735758185386658,
+          "size_a": 1,
+          "size_b": 149
+        },
+        {
+          "height": 0.6744776964187622,
+          "size_a": 1,
+          "size_b": 150
+        },
+        {
+          "height": 0.6748993992805481,
+          "size_a": 1,
+          "size_b": 151
+        },
+        {
+          "height": 0.6757300496101379,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6758813858032227,
+          "size_a": 152,
+          "size_b": 1
+        },
+        {
+          "height": 0.6759044528007507,
+          "size_a": 153,
+          "size_b": 1
+        },
+        {
+          "height": 0.6759724617004395,
+          "size_a": 1,
+          "size_b": 154
+        },
+        {
+          "height": 0.676523745059967,
+          "size_a": 2,
+          "size_b": 2
+        },
+        {
+          "height": 0.6784070134162903,
+          "size_a": 155,
+          "size_b": 1
+        },
+        {
+          "height": 0.6785305738449097,
+          "size_a": 156,
+          "size_b": 4
+        },
+        {
+          "height": 0.6809965968132019,
+          "size_a": 160,
+          "size_b": 1
+        },
+        {
+          "height": 0.6813153624534607,
+          "size_a": 1,
+          "size_b": 161
+        },
+        {
+          "height": 0.6815356016159058,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.6815793514251709,
+          "size_a": 162,
+          "size_b": 1
+        },
+        {
+          "height": 0.6818733215332031,
+          "size_a": 1,
+          "size_b": 163
+        },
+        {
+          "height": 0.6827261447906494,
+          "size_a": 1,
+          "size_b": 164
+        },
+        {
+          "height": 0.6834924221038818,
+          "size_a": 165,
+          "size_b": 1
+        },
+        {
+          "height": 0.6836018562316895,
+          "size_a": 166,
+          "size_b": 1
+        },
+        {
+          "height": 0.685168445110321,
+          "size_a": 1,
+          "size_b": 167
+        },
+        {
+          "height": 0.6853272318840027,
+          "size_a": 168,
+          "size_b": 1
+        },
+        {
+          "height": 0.6853569746017456,
+          "size_a": 1,
+          "size_b": 169
+        },
+        {
+          "height": 0.6857946515083313,
+          "size_a": 170,
+          "size_b": 1
+        },
+        {
+          "height": 0.6861249804496765,
+          "size_a": 1,
+          "size_b": 171
+        },
+        {
+          "height": 0.6861581802368164,
+          "size_a": 1,
+          "size_b": 172
+        },
+        {
+          "height": 0.6862096786499023,
+          "size_a": 173,
+          "size_b": 1
+        },
+        {
+          "height": 0.6865798830986023,
+          "size_a": 1,
+          "size_b": 174
+        },
+        {
+          "height": 0.6870394349098206,
+          "size_a": 175,
+          "size_b": 1
+        },
+        {
+          "height": 0.6871399879455566,
+          "size_a": 176,
+          "size_b": 1
+        },
+        {
+          "height": 0.6871790289878845,
+          "size_a": 177,
+          "size_b": 2
+        },
+        {
+          "height": 0.687798798084259,
+          "size_a": 1,
+          "size_b": 179
+        },
+        {
+          "height": 0.6879256367683411,
+          "size_a": 180,
+          "size_b": 1
+        },
+        {
+          "height": 0.6881895065307617,
+          "size_a": 181,
+          "size_b": 1
+        },
+        {
+          "height": 0.6896193027496338,
+          "size_a": 1,
+          "size_b": 182
+        },
+        {
+          "height": 0.689681887626648,
+          "size_a": 1,
+          "size_b": 183
+        },
+        {
+          "height": 0.6907668709754944,
+          "size_a": 184,
+          "size_b": 1
+        },
+        {
+          "height": 0.6908496022224426,
+          "size_a": 1,
+          "size_b": 185
+        },
+        {
+          "height": 0.6910238265991211,
+          "size_a": 1,
+          "size_b": 186
+        },
+        {
+          "height": 0.691043496131897,
+          "size_a": 187,
+          "size_b": 1
+        },
+        {
+          "height": 0.6911720037460327,
+          "size_a": 1,
+          "size_b": 188
+        },
+        {
+          "height": 0.6916242837905884,
+          "size_a": 189,
+          "size_b": 1
+        },
+        {
+          "height": 0.6922242641448975,
+          "size_a": 190,
+          "size_b": 1
+        },
+        {
+          "height": 0.6922836899757385,
+          "size_a": 191,
+          "size_b": 1
+        },
+        {
+          "height": 0.6929460763931274,
+          "size_a": 1,
+          "size_b": 192
+        },
+        {
+          "height": 0.6930001974105835,
+          "size_a": 1,
+          "size_b": 193
+        },
+        {
+          "height": 0.6943939328193665,
+          "size_a": 194,
+          "size_b": 1
+        },
+        {
+          "height": 0.6955486536026001,
+          "size_a": 195,
+          "size_b": 1
+        },
+        {
+          "height": 0.6960347294807434,
+          "size_a": 196,
+          "size_b": 1
+        },
+        {
+          "height": 0.6963069438934326,
+          "size_a": 197,
+          "size_b": 1
+        },
+        {
+          "height": 0.697175920009613,
+          "size_a": 198,
+          "size_b": 1
+        },
+        {
+          "height": 0.6978799700737,
+          "size_a": 199,
+          "size_b": 1
+        },
+        {
+          "height": 0.7018921971321106,
+          "size_a": 200,
+          "size_b": 1
+        },
+        {
+          "height": 0.7028757929801941,
+          "size_a": 201,
+          "size_b": 2
+        },
+        {
+          "height": 0.705970048904419,
+          "size_a": 203,
+          "size_b": 1
+        },
+        {
+          "height": 0.706458568572998,
+          "size_a": 1,
+          "size_b": 204
+        },
+        {
+          "height": 0.7076475620269775,
+          "size_a": 1,
+          "size_b": 205
+        },
+        {
+          "height": 0.7078313827514648,
+          "size_a": 1,
+          "size_b": 206
+        },
+        {
+          "height": 0.7139790654182434,
+          "size_a": 1,
+          "size_b": 207
+        },
+        {
+          "height": 0.7152933478355408,
+          "size_a": 208,
+          "size_b": 1
+        },
+        {
+          "height": 0.7159346342086792,
+          "size_a": 209,
+          "size_b": 1
+        },
+        {
+          "height": 0.7159767746925354,
+          "size_a": 210,
+          "size_b": 1
+        },
+        {
+          "height": 0.7167001366615295,
+          "size_a": 211,
+          "size_b": 1
+        },
+        {
+          "height": 0.7167930603027344,
+          "size_a": 1,
+          "size_b": 212
+        },
+        {
+          "height": 0.7177626490592957,
+          "size_a": 213,
+          "size_b": 1
+        },
+        {
+          "height": 0.7209147810935974,
+          "size_a": 214,
+          "size_b": 1
+        },
+        {
+          "height": 0.7212149500846863,
+          "size_a": 1,
+          "size_b": 215
+        },
+        {
+          "height": 0.7218019366264343,
+          "size_a": 216,
+          "size_b": 1
+        },
+        {
+          "height": 0.7220022678375244,
+          "size_a": 217,
+          "size_b": 1
+        },
+        {
+          "height": 0.7233515977859497,
+          "size_a": 1,
+          "size_b": 218
+        },
+        {
+          "height": 0.7263278961181641,
+          "size_a": 1,
+          "size_b": 1
+        },
+        {
+          "height": 0.7279662489891052,
+          "size_a": 1,
+          "size_b": 219
+        },
+        {
+          "height": 0.7282942533493042,
+          "size_a": 220,
+          "size_b": 1
+        },
+        {
+          "height": 0.7316558361053467,
+          "size_a": 221,
+          "size_b": 1
+        },
+        {
+          "height": 0.7330820560455322,
+          "size_a": 1,
+          "size_b": 222
+        },
+        {
+          "height": 0.7400636672973633,
+          "size_a": 1,
+          "size_b": 223
+        },
+        {
+          "height": 0.7433894872665405,
+          "size_a": 224,
+          "size_b": 2
+        },
+        {
+          "height": 0.7462114691734314,
+          "size_a": 1,
+          "size_b": 226
+        },
+        {
+          "height": 0.7464829683303833,
+          "size_a": 1,
+          "size_b": 227
+        },
+        {
+          "height": 0.7551228404045105,
+          "size_a": 228,
+          "size_b": 1
+        },
+        {
+          "height": 0.7575021982192993,
+          "size_a": 229,
+          "size_b": 1
+        },
+        {
+          "height": 0.7642345428466797,
+          "size_a": 230,
+          "size_b": 1
+        },
+        {
+          "height": 0.7650062441825867,
+          "size_a": 1,
+          "size_b": 231
+        },
+        {
+          "height": 0.7655856013298035,
+          "size_a": 232,
+          "size_b": 1
+        },
+        {
+          "height": 0.7657781839370728,
+          "size_a": 1,
+          "size_b": 233
+        },
+        {
+          "height": 0.7695881128311157,
+          "size_a": 234,
+          "size_b": 1
+        },
+        {
+          "height": 0.7716655731201172,
+          "size_a": 235,
+          "size_b": 1
+        },
+        {
+          "height": 0.7739942669868469,
+          "size_a": 236,
+          "size_b": 1
+        },
+        {
+          "height": 0.7741690278053284,
+          "size_a": 237,
+          "size_b": 1
+        },
+        {
+          "height": 0.7814465761184692,
+          "size_a": 238,
+          "size_b": 1
+        },
+        {
+          "height": 0.7919461131095886,
+          "size_a": 239,
+          "size_b": 1
+        },
+        {
+          "height": 0.8017805218696594,
+          "size_a": 240,
+          "size_b": 1
+        },
+        {
+          "height": 0.8066622614860535,
+          "size_a": 1,
+          "size_b": 241
+        },
+        {
+          "height": 0.8106877207756042,
+          "size_a": 1,
+          "size_b": 242
+        },
+        {
+          "height": 0.8232598900794983,
+          "size_a": 1,
+          "size_b": 243
+        },
+        {
+          "height": 0.8250826597213745,
+          "size_a": 1,
+          "size_b": 244
+        },
+        {
+          "height": 0.8253611922264099,
+          "size_a": 1,
+          "size_b": 245
+        },
+        {
+          "height": 0.8348856568336487,
+          "size_a": 1,
+          "size_b": 246
+        },
+        {
+          "height": 0.8393440246582031,
+          "size_a": 247,
+          "size_b": 1
+        },
+        {
+          "height": 0.884419322013855,
+          "size_a": 248,
+          "size_b": 1
+        },
+        {
+          "height": 0.889959454536438,
+          "size_a": 249,
+          "size_b": 1
+        },
+        {
+          "height": 0.8926895260810852,
+          "size_a": 1,
+          "size_b": 250
+        },
+        {
+          "height": 0.9115071892738342,
+          "size_a": 251,
+          "size_b": 1
+        },
+        {
+          "height": 0.9485425353050232,
+          "size_a": 252,
+          "size_b": 1
+        },
+        {
+          "height": 0.9738371968269348,
+          "size_a": 253,
+          "size_b": 1
+        },
+        {
+          "height": 0.9764423966407776,
+          "size_a": 1,
+          "size_b": 254
+        },
+        {
+          "height": 1.05680513381958,
+          "size_a": 255,
+          "size_b": 1
+        }
+      ],
+      "metric": "continuation_mmd",
+      "metric_error": {
+        "derivation": "McDiarmid on the R-sample kernel mean embedding; factor 2 for both endpoints",
+        "metric_diameter": 2.0,
+        "required_R_for_tau_le_0.05": 32768,
+        "vacuous": true
+      },
+      "plateau": {
+        "eps_hi": 1.05680513381958,
+        "eps_lo": 0.9764423966407776,
+        "k": 2,
+        "valid": true,
+        "width": 0.08036273717880249
+      },
+      "routing_bound_rate": 1.0,
+      "routing_rate": 0.5520833134651184,
+      "scale_signature": [
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.5919683575630188,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0,
+          "eps": 0.6095126271247864,
+          "gap_mass": 1.0,
+          "k": 255,
+          "kernel_multiplicity": 255,
+          "lambda_gap": 2.0
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0002500000118743628,
+          "eps": 0.627056896686554,
+          "gap_mass": 0.97265625,
+          "k": 249,
+          "kernel_multiplicity": 249,
+          "lambda_gap": 0.7712863683700562
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.0017500000540167093,
+          "eps": 0.6446011662483215,
+          "gap_mass": 0.84375,
+          "k": 213,
+          "kernel_multiplicity": 213,
+          "lambda_gap": 0.08998741954565048
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.006800000090152025,
+          "eps": 0.6621454358100891,
+          "gap_mass": 0.5546875,
+          "k": 142,
+          "kernel_multiplicity": 142,
+          "lambda_gap": 0.0879364013671875
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.026599999517202377,
+          "eps": 0.6796897053718567,
+          "gap_mass": 0.375,
+          "k": 96,
+          "kernel_multiplicity": 96,
+          "lambda_gap": 0.056621003895998
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.07045000046491623,
+          "eps": 0.6972339749336243,
+          "gap_mass": 0.22265625,
+          "k": 57,
+          "kernel_multiplicity": 57,
+          "lambda_gap": 0.07083180546760559
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.14454999566078186,
+          "eps": 0.7147782444953918,
+          "gap_mass": 0.1875,
+          "k": 49,
+          "kernel_multiplicity": 49,
+          "lambda_gap": 0.20552361011505127
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.2414499968290329,
+          "eps": 0.7323225140571594,
+          "gap_mass": 0.1328125,
+          "k": 34,
+          "kernel_multiplicity": 32,
+          "lambda_gap": 0.2870163917541504
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.33629998564720154,
+          "eps": 0.749866783618927,
+          "gap_mass": 0.109375,
+          "k": 29,
+          "kernel_multiplicity": 29,
+          "lambda_gap": 0.28849220275878906
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.42989999055862427,
+          "eps": 0.7674110531806946,
+          "gap_mass": 0.0859375,
+          "k": 23,
+          "kernel_multiplicity": 23,
+          "lambda_gap": 0.29036763310432434
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.5171499848365784,
+          "eps": 0.7849553227424622,
+          "gap_mass": 0.06640625,
+          "k": 18,
+          "kernel_multiplicity": 18,
+          "lambda_gap": 0.36056971549987793
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.5896499752998352,
+          "eps": 0.8024995923042297,
+          "gap_mass": 0.05859375,
+          "k": 16,
+          "kernel_multiplicity": 16,
+          "lambda_gap": 0.4744388461112976
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.6500999927520752,
+          "eps": 0.8200438618659973,
+          "gap_mass": 0.05078125,
+          "k": 14,
+          "kernel_multiplicity": 14,
+          "lambda_gap": 0.7411073446273804
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.7019000053405762,
+          "eps": 0.8375881314277649,
+          "gap_mass": 0.03515625,
+          "k": 10,
+          "kernel_multiplicity": 10,
+          "lambda_gap": 0.7875109910964966
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.7513999938964844,
+          "eps": 0.8551324009895325,
+          "gap_mass": 0.03125,
+          "k": 9,
+          "kernel_multiplicity": 9,
+          "lambda_gap": 0.8518210053443909
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.7936499714851379,
+          "eps": 0.8726766109466553,
+          "gap_mass": 0.03125,
+          "k": 9,
+          "kernel_multiplicity": 9,
+          "lambda_gap": 0.8833844065666199
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.8327500224113464,
+          "eps": 0.8902208805084229,
+          "gap_mass": 0.0234375,
+          "k": 7,
+          "kernel_multiplicity": 7,
+          "lambda_gap": 0.88399338722229
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.8626999855041504,
+          "eps": 0.9077651500701904,
+          "gap_mass": 0.01953125,
+          "k": 6,
+          "kernel_multiplicity": 6,
+          "lambda_gap": 0.9121827483177185
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.8848000168800354,
+          "eps": 0.925309419631958,
+          "gap_mass": 0.015625,
+          "k": 5,
+          "kernel_multiplicity": 5,
+          "lambda_gap": 0.9210793375968933
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9013000130653381,
+          "eps": 0.9428536891937256,
+          "gap_mass": 0.015625,
+          "k": 5,
+          "kernel_multiplicity": 5,
+          "lambda_gap": 0.9242827892303467
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9114000201225281,
+          "eps": 0.9603979587554932,
+          "gap_mass": 0.01171875,
+          "k": 4,
+          "kernel_multiplicity": 4,
+          "lambda_gap": 0.9230366349220276
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.922950029373169,
+          "eps": 0.9779422283172607,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.9239715933799744
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9355000257492065,
+          "eps": 0.9954865574836731,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.9250905513763428
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9470000267028809,
+          "eps": 1.013030767440796,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.9306293725967407
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9571999907493591,
+          "eps": 1.0305750370025635,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.9363667368888855
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9665499925613403,
+          "eps": 1.048119306564331,
+          "gap_mass": 0.00390625,
+          "k": 2,
+          "kernel_multiplicity": 2,
+          "lambda_gap": 0.9347872734069824
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.974399983882904,
+          "eps": 1.0656635761260986,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9385628700256348
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9805499911308289,
+          "eps": 1.0832078456878662,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9369506239891052
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.985450029373169,
+          "eps": 1.1007521152496338,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.940581202507019
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9886500239372253,
+          "eps": 1.1182963848114014,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9447720050811768
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.991349995136261,
+          "eps": 1.135840654373169,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9530330300331116
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9947999715805054,
+          "eps": 1.1533849239349365,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9636421203613281
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9964500069618225,
+          "eps": 1.170929193496704,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.974023163318634
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9981499910354614,
+          "eps": 1.1884734630584717,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9812070727348328
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.998449981212616,
+          "eps": 1.2060177326202393,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9842734336853027
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9989500045776367,
+          "eps": 1.2235620021820068,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9892818927764893
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9994000196456909,
+          "eps": 1.2411062717437744,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9926377534866333
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9997000098228455,
+          "eps": 1.258650541305542,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9944621324539185
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.999750018119812,
+          "eps": 1.2761948108673096,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.99522864818573
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9998499751091003,
+          "eps": 1.2937390804290771,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9965463876724243
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9998999834060669,
+          "eps": 1.3112833499908447,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.997559666633606
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9999499917030334,
+          "eps": 1.3288276195526123,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9999997615814209
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9999499917030334,
+          "eps": 1.3463718891143799,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9999997615814209
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9999499917030334,
+          "eps": 1.3639161586761475,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9999997615814209
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9999499917030334,
+          "eps": 1.381460428237915,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9999997615814209
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 0.9999499917030334,
+          "eps": 1.3990046977996826,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 0.9999997615814209
+        },
+        {
+          "corr_ci": 0.009603227488696575,
+          "corr_integral": 1.0,
+          "eps": 1.4165489673614502,
+          "gap_mass": 0.0,
+          "k": 1,
+          "kernel_multiplicity": 1,
+          "lambda_gap": 1.0039201974868774
+        }
+      ],
+      "tau95": 3.447746753692627,
+      "verdict": "PARTIAL_GO",
+      "window_overlap": 0.5632943511009216
+    }
+  ],
+  "model_sha256": "c7a387d6fe81ca6dd304aeb809bda3932ff1bbef3ca41c9484502f2f448dc093",
+  "n": 64,
+  "rationale": "Verdict follows the pre-committed §4 rule applied to every metric in §5 B1. One-step TV, rollout root-JS and continuation MMD were each scanned for a plateau under the corrected spectral criterion (lambda_{k+1}). No threshold was relaxed after seeing results. If no metric yields a plateau, branch B3 (hierarchical soft domains) is the pre-committed architectural response.",
+  "timing": {
+    "threads": 4,
+    "total_sec": 435.1786637,
+    "traces_and_rollouts_sec": 337.742427623
+  },
+  "version": "alysane-probe/1.0"
+}
