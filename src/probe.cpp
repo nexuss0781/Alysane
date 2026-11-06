@@ -225,7 +225,10 @@ static HypothesisResult h1_sequential(const DistMatrix& D, const std::vector<int
                 for (int y : groups[b]) {
                     float d = D(x, y);
                     min_cross = std::min(min_cross, d);
-                    if (d <= eps_hi) cross_violations++;
+                    // C6: k constant on [lo,hi) implies cross >= hi. The merge at
+                    // hi is itself a cross pair at exactly eps_hi, so the correct
+                    // violation test is strict: d < eps_hi.
+                    if (d < eps_hi - 1e-9f) cross_violations++;
                     cross_checked++;
                 }
     bool exact_sep = (cross_checked > 0 && cross_violations == 0);
@@ -236,8 +239,8 @@ static HypothesisResult h1_sequential(const DistMatrix& D, const std::vector<int
     bool population_test_powered = hw_at_budget < delta_sep;
     R.pass = exact_sep;
     R.detail = exact_sep
-        ? "exact empirical separation: every cross-component pair exceeds eps_hi"
-        : "empirical separation violated: some cross-component pair is <= eps_hi";
+        ? "exact empirical separation: every cross-component distance is >= eps_hi"
+        : "empirical separation violated: some cross-component distance is < eps_hi";
     R.evidence = {{"component_pairs", total_pairs}, {"sequential_accepted", accepted},
                   {"delta_sep_bonferroni", delta_sep}, {"budget_per_pair", budget},
                   {"min_samples_used", min_cross_samples == budget ? budget : min_cross_samples},
